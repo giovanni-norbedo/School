@@ -97,7 +97,7 @@ Usando la notazione di prima, possiamo dire che $(37,37,74)$ è soluzione perch�
 
 $(37,37,74) = 37 \cdot (1,1,2)$
 
-Generalizzando, vediamo che per ogni $\alpha \in \real$,  
+Generalizzando, vediamo che per ogni $\alpha \in \mathbb{R}$,  
 la terna $(\alpha, \alpha, 2 \alpha) = \alpha \cdot (1,1,2)$ è soluzione.
 
 Analizziamo ora un secondo fenomeno.  
@@ -124,7 +124,7 @@ Considerando quanto abbiamo imparato, troviamo che
 
 > - A. La terna $(0,0,0)$ è soluzione.
 >
-> - B. Che $(\overline{x}, \overline{y}, \overline{z})$ è un particolare soluzione, allora per ogni $\alpha \in \real$ anche $\alpha \cdot (\overline{x}, \overline{y}, \overline{z})$ è soluzione.
+> - B. Che $(\overline{x}, \overline{y}, \overline{z})$ è un particolare soluzione, allora per ogni $\alpha \in \mathbb{R}$ anche $\alpha \cdot (\overline{x}, \overline{y}, \overline{z})$ è soluzione.
 > 
 > - C. Che $(\overline{x}, \overline{y}, \overline{z})$ e $(\hat{x}, \hat{y}, \hat{z})$ sono due soluzioni, allora anche $(\overline{x}, \overline{y}, \overline{z}) + (\hat{x}, \hat{y}, \hat{z}) = (\overline{x} + \hat{x}, \overline{y} + \hat{y}, \overline{z} + \hat{z})$ è soluzione.
 
@@ -201,7 +201,7 @@ $$
 \end{cases}
 $$
 
-Questo sistema ci dice che se $z$ assume un valore $\alpha \in \real$  
+Questo sistema ci dice che se $z$ assume un valore $\alpha \in \mathbb{R}$  
 allora $y$ deve essere $\frac{1}{2} \alpha$ e $x$ deve essere $\frac{1}{2} \alpha$.
 
 Quindi le soluzioni sono della forma
