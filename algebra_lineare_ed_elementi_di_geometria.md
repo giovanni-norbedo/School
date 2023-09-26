@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Che cos'è un'equazione? Un' *equazione* è una *domanda*.
+Che cos'è un'equazione? Un'*equazione* è una *domanda*.
 
 $x^2+2x+1=0$
 
