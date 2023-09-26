@@ -197,3 +197,14 @@ $\neg (p \vee q) = \neg p \wedge \neg q$
 | V   | F   |      F       |        **V**        |    F     |    V     |        **V**         |
 | F   | V   |      F       |        **V**        |    V     |    F     |        **V**         |
 | F   | F   |      F       |        **V**        |    V     |    V     |        **V**         |
+
+--- 
+
+### Predicati
+
+"parte del nostro discorso che contenda una o più variabili"
+
+> Esempio:  
+> $P(X) : lo\ studente\ x\ è\ più\ alto\ di\ 1,7m.$   
+> è un predicato
+
