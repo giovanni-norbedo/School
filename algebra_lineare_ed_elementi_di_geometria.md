@@ -21,11 +21,11 @@ Passiamo, invece, a considerare:
 
 $3x + y -2z = 0$
 
-> $\char"1F526$ Soluzione banale: $(0,0,0)$
+> $\underline{\text{Idea}}$: Soluzione banale con $(0,0,0)$
 
 Risolvere questa equazione significa determinare una (o tutte) le terne di numeri $(x,y,z)$ tali che, se sostituiamo tali numeri alle variabili nel membro sinistro, otteniamo zero.
 
-> $\char"1F441$ *Osservazione*: nella prima equazione ci veniva chiesto di determinare *un numero* , nella seconda ogni sostituzione è costituita da *tre numeri* ; diciamo quindi che la prima equazione è in  *una variabile* , la seconda in *tre variabili*.
+> $\underline{\text{Osservazione}}$: nella prima equazione ci veniva chiesto di determinare *un numero* , nella seconda ogni sostituzione è costituita da *tre numeri* ; diciamo quindi che la prima equazione è in  *una variabile* , la seconda in *tre variabili*.
 
 Una prima soluzione è data dalla scelta:  
 
@@ -146,7 +146,7 @@ Le proprietà A, B e C valgono anche in questo caso.
 
 Ora vorrei calcolare le soluzioni di questo sistema. Per farlo usiamo un teorema chiamato "*eliminazione di Gauss*".
 
-> $\char"1F4D6$ Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
+> $\underline{\text{Definizione}}$: Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
 
 Andremo a manipolare il sistema al fine di trovarne uno equivalente (ovvero con le stesse soluzioni) più semplicemente da risolvere, ovvero nella forma :
 
