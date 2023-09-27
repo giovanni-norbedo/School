@@ -11,6 +11,7 @@ $x^2+2x+1=0$
 Questo è un modo di formalizzare la domanda "Qual è quel numero, che indichiamo con $x$, tale che se calcolo il numero $x^2 + 2x +1$, esso è $0$?
 
 Una  *soluzione* è una *risposta* (corretta) alla domanda.  
+
 Per esempio nel nostro caso abbiamo che il numero $-1$ è soluzione, perché:
 
 $(-1)^2 + 2(-1) + 1 = 1 -2 + 1 = 0$
@@ -23,11 +24,11 @@ Passiamo, invece, a considerare:
 
 $3x + y -2z = 0$
 
-> $\underline{\text{Idea}}$: Soluzione banale con $(0,0,0)$
+**Attenzione**: Soluzione banale con $(0,0,0)$
 
 Risolvere questa equazione significa determinare una (o tutte) le terne di numeri $(x,y,z)$ tali che, se sostituiamo tali numeri alle variabili nel membro sinistro, otteniamo zero.
 
-> $\underline{\text{Osservazione}}$: nella prima equazione ci veniva chiesto di determinare *un numero* , nella seconda ogni sostituzione è costituita da *tre numeri* ; diciamo quindi che la prima equazione è in  *una variabile* , la seconda in *tre variabili*.
+**Osservazione**: nella prima equazione ci veniva chiesto di determinare *un numero* , nella seconda ogni sostituzione è costituita da *tre numeri* ; diciamo quindi che la prima equazione è in  *una variabile* , la seconda in *tre variabili*.
 
 Una prima soluzione è data dalla scelta:  
 
@@ -124,12 +125,11 @@ perché $(1,1,2)$ è soluzione
 
 Considerando quanto abbiamo imparato, troviamo che 
 
-> - A. La terna $(0,0,0)$ è soluzione.
->
-> - B. Che $(\overline{x}, \overline{y}, \overline{z})$ è un particolare soluzione, allora per ogni $\alpha \in \mathbb{R}$ anche $\alpha \cdot (\overline{x}, \overline{y}, \overline{z})$ è soluzione.
-> 
-> - C. Che $(\overline{x}, \overline{y}, \overline{z})$ e $(\hat{x}, \hat{y}, \hat{z})$ sono due soluzioni, allora anche $(\overline{x}, \overline{y}, \overline{z}) + (\hat{x}, \hat{y}, \hat{z}) = (\overline{x} + \hat{x}, \overline{y} + \hat{y}, \overline{z} + \hat{z})$ è soluzione.
+- A. La terna $(0,0,0)$ è soluzione.
 
+- B. Che $(\overline{x}, \overline{y}, \overline{z})$ è un particolare soluzione, allora per ogni $\alpha \in \mathbb{R}$ anche $\alpha \cdot (\overline{x}, \overline{y}, \overline{z})$ è soluzione.
+
+- C. Che $(\overline{x}, \overline{y}, \overline{z})$ e $(\hat{x}, \hat{y}, \hat{z})$ sono due soluzioni, allora anche $(\overline{x}, \overline{y}, \overline{z}) + (\hat{x}, \hat{y}, \hat{z}) = (\overline{x} + \hat{x}, \overline{y} + \hat{y}, \overline{z} + \hat{z})$ è soluzione.
 
 Consideriamo ora il sistema
 
@@ -148,7 +148,7 @@ Le proprietà A, B e C valgono anche in questo caso.
 
 Ora vorrei calcolare le soluzioni di questo sistema. Per farlo usiamo un teorema chiamato "*eliminazione di Gauss*".
 
-> $\underline{\text{Definizione}}$: Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
+**Definizione**: Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
 
 Andremo a manipolare il sistema al fine di trovarne uno equivalente (ovvero con le stesse soluzioni) più semplicemente da risolvere, ovvero nella forma :
 
@@ -305,8 +305,7 @@ Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
 ![Somma di due vettori](./img/somma_vettori.png)
 
-> $\underline{\text{Attenzione!}}$  
-> se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
+**Attenzione**: $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
 
 **Osservazione**: $\overrightarrow{AB} + \overrightarrow{BB} = \overrightarrow{AB}$ e $\overrightarrow{AA} + \overrightarrow{AB} = \overrightarrow{AB}$
 
