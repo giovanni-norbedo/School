@@ -211,5 +211,57 @@ $\mathcal{Q}(x,y) : \text{lo studente x è amico dello studente y.}$
 $\mathcal{Q}(Pietro,Giorgio) : \text{lo studente Pietro è amico dello studente Giorgio.}$  
 è una *proposizione*
 
-$\mathcal{S}(x,y,z) : \text{nell'ospedale x, il medicoy, ha sbagliato la diagnosi z.}$
+$\mathcal{S}(x,y,z) : \text{nell'ospedale x, il medico y, ha sbagliato la diagnosi z.}$
+
+> $\underline{\text{Osservazione}}$: un modo per trasformare predicati in proposizioni è utilizzare i **quantificatori**.
+
+---
+
+### Quantificatori
+
+$\forall$  
+"per ogni"  
+Quantificatore Universale
+
+$\exist$
+"esiste"
+QUantificatore Esistenziale
+
+#### Esempi:
+
+$\forall x, \mathcal{P}(x)$ è una proposizione  
+significa "ogni studente è più alto di 1,7m."
+
+$\exist x, \mathcal{P}(x)$ è una proposizione  
+significa "esiste uno studente più alto di 1,7m."
+
+$\Big(\forall x, \mathcal{Q}(x,y)\Big) = \mathcal{R}(y)$  
+significa "tutti gli studenti sono amici dello studente y"
+
+> $\underline{\text{Idea}}$: la variabile $x$ non è più presente.
+
+$\exists y : \Big(\forall x, \mathcal{Q}(x,y)\Big)$  
+significa "esiste uno studente amico di tutti gli studenti"
+
+$\forall x, \exists y : \mathcal{Q}(x,y)$  
+significa "ogni studente ha almeno un amico"
+
+Voglio tradurre formalmente la frase "in ogni ospedale, esiste almeno un medico che ha sbagliato tutte le diagnosi" 
+
+Quindi scrivo
+
+$\forall x, \exist y : \forall z, \mathcal{S}(x,y,z)$
+
+> $\underline{\text{Osservazione}}$: come posso fare la negazione di una frase con i quantificatori.
+
+Prendiamo  
+
+$\forall x, \mathcal{P}(x)$  
+"ogni studente è più alto di 1,7m."
+
+dobbiamo negarla, perciò "non è vero che ..."
+
+> **ATTENZIONE!**  
+> **NON è vero che**  
+> $\neg \Big(\forall x, \mathcal{P}(x)\Big) \neq \forall x, \neg \mathcal{P}(x)$  
 

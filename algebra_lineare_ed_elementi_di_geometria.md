@@ -2,6 +2,8 @@
 
 ## Introduzione
 
+### Equazioni e Soluzioni
+
 Che cos'è un'equazione? Un'*equazione* è una *domanda*.
 
 $x^2+2x+1=0$
@@ -210,11 +212,154 @@ $(\frac{1}{2} \alpha, \frac{1}{2} \alpha, \alpha) = \alpha \cdot (\frac{1}{2}, \
 
 Se ora, a partite dal sistema iniziale, estraessimo i coefficienti e li ponessimo in una tabella, otterremmo 
 
+$$
+\begin{cases}
+    \begin{align*}
+        3x + 1y - 2z &= 0 \\
+    - 2x - 2y + 2z &= 0 \\  
+        2x + 0y - 1z &= 0
+    \end{align*}
+\end{cases} 
+$$
 
 $$ 
 \begin{bmatrix*}[r]
     3  &  1 & -2 \\
-    -2 & -2 & -2 \\
+    -2 & -2 &  2 \\
     2  &  0 & -1 
 \end{bmatrix*}
 $$
+
+Moltiplico per $- \frac{1}{2}$ la seconda equazione
+
+$$ 
+\begin{bmatrix*}[r]
+    3  &  1 & -2 \\
+    1  &  1 & -1 \\
+    2  &  0 & -1 
+\end{bmatrix*}
+$$
+
+Inverto la prima equazione con la seconda
+
+$$ 
+\begin{bmatrix*}[r]
+    1  &  1 & -1 \\
+    3  &  1 & -2 \\
+    2  &  0 & -1 
+\end{bmatrix*}
+$$
+
+Sottraggo dall'attuale seconda equazione la prima equazione moltiplicata per $3$
+
+$$ 
+\begin{bmatrix*}[r]
+    1  &  1 & -1 \\
+    0  & -2 &  1 \\
+    2  &  0 & -1 
+\end{bmatrix*}
+$$
+
+Sottraggo dalla terza equazione la prima moltiplicata per $2$
+
+$$ 
+\begin{bmatrix*}[r]
+    1  &  1 & -1 \\
+    0  & -2 &  1 \\
+    0  & -2 &  1 
+\end{bmatrix*}
+$$
+
+Sottraggo dalla terza equazione la seconda
+
+$$ 
+\begin{bmatrix*}[r]
+    1  &  1 & -1 \\
+    0  & -2 &  1 \\
+    0  &  0 &  0 
+\end{bmatrix*}
+$$
+
+Sono riuscito a risolvere il sistema.  
+Ho utilizzato una procedura algoritmica (un algoritmo può essere eseguito da un calcolatore).  
+
+---
+
+### Vettori applicati e vettori liberi
+
+Ci mettiamo nel contesto della geometria euclidea.  
+Un vettore ordinato è un segmento orientato, caratterizzato dunque da:
+
+- un punto di applicazione
+- direzione 
+- verso
+- lunghezza (o modulo)
+
+Un vettore applicato è determinato da una coppia ordinata $(A,B)$ di punti, in tal caso il vettore si denota $\overrightarrow{AB}$.
+
+Per ogni punto di applicazione esiste il vettore applicato nullo \overrightarrow{AA}.
+
+Il vettori applicati si possono sommare tra di loro, purché il punto finale del primo coincida con il punto iniziale del secondo, ovvero purché siano della forma $\overrightarrow{AB}$ e $\overrightarrow{AC}$.
+
+Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
+
+INSERISCI IMMAGINE SOMMA VETTORI
+
+> $\underline{\text{Attenzione!}}$  
+> se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
+
+**Osservazione**: $\overrightarrow{AB} + \overrightarrow{BB} = \overrightarrow{AB}$ e $\overrightarrow{AA} + \overrightarrow{AB} = \overrightarrow{AB}$
+
+**Proposizione**: la somma di vettori applicati, quando possibile, soddisfa la proprietà associativa.
+
+Nei numeri reali, la proprietà associativa della somma dice che per ogni $a,b,c \in \mathbb{R}$ vale che  
+
+$$(a+b) + c = a + (b+c)$$
+
+per questo motivo possiamo scrivere $a+b+c$ senza ambiguità.
+
+**Dimostrazione**: dobbiamo dimostrare che per ogni vettore applicato $\overrightarrow{AB}, \overrightarrow{BC}, \overrightarrow{CD}$ vale che
+
+$(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD})$
+
+Ora, vale che
+
+$(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AC} + \overrightarrow{CD} = \overrightarrow{AD}$  
+$\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}$
+
+ISERISCI IMMAGINE GRAFICAMENTE
+
+**Definizione**: dato un vettore applicato AB e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot AB$ in questo modo:
+
+- se $a=0,\ a \cdot \overrightarrow{AB} := \overrightarrow{AA}$
+- se $a>0,\ a \cdot \overrightarrow{AB} :=$ vettore applicato in $A$ con *stessa direzione e stesso verso* di $\overrightarrow{AB}$ e modulo $a \cdot$ [modulo di $\overrightarrow{AB}$] (il modulo di AB si può indicare con |AB| e quindi possiamo scrivere "modulo uguale ad a\*|AB|)
+- se a<0, a\*AB := vettore applicato in A con stessa direzione e verso opposto di AB e modulo uguale ad |a|\*|AB|, (ovvero in questo caso (-a)\*(|AB|)).
+
+Per ottenere una teoria "più comprensiva" introduciamo un nuovo oggetto, i vettori liberi.
+
+**Definizione**: due vettori applicati $\overrightarrow{AB}$ e $\overrightarrow{CD}$ si dicono **equipollenti** se e solo se $\overrightarrow{AB}$ e $\overrightarrow{CD}$ hanno la medesima direzione, il medesimo verso e il medesimo modulo (cambia il PDA).
+
+INSERISCI IMMAGINE AB E CD
+
+Si verifica che quella di equipollenza è una relazione di equivalenza, ovvero essa è riflessiva, simmetrica e transitiva.
+
+Definizione: dato un vettore applicato $\overrightarrow{AB}$, si definisce la sua classe di equipollenza 
+
+$[\overrightarrow{AB}] := \Big\{\text{vettori applicati}\ \overrightarrow{CD}\ \text{tale che}\ \overrightarrow{AB} \equiv \overrightarrow{CD}\Big\}$ 
+
+**Proposizione**: dai risultati della geometria euclidea segue che dato un vettore applicato $\overrightarrow{AB}$ e un punto $C$, allora esiste sempre un vettore applicato $\overrightarrow{CD}$ equipollente ad $\overrightarrow{AB}$;  
+da questo segue che data una classe di equipollenza, denotato $\vec{v}$ e dato un punto $C$ nel piano, esiste dunque un vettore applicato che appartiene a $\vec{v}$ e che ha $\overrightarrow{CP}$,e punto iniziale $C$. ???
+
+**Osservazione**: se $\overrightarrow{AB} \equiv \overrightarrow{CD}$ allora $[\overrightarrow{AB}] = [\overrightarrow{AB}]$; si dice che $\overrightarrow{AB}$ e $\overrightarrow{CD}$ sono dei **rappresentativi** della medesima classe di equipollenza.
+
+**Definizione**: una classe di equipollenza $\vec{v}$ di vettori applicati si dice vettore libero.
+
+**Osservazione**: tutti i vettori applicati nulli sono equipollenti e dunque formano una sola classe di equipollenza che denotiamo $\overrightarrow{O}$.
+
+**Definizione**: dati due vettori liberi $\vec{u}$ e $\vec{v}$ definiamo la loro somma $\vec{u} + \vec{v}$ nella maniera seguente:
+
+1. scegliamo un rappresentante $\overrightarrow{AB}$ per $\vec{u}$, ovvero $\vec{u} = [\overrightarrow{AB}]$
+2. per la proposizione che abbiamo enunciato prima, possiamo scegliere un vettore applicato un $\vec{v}$ tale che il suo punto iniziale sia &B&, ovvero un vettore $\overrightarrow{BC} \in \vec{v}$, ovvero $\vec{v} = [\overrightarrow{BC}]$
+3. definiamo $\vec{u} + \vec{v} := [\overrightarrow{AB} + \overrightarrow{BC}]\ (=[\overrightarrow{AC}])$
+
+Questa costruzione è indipendente dalla scelta del rappresentante di $\vec{u}$.
