@@ -303,7 +303,7 @@ Il vettori applicati si possono sommare tra di loro, purché il punto finale del
 
 Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
-![Somma di due vettori](/somma_vettori.drawio.png)
+![Somma di due vettori](./img/somma_vettori.png)
 
 > $\underline{\text{Attenzione!}}$  
 > se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
@@ -327,7 +327,7 @@ Ora, vale che
 $(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AC} + \overrightarrow{CD} = \overrightarrow{AD}$  
 $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}$
 
-![Proprietà associativa dei vettori](proprietà_associativa_dei_vettori.png)
+![Proprietà associativa dei vettori](./img/proprietà_associativa_dei_vettori.png)
 
 **Definizione**: dato un vettore applicato AB e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot AB$ in questo modo:
 
@@ -338,8 +338,6 @@ $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrighta
 Per ottenere una teoria "più comprensiva" introduciamo un nuovo oggetto, i vettori liberi.
 
 **Definizione**: due vettori applicati $\overrightarrow{AB}$ e $\overrightarrow{CD}$ si dicono **equipollenti** se e solo se $\overrightarrow{AB}$ e $\overrightarrow{CD}$ hanno la medesima direzione, il medesimo verso e il medesimo modulo (cambia il PDA).
-
-INSERISCI IMMAGINE AB E CD
 
 Si verifica che quella di equipollenza è una relazione di equivalenza, ovvero essa è riflessiva, simmetrica e transitiva.
 
