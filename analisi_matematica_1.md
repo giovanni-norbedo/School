@@ -223,7 +223,7 @@ $\forall$
 "per ogni"  
 Quantificatore Universale
 
-$\exist$
+$\exists$
 "esiste"
 QUantificatore Esistenziale
 
@@ -232,7 +232,7 @@ QUantificatore Esistenziale
 $\forall x, \mathcal{P}(x)$ è una proposizione  
 significa "ogni studente è più alto di 1,7m."
 
-$\exist x, \mathcal{P}(x)$ è una proposizione  
+$\exists x, \mathcal{P}(x)$ è una proposizione  
 significa "esiste uno studente più alto di 1,7m."
 
 $\Big(\forall x, \mathcal{Q}(x,y)\Big) = \mathcal{R}(y)$  
@@ -250,7 +250,7 @@ Voglio tradurre formalmente la frase "in ogni ospedale, esiste almeno un medico 
 
 Quindi scrivo
 
-$\forall x, \exist y : \forall z, \mathcal{S}(x,y,z)$
+$\forall x, \exists y : \forall z, \mathcal{S}(x,y,z)$
 
 > $\underline{\text{Osservazione}}$: come posso fare la negazione di una frase con i quantificatori.
 
