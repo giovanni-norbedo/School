@@ -1,6 +1,6 @@
 # Analisi Matematica 1
 
-## Linguaggio formale  
+## Prerequisiti
 
 ### Proposizioni
 
@@ -9,8 +9,8 @@ $p,\ q,\ r,\ \dots$
 Una proposizione è una parte del discorso a cui si può assegnare un valore di verità o di falsità $(V, F)$.
 
 > Esempio:   
-> $p: Giorgio\ è\ più\ alto\ di\ 1,80m \rightarrow V$  
-> $q: Roma\ è\ la\ capitale\ della\ Francia \rightarrow F$   
+> $p: \text{Giorgio è più alto di 1,80m.} \rightarrow V$  
+> $q: \text{Roma è la capitale della Francia.} \rightarrow F$   
 
 ---
 
@@ -73,7 +73,7 @@ $p \vee q$
 
 ### Implicazione (materiale)
 
-> Abbiamo usato il simbolo $\Rightarrow$ (implicazione logica) invece del simbolo $\rightarrow$ (implicazione materiale).  
+> Abbiamo usato il simbolo $\Rightarrow$ (implicazione logica) invece del simbolo $\rightarrow$ (implicazione materiale). ???  
 > [Materiale vs Logica](https://www.youmath.it/domande-a-risposte/view/6992-implicazione-matematica.html)
 
 $p \Rightarrow q$  
@@ -89,9 +89,9 @@ $p \Rightarrow q$
 > Esempio:  
 > $p : piove$  
 > $q : prendo\ l'ombrello$  
-> $p \Rightarrow q : se\ piove\ allora\ prendo\ l'ombrello$
+> $p \Rightarrow q : \text{se piove allora prendo l'ombrello.}$
 
-INSERISCI LA DIMOSTRAZIONE DELLA NEGAZIONE CON ESEMPI
+INSERISCI LA DIMOSTRAZIONE DELLA NEGAZIONE CON ESEMPIO DEL LIMITE
 
 ### Doppia implicazione
 
@@ -99,8 +99,8 @@ $p \Leftrightarrow q$
 **"p è equivalente a q"** oppure **"p se e solo se q"**
 
 > Esempio:  
-> $p : in\ un\ triangolo, 2\ lati\ sono\ uguali$  
-> $q : in\ un\ triangolo, 2\ angoli\ sono\ uguali$  
+> $p : \text{in un triangolo, 2 lati sono uguali.}$  
+> $q : \text{in un triangolo, 2 angoli sono uguali.}$  
 > $p \Leftrightarrow q$
 
 | $p$ | $q$ | $p \Leftrightarrow q$ |
@@ -116,8 +116,6 @@ $p \Leftrightarrow q$
 
 Una tautologia è una proposizione (composta) che è sempre vera.
 
----
-
 #### tertium non datur  
 
 $p \vee \neg p$  
@@ -128,7 +126,6 @@ $p \vee \neg p$
 | V   |    F     |        V        |
 | F   |    V     |        V        |
 | F   |    V     |        V        |
----
 
 #### non contradditio  
 
@@ -141,8 +138,6 @@ $\neg(p \wedge \neg p)$
 | F   |    V     |         F         |            V            |
 | F   |    V     |         F         |            V            |
 
----
-
 #### modus ponens  
 
 $(p \wedge (p \Rightarrow q)) \Rightarrow p$  
@@ -153,8 +148,6 @@ $(p \wedge (p \Rightarrow q)) \Rightarrow p$
 | V   | F   |         F         |              F               |                      V                       |
 | F   | V   |         V         |              F               |                      V                       |
 | F   | F   |         V         |              F               |                      V                       |
-
----
 
 #### modus tollens  
 
@@ -167,24 +160,20 @@ $(\neg q \wedge (p \Rightarrow q)) \Rightarrow \neg p$
 | F   | V   |    V     |    F     |         V         |                 F                 |                           V                            |
 | F   | F   |    V     |    V     |         V         |                 V                 |                           V                            |
 
----
-
 #### reductio ad absurdum
 
 $\Big((p \wedge \neg q) \Rightarrow (r \wedge \neg r)\Big) \Leftrightarrow (p \Rightarrow q)$  
 
-| $p$ | $q$ | $r$ | $\neg q$ | $\neg 2$ |       |       |
-| --- | --- | --- | :------: | :------: | :---: | :---: |
-| V   | V   | V   |    F     |    V     |   F   |   V   |
-| V   | V   | F   |    F     |    F     |   F   |   V   |
-| V   | F   | V   |    V     |    V     |   F   |   V   |
-| V   | F   | F   |    V     |    V     |   V   |   V   |
-| F   | V   | V   |    F     |
-| F   | V   | F   |    F     |
-| F   | F   | V   |    V     |
-| F   | F   | F   |    V     |
-
----
+| $p$ | $q$ | $r$ | $\neg q$ | $\neg r$ | $p \wedge \neg q$ | $r \wedge \neg r$ | $\Big((p \wedge \neg q) \Rightarrow (r \wedge \neg r)\Big)$ | $p \Rightarrow q$ |
+| --- | --- | --- | :------: | :------: | :---------------: | :---------------: | :---------------------------------------------------------: | :---------------: |
+| V   | V   | V   |    F     |    F     |         F         |         F         |                            **V**                            |       **V**       |
+| V   | V   | F   |    F     |    V     |         F         |         F         |                            **V**                            |       **V**       |
+| V   | F   | V   |    V     |    F     |         V         |         F         |                            **F**                            |       **F**       |
+| V   | F   | F   |    V     |    V     |         V         |         F         |                            **F**                            |       **F**       |
+| F   | V   | V   |    F     |    F     |         F         |         F         |                            **V**                            |       **V**       |
+| F   | V   | F   |    F     |    V     |         F         |         F         |                            **V**                            |       **V**       |
+| F   | F   | V   |    V     |    F     |         F         |         F         |                            **V**                            |       **V**       |
+| F   | F   | F   |    V     |    V     |         F         |         F         |                            **V**                            |       **V**       |
 
 ### Legge di De Morgan
 
@@ -198,13 +187,29 @@ $\neg (p \vee q) = \neg p \wedge \neg q$
 | F   | V   |      F       |        **V**        |    V     |    F     |        **V**         |
 | F   | F   |      F       |        **V**        |    V     |    V     |        **V**         |
 
---- 
+---
 
 ### Predicati
 
 "parte del nostro discorso che contenda una o più variabili"
 
-> Esempio:  
-> $P(X) : lo\ studente\ x\ è\ più\ alto\ di\ 1,7m.$   
-> è un predicato
+- UNARIO (1 variabile): $\mathcal{P}(x)$
+- BINARIO (2 variabili): $\mathcal{Q}(x,y)$
+- TERZIARIO (3 variabili): $\mathcal{S}(x,y,z)$
+
+#### Esempi:  
+ 
+$\mathcal{P}(x) : \text{lo studente x è più alto di 1,7m.}$   
+è un *predicato*
+
+$\mathcal{P}(Pietro) = \text{Pietro è più alto di 1,7m.}$  
+è una *proposizione*
+
+$\mathcal{Q}(x,y) : \text{lo studente x è amico dello studente y.}$  
+è un *predicato*
+
+$\mathcal{Q}(Pietro,Giorgio) : \text{lo studente Pietro è amico dello studente Giorgio.}$  
+è una *proposizione*
+
+$\mathcal{S}(x,y,z) : \text{nell'ospedale x, il medicoy, ha sbagliato la diagnosi z.}$
 
