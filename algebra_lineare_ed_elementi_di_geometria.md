@@ -342,7 +342,7 @@ Si verifica che quella di equipollenza è una relazione di equivalenza, ovvero e
 
 **Definizione**: dato un vettore applicato $\overrightarrow{AB}$, si definisce la sua classe di equipollenza.
 
-$[\overrightarrow{AB}] := \Big \{\text{vettori applicati}\ \overrightarrow{CD}\ \text{tale che}\ \overrightarrow{AB} \equiv \overrightarrow{CD}\Big \}$ 
+$[\overrightarrow{AB}] :=$ $\Big\{$ $\text{vettori applicati}\ \overrightarrow{CD}\ \text{tale che}\ \overrightarrow{AB} \equiv \overrightarrow{CD}$ $\Big\}$ 
 
 **Proposizione**: dai risultati della geometria euclidea segue che dato un vettore applicato $\overrightarrow{AB}$ e un punto $C$, allora esiste sempre un vettore applicato $\overrightarrow{CD}$ equipollente ad $\overrightarrow{AB}$;  
 da questo segue che data una classe di equipollenza, denotato $\vec{v}$ e dato un punto $C$ nel piano, esiste dunque un vettore applicato che appartiene a $\vec{v}$ e che ha $\overrightarrow{CP}$,e punto iniziale $C$. ???
