@@ -328,11 +328,11 @@ $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrighta
 
 ![Proprietà associativa dei vettori](./img/proprietà_associativa_dei_vettori.png)
 
-**Definizione**: dato un vettore applicato AB e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot AB$ in questo modo:
+**Definizione**: dato un vettore applicato $\overrightarrow{AB}$ e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot \overrightarrow{AB}$ in questo modo:
 
 - se $a=0,\ a \cdot \overrightarrow{AB} := \overrightarrow{AA}$
-- se $a>0,\ a \cdot \overrightarrow{AB} :=$ vettore applicato in $A$ con *stessa direzione e stesso verso* di $\overrightarrow{AB}$ e modulo $a \cdot$ [modulo di $\overrightarrow{AB}$] (il modulo di AB si può indicare con |AB| e quindi possiamo scrivere "modulo uguale ad a\*|AB|)
-- se a<0, a\*AB := vettore applicato in A con stessa direzione e verso opposto di AB e modulo uguale ad |a|\*|AB|, (ovvero in questo caso (-a)\*(|AB|)).
+- se $a>0,\ a \cdot \overrightarrow{AB} :=$ vettore applicato in $A$ con *stessa direzione e stesso verso* di $\overrightarrow{AB}$ e modulo $a \cdot$ [modulo di $\overrightarrow{AB}$] (il modulo di $\overrightarrow{AB}$ si può indicare con $|\overrightarrow{AB}|$ e quindi possiamo scrivere "modulo uguale ad a $\cdot |\overrightarrow{AB}|$)
+- se $a<0, a \cdot \overrightarrow{AB} :=$ vettore applicato in $A$ con stessa direzione e verso opposto di $\overrightarrow{AB}$ e modulo uguale ad $|a| \cdot |\overrightarrow{AB}|$, (ovvero in questo caso $(-a) \cdot (|\overrightarrow{AB}|)$).
 
 Per ottenere una teoria "più comprensiva" introduciamo un nuovo oggetto, i vettori liberi.
 
