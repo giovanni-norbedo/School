@@ -9,8 +9,8 @@ $p,\ q,\ r,\ \dots$
 Una proposizione è una parte del discorso a cui si può assegnare un valore di verità o di falsità $(V, F)$.
 
 #### Esempio:   
-$p: \text{Giorgio è più alto di 1,80m.} \rightarrow V$  
-$q: \text{Roma è la capitale della Francia.} \rightarrow F$   
+$p:$ Giorgio è più alto di 1,80m. $\rightarrow V$  
+$q:$ Roma è la capitale della Francia. $\rightarrow F$   
 
 ---
 
@@ -84,9 +84,9 @@ $p \Rightarrow q$
 | F   | F   |         V         |
 
 #### Esempi:  
-$p : piove$  
-$q : prendo\ l'ombrello$  
-$p \Rightarrow q : \text{se piove allora prendo l'ombrello.}$
+$p :$ piove.  
+$q :$ prendo l'ombrello.  
+$p \Rightarrow q :$ se piove allora prendo l'ombrello.
 
 Voglio negarlo, quindi
 
@@ -108,22 +108,6 @@ per De Morgan
 Trovando che
 
 $\neg (\neg p \vee q) = p \wedge \neg q$
-
-#### Esempio con la definizione di limite
-
-$\lim\limits_{x \to x_o} f(x) = l$  
-$x_0, l \in \mathbb{R}$  
-
-$\forall \varepsilon > 0, \exists \delta > 0 : \forall x,\ \neg(0 < |x-x_0| < \delta) \Rightarrow |f(x)-l| < \varepsilon$  
-
-Poiché 
-
-$\neg(p \Rightarrow q) = p \wedge \neg q$
-
-allora 
-
-$0 < |x-x_0| < \delta \wedge |f(x)-l| > \varepsilon$
- 
 
 ### Doppia implicazione
 
@@ -239,6 +223,7 @@ $\neg (p \vee q) = \neg p \wedge \neg q$
 - UNARIO (1 variabile): $\mathcal{P}(x)$
 - BINARIO (2 variabili): $\mathcal{Q}(x,y)$
 - TERZIARIO (3 variabili): $\mathcal{S}(x,y,z)$
+- $\dots$
 
 #### Esempi:  
  
@@ -256,7 +241,7 @@ $\mathcal{Q}(Pietro,Giorgio) : \text{lo studente Pietro è amico dello studente 
 
 $\mathcal{S}(x,y,z) : \text{nell'ospedale x, il medico y, ha sbagliato la diagnosi z.}$
 
-> $\underline{\text{Osservazione}}$: un modo per trasformare predicati in proposizioni è utilizzare i **quantificatori**.
+**Osservazione**: un modo per trasformare predicati in proposizioni è utilizzare i **quantificatori**.
 
 ---
 
@@ -295,25 +280,28 @@ Quindi scrivo
 
 $\forall x, \exists y : \forall z, \mathcal{S}(x,y,z)$
 
-> $\underline{\text{Osservazione}}$: come posso fare la negazione di una frase con i quantificatori.
+#### Negazione di proposizioni con i quantificatori
 
-Prendiamo  
+**Osservazione**: come posso fare la negazione di una frase con i quantificatori.
+
+**Importante**  
+Per negare una proposizione con i quantificatori, occorre sostituire il *quantificatore esistenziale* con il *quantificatore universale* e viceversa, quindi la negazione si distribuisce all'interno, quindi:
+
+- $\neg \Big(\exists x : \mathcal{P}(x)\Big)$ diventa $\forall x, \neg \Big(\mathcal{P}(x)\Big)$  
+- $\neg \Big(\forall x, \mathcal{P}(x)\Big)$ diventa $\exists x: \neg \Big(\mathcal{P}(x)\Big)$  
+
+Per esempio, prendiamo  
 
 $\forall x, \mathcal{P}(x)$  
 "ogni studente è più alto di 1,7m."
 
 dobbiamo negarla, perciò "non è vero che ..."
 
-> **ATTENZIONE!**  
-> **NON è vero che**  
-> $\neg \Big(\forall x, \mathcal{P}(x)\Big) \neq \forall x, \neg \mathcal{P}(x)$  
-> poiché sarebbe
-> "ogni studente non è più alto di 1,7m."
-
-#### Negazione di proposizioni con i quantificatori
-
-"i due quantificatori si invertono e la negazione passa all'interno"  
-MEGLIO?
+**ATTENZIONE!**  
+**NON è vero che**  
+$\neg \Big(\forall x, \mathcal{P}(x)\Big) \neq \forall x, \neg \mathcal{P}(x)$  
+poiché sarebbe
+"ogni studente non è più alto di 1,7m."
 
 #### Esempi:
 
@@ -342,17 +330,35 @@ $= \exists x : \forall y, \exists z : \neg \mathcal{S}(x,y,z)$
 
 #### Esempio con la definizione di limite
 
-INSERISCI ESEMPIO LIMITE
+$\lim\limits_{x \to x_o} f(x) = l$  
+$x_0, l \in \mathbb{R}$  
 
+$\forall \varepsilon > 0, \exists \delta > 0 : \forall x \in \mathbb{E},$  
+$0 < |x-x_0| < \delta \Rightarrow |f(x)-l| < \varepsilon$  
+
+Modificando correttamente i quantificatori, la sua negazione è
+
+$\exists \varepsilon > 0 : \forall \delta > 0, \exists x \in \mathbb{E} :$  
+$\neg (0 < |x-x_0| < \delta \Rightarrow |f(x)-l| < \varepsilon)$  
+
+Poiché prima abbiamo visto che 
+
+$\neg(p \Rightarrow q) = p \wedge \neg q$
+
+allora la negazione diventa
+
+$\exists \varepsilon > 0 : \forall \delta > 0, \exists x \in \mathbb{E} :$  
+$0 < |x-x_0| < \delta \wedge |f(x)-l| \geq \varepsilon$
+ 
 ---
 
 ### Insiemistica
 
 **insieme** (nozione primitiva) : aggregazione, famiglia, groppo (di solito con qualche caratteristica comune) di **elementi**.
 
-> **Attenzione!**  
-> Gli insiemi sono caratterizzati dai solo elementi. ???  
-> Due insiemi sono uguali se hanno gli stessi elementi.
+**Attenzione**  
+Gli insiemi sono caratterizzati dai soli elementi.   
+Due insiemi sono uguali se hanno gli stessi elementi.  
 
 L'ordine non conta: $A = \{a,b,c\} = \{c,a,b\}$
 
@@ -382,6 +388,8 @@ $U$ è l'insieme universo
 $A$ è l'insieme  
 
 $\mathscr{C}_U A = \{x \in U : x \notin U\} = \{x \in U : \neg (x \in U)\}$ 
+
+> L'insieme complemento si può scrivere anche $\overline{A}$.
 
 #### Intersezione
 
