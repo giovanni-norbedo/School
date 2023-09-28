@@ -435,7 +435,13 @@ $\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \
 Tutti i sottoinsiemi si dicono **propri**, tranne l'insieme $\{a,b,c\}$, detto **improprio**.
 
 #### Il numero di elementi di $\mathcal{P}(A)$ è $2^n$
+
 $|\mathcal{P}(A)| = 2^n$
+
+con
+
+
+$|A| =$ numero di elementi in $A$
 
 Per esempio, se prendiamo l'insieme $A = \{a,b,c,d,e,f\}$,  
 possiamo rappresentare il sottoinsieme $S = \{a,d,e\}$ così: 
@@ -446,4 +452,16 @@ possiamo rappresentare il sottoinsieme $S = \{a,d,e\}$ così:
 
 Dove inserisco $1$ se l'elemento è presente o $0$ se è assente.  
 
+Un altro esempio è  
+$\emptyset = \{\}$  corrisponde a $(0,0,0,0,0,0)$
+
 In questo modo, vediamo che tutte le possibilità sono rappresentabili da un numero binario di lunghezza $|A|$, quindi $2^n$ in decimale.  
+
+---
+
+### Coppie ordinate
+
+Una *coppia ordinata* è un aggregato con due elementi in cui si distingue il primo elemento e il secondo elemento.  
+
+$(a,b) = \{a,b\}$  
+
