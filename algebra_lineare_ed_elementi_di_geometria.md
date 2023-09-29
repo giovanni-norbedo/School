@@ -303,7 +303,7 @@ Il vettori applicati si possono sommare tra di loro, purché il punto finale del
 
 Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
-![Somma di due vettori](./img/somma_vettori.png)
+![somma di due vettori](./img/somma_vettori.png)
 
 **Attenzione**: $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
 
@@ -326,7 +326,7 @@ Ora, vale che
 $(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AC} + \overrightarrow{CD} = \overrightarrow{AD}$  
 $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}$
 
-![Proprietà associativa dei vettori](./img/proprietà_associativa_dei_vettori.png)
+![proprietà associativa dei vettori](./img/proprietà_associativa_dei_vettori.png)
 
 **Definizione**: dato un vettore applicato $\overrightarrow{AB}$ e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot \overrightarrow{AB}$ in questo modo:
 

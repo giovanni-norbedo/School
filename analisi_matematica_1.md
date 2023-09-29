@@ -459,9 +459,137 @@ In questo modo, vediamo che tutte le possibilità sono rappresentabili da un num
 
 ---
 
-### Coppie ordinate
+### Coppie ordinate e prodotto cartesiano
 
 Una *coppia ordinata* è un aggregato con due elementi in cui si distingue il primo elemento e il secondo elemento.  
 
-$(a,b) = \{a,b\}$  
+$(a,b) \neq \{a,b\}$  
+
+$\{a,b\} = \{b,a\}$  
+
+$(a,b) = (a',b') \Leftrightarrow a=a', b=b'$
+
+$(a,b) \neq (b,a)$  
+a meno che $a=b$
+
+**Definizione**:  
+siano $A,B$ insiemi,  
+$A \times B = \{(a,b) : a \in A, b\in B \}$  
+è detto insieme *prodotto cartesiano di $A$ e $B$*.
+
+Anche il *piano cartesiano* è un prodotto cartesiano
+
+$\Pi = \{(a,b) : a \in \mathbb{R}, b \in \mathbb{R}\}$
+
+in questo caso $A=B=\mathbb{R}$, quindi
+
+$\mathbb{R} \times \mathbb{R} = \mathbb{R}^2$
+
+![grafico piano cartesiano come prodotto cartesiano](img/grafico_piano_cartesiano_come_prodotto_cartesiano.png)
+
+Similmente
+
+$A \times B \times C = \{(a,b,c) : a \in A, b \in B, c \in C\}$
+
+$\mathbb{R}^3 = \{(x,y,a) : x,y,z \in \mathbb{R}\}$  
+nello spazio a tre dimensioni
+
+$\mathbb{R}^n = \{(x_1,x_2,x_3, \dots, x_n) : x_1,x_2,x_3, \dots, x_n \in \mathbb{R}\}$  
+n-upla, tupla ordinata (vettore)
+
+$A = \{a_1,a_2,a_3,a_4,a_5\}$  
+$B = \{b_1,b_2,b_3,b_4\}$
+
+$A \times B = \{(a_i,b_j) : i = (1,2,3,4,5),\ j = (1,2,3,4)\}$  
+
+![esempio prodotto cartesiano tra A e B](img/esempio_prodotto_cartesiano_tra_A_e_B.png)
+
+**Osservazione**:  
+numeri divisibili per $3 = \{n \in \mathbb{N} : \exists k \in \mathbb{N} : (n = 3k)\} = \{n \in \mathbb{N} : \mathcal{P}(n)\}$  
+con $\mathcal{P}(n) = \exists k \in \mathbb{N} : (n = 3k)$  
+la variabile $k$, preceduta dal quantificatore esistenziale, è **muta**.
+
+I predicati binari sono quelli giusti per i prodotti cartesiani.
+
+Indicando in $A \times B$ l'insieme delle coppie che soddisfano $\mathcal{P}(x,y) \rightarrow$ *predicato binario*  
+
+#### Esempio
+
+$A = \{$ragazzi in quest'aula$\}$  
+$B = \{$ragazze in quest'aula$\}$
+
+$\mathcal{P}(x) :$ $x$ è amico di $y$  
+*Relazione* di "amicizia" tra due insiemi
+
+![relazione di amicizia](img/relazione_di_amicizia.png)
+
+### Relazione tra due insiemi
+
+**Definizione**: 
+*Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
+(se $A=B$, parliamo di relazione su $A$)
+
+#### Esempio
+
+$A = \mathbb{N} \setminus \{0\} = \{1,2,3, \dots\}$  
+
+Decidiamo che $n | m$ significa "n divide m", introducendo la relazione "$|$ divide".
+
+Per esempio, 3 divide 12, ma 3 non divide 5, poiché $\nexists k \in \mathbb{Z} : 3k=5$.
+
+#### Grafico della relazione
+
+![grafico relazione divide](img/grafico_relazione_divide.png)
+
+#### Esempio
+
+$A = \mathbb{Z} = \{\dots,-3,-2,-1,0,1,2,3,\dots\}$  
+$m = 3$ (è il modulo in base 3)
+
+$x$ è in relazione con $y$  
+se $\exists k \in \mathbb{Z} : x-y=3k$  
+
+cioè 2 numeri sono in relazione se la loro differenza è un multiplo di 3.
+
+Si chiama **congruenza modulo 3**, indicata con $m \equiv_3 n$.
+
+![grafico relazione congruenza modulo 3](img/grafico_relazione_congruenza_modulo_3.png)
+
+**Definizione**:
+Sia $A$ un insieme, sia $\rho$ una relazione su $A$,
+
+allora $x \rho y$
+
+- si dice **riflessiva** se $\forall x \in A, x \rho x$
+- si dice **simmetrica** se $\forall x,y \in A, x \rho y \Rightarrow y \rho x$
+- si dice **transitiva** se $\forall x,y,z \in A, x \rho y \wedge y \rho z \Rightarrow x \rho z$
+
+#### Esempio
+
+La relazione divide è transitiva:
+
+$x|y \wedge y|z \xRightarrow{?} x|z$
+
+$x|y \Leftrightarrow \exists k_1 : y = k_1 \cdot x$  
+$y|z \Leftrightarrow \exists k_2 : z = k_2 \cdot y = k_2 \cdot (k_1 \cdot x) =$
+
+$x|z$ quindi è vero perché, se $k_3 = k_1 \cdot k_2$ allora $z = k_3 \cdot x$.  
+
+$\square$  
+
+La relazione congruenza modulo m è transitiva:
+
+$x,y,z \in \mathbb{Z}$
+
+$x \equiv_m y \wedge y \equiv_m z \xRightarrow{?} x \equiv_m z$
+
+$\exists k_1 \in \mathbb{Z} : x-y= k_1 \cdot m$  
+$\exists k_2 \in \mathbb{Z} : y-z= k_2 \cdot m$  
+
+
+$x \equiv_m z$ quindi è vero perché se $k_3 = k_1 \cdot k_2$ allora $x-z = k_1 \cdot m + k_2 \cdot m = (k_1 + k_2)m = k_3 \cdot m$.  
+
+$\square$  
+
+
 
