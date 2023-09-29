@@ -266,7 +266,7 @@ significa "esiste uno studente più alto di 1,7m."
 $\Big(\forall x, \mathcal{Q}(x,y)\Big) = \mathcal{R}(y)$  
 significa "tutti gli studenti sono amici dello studente y."
 
-> $\underline{\text{Idea}}$: la variabile $x$ non è più presente.
+**Idea**: la variabile $x$ non è più presente.
 
 $\exists y : \Big(\forall x, \mathcal{Q}(x,y)\Big)$  
 significa "esiste uno studente amico di tutti gli studenti."
