@@ -19,4 +19,3 @@
 **Variabile**: un nome associato ad un valore, *modificabile*.
 
 **Stato**: un insieme di variabili che descrivono *qualcosa che mi interessa*.
-
