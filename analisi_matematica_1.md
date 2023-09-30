@@ -591,5 +591,8 @@ $x \equiv_m z$ quindi è vero perché se $k_3 = k_1 \cdot k_2$ allora $x-z = k_1
 
 $\square$  
 
+**Definizione**:
 
+$A$ insieme, $\rho$ relazione
 
+$\rho$ si dice **antisimmetrica** se  

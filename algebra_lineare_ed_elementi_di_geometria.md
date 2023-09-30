@@ -48,7 +48,7 @@ $3 \cdot 1 + 1 \cdot 1 - 2 \cdot 2 = 3 + 1 -4 = 0$
 
 Similmente, anche
 
-0, 2, 1
+$(0, 2, 1)$
 
 è soluzione, perché
 
@@ -118,8 +118,8 @@ $(1,3,3) = (1,1,2) + (0,2,1)$
 
 Ora calcoliamo
 
-$3 \cdot 1 + 1 \cdot 3 - 2 \cdot 3 = 3 \cdot (1+0) + 1  \cdot (1+2) -2 \cdot (2+1)$  
-$= (3 \cdot 1 + 1 \cdot 1 -2 \cdot 2) + (3 \cdot 0 + 1 \cdot 2 -2 \cdot 1)$  
+$3 \cdot 1 + 1 \cdot 3 - 2 \cdot 3 = 3 \cdot (1+0) + 1  \cdot (1+2) -2 \cdot (2+1) =$  
+$= (3 \cdot 1 + 1 \cdot 1 -2 \cdot 2) + (3 \cdot 0 + 1 \cdot 2 -2 \cdot 1) =$  
 $= 0$  
 perché $(1,1,2)$ è soluzione
 
@@ -146,9 +146,25 @@ $$
 
 Le proprietà A, B e C valgono anche in questo caso.
 
-Ora vorrei calcolare le soluzioni di questo sistema. Per farlo usiamo un teorema chiamato "*eliminazione di Gauss*".
+Ora vorrei calcolare le soluzioni di questo sistema. Per farlo usiamo un teorema chiamato "*eliminazione di Gauss*" o "*eliminazione gaussiana*".
 
-**Definizione**: Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
+> **AGGIUNTO**:
+>
+> **Definizione**:  
+> L'**eliminazione gaussiana** è un metodo matematico algoritmico utilizzato per trasformare una matrice in una *matrice a scalini* o *matrice a scala*, semplificando così la risoluzione dei sistemi di equazioni lineari.
+>
+> [Wikipedia](https://it.wikipedia.org/wiki/Metodo_di_eliminazione_di_Gauss) | [YouMath](https://www.youmath.it/lezioni/algebra-lineare/matrici-e-vettori/831-eliminazione-di-gauss.html)
+>
+> **Esercizio**: data una matrice, ridurla in una matrice a scalini utilizzando il metodo di Gauss.
+>
+> **Definizione**:  
+> Una **matrice a scalini** è una matrice $A$ avente le proprietà seguenti:
+>
+> - ogni riga, dopo la prima, inizia con almeno uno 0 in più della riga soprastante;
+> - se una riga è nulla, allora ogni riga sottostante è nulla.
+
+**Definizione**:  
+Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.*
 
 Andremo a manipolare il sistema al fine di trovarne uno equivalente (ovvero con le stesse soluzioni) più semplicemente da risolvere, ovvero nella forma :
 
@@ -288,16 +304,16 @@ Ho utilizzato una procedura algoritmica (un algoritmo può essere eseguito da un
 ### Vettori applicati e vettori liberi
 
 Ci mettiamo nel contesto della geometria euclidea.  
-Un vettore ordinato è un segmento orientato, caratterizzato dunque da:
+Un **vettore applicato** è un segmento orientato, caratterizzato dunque da:
 
-- un punto di applicazione
-- direzione 
-- verso
-- lunghezza (o modulo)
+- un **punto di applicazione** (PDA)
+- una **direzione**
+- un **verso**
+- una **lunghezza** (o modulo)
 
-Un vettore applicato è determinato da una coppia ordinata $(A,B)$ di punti, in tal caso il vettore si denota $\overrightarrow{AB}$.
+Un **vettore applicato** è determinato da una coppia ordinata $(A,B)$ di punti, in tal caso il vettore si denota $\overrightarrow{AB}$.
 
-Per ogni punto di applicazione esiste il vettore applicato nullo \overrightarrow{AA}.
+Per ogni punto di applicazione esiste il vettore applicato nullo $\overrightarrow{AA}$.
 
 Il vettori applicati si possono sommare tra di loro, purché il punto finale del primo coincida con il punto iniziale del secondo, ovvero purché siano della forma $\overrightarrow{AB}$ e $\overrightarrow{AC}$.
 
@@ -305,11 +321,11 @@ Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
 ![somma di due vettori](./img/somma_vettori.png)
 
-**Attenzione**: $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
+**Attenzione**: se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
 
 **Osservazione**: $\overrightarrow{AB} + \overrightarrow{BB} = \overrightarrow{AB}$ e $\overrightarrow{AA} + \overrightarrow{AB} = \overrightarrow{AB}$
 
-**Proposizione**: la somma di vettori applicati, quando possibile, soddisfa la proprietà associativa.
+**Proposizione**: la somma di vettori applicati, quando è possibile eseguirla, soddisfa la proprietà associativa.
 
 Nei numeri reali, la proprietà associativa della somma dice che per ogni $a,b,c \in \mathbb{R}$ vale che  
 
@@ -345,18 +361,19 @@ Si verifica che quella di equipollenza è una relazione di equivalenza, ovvero e
 $[\overrightarrow{AB}] := \{\text{vettori applicati}\ \overrightarrow{CD}\ \text{tale che}\ \overrightarrow{AB} \equiv \overrightarrow{CD}\}$ 
 
 **Proposizione**: dai risultati della geometria euclidea segue che dato un vettore applicato $\overrightarrow{AB}$ e un punto $C$, allora esiste sempre un vettore applicato $\overrightarrow{CD}$ equipollente ad $\overrightarrow{AB}$;  
-da questo segue che data una classe di equipollenza, denotato $\vec{v}$ e dato un punto $C$ nel piano, esiste dunque un vettore applicato che appartiene a $\vec{v}$ e che ha $\overrightarrow{CP}$,e punto iniziale $C$. ???
+
+da questo segue che data una classe di equipollenza denotata $\vec{V}$, e dato un punto $C$ nel piano, esiste dunque un vettore applicato che appartiene a $\vec{V}$ e che ha punto iniziale $C$.
 
 **Osservazione**: se $\overrightarrow{AB} \equiv \overrightarrow{CD}$ allora $[\overrightarrow{AB}] = [\overrightarrow{AB}]$; si dice che $\overrightarrow{AB}$ e $\overrightarrow{CD}$ sono dei **rappresentativi** della medesima classe di equipollenza.
 
-**Definizione**: una classe di equipollenza $\vec{v}$ di vettori applicati si dice vettore libero.
+**Definizione**: una classe di equipollenza $\vec{V}$ di vettori applicati si dice **vettore libero**.
 
 **Osservazione**: tutti i vettori applicati nulli sono equipollenti e dunque formano una sola classe di equipollenza che denotiamo $\overrightarrow{O}$.
 
-**Definizione**: dati due vettori liberi $\vec{u}$ e $\vec{v}$ definiamo la loro somma $\vec{u} + \vec{v}$ nella maniera seguente:
+**Definizione**: dati due vettori liberi $\vec{U}$ e $\vec{V}$ definiamo la loro somma $\vec{U} + \vec{V}$ nella maniera seguente:
 
-1. scegliamo un rappresentante $\overrightarrow{AB}$ per $\vec{u}$, ovvero $\vec{u} = [\overrightarrow{AB}]$
-2. per la proposizione che abbiamo enunciato prima, possiamo scegliere un vettore applicato un $\vec{v}$ tale che il suo punto iniziale sia &B&, ovvero un vettore $\overrightarrow{BC} \in \vec{v}$, ovvero $\vec{v} = [\overrightarrow{BC}]$
-3. definiamo $\vec{u} + \vec{v} := [\overrightarrow{AB} + \overrightarrow{BC}]\ (=[\overrightarrow{AC}])$
+1. scegliamo un rappresentante $\overrightarrow{AB}$ per $\vec{U}$, ovvero $\vec{U} = [\overrightarrow{AB}]$
+2. per la proposizione che abbiamo enunciato prima, possiamo scegliere un vettore applicato un $\vec{V}$ tale che il suo punto iniziale sia $B$, ovvero un vettore $\overrightarrow{BC} \in \vec{V}$, ovvero $\vec{V} = [\overrightarrow{BC}]$
+3. definiamo $\vec{U} + \vec{V} := [\overrightarrow{AB} + \overrightarrow{BC}]\ (=[\overrightarrow{AC}])$
 
-Questa costruzione è indipendente dalla scelta del rappresentante di $\vec{u}$.
+Questa costruzione è indipendente dalla scelta del rappresentante di $\vec{U}$.
