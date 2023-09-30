@@ -8,9 +8,10 @@ $p,\ q,\ r,\ \dots$
 
 Una proposizione è una parte del discorso a cui si può assegnare un valore di verità o di falsità $(V, F)$.
 
-#### Esempio:   
+#### Esempio
+
 $p:$ Giorgio è più alto di 1,80m. $\rightarrow V$  
-$q:$ Roma è la capitale della Francia. $\rightarrow F$   
+$q:$ Roma è la capitale della Francia. $\rightarrow F$  
 
 ---
 
@@ -21,14 +22,14 @@ I connettivi logici servono a costruire nuove proposizioni dalle proposizioni di
 - Connettivi UNARI
   - Negazione
 - Connettivi BINARI
-  - Congiunzione 
+  - Congiunzione
   - Disgiunzione
   - Implicazione
   - Doppia implicazione
 
 ### Negazione - NOT
 
-$\neg p$   
+$\neg p$  
 "non p"
 
 | $p$ | $\neg p$ |
@@ -83,7 +84,8 @@ $p \Rightarrow q$
 | F   | V   |         V         |
 | F   | F   |         V         |
 
-#### Esempi:  
+#### Esempio
+
 $p :$ piove.  
 $q :$ prendo l'ombrello.  
 $p \Rightarrow q :$ se piove allora prendo l'ombrello.
@@ -98,14 +100,19 @@ Quindi
 
 $\neg(p \Rightarrow q) = p \wedge \neg q$
 
-Poiché
+Poiché, se è vero che
 
 $\neg (\neg p) = p$  
-$\neg \Big(\neg(p \Rightarrow q)\Big) = \neg (p \wedge \neg q) =$  
-$=\neg p \vee \neg (\neg q) = \neg p \vee q$  
-per De Morgan
 
-Trovando che
+allora
+
+$\neg \Big(\neg(p \Rightarrow q)\Big) = \neg (p \wedge \neg q) =$  
+
+per De Morgan (vedi più avanti)
+
+$=\neg p \vee \neg (\neg q) = \neg p \vee q$  
+
+trovando infine che
 
 $\neg (\neg p \vee q) = p \wedge \neg q$
 
@@ -132,7 +139,8 @@ $p \Leftrightarrow q = (p \Rightarrow q) \wedge (q \Rightarrow p)$
 | F   | V   |         V         |         F         |                    **F**                     |
 | F   | F   |         V         |         V         |                    **V**                     |
 
-#### Esempio:  
+#### Esempio
+
 $p : \text{in un triangolo, 2 lati sono uguali.}$  
 $q : \text{in un triangolo, 2 angoli sono uguali.}$  
 $p \Leftrightarrow q$
@@ -218,16 +226,16 @@ $\neg (p \vee q) = \neg p \wedge \neg q$
 
 ### Predicati
 
-"parte del nostro discorso che contenda una o più variabili"
+"parte del nostro discorso che contende una o più variabili"
 
 - UNARIO (1 variabile): $\mathcal{P}(x)$
 - BINARIO (2 variabili): $\mathcal{Q}(x,y)$
 - TERZIARIO (3 variabili): $\mathcal{S}(x,y,z)$
 - $\dots$
 
-#### Esempi:  
- 
-$\mathcal{P}(x) : \text{lo studente x è più alto di 1,7m.}$   
+#### Esempi
+
+$\mathcal{P}(x) : \text{lo studente x è più alto di 1,7m.}$  
 è un *predicato*
 
 $\mathcal{P}(Pietro) = \text{Pietro è più alto di 1,7m.}$  
@@ -253,9 +261,9 @@ Quantificatore Universale
 
 $\exists$
 "esiste"
-QUantificatore Esistenziale
+Quantificatore Esistenziale
 
-#### Esempi:
+#### Esempi
 
 $\forall x, \mathcal{P}(x)$ è una proposizione  
 significa "ogni studente è più alto di 1,7m."
@@ -274,7 +282,7 @@ significa "esiste uno studente amico di tutti gli studenti."
 $\forall x, \exists y : \mathcal{Q}(x,y)$  
 significa "ogni studente ha almeno un amico."
 
-Voglio tradurre formalmente la frase "in ogni ospedale, esiste almeno un medico che ha sbagliato tutte le diagnosi." 
+Voglio tradurre formalmente la frase "in ogni ospedale, esiste almeno un medico che ha sbagliato tutte le diagnosi."
 
 Quindi scrivo
 
@@ -303,7 +311,7 @@ $\neg \Big(\forall x, \mathcal{P}(x)\Big) \neq \forall x, \neg \mathcal{P}(x)$
 poiché sarebbe
 "ogni studente non è più alto di 1,7m."
 
-#### Esempi:
+#### Esempi
 
 $\neg \Big(\forall x, \mathcal{P}(x)\Big) = \exists x : \neg \mathcal{P}(x)$  
 "esiste almeno uno studente che non è più alto di 1,7m."  
@@ -341,7 +349,7 @@ Modificando correttamente i quantificatori, la sua negazione è
 $\exists \varepsilon > 0 : \forall \delta > 0, \exists x \in \mathbb{E} :$  
 $\neg (0 < |x-x_0| < \delta \Rightarrow |f(x)-l| < \varepsilon)$  
 
-Poiché prima abbiamo visto che 
+Poiché prima abbiamo visto che
 
 $\neg(p \Rightarrow q) = p \wedge \neg q$
 
@@ -349,7 +357,7 @@ allora la negazione diventa
 
 $\exists \varepsilon > 0 : \forall \delta > 0, \exists x \in \mathbb{E} :$  
 $0 < |x-x_0| < \delta \wedge |f(x)-l| \geq \varepsilon$
- 
+
 ---
 
 ### Insiemistica
@@ -357,7 +365,7 @@ $0 < |x-x_0| < \delta \wedge |f(x)-l| \geq \varepsilon$
 **insieme** (nozione primitiva) : aggregazione, famiglia, groppo (di solito con qualche caratteristica comune) di **elementi**.
 
 **Attenzione**  
-Gli insiemi sono caratterizzati dai soli elementi.   
+Gli insiemi sono caratterizzati dai soli elementi.  
 Due insiemi sono uguali se hanno gli stessi elementi.  
 
 L'ordine non conta: $A = \{a,b,c\} = \{c,a,b\}$
@@ -371,10 +379,11 @@ Per esempio, l'elemento $a$ appartiene all'insieme $A$ diventa $a \in A$:
 Si possono rappresentare con i **diagrammi di Eulero-Venn**.
 
 **Osservazione**: Per rappresentare un insieme:
+
 - elencare gli elementi (**Forma estensiva**)
 - fisso un insieme "universo" (**Ambiente**) e poi caratterizzo gli elementi con una proprietà (**Forma intensiva**)
 
-#### Esempio:
+#### Esempio
 
 $A =\{n \in \mathbb{N} : n\ pari \} = \{0,2,4,6 \dots\}$
 
@@ -387,7 +396,7 @@ $A =\{n \in \mathbb{N} : n\ pari \} = \{0,2,4,6 \dots\}$
 $U$ è l'insieme universo  
 $A$ è l'insieme  
 
-$\mathscr{C}_U A = \{x \in U : x \notin U\} = \{x \in U : \neg (x \in U)\}$ 
+$\mathscr{C}_U A = \{x \in U : x \notin U\} = \{x \in U : \neg (x \in U)\}$
 
 > L'insieme complemento si può scrivere anche $\overline{A}$.
 
@@ -422,9 +431,9 @@ Esiste un insieme (speciale) che è senza elementi, chiamato *insieme vuoto*, in
 
 $\mathcal{P}(A)$ è l'insieme dei sottoinsiemi di A
 
-#### Esempio:
+#### Esempio
 
-Sia 
+Sia
 
 $A = \{a,b,c\}$  
 
@@ -440,11 +449,10 @@ $|\mathcal{P}(A)| = 2^n$
 
 con
 
-
 $|A| =$ numero di elementi in $A$
 
 Per esempio, se prendiamo l'insieme $A = \{a,b,c,d,e,f\}$,  
-possiamo rappresentare il sottoinsieme $S = \{a,d,e\}$ così: 
+possiamo rappresentare il sottoinsieme $S = \{a,d,e\}$ così:
 
 |   a   |   b   |   c   |   d   |   e   |   f   |
 | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -525,7 +533,7 @@ $\mathcal{P}(x) :$ $x$ è amico di $y$
 
 ### Relazione tra due insiemi
 
-**Definizione**: 
+**Definizione**:  
 *Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
 (se $A=B$, parliamo di relazione su $A$)
 
@@ -585,7 +593,6 @@ $x \equiv_m y \wedge y \equiv_m z \xRightarrow{?} x \equiv_m z$
 
 $\exists k_1 \in \mathbb{Z} : x-y= k_1 \cdot m$  
 $\exists k_2 \in \mathbb{Z} : y-z= k_2 \cdot m$  
-
 
 $x \equiv_m z$ quindi è vero perché se $k_3 = k_1 \cdot k_2$ allora $x-z = k_1 \cdot m + k_2 \cdot m = (k_1 + k_2)m = k_3 \cdot m$.  
 

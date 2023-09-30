@@ -1,0 +1,16 @@
+{
+    "cSpell.words": [
+        "bmatrix",
+        "contradditio",
+        "datur",
+        "mathbb",
+        "mathcal",
+        "mathscr",
+        "overrightarrow",
+        "tertium",
+        "tollens"
+    ],
+    "markdownlint.config": {
+        "MD024" : false,
+    }
+}

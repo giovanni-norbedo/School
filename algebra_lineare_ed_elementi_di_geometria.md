@@ -90,13 +90,13 @@ questa quantita è zero perché $(1,1,2)$ è soluzione.
 
 Lo stesso ragionamento ci mostra che la terna
 
-$(37,37,74)$ 
+$(37,37,74)$
 
 è soluzione, perché
 
 $3 \cdot 37 + 1 \cdot 37 -2  \cdot 74 = 37 \cdot (3 \cdot 1 + 1 \cdot 1 - 2 \cdot 2)$
 
-Usando la notazione di prima, possiamo dire che $(37,37,74)$ è soluzione perché 
+Usando la notazione di prima, possiamo dire che $(37,37,74)$ è soluzione perché
 
 $(37,37,74) = 37 \cdot (1,1,2)$
 
@@ -112,7 +112,7 @@ $1 = 1 + 0$
 $3 = 1 + 2$  
 $3 = 2 + 1$  
 
-In una notazione più compatta scriviamo 
+In una notazione più compatta scriviamo
 
 $(1,3,3) = (1,1,2) + (0,2,1)$
 
@@ -123,7 +123,7 @@ $= (3 \cdot 1 + 1 \cdot 1 -2 \cdot 2) + (3 \cdot 0 + 1 \cdot 2 -2 \cdot 1) =$
 $= 0$  
 perché $(1,1,2)$ è soluzione
 
-Considerando quanto abbiamo imparato, troviamo che 
+Considerando quanto abbiamo imparato, troviamo che
 
 - A. La terna $(0,0,0)$ è soluzione.
 
@@ -140,9 +140,8 @@ $$
     - 2x - 2y + 2z &= 0 \\  
         2x + 0y - 1z &= 0
     \end{align*}
-\end{cases} 
+\end{cases}
 $$
-
 
 Le proprietà A, B e C valgono anche in questo caso.
 
@@ -176,7 +175,7 @@ Partiamo mostrando che
 
 $-2x -2y + 2z = 0$
 
-è equivalente a 
+è equivalente a
 
 $x + y -z = 0$
 
@@ -226,7 +225,7 @@ Quindi le soluzioni sono della forma
 
 $(\frac{1}{2} \alpha, \frac{1}{2} \alpha, \alpha) = \alpha \cdot (\frac{1}{2}, \frac{1}{2}, 1)$
 
-Se ora, a partite dal sistema iniziale, estraessimo i coefficienti e li ponessimo in una tabella, otterremmo 
+Se ora, a partite dal sistema iniziale, estraessimo i coefficienti e li ponessimo in una tabella, otterremmo
 
 $$
 \begin{cases}
@@ -235,64 +234,64 @@ $$
     - 2x - 2y + 2z &= 0 \\  
         2x + 0y - 1z &= 0
     \end{align*}
-\end{cases} 
+\end{cases}
 $$
 
-$$ 
+$$
 \begin{bmatrix*}[r]
     3  &  1 & -2 \\
     -2 & -2 &  2 \\
-    2  &  0 & -1 
+    2  &  0 & -1
 \end{bmatrix*}
 $$
 
 Moltiplico per $- \frac{1}{2}$ la seconda equazione
 
-$$ 
+$$
 \begin{bmatrix*}[r]
     3  &  1 & -2 \\
     1  &  1 & -1 \\
-    2  &  0 & -1 
+    2  &  0 & -1
 \end{bmatrix*}
 $$
 
 Inverto la prima equazione con la seconda
 
-$$ 
+$$
 \begin{bmatrix*}[r]
     1  &  1 & -1 \\
     3  &  1 & -2 \\
-    2  &  0 & -1 
+    2  &  0 & -1
 \end{bmatrix*}
 $$
 
 Sottraggo dall'attuale seconda equazione la prima equazione moltiplicata per $3$
 
-$$ 
+$$
 \begin{bmatrix*}[r]
     1  &  1 & -1 \\
     0  & -2 &  1 \\
-    2  &  0 & -1 
+    2  &  0 & -1
 \end{bmatrix*}
 $$
 
 Sottraggo dalla terza equazione la prima moltiplicata per $2$
 
-$$ 
+$$
 \begin{bmatrix*}[r]
     1  &  1 & -1 \\
     0  & -2 &  1 \\
-    0  & -2 &  1 
+    0  & -2 &  1
 \end{bmatrix*}
 $$
 
 Sottraggo dalla terza equazione la seconda
 
-$$ 
+$$
 \begin{bmatrix*}[r]
     1  &  1 & -1 \\
     0  & -2 &  1 \\
-    0  &  0 &  0 
+    0  &  0 &  0
 \end{bmatrix*}
 $$
 
@@ -358,7 +357,7 @@ Si verifica che quella di equipollenza è una relazione di equivalenza, ovvero e
 
 **Definizione**: dato un vettore applicato $\overrightarrow{AB}$, si definisce la sua classe di equipollenza.
 
-$[\overrightarrow{AB}] := \{\text{vettori applicati}\ \overrightarrow{CD}\ \text{tale che}\ \overrightarrow{AB} \equiv \overrightarrow{CD}\}$ 
+$[\overrightarrow{AB}] := \{\text{vettori applicati}\ \overrightarrow{CD}\ \text{tale che}\ \overrightarrow{AB} \equiv \overrightarrow{CD}\}$
 
 **Proposizione**: dai risultati della geometria euclidea segue che dato un vettore applicato $\overrightarrow{AB}$ e un punto $C$, allora esiste sempre un vettore applicato $\overrightarrow{CD}$ equipollente ad $\overrightarrow{AB}$;  
 
@@ -376,4 +375,4 @@ da questo segue che data una classe di equipollenza denotata $\vec{V}$, e dato u
 2. per la proposizione che abbiamo enunciato prima, possiamo scegliere un vettore applicato un $\vec{V}$ tale che il suo punto iniziale sia $B$, ovvero un vettore $\overrightarrow{BC} \in \vec{V}$, ovvero $\vec{V} = [\overrightarrow{BC}]$
 3. definiamo $\vec{U} + \vec{V} := [\overrightarrow{AB} + \overrightarrow{BC}]\ (=[\overrightarrow{AC}])$
 
-Questa costruzione è indipendente dalla scelta del rappresentante di $\vec{U}$.
+Questa costruzione è indipendente dalla scelta del rappresentante di $\vec{U}$.  
