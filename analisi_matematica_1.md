@@ -1,6 +1,6 @@
 # Analisi Matematica 1
 
-## Prerequisiti
+## Logica
 
 ### Proposizioni
 
@@ -360,7 +360,7 @@ $0 < |x-x_0| < \delta \wedge |f(x)-l| \geq \varepsilon$
 
 ---
 
-### Insiemistica
+## Insiemistica
 
 **Insieme** (nozione primitiva) : aggregazione, famiglia, groppo (di solito con qualche caratteristica comune) di **elementi**.
 
@@ -533,7 +533,7 @@ $\mathcal{P}(x) :$ $x$ è amico di $y$
 
 ---
 
-### Relazioni tra due insiemi
+## Relazioni
 
 **Definizione**:  
 *Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
@@ -675,3 +675,11 @@ Per esempio $\mathbb{R}$ con la relazione $\geq$.
 $A$ insieme, $\rho$ relazione  
 se $\rho$ è riflessiva, simmetrica e transitiva  
 $\rho$ si dice *relazione di equivalenza*.
+
+---
+
+### Classe di equivalenza
+
+$A$ insieme, $\rho$ relazione di equivalenza  
+chiamo $[a]_\rho = \{b \in A : a \rho b\}$
+cioè tutti gli elementi in relazione con $a$.
