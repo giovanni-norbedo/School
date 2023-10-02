@@ -692,11 +692,11 @@ $[1]_{\equiv_3} = \{\dots, -5, -2, +1, +3, +7, +10, +13, \dots\}$
 
 $[2]_{\equiv_3} = \{\dots, -7, -4, -1, +2, +5, +8, +11, \dots\}$
 
-$[0]_{\equiv_3} = [3]{\equiv_3} = [6]{\equiv_3} = \dots$
+$[0]_{\equiv_3} =$ $[3]_{\equiv_3} =$ $[6]_{\equiv_3} = \dots$
 
-$[1]_{\equiv_3} = [4]_{\equiv_3} = [7]_{\equiv_3} = \dots$
+$[1]_{\equiv_3} =$ $[4]_{\equiv_3} =$ $[7]_{\equiv_3} = \dots$
 
-$[2]_{\equiv_3} = [5]_{\equiv_3} = [8]_{\equiv_3} = \dots$
+$[2]_{\equiv_3} =$ $[5]_{\equiv_3} =$ $[8]_{\equiv_3} = \dots$
 
 L'insieme delle classi di equivalenza di dice  
 **insieme quoziente rispetto all'equivalenza**.
@@ -707,7 +707,7 @@ $^{A}/_{\rho}$
 
 per esempio
 
-$^{\mathbb{Z}}/_{\equiv_3} = \{[0]_{\equiv_3}, [1]_{\equiv_3}, [2]_{\equiv_3}\}$
+$^{\mathbb{Z}}/_{\equiv_3} =$ $\{[0]_{\equiv_3},$ $[1]_{\equiv_3},$ $[2]_{\equiv_3}\}$
 
 ---
 
