@@ -362,7 +362,7 @@ $0 < |x-x_0| < \delta \wedge |f(x)-l| \geq \varepsilon$
 
 ### Insiemistica
 
-**insieme** (nozione primitiva) : aggregazione, famiglia, groppo (di solito con qualche caratteristica comune) di **elementi**.
+**Insieme** (nozione primitiva) : aggregazione, famiglia, groppo (di solito con qualche caratteristica comune) di **elementi**.
 
 **Attenzione**  
 Gli insiemi sono caratterizzati dai soli elementi.  
@@ -481,7 +481,7 @@ $(a,b) \neq (b,a)$
 a meno che $a=b$
 
 **Definizione**:  
-siano $A,B$ insiemi,  
+Siano $A,B$ insiemi,  
 $A \times B = \{(a,b) : a \in A, b\in B \}$  
 è detto insieme *prodotto cartesiano di $A$ e $B$*.
 
@@ -531,7 +531,9 @@ $\mathcal{P}(x) :$ $x$ è amico di $y$
 
 ![relazione di amicizia](img/relazione_di_amicizia.png)
 
-### Relazione tra due insiemi
+---
+
+### Relazioni tra due insiemi
 
 **Definizione**:  
 *Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
@@ -567,9 +569,8 @@ Si chiama **congruenza modulo 3**, indicata con $m \equiv_3 n$.
 
 ### Proprietà delle relazioni
 
-**Definizione**:
-Sia $A$ un insieme, sia $\rho$ una relazione su $A$,
-
+**Definizione**:  
+Sia $A$ un insieme, sia $\rho$ una relazione su $A$,  
 allora $x \rho y$
 
 - si dice **riflessiva** se $\forall x \in A, x \rho x$
@@ -603,8 +604,7 @@ allora $x-z = k_1 \cdot m + k_2 \cdot m = (k_1 + k_2)m = k_3 \cdot m$.
 
 $\square$  
 
-**Definizione**:
-
+**Definizione**:  
 $A$ insieme, $\rho$ relazione
 
 $\rho$ si dice **antisimmetrica** se  
@@ -627,35 +627,31 @@ quindi
 
 $k_1 \cdot x = \frac{x}{k_2}$
 
-dato che $x \in \mathbb{N} \setminus \{0\}$, posso dividere per $x$, ottenendo
+che equivale a
 
-$k_1 = \frac{1}{k_2}$
+$k_1 \cdot k_2 \cdot x - x = 0$
 
-poiché $k \in \mathbb{Z}$, allora
+quindi
 
-$\frac{1}{k_2} \in \mathbb{Z}$
+$(k_1 \cdot k_2 - 1) \cdot x = 0$
 
-e quindi
+per la legge dell'annullamento del prodotto
 
-$k_2 = \plusmn 1$
+o $k_1 \cdot k_2 - 1 = 0$ o $x = 0$
 
-e a sua volta
+ma poiché $x \in \mathbb{N} \setminus \{0\}$
 
-$k_1 = \plusmn 1$
+allora
 
-Quindi abbiamo trovato che
+$k_1 \cdot k_2 = 1$
 
-$k = k_1 = k_2 = \plusmn 1$
+poiché $k_1, k_2 \in \mathbb{N}$, allora
 
-ma poiché $m,n \in \mathbb{N} \setminus \{0\}$
+$k = k_1 = k_2 = 1$
 
-allora non può essere che
+e se l'unica soluzione è $k = +1$
 
-$x = -y$ o $y = -x$
-
-trovando che l'unica soluzione è $k = +1$
-
-e che quindi $x=y$.
+allora $x=y$.
 
 $\square$
 
@@ -671,3 +667,11 @@ Con $(A, \rho)$ **insieme ordinato**.
 
 Per esempio $\mathbb{R}$ con la relazione $\geq$.
 
+---
+
+### Relazione di equivalenza
+
+**Definizione**:  
+$A$ insieme, $\rho$ relazione  
+se $\rho$ è riflessiva, simmetrica e transitiva  
+$\rho$ si dice *relazione di equivalenza*.
