@@ -709,19 +709,18 @@ $^{A}/_{\rho}$
 
 per esempio
 
-$$
-^{\mathbb{Z}}/_{\equiv_3} =
+$^{\mathbb{Z}}/_{\equiv_3} =$
 
-\{
+$\{$
 
-[0]_{\equiv 3},  
+$[0]_{\equiv 3},$
 
-[1]_{\equiv 3},
+$[1]_{\equiv 3},$
 
-[2]_{\equiv 3}
+$[2]_{\equiv 3}$
 
-\}
-$$
+$\}$
+
 ---
 
 ## Funzioni
