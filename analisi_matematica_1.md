@@ -694,11 +694,11 @@ $[2]_{\equiv_3} = \{\dots, -7, -4, -1, +2, +5, +8, +11, \dots\}$
 
 Poi si ripetono
 
-$[0]_{\equiv3} =$  
+$[0]_{\equiv 3} =$  
 
-$= [3]_{\equiv3} =$  
+$= [3]_{\equiv 3} =$  
 
-$= [6]_{\equiv3} = \dots$
+$= [6]_{\equiv 3} = \dots$
 
 L'insieme delle classi di equivalenza di dice  
 **insieme quoziente rispetto all'equivalenza**.
@@ -711,11 +711,11 @@ per esempio
 
 $^{\mathbb{Z}}/_{\equiv_3} =$
 
-$\{[0]_{\equiv3},$  
+$\{[0]_{\equiv 3},$  
 
-$[1]_{\equiv3},$  
+$[1]_{\equiv 3},$  
 
-$[2]_{\equiv3}\}$
+$[2]_{\equiv 3}\}$
 
 ---
 
