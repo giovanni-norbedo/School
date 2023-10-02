@@ -563,6 +563,10 @@ Si chiama **congruenza modulo 3**, indicata con $m \equiv_3 n$.
 
 ![grafico relazione congruenza modulo 3](img/grafico_relazione_congruenza_modulo_3.png)
 
+---
+
+### Proprietà delle relazioni
+
 **Definizione**:
 Sia $A$ un insieme, sia $\rho$ una relazione su $A$,
 
@@ -594,7 +598,8 @@ $x \equiv_m y \wedge y \equiv_m z \xRightarrow{?} x \equiv_m z$
 $\exists k_1 \in \mathbb{Z} : x-y= k_1 \cdot m$  
 $\exists k_2 \in \mathbb{Z} : y-z= k_2 \cdot m$  
 
-$x \equiv_m z$ quindi è vero perché se $k_3 = k_1 \cdot k_2$ allora $x-z = k_1 \cdot m + k_2 \cdot m = (k_1 + k_2)m = k_3 \cdot m$.  
+$x \equiv_m z$ quindi è vero perché, se $k_3 = k_1 \cdot k_2$,  
+allora $x-z = k_1 \cdot m + k_2 \cdot m = (k_1 + k_2)m = k_3 \cdot m$.  
 
 $\square$  
 
@@ -603,3 +608,66 @@ $\square$
 $A$ insieme, $\rho$ relazione
 
 $\rho$ si dice **antisimmetrica** se  
+
+$\forall x,y \in A, x \rho y \wedge y \rho x \Rightarrow x=y$
+
+
+#### Esempio
+
+La relazione divide è antisimmetrica se e solo se
+
+$\forall x,y \in \mathbb{N} \setminus \{0\}, x | y \wedge y | x \Rightarrow x=y$
+
+Dimostriamolo partendo da
+
+$x|y \Leftrightarrow \exists k_1 : y = k_1 \cdot x$  
+$y|x \Leftrightarrow \exists k_2 : x = k_2 \cdot y \Leftrightarrow \exists k_2 : y = \frac{x}{k_2}$
+
+quindi
+
+$k_1 \cdot x = \frac{x}{k_2}$
+
+dato che $x \in \mathbb{N} \setminus \{0\}$, posso dividere per $x$, ottenendo
+
+$k_1 = \frac{1}{k_2}$
+
+poiché $k \in \mathbb{Z}$, allora
+
+$\frac{1}{k_2} \in \mathbb{Z}$
+
+e quindi
+
+$k_2 = \plusmn 1$
+
+e a sua volta
+
+$k_1 = \plusmn 1$
+
+Quindi abbiamo trovato che
+
+$k = k_1 = k_2 = \plusmn 1$
+
+ma poiché $m,n \in \mathbb{N} \setminus \{0\}$
+
+allora non può essere che
+
+$x = -y$ o $y = -x$
+
+trovando che l'unica soluzione è $k = +1$
+
+e che quindi $x=y$.
+
+$\square$
+
+---
+
+### Relazione d'ordine
+
+**Definizione**:  
+$A$ insieme, $\rho$ relazione  
+se $\rho$ è riflessiva, antisimmetrica e transitiva  
+$\rho$ si dice *relazione d'ordine* o *ordinamento*.  
+Con $(A, \rho)$ **insieme ordinato**.
+
+Per esempio $\mathbb{R}$ con la relazione $\geq$.
+
