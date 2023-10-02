@@ -701,11 +701,13 @@ $[2]_{\equiv_3} = [5]_{\equiv_3} = [8]_{\equiv_3} = \dots$
 L'insieme delle classi di equivalenza di dice  
 **insieme quoziente rispetto all'equivalenza**.
 
-Si indica con $^{A}/_{\rho}$
+Si indica con 
+
+$^{A}/_{\rho}$
 
 per esempio
 
-$^{\mathbb{Z}}/_{\equiv_3} = \{[0]_{\equiv_3}, [1]_{\equiv_3}, [2]_{\equiv_3}\}$
+$$^{\mathbb{Z}}/_{\equiv_3} = \{[0]_{\equiv_3}, [1]_{\equiv_3}, [2]_{\equiv_3}\}$$
 
 ---
 
