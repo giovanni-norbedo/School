@@ -711,7 +711,9 @@ per esempio
 
 $^{\mathbb{Z}}/_{\equiv_3} =$
 
-$\{[0]_{\equiv_3}, [1]_{\equiv_3}, [2]_{\equiv_3}\}$
+$\{[0]_{\equiv3},$  
+$[1]_{\equiv3},$  
+$[2]_{\equiv3}\}$
 
 ---
 
