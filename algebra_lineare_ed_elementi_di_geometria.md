@@ -320,11 +320,14 @@ Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
 ![somma di due vettori](./img/somma_vettori.png)
 
-**Attenzione**: se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
+**Attenzione**:  
+se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
 
-**Osservazione**: $\overrightarrow{AB} + \overrightarrow{BB} = \overrightarrow{AB}$ e $\overrightarrow{AA} + \overrightarrow{AB} = \overrightarrow{AB}$
+**Osservazione**:  
+$\overrightarrow{AB} + \overrightarrow{BB} = \overrightarrow{AB}$ e $\overrightarrow{AA} + \overrightarrow{AB} = \overrightarrow{AB}$
 
-**Proposizione**: la somma di vettori applicati, quando è possibile eseguirla, soddisfa la proprietà associativa.
+**Proposizione**:  
+La somma di vettori applicati, quando è possibile eseguirla, soddisfa la proprietà associativa.
 
 Nei numeri reali, la proprietà associativa della somma dice che per ogni $a,b,c \in \mathbb{R}$ vale che  
 
@@ -332,7 +335,8 @@ $$(a+b) + c = a + (b+c)$$
 
 per questo motivo possiamo scrivere $a+b+c$ senza ambiguità.
 
-**Dimostrazione**: dobbiamo dimostrare che per ogni vettore applicato $\overrightarrow{AB}, \overrightarrow{BC}, \overrightarrow{CD}$ vale che
+**Dimostrazione**:  
+Dobbiamo dimostrare che per ogni vettore applicato $\overrightarrow{AB}, \overrightarrow{BC}, \overrightarrow{CD}$ vale che
 
 $(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD})$
 
@@ -376,3 +380,262 @@ da questo segue che data una classe di equipollenza denotata $\vec{V}$, e dato u
 3. definiamo $\vec{U} + \vec{V} := [\overrightarrow{AB} + \overrightarrow{BC}]\ (=[\overrightarrow{AC}])$
 
 Questa costruzione è indipendente dalla scelta del rappresentante di $\vec{U}$.  
+
+Se denotiamo con $V_2$ l'insieme dei vettori liberi nel piano,  
+la somma è una *funzione*
+
+$+ : V_2 \times V_2$  
+l'insieme delle coppie ordinate di elementi di $V_2$  
+
+$(\vec{U}, \vec{V}) \mapsto \vec{U} + \vec{V}$  
+coppia ordinata
+
+Se $\lambda \in \mathbb{R}$ e $\vec{V}$ è un vettore libero,  
+possiamo definire $\lambda \cdot \vec{V}$  
+
+$\lambda \cdot \vec{V}: = [\lambda \cdot \overrightarrow{AB}]$
+
+moltiplicazione per un numero di un vettore applicato (che sappiamo già fare).
+
+Questa definizione è *ben posta*, ovvero non dipende dal rappresentante che abbiamo scelto.
+
+La moltiplicazione per uno scalare è una funzione
+
+$\mathbb{R} \times V_2 \rightarrow V_2$  
+coppia ordinata
+
+$(\lambda, \vec{V}) \mapsto \lambda \cdot \vec{V}$
+
+Definiamo il vettore libero nullo come
+
+$\vec{O} = \overrightarrow{AA}$
+
+Notiamo che
+
+$\vec{O} + \vec{V} = [\overrightarrow{AA}] + [\overrightarrow{AB}] = [\overrightarrow{AA} + \overrightarrow{AB}] = [\overrightarrow{AB}] = \vec{V}$
+
+$\vec{V} + \vec{O} = [\overrightarrow{AB}] + [\overrightarrow{BB}] = [\overrightarrow{AB + BB}] = [\overrightarrow{BB}] = \vec{V}$
+
+Quindi $\vec{O}$ si comporta come lo zero rispetto alla somma.
+
+**Proprietà** della somma tra vettori liberi:
+
+- proprietà associativa
+  - $(\vec{U} + \vec{V}) + \vec{W} = \vec{U} + (\vec{V} + \vec{W})$ per ogni $\vec{U}, \vec{V}, \vec{W}$
+- proprietà commutativa
+  - $\vec{U} + \vec{V} = \vec{V} + \vec{U}$ per ogni $\vec{U}, \vec{V}$
+- esistenza dell'elemento neutro
+  - per ogni $\vec{V}$ vale $\vec{O} + \vec{V} = \vec{V} + \vec{O} = \vec{V}$
+- esistenza dell'elemento opposto
+  - per ogni $\vec{V}$ esiste un $\vec{W}$ tale che $\vec{V} + \vec{W} = \vec{W} + \vec{V} = \vec{O}$, con $\vec{W} = - \vec{V}$
+
+Se $\vec{v} = [\overrightarrow{AB}]$ allora $- \vec{v} = [\overrightarrow{BA}]$
+
+**Proprietà** della moltiplicazione per uno scalare:
+
+- per ogni $\vec{V}$
+  - $1 \cdot \vec{V} = \vec{V}$
+- per ogni $\vec{V}$
+  - $(-1) \cdot \vec{V} = - \vec{V}$
+- per ogni $\lambda, \mu \in \mathbb{R}$, per ogni $\vec{V}$
+  - $(\lambda \mu) \cdot \vec{V} = \lambda (\mu \cdot \vec{V})$
+- per ogni $\lambda, \mu \in \mathbb{R}$, per ogni $\vec{V}, \vec{U}$
+  - $(\lambda + \mu) \cdot \vec{V} = \lambda \cdot \vec{V} + \mu \cdot \vec{V}$
+  - $\lambda \cdot (\vec{V} + \vec{U}) = \lambda \cdot \vec{U} + \lambda \cdot \vec{V}$
+
+**Definizione**:  
+Uno spazio vettoriale è un insieme $V$  
+con due operazioni:  
+
+$+ : V \times V \rightarrow V$  
+$(\mu, v) \mapsto \mu + v$
+
+$\cdot : V \times V \rightarrow V$  
+$(\mu, V) \mapsto \mu \cdot V$
+
+tali per cui per ogni $\lambda, \mu \in \mathbb{R}$ e per ogni $u, v, w \in V$ siano soddisfatte le proprietà:
+
+- $V1$. proprietà associativa
+- $V2$. proprietà commutativa
+- $V3$. esistenza del vettore nullo
+- $V4$. esistenza del vettore opposto
+- $V5$. proprietà distributiva di ? rispetto a R
+- $V6$. proprietà distributiva di ? rispetto a R
+- $V7$. $(\lambda \mu) \cdot \vec{V} = \lambda (\mu \cdot \vec{V})$
+- $V8$. $1 \cdot v = v$
+
+**Proposizione**  
+Ciò che abbiamo visto finora ci mostra che $V_2$ (insieme dei vettori liberi nel piano) è un $\mathbb{R}$-spazio vettoriale.
+
+**Notazione**  
+un $\mathbb{R}$-spazio vettoriale si dice anche uno spazio vettoriale di $\mathbb{R}$.
+
+Esempio:  
+consideriamo $V = \mathbb{R}$
+con l'usuale somma o moltiplicazione  
+allora si verifica che $\mathbb{R}$ è un $\mathbb{R}$-spazio vettoriale.
+
+Esempio:  
+consideriamo $V = \mathbb{R} \times \mathbb{R}$ ovvero  
+$V = \{(a,b) : a,b \in \mathbb{R}\}$  
+$V$ si denota anche $\mathbb{R}^2$  
+con le operazioni  
+$(a,b) + (c,d) = (a + c,\ c+d)$
+$\lambda (a,b) = (\lambda a, \lambda b)$
+
+$(V,+,\cdot)$ è un $\mathbb{R}$-spazio vettoriale
+
+Esempio:  
+$V = \mathbb{R} \times \dots \times \mathbb{R} = \mathbb{R}^n$  
+$V =$ l'insieme delle n-uple ordinate di numeri reali.
+$V = \{(a_1, \dots, a_n) : a_1, \dots, a_n \in \mathbb{R}\}$  
+
+Con le operazioni
+
+$+ : \mathbb{R}^n = \mathbb{R}^n \rightarrow \mathbb{R^n}$  
+$(a_1, a_2), (b_1, b_2) \mapsto (a_1 + b_1, a_2 + b_2)$
+
+$\cdot : \mathbb{R} = \mathbb{R}^n \rightarrow \mathbb{R^n}$  
+$\lambda, (a_1, a_2) \mapsto (\lambda a_1, \lambda a_2)$
+
+Esempio:  
+Consideriamo
+$V = \{$ funzioni $f : \mathbb{R} \rightarrow \mathbb{R}\}$  
+con le operazioni  
+$+ : V \times V \rightarrow V$  
+$(f,g) \mapsto (f+g)$
+
+dove $f+g$ è la funzione $\mathbb{R} \rightarrow \mathbb{R}$ data da:  
+se $a \in \mathbb{R}, (f+g)(a) := f(a) + g(a)$  
+e  
+$\mathbb{R} \times V \rightarrow V$  
+$(\lambda,f) \mapsto \lambda f$
+
+dove $\lambda f$ è la funzione $\mathbb{R} \rightarrow \mathbb{R}$ data da:
+
+se $a \in \mathbb{R}, (\lambda f)(a) = \lambda (f(a)) \in \mathbb{R}$ (moltiplicazione in $\mathbb{R}$).
+
+**Notazione**  
+Sia $V$ in un $\mathbb{R}$-spazio vettoriale; gli elementi di $V$ si dicono *vettori*.  
+
+**Osservazione**  
+Sia $(V,+,\cdot)$ è l'insieme delle funzioni $f : \mathbb{R} \rightarrow \mathbb{R}$, allora il ruolo del vettore nullo è quello giocato dalla funzione
+
+$F : \mathbb{R} \rightarrow \mathbb{R}$  
+$x \mapsto 0$
+
+infatti, se $g : \mathbb{R} \rightarrow \mathbb{R}$ è una funzione
+
+$(g + F) : \mathbb{R} \rightarrow \mathbb{R}$  
+$x \mapsto g(x) + F(x) = g(x) + 0 = g(x)$
+
+abbiamo visto che $\forall x \in \mathbb{R}$, $(g + F)(x) = g(x)$, pertanto $g + F = g$; analogamente $F + g = g$, quindi $F$ è l'elemento neutro.
+
+**Proposizione**  
+Se $V$ è un $\mathbb{R}$-spazio vettoriale, allora l'elemento neutro è unico.
+
+**Dimostrazione**  
+Supponiamo che esistano due elementi neutri, che indichiamo con $0$ è $0'$:  
+mostreremo che deve valere $0 = 0'$ e quindi da questo seguirà la tesi.  
+
+Per ipotesi, abbiamo che
+
+$\forall v \in V, 0 + v = v + 0 = v$ (@)  
+$\forall v \in V, 0' + v = v + 0' = v$ (#)  
+
+in (@) scegliamo $v = 0'$; allora
+
+$0 + 0' = 0$
+
+quindi $0 = 0 + 0' = 0'$, pertanto $0 = 0'$.
+
+$\square$
+
+**Proposizione**  
+Sia $V$ un $\mathbb{R}$-spazio vettoriale, allora $\forall v \in V$, vale che
+
+$(-1) \cdot v = -v$
+
+**Dimostrazione**  
+Per dimostrare la tesi, mostriamo che $\forall v \in V$, l'elemento $-1 \cdot v$ soddisfa la proprietà di essere opposto di $v$, ovvero:
+
+$v + (-1) \cdot v = (-1) \cdot v + v = 0$
+
+la prima uguaglianza segue dalla commutatività della somma; dimostramo la seconda uguaglianza
+
+$v + (-1) \cdot v \xlongequal{V8} (-1) \cdot v + v \xlongequal{V6} (-1 +1) \cdot v = 0 \cdot v = 0$
+
+Se sapessimo che $0 \cdot v = 0$ (vettore nullo), allora avremmo concluso la dimostrazione,  
+però questo non ci è dato a sapere, stanti semplicemente le 8 proprietà definitasi degli spazi vettoriali; dimostriamo qui di seguito che questa ulteriore proprietà segue dalle 8 proprietà.
+
+$\square$
+
+**Proposizione**  
+Sia $V$ uno spazio vettoriale; allora $\forall v \in V$, vale che
+
+$0 \cdot v = 0$
+
+**Dimostrazione**  
+Sia $v \in V$; abbiamo che
+
+$0 \cdot v = (0 + 0) \cdot v \xlongequal{V6} 0 \cdot v + 0 \cdot v$
+
+quindi
+
+$0 \cdot v = 0 \cdot v + 0 \cdot v$
+
+ora sommiamo ad entrambi i membri dell'uguaglianza l'opposto di $0 \cdot v$
+
+$-(0 \cdot v) + 0 \cdot v = -(0 \cdot v) + 0 \cdot v + 0 \cdot v$
+
+per la proprietà $V4$, individuo i vettori nulli; pertanto
+
+$0 = 0 + 0 \cdot v$  
+$0 = 0 \cdot v$
+
+che è quindi il vettore nullo.
+
+$\square$
+
+**Dimostrazione** XCASA  
+Il vettore opposto è unico.
+
+...
+
+Consideriamo ora $\mathbb{R}^2$ con $+$ e $\cdot$ introdotti in precedenza ("*le operazioni componente per componente*"). Abbiamo visto che $\mathbb{R}^2$ è un $\mathbb{R}$-spazio vettoriale. Ora consideriamo il seguente sottoinsieme $W \subseteq \mathbb{R}^2$
+
+$W := \{(x,y) \in \mathbb{R}^2 : x - 3y = 0\}$
+
+In $\mathbb{R}^2$ esiste il vettore nullo $(0,0)$. Vale che $(0,0) \in W$.
+
+In $\mathbb{R}^2$ è definita una somma. Se $v$ e $w$ sono elementi di $W$, allora in particolare sono entrambi di $\mathbb{R}^2$ e quindi li posso sommare, dunque $v+w \in \mathbb{R}^2$.
+
+In aggiunta vale che $v+w \in W$. Infatti
+
+se $v = (v_1, v_2)$ e $w = (w_1,w_2)$, allora
+
+$v \in W \Rightarrow v_1 - 3 v_2 = 0$  
+$w \in W \Rightarrow w_1 - 3 w_2 = 0$  
+
+allora $(v_1 - 3 v_2) + (w_1 - 3 w_2) = 0 + 0 = 0$  
+
+ovvero per esempio $(v_1 + w_1) + 3(v_2 + w_2) = 0$
+
+ovvero $v + w \in W$
+
+Infine consideriamo $v \in W$ e $\lambda \in \mathbb{R}$; vediamo che $\lambda \cdot v \in W$. Infatti se $v = (v_1,v_2)$, allora $\lambda \cdot v = (\lambda v_1, \lambda v_2)$
+
+$v \in W \Rightarrow v_1 - 3 v_2 = 0$  
+
+allora ...
+
+**Definizione**  
+Sia $V$ un $\mathbb{R}$-spazio vettoriale, un sottoinsieme $W \subseteq V$ si dice un **sottospazio vettoriale** di $V$ se valgono:
+
+1. il vettore nullo di $V$ appartiene a $W$
+...
+
+**Esempio**  
+$\mathbb{R}^2 \leftrightarrow$ {punti del piano}
+
+...

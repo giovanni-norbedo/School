@@ -717,6 +717,33 @@ $[1]_{\equiv 3},$
 
 $[2]_{\equiv 3}$ }
 
+> Formattato male (verticalmente e senza pendici), perché GitHub non riesce a fare il rendering di due underscore. Prima o poi spero di risolvere.
+
 ---
 
 ## Funzioni
+
+### Funzione
+
+**Definizione**:  
+Siano $A, B$ insiemi  
+
+$f$ una "legge"  
+che ad ogni valore di $A$ associa uno e un solo valore di $B$,
+cioè se $x \in A$ esiste uno e uno solo $y$ in $B$ tale che $y$ è associato a $x$ (scrivo $f(x) = y$).  
+
+La terna $(A,B,f)$ la chiamo **funzione**.
+
+### Dominio e codominio
+
+**Definizione**:  
+$A$ si dice **dominio** della funzione.  
+$B$ si dice **codominio** della funzione.  
+$f$ è una regola che ad ogni $x$ del dominio associa uno e uno solo elemento $y$ del codominio.
+
+#### Esempio
+
+$A =$ {persone in quest'aula}  
+$B =$ {comuni italiani}  
+
+$x \mapsto$ comune di residenza
