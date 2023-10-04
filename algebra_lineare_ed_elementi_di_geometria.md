@@ -500,7 +500,7 @@ $\lambda, (a_1, a_2) \mapsto (\lambda a_1, \lambda a_2)$
 
 Esempio:  
 Consideriamo
-$V = \{$ funzioni $f : \mathbb{R} \rightarrow \mathbb{R}\}$  
+$V = \{ \text{funzioni}\ f : \mathbb{R} \rightarrow \mathbb{R}\}$  
 con le operazioni  
 $+ : V \times V \rightarrow V$  
 $(f,g) \mapsto (f+g)$
@@ -639,3 +639,31 @@ Sia $V$ un $\mathbb{R}$-spazio vettoriale, un sottoinsieme $W \subseteq V$ si di
 $\mathbb{R}^2 \leftrightarrow$ {punti del piano}
 
 ...
+
+---
+
+### Matrici
+
+**Definizione**  
+Siano $m,n \in \mathbb{N}$; una matrice $m \times n$ a coefficienti reali è una tabella rettangolare di $m \cdot n$ numeri del tipo
+
+!!! MATRICE TABELLA $a_{mn}$
+
+dove $a_{ij}$ è un numero reale, ovvero
+
+$a_{ij} \in \mathbb{R}$, $\forall i \in \{1, 2, \dots, m\}$ e $\forall j \in \{1, 2, \dots, n\}$
+
+**Esempio**  
+
+!!! MATRICE TABELLA dalla foto
+
+**Definizione**  
+Sia $A = (a_{ij})$ una matrive a coefficienti reali
+
+per ogni $i \in \{1, 2, \dots, m\}$ la i-esima riga è la matrice
+
+$A_j = (a_{i1}, a_{i2}, \dots, a_{in})$
+
+per ogni $j \in \{1, 2, \dots, n\}$ la j-esima colonna la matrice 
+
+!!! MATRICE COLONNA FOTO
