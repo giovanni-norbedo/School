@@ -5,7 +5,7 @@
 ### Paradigmi di programmazione
 
 - Programmazione  
-  - Paradigma imperativo 
+  - Paradigma imperativo
     - Programmazione ad oggetti
   - Paradigma dichiarativo
     - Programmazione logica
@@ -19,3 +19,12 @@
 **Variabile**: un nome associato ad un valore, *modificabile*.
 
 **Stato**: un insieme di variabili che descrivono *qualcosa che mi interessa*.
+
+Python  
+C++  
+^  
+C  
+^  
+ASM  
+^  
+CPU  

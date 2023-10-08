@@ -3,12 +3,19 @@
         "bmatrix",
         "contradditio",
         "datur",
+        "iniettiva",
         "mathbb",
         "mathcal",
         "mathscr",
         "overrightarrow",
+        "ponens",
+        "surgettiva",
         "tertium",
-        "tollens"
+        "tollens",
+        "tupla",
+        "upla",
+        "uple",
+        "xlongequal"
     ],
     "markdownlint.config": {
         "MD024" : false,

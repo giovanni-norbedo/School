@@ -362,6 +362,8 @@ $0 < |x-x_0| < \delta \wedge |f(x)-l| \geq \varepsilon$
 
 ## Insiemistica
 
+### Cos'è un insieme
+
 **Insieme** (nozione primitiva) : aggregazione, famiglia, groppo (di solito con qualche caratteristica comune) di **elementi**.
 
 **Attenzione**  
@@ -535,6 +537,8 @@ $\mathcal{P}(x) :$ $x$ è amico di $y$
 
 ## Relazioni
 
+### Relazione dra due insiemi
+
 **Definizione**:  
 *Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
 (se $A=B$, parliamo di relazione su $A$)
@@ -611,7 +615,6 @@ $\rho$ si dice **antisimmetrica** se
 
 $\forall x,y \in A, x \rho y \wedge y \rho x \Rightarrow x=y$
 
-
 #### Esempio
 
 La relazione divide è antisimmetrica se e solo se
@@ -686,7 +689,7 @@ cioè tutti gli elementi in relazione con $a$.
 
 #### Esempio
 
-$[0]_{\equiv_3} = \{\dots, -9, -6, -3, +0, +3, +6, +9, \dots\}$
+$[0]_{\equiv_3} = \{ \dots, -9, -6, -3, +0, +3, +6, +9, \dots \}$
 
 $[1]_{\equiv_3} = \{\dots, -5, -2, +1, +3, +7, +10, +13, \dots\}$
 
@@ -703,7 +706,7 @@ $= [6]_{\equiv 3} = \dots$
 L'insieme delle classi di equivalenza di dice  
 **insieme quoziente rispetto all'equivalenza**.
 
-Si indica con 
+Si indica con
 
 $^{A}/_{\rho}$
 
@@ -734,6 +737,8 @@ cioè se $x \in A$ esiste uno e uno solo $y$ in $B$ tale che $y$ è associato a 
 
 La terna $(A,B,f)$ la chiamo **funzione**.
 
+---
+
 ### Dominio e codominio
 
 **Definizione**:  
@@ -747,3 +752,189 @@ $A =$ {persone in quest'aula}
 $B =$ {comuni italiani}  
 
 $x \mapsto$ comune di residenza
+
+!!! IMMAGINE comuni di residenza
+
+**Osservazione**  
+Tutto l'anno studieremo funzioni
+
+$f = A \rightarrow B$ con $A, B \subseteq \mathbb{R}$
+
+che tradizionalmente si dicono "*funzioni reali di variabile reale*".
+
+**Osservazione**  
+!!! IMMAGINE non è una funzione
+
+---
+
+### Insieme immagine
+
+**Definizione**  
+Sia $f : A \rightarrow B$ una funzione,  
+se $x \in A$, il valore $f(x) \in B$  
+lo chiamo **valore immaginario di x**.
+
+**Definizione**
+L'insieme delle immagini si chiama  
+**insieme immagine** o *immagine dell'insieme*,  
+indicato da $f(A)$.
+
+> Esempio con $f(n) = 2n$
+
+**Osservazione**  
+*Sempre* $f(A) \subseteq B$
+
+**Definizione**  
+Sia $f : A \rightarrow B$ una funzione,  
+sia $A' \subseteq A$,  
+$f(A') = \left\{ f(x) : x \in A' \right\}$
+
+!!! IMMAGINE insiemi A e A'
+
+> Esempio con l'immagine della funzione $x^2 + 3$
+
+---
+
+### Funzione suriettiva
+
+**Definizione**  
+Se $f(A) = B$  
+$f$ si dice **suriettiva** (o surgettiva).
+
+---
+
+### Funzione composta
+
+**Definizione**  
+Sono  
+$f : A \rightarrow B$  
+$g : B \rightarrow C$  
+
+Diciamo **funzione composta**  
+$g \circ f : A \rightarrow C$  
+"g dopo f",  
+quindi $x \rightarrow g\Big(f(x)\Big)$.
+
+> Esempio con $x^2$ e $y + 2$
+
+---
+
+### Funzione inversa
+
+**Definizione**  
+Sia $f : A \rightarrow B$,  
+supponiamo che esista una funzione  
+$g : B \rightarrow A$ tale che:
+
+- $g \circ f =$ identità su A  
+- $f \circ g =$ identità su B  
+
+$g$ si dice **funzione inversa** di $f$.
+
+$g = f^{-1}$
+
+!!! IMMAGINE funzione inversa con A e B
+
+> Identità:  
+> $A \rightarrow A$  
+> $x \mapsto x$
+
+**Teorema**  
+Sia $f : A \rightarrow B$,  
+$f$ ha inversa se e solo se  
+$f$ è *iniettiva* e *suriettiva*, quindi **biettiva**.
+
+---
+
+## I numeri naturali
+
+$\mathbb{N} = \left\{ 0, 1, 2, 3, \cdots \right\}$
+
+> Sono quelli che servono per contare (con lo zero).
+
+---
+
+Su $\mathbb{N}$ è definita un'operazione di **somma** o **addizione**,  
+è una funzione
+
+$+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$  
+$(n, m) \mapsto k = n + m$  
+
+Questa è un'operazione:
+
+- associativa
+  - $\forall n,m,k$ vale che $n+(m+k) = (n+m)+k$
+- $\exists$ neutro
+  - $\exists 0 \in \mathbb{N} : \forall m,\ 0+m = m+0 = m$
+- commutativa
+  - $\forall n,m$ vale che $n+m = m+n$
+
+---
+
+Su $\mathbb{N}$ è definita anche un'operazione di **prodotto** o **moltiplicazione**,  
+è una funzione
+
+$\cdot : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$  
+$(n, m) \mapsto k = n \cdot m$  
+
+Questa è un'operazione:
+
+- associativa
+  - $\forall n,m,k$ vale che $n \cdot (m \cdot k) = (n \cdot m) \cdot k$
+- $\exists$ neutro
+  - $\exists 1 \in \mathbb{N} : \forall n,\ 1 \cdot n = n \cdot 1 = n$
+- commutativa
+  - $\forall n,m$ vale che $n \cdot m = m \cdot n$
+
+---
+
+Vale una proprietà che lega la somma la prodotto, la **distributiva**,
+
+$\forall m,n,k$ vale che $n \cdot (m + k) = (n \cdot m) + (n \cdot k)$
+
+---
+
+Su $\mathbb{N}$ è definita anche una **relazione d'ordine totale**,  
+cioè che $\forall x,y \in A,\ x \rho y \vee y \rho x$
+
+$\geq$ "maggiore o uguale"
+
+che è compatibile con le operazioni:
+
+$\forall n,m,k \in \mathbb{N},$  
+$n \geq m \Rightarrow n + k \geq m + k$  
+
+$\forall n,m,k \in \mathbb{N},$  
+$n \geq m \Rightarrow n \cdot k \geq m \cdot k$  
+
+---
+
+Abbiamo un insieme con operazioni e relazioni
+
+$(\mathbb{N}, +, \cdot, \geq)$
+
+esso è un insieme con una "**struttura algebrica**".
+
+---
+
+**Osservazione**  
+Possiamo determinare degli **assiomi** ("prime proprietà che non vengono dimostrate ma assunte a priori") su $\mathbb{N}$ in modo che tutte le altre proprietà siano deducibili da questi?
+
+### Assiomi di Giuseppe Peano
+
+Esiste un insieme che chiamo $\mathbb{N}$
+
+- Esiste un elemento di questo insieme che chiamo $0$ (zero), cioè $0 \in \mathbb{N}$
+- Esiste una funzione $\sigma : \mathbb{N} \rightarrow \mathbb{N}$ che chiamo "successivo" che gode delle seguenti proprietà:
+  - $\sigma$ è iniettiva
+  - $\sigma(n) \neq 0$ (zero non è il successivo di nessun numero)
+  - **principio di induzione**
+    - sia $\mathcal{S} \subseteq \mathbb{N}$, supponiamo che
+      - $0 \in \mathbb{N}$
+      - $\forall n,\ n \in \mathcal{S} \Rightarrow \sigma(n) \in \mathcal{S}$
+    - Allora $\mathcal{S} = \mathbb{N}$
+
+**Idea**  
+$\sigma(0) = 1$  
+$\sigma(n) = n + 1$  
+se parto da $0$ e sommo $1$, trovo tutti i numeri.

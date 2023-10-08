@@ -347,6 +347,8 @@ $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrighta
 
 ![proprietà associativa dei vettori](./img/proprietà_associativa_dei_vettori.png)
 
+$\square$
+
 **Definizione**: dato un vettore applicato $\overrightarrow{AB}$ e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot \overrightarrow{AB}$ in questo modo:
 
 - se $a=0,\ a \cdot \overrightarrow{AB} := \overrightarrow{AA}$
@@ -367,7 +369,7 @@ $[\overrightarrow{AB}] := \{\text{vettori applicati}\ \overrightarrow{CD}\ \text
 
 da questo segue che data una classe di equipollenza denotata $\vec{V}$, e dato un punto $C$ nel piano, esiste dunque un vettore applicato che appartiene a $\vec{V}$ e che ha punto iniziale $C$.
 
-**Osservazione**: se $\overrightarrow{AB} \equiv \overrightarrow{CD}$ allora $[\overrightarrow{AB}] = [\overrightarrow{AB}]$; si dice che $\overrightarrow{AB}$ e $\overrightarrow{CD}$ sono dei **rappresentativi** della medesima classe di equipollenza.
+**Osservazione**: se $\overrightarrow{AB} \equiv \overrightarrow{CD}$ allora $[\overrightarrow{AB}] = [\overrightarrow{CD}]$; si dice che $\overrightarrow{AB}$ e $\overrightarrow{CD}$ sono dei **rappresentanti** della medesima classe di equipollenza.
 
 **Definizione**: una classe di equipollenza $\vec{V}$ di vettori applicati si dice **vettore libero**.
 
@@ -376,7 +378,7 @@ da questo segue che data una classe di equipollenza denotata $\vec{V}$, e dato u
 **Definizione**: dati due vettori liberi $\vec{U}$ e $\vec{V}$ definiamo la loro somma $\vec{U} + \vec{V}$ nella maniera seguente:
 
 1. scegliamo un rappresentante $\overrightarrow{AB}$ per $\vec{U}$, ovvero $\vec{U} = [\overrightarrow{AB}]$
-2. per la proposizione che abbiamo enunciato prima, possiamo scegliere un vettore applicato un $\vec{V}$ tale che il suo punto iniziale sia $B$, ovvero un vettore $\overrightarrow{BC} \in \vec{V}$, ovvero $\vec{V} = [\overrightarrow{BC}]$
+2. per la proposizione che abbiamo enunciato prima, possiamo scegliere un vettore applicato e un $\vec{V}$ tale che il suo punto iniziale sia $B$, ovvero un vettore $\overrightarrow{BC} \in \vec{V}$, ovvero $\vec{V} = [\overrightarrow{BC}]$
 3. definiamo $\vec{U} + \vec{V} := [\overrightarrow{AB} + \overrightarrow{BC}]\ (=[\overrightarrow{AC}])$
 
 Questa costruzione è indipendente dalla scelta del rappresentante di $\vec{U}$.  
@@ -450,7 +452,7 @@ con due operazioni:
 $+ : V \times V \rightarrow V$  
 $(\mu, v) \mapsto \mu + v$
 
-$\cdot : V \times V \rightarrow V$  
+$\cdot : \mathbb{R } \times V \rightarrow V$  
 $(\mu, V) \mapsto \mu \cdot V$
 
 tali per cui per ogni $\lambda, \mu \in \mathbb{R}$ e per ogni $u, v, w \in V$ siano soddisfatte le proprietà:
@@ -459,8 +461,8 @@ tali per cui per ogni $\lambda, \mu \in \mathbb{R}$ e per ogni $u, v, w \in V$ s
 - $V2$. proprietà commutativa
 - $V3$. esistenza del vettore nullo
 - $V4$. esistenza del vettore opposto
-- $V5$. proprietà distributiva di ? rispetto a R
-- $V6$. proprietà distributiva di ? rispetto a R
+- $V5$. proprietà distributiva di $+$ rispetto a R
+- $V6$. proprietà distributiva di $\cdot$ rispetto a R
 - $V7$. $(\lambda \mu) \cdot \vec{V} = \lambda (\mu \cdot \vec{V})$
 - $V8$. $1 \cdot v = v$
 
@@ -561,7 +563,7 @@ Per dimostrare la tesi, mostriamo che $\forall v \in V$, l'elemento $-1 \cdot v$
 
 $v + (-1) \cdot v = (-1) \cdot v + v = 0$
 
-la prima uguaglianza segue dalla commutatività della somma; dimostramo la seconda uguaglianza
+la prima uguaglianza segue dalla commutatività della somma; dimostriamo la seconda uguaglianza
 
 $v + (-1) \cdot v \xlongequal{V8} (-1) \cdot v + v \xlongequal{V6} (-1 +1) \cdot v = 0 \cdot v = 0$
 
@@ -597,7 +599,7 @@ che è quindi il vettore nullo.
 
 $\square$
 
-**Dimostrazione** XCASA  
+**Dimostrazione** X CASA  
 Il vettore opposto è unico.
 
 ...
@@ -654,16 +656,15 @@ dove $a_{ij}$ è un numero reale, ovvero
 $a_{ij} \in \mathbb{R}$, $\forall i \in \{1, 2, \dots, m\}$ e $\forall j \in \{1, 2, \dots, n\}$
 
 **Esempio**  
-
 !!! MATRICE TABELLA dalla foto
 
 **Definizione**  
-Sia $A = (a_{ij})$ una matrive a coefficienti reali
+Sia $A = (a_{ij})$ una matrice a coefficienti reali
 
 per ogni $i \in \{1, 2, \dots, m\}$ la i-esima riga è la matrice
 
 $A_j = (a_{i1}, a_{i2}, \dots, a_{in})$
 
-per ogni $j \in \{1, 2, \dots, n\}$ la j-esima colonna la matrice 
+per ogni $j \in \{1, 2, \dots, n\}$ la j-esima colonna la matrice
 
 !!! MATRICE COLONNA FOTO
