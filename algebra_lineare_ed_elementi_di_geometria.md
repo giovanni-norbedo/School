@@ -238,61 +238,61 @@ $$
 $$
 
 $$
-\begin{bmatrix*}[r]
+\begin{pmatrix*}[r]
     3  &  1 & -2 \\
     -2 & -2 &  2 \\
     2  &  0 & -1
-\end{bmatrix*}
+\end{pmatrix*}
 $$
 
 Moltiplico per $- \frac{1}{2}$ la seconda equazione
 
 $$
-\begin{bmatrix*}[r]
+\begin{pmatrix*}[r]
     3  &  1 & -2 \\
     1  &  1 & -1 \\
     2  &  0 & -1
-\end{bmatrix*}
+\end{pmatrix*}
 $$
 
 Inverto la prima equazione con la seconda
 
 $$
-\begin{bmatrix*}[r]
+\begin{pmatrix*}[r]
     1  &  1 & -1 \\
     3  &  1 & -2 \\
     2  &  0 & -1
-\end{bmatrix*}
+\end{pmatrix*}
 $$
 
 Sottraggo dall'attuale seconda equazione la prima equazione moltiplicata per $3$
 
 $$
-\begin{bmatrix*}[r]
+\begin{pmatrix*}[r]
     1  &  1 & -1 \\
     0  & -2 &  1 \\
     2  &  0 & -1
-\end{bmatrix*}
+\end{pmatrix*}
 $$
 
 Sottraggo dalla terza equazione la prima moltiplicata per $2$
 
 $$
-\begin{bmatrix*}[r]
+\begin{pmatrix*}[r]
     1  &  1 & -1 \\
     0  & -2 &  1 \\
     0  & -2 &  1
-\end{bmatrix*}
+\end{pmatrix*}
 $$
 
 Sottraggo dalla terza equazione la seconda
 
 $$
-\begin{bmatrix*}[r]
+\begin{pmatrix*}[r]
     1  &  1 & -1 \\
     0  & -2 &  1 \\
     0  &  0 &  0
-\end{bmatrix*}
+\end{pmatrix*}
 $$
 
 Sono riuscito a risolvere il sistema.  
@@ -300,7 +300,7 @@ Ho utilizzato una procedura algoritmica (un algoritmo può essere eseguito da un
 
 ---
 
-### Vettori applicati e vettori liberi
+## Vettori applicati e vettori liberi
 
 Ci mettiamo nel contesto della geometria euclidea.  
 Un **vettore applicato** è un segmento orientato, caratterizzato dunque da:
@@ -599,8 +599,8 @@ che è quindi il vettore nullo.
 
 $\square$
 
-**Dimostrazione** X CASA  
-Il vettore opposto è unico.
+**Dimostrazione**  
+!!! Per esercizio. Il vettore opposto è unico.
 
 ...
 
@@ -644,19 +644,27 @@ $\mathbb{R}^2 \leftrightarrow$ {punti del piano}
 
 ---
 
-### Matrici
+## Matrici
 
 **Definizione**  
 Siano $m,n \in \mathbb{N}$; una matrice $m \times n$ a coefficienti reali è una tabella rettangolare di $m \cdot n$ numeri del tipo
 
-!!! MATRICE TABELLA $a_{mn}$
+$$
+A_{m\times n} =
+\left[ {\begin{array}{cccc}
+  a_{11} & a_{12} & \cdots & a_{1n}\\
+  a_{21} & a_{22} & \cdots & a_{2n}\\
+  \vdots & \vdots & \ddots & \vdots\\
+  a_{m1} & a_{m2} & \cdots & a_{mn}\\
+\end{array} } \right]
+$$
 
 dove $a_{ij}$ è un numero reale, ovvero
 
 $a_{ij} \in \mathbb{R}$, $\forall i \in \{1, 2, \dots, m\}$ e $\forall j \in \{1, 2, \dots, n\}$
 
 **Esempio**  
-!!! MATRICE TABELLA dalla foto
+!!! ESEMPIO MATRICE FOTO
 
 **Definizione**  
 Sia $A = (a_{ij})$ una matrice a coefficienti reali
@@ -667,4 +675,570 @@ $A_j = (a_{i1}, a_{i2}, \dots, a_{in})$
 
 per ogni $j \in \{1, 2, \dots, n\}$ la j-esima colonna la matrice
 
-!!! MATRICE COLONNA FOTO
+$$
+A_i =
+\begin{pmatrix}
+  \alpha_{1j} \\
+  \alpha_{2j} \\
+  \vdots \\
+  \alpha_{mj} \\
+\end{pmatrix}
+$$
+
+**Esempio**  
+$$
+A =
+\begin{pmatrix}
+   1 & 3 \\
+  -2 & 5
+\end{pmatrix}
+$$
+
+$$
+A_{(1)} = (1\ 3)  
+$$
+
+$$
+A_{(2)} = (-2\ 5)  
+$$
+
+$$
+A^{(1)} =
+\begin{pmatrix}
+  1 \\
+  -2 \\
+\end{pmatrix}
+$$
+
+$$
+A^{(2)} =
+\begin{pmatrix}
+  3 \\
+  5 \\
+\end{pmatrix}
+$$
+
+**Definizione**  
+Dati $m,n \in \mathbb{N},\ m>0,\ n>0$, l'insieme delle matrici $m \times n$ è denotato con $M_{m,n}(\mathbb{R})$; l'insieme delle matrici quadrate è denotato $M_n (\mathbb{R})$.
+
+**Definizione**  
+La matrice $m \times n$ nulla è la matrice $m \times n$ le cui entrate sono tutte zero.
+
+**Esempio**  
+$$
+\begin{equation*}
+ \begin{pmatrix}
+   0 & 0 & 0\\
+   0 & 0 & 0\\
+  0 & 0 & 0
+ \end{pmatrix}
+\end{equation*}
+$$
+
+Introduciamo delle operazioni tra matrici al fine di rendere $M_{m,n}(\mathbb{R})$ un $\mathbb{R}$-spazio vettoriale.
+
+**Definizione**  
+Siano $m,n \in \mathbb{N},\ m>0,\ n>0$ e siano $A, B \in M_{m,n}(\mathbb{R})$, definiamo la somma di $A$ e $B$, che denotiamo $A + B$, è la matrice definita nel modo seguente: l'entrata di posto $i,j$ di $A + B$ è data da:
+
+$(A + B)_{i,j} := A_{i,j} + B_{i,j}$  
+con tutti i membri $\in \mathbb{R}$
+
+(qui utilizziamo il fatto che per descrivere una matrice è sufficiente determinare come ottenere ciascuna delle sue entrate)
+
+**Esempio**  
+$$
+A =
+\begin{pmatrix}
+   1 & 2 \\
+   3 & 4
+\end{pmatrix}
+$$
+
+$$
+B =
+\begin{pmatrix}
+   5 & 6 \\
+   7 & 8
+\end{pmatrix}
+$$
+
+$$
+A + B =
+\begin{pmatrix}
+   6 & 8 \\
+   10 & 12
+\end{pmatrix}
+$$
+
+**Osservazione**  
+La matrice nulla è l'elemento neutro della somma tra matrici.
+
+**Definizione**  
+Sia $A \in M_{m,n} (\mathbb{R})$ e sia $\lambda \in \mathbb{R}$; definiamo la moltiplicazione per uno scalare di $\lambda$ per $A$, che denotiamo $\lambda \cdot A$, come la matrice:
+
+$(\lambda \cdot A)_{i,j} := \lambda \cdot A_{i,j}$
+
+**Proposizione**  
+L'insieme $M_{m,n} (\mathbb{R})$ con le operazioni di somma e moltiplicazione per uno scalare definite sopra è un $\mathbb{R}$-spazio vettoriale.
+
+**Dimostrazione**  
+!!! Per esercizio.
+
+**Esempio**  
+Sia $\lambda = 3$, e sia
+
+$$
+A =
+\begin{equation*}
+ \begin{pmatrix}
+  1 & 2 & 3\\
+  -3 & -2 & -1\\
+ \end{pmatrix}
+\end{equation*}
+$$
+
+$$
+3 \cdot A =
+\begin{equation*}
+ \begin{pmatrix}
+  3 & 6 & 9\\
+  -9 & -6 & -3\\
+ \end{pmatrix}
+\end{equation*}
+$$
+
+Consideriamo una matrice $2 \times 2$:
+
+$$
+A=
+\begin{equation*}
+ \begin{pmatrix}
+   3 & 1 \\
+   -2 & 4
+ \end{pmatrix}
+\end{equation*}
+$$
+
+Ora consideriamo quattro matrici particolari:
+
+$$
+E :=
+\begin{equation*}
+ \begin{pmatrix}
+   1 & 0 \\
+   0 & 0
+ \end{pmatrix}
+\end{equation*}
+$$
+
+$$
+F :=
+\begin{equation*}
+ \begin{pmatrix}
+   0 & 1 \\
+   0 & 0
+ \end{pmatrix}
+\end{equation*}
+$$
+
+$$
+G :=
+\begin{equation*}
+ \begin{pmatrix}
+   0 & 0 \\
+   1 & 0
+ \end{pmatrix}
+\end{equation*}
+$$
+
+$$
+H :=
+\begin{equation*}
+ \begin{pmatrix}
+   0 & 0 \\
+   0 & 1
+ \end{pmatrix}
+\end{equation*}
+$$
+
+Considero ora la seguente **combinazione lineare** di queste quattro matrici:
+
+$$
+\begin{equation*}
+3F + F - 2G + 4H =
+\begin{pmatrix}
+   3 & 1 \\
+   -2 & 4
+\end{pmatrix}
+\end{equation*}
+= A
+$$
+
+Questa costruzione si può ripetere qualsiasi sia la matrice $A$:
+
+$$
+A = a_{11} \cdot E + a_{12} \cdot F + a_{21} \cdot G + a_{22} \cdot H
+$$
+
+Le quattro matrici $E,F,G,H$ sono tali che ogni matrice si può scrivere come combinazione lineare di queste quattro matrici con opportuni coefficienti.
+
+Diciamo che $E,F,G,H$ sono un **sistema di generatori** di $M_{2,2} (\mathbb{R})$.  
+
+Notiamo che questo ragionamento può essere formulato allo stesso modo per qualsiasi insieme di matrici $M_{m.n} (\mathbb{R})$. Abbiamo quindi mostrato che:
+
+**Proposizione**  
+Consideriamo in $M_{m,n} (\mathbb{R})$ l'insieme delle $m \cdot n$ matrici costruite nel seguente modo: esse hanno tutte le entrate nulle fuorché una, la quale è uguale a 1; allora tale insieme è un *sistema di generatori* per $M_{m,n} (\mathbb{R})$.
+
+Ritorniamo alla situazione delle matrici $2 \times 2$. La matrice nulla si può scrivere come combinazione lineare delle quattro matrici $E, F, G, H$.  
+
+$$
+0 \cdot E +
+0 \cdot F +
+0 \cdot G +
+0 \cdot H =
+\begin{pmatrix}
+   0 & 0 \\
+   0 & 0
+\end{pmatrix}
+$$
+
+Mi chiedo: esiste un'altra combinazione lineare di $E, F, G, H$ che restituisca la matrice nulla? Ovvero esistono costituenti, $e, f, g, h \in \mathbb{R}$ tali che non tutti gli $e, f, g, h$ sono nulli e vale:
+
+$$
+\begin{pmatrix}
+   0 & 0 \\
+   0 & 0
+\end{pmatrix}
+= e \cdot E + f \cdot F + g \cdot G + h \cdot H
+$$
+
+Riusciamo a capire quali condizioni dobbiamo imporre a $e, f, g, h$ affinché la precedente uguaglianza sia vera?
+
+$$
+e \cdot E + f \cdot F + g \cdot G + h \cdot H =
+$$
+
+!!! somma matrici
+
+Quindi, affinché valga
+
+$$
+\begin{pmatrix}
+   0 & 0 \\
+   0 & 0
+\end{pmatrix}
+= e \cdot E + f \cdot F + g \cdot G + h \cdot H
+$$
+
+deve valere
+
+$$
+\begin{pmatrix}
+   0 & 0 \\
+   0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+   e & f \\
+   g & h
+\end{pmatrix}
+$$
+
+quindi
+
+$e = 0,\ f = 0,\ g = 0,\ h = 0$
+
+pertanto, l'unico modo di ottenere la matrice nulla come combinazione lineare delle matrici $E, F, G, H$, è prendere tutti e quattro i coefficienti nulli.
+
+In questo caso diciamo che le quattro matrici sono **linearmente indipendenti**.  
+
+Notiamo che tutti questi ragionamenti possono essere formulati anche per matrici $m \times n$.
+
+**Osservazione**  
+Se prendo
+
+$$
+A =
+\begin{pmatrix}
+   1 & 1 \\
+   1 & 1
+\end{pmatrix}
+$$
+
+$$
+B =
+\begin{pmatrix}
+   2 & 2 \\
+   2 & 2
+\end{pmatrix}
+$$
+
+allora
+
+$$
+1 \cdot A + \Big(-\frac{1}{2} \Big) \cdot B =
+\begin{pmatrix}
+   0 & 0 \\
+   0 & 0
+\end{pmatrix}
+$$
+
+abbiamo quindi ottenuto la matrice nulla come combinazione lineare delle matrici $A$ e $B$, cui coefficienti non sono tutti nulli, pertanto le matrici $A$ e $B$ non sono linearmente indipendenti.
+
+Ritorniamo alla situazione delle matrici $2 \times 2$ e consideriamo il seguente insieme 
+
+$$
+T_{2,2} (\mathbb{R}) := \{A \in M_{2,2} \in (\mathbb{R}) : a_{21} = 0\} =
+$$
+!!! finisci
+
+Dunque ... !!! foto
+
+L'insieme $T_{2,2} (\mathbb{R})$ è l'insieme delle matrici $2 \times 2$ a coefficienti in $\mathbb{R}$ triangolari superiori. Notiamo che $T_{2,2} (\mathbb{R}) \subseteq M_{2,2} (\mathbb{R})$.
+
+Vale che:
+
+1:
+
+$$
+\begin{pmatrix}
+   0 & 0 \\
+   0 & 0
+\end{pmatrix}
+\in T_{2,2} (\mathbb{R})
+$$
+
+2:
+
+se $A,B \in T_{2,2} (\mathbb{R})$, allora
+
+... !!! foto
+
+Abbiamo dimostrato quindi che $T_{2,2} (\mathbb{R})$ è un sottoinsieme vettoriale di $M_{2,2} (\mathbb{R})$.
+
+Notiamo che l'analogo di $T_{2,2} (\mathbb{R})$ per matrici $3 \times 3$ è
+
+$$
+T_{3,3} (\mathbb{R}) =
+$$
+
+!!! finisci foto
+
+**Definizione**  
+Sia $A \in M_{n} (\mathbb{R})$; allora la **diagonale principale** è la partte di $A$ data dalle entrate di posto $i,i$ per $i \in \{1,2, \dots, n\}$.
+
+!!! matrice con diagonale
+
+!!! inizio lezione 11.10
+
+**Proposizione**  
+Siano $A,B \in M_{m,n} (\mathbb{R})$, allora
+
+1. $^t(A+B) =\ ^tA +\ ^tB$
+2. $^t(\ ^tA) = A$
+
+**Dimostrazione 1.**  
+Notiamo che
+
+$^t(A + B) \in M_{m,n} (\mathbb{R})$ 
+
+$^tA \in M_{m,n} (\mathbb{R})$
+
+$^tB \in M_{m,n} (\mathbb{R})$
+
+Abbiamo dunque che sia a sinistra che a destra dell'uguale abbiamo matrici dello stesso tipo, dunque ha senso chiedersi se esse sono uguali.
+
+per vedere che le due matrici sono uguali dimostriamo che tutte le loro entrate sono uguali, ovvero che
+
+$\forall i \in \{1, \dots, n\}$  
+$\forall j \in \{1, \dots, m\}$  
+
+$(^t(A+B))_{ij} = (^tA +\ ^tB)_{ij}$
+
+fissiamo $\forall i \in \{1, \dots, n\}$ e $\forall j \in \{1, \dots, m\}$, allora
+
+$(^t(A+B))_{ij} = (A + B)_{ji} = A_{ji} + B_{ji}$
+
+$(^tA +\ ^tB)_{ij} = (^tA)_{ij} + (^tB)_{ij} = A_{ji} + B_{ji}$
+
+quindi le due quantità sono uguali. 
+
+$\square$
+
+**Dimostrazione 2.**  
+Notiamo
+
+$^t(\ ^tA) \in M_{m,n} (\mathbb{R})$
+
+$^tA \in M_{m,n} (\mathbb{R})$
+
+dunque ha senso chiedersi se $^t(\ ^tA) = A$; per mostrarlo, dimostriamo che tutte le entrate di queste due matrici sono uguali, ovvero
+
+$\forall i \in \{1, \dots, n\}$  
+$\forall j \in \{1, \dots, m\}$  
+
+$^t(\ ^tA)_{ij} = A_{ij}$
+
+fissiamo $\forall i \in \{1, \dots, n\}$ e $\forall j \in \{1, \dots, m\}$, allora
+
+$^t(\ ^tA)_{ij} = (^tA)_{ji} = A_{ij}$
+
+$\square$
+
+**Osservazione**  
+Non ha sempre senso chiedersi se vale $A =\ ^tA$ perché queste due matrici in generale sono di tipo diverso; ha però senso chiederselo se la matrice è quadrata.
+
+**Esempio**  
+$$
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  2 & 4 & 5 \\
+  3 & 5 & 6 \\
+\end{pmatrix}
+$$
+
+Questa matrice soddisfa $A =\ ^tA$.
+
+**Definizione**  
+Sia $A \in M_{n} (\mathbb{R})$ (matrice quadrata); la matrice $A$ si dice **simmetrica** se vale $A =\ ^tA$; la matrice si dice **antisimmetrica** se vale  $A = -\ ^tA$.
+
+**Esempio**  
+$$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    0 & 2 & 3 \\
+    -2 & 0 & 4 \\
+    -3 & -4 & 0 \\
+  \end{array}
+\end{pmatrix}
+$$
+
+**Osservazione**  
+Ogni matrice antisimmetrica ha la diagonale costituita da entrate tutte nulle.
+
+**Nuova operazione**  
+Ora introduciamo una nuova operazione fra matrici.
+
+Consideriamo questa situazione:
+
+costo unitario della pasta: $c_P = 1\$$  
+costo unitario del latte: $c_L = 2\$$  
+costo unitario delle uova: $c_U = 3\$$  
+
+Supponiamo di dover acquistare $n_P, n_L, n_U$ unità di pasta, latte e uova.
+
+Qual è il costo totale?
+
+$c_P \cdot n_P + c_L \cdot n_L + c_U \cdot n_U$  
+
+Facciamo una matrice $1 \times 3$ con i costi unitari e una matrice $3 \times 1$ con il numero delle unità.
+
+!!! matrici ccc e nnn
+
+Più in generale, se abbiamo una matrice riga $1 \times n$ e una matrice colonna $n \times 1$, definiamo il loro prodotto righe per colonne come:
+
+!!! moltiplicazione riga (a11 ... a1n) colonna b11 bn1 := a11 \cdot b11 + ... + a1n \cdot bn1 = sum n k=1 a1k \cdot bk1
+
+Supponiamo che in un altro negozio valga
+
+$c'_P = -3 \$$  
+$c'_L = -2 \$$  
+$c'_U = -1 \$$  
+
+Per tenere sotto controllo i due totali di spesa potrei impacchettare le due righe dei costi unitari in un unica matrice.
+
+$$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    c_P & c_L & c_U \\
+    c'_P & c'_L & c'_U \\
+  \end{array}
+\end{pmatrix}
+\in M_{2,2} (\mathbb{R})
+$$
+
+Potrebbe essere ragionevole definire !!! manca
+
+$$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    c_P & c_L & c_U \\
+    c'_P & c'_L & c'_U \\
+  \end{array}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  \begin{array}{rrr}
+    n_P \\
+    n_L \\
+    n_U \\
+  \end{array}
+\end{pmatrix}
+$$
+
+
+come la matrice $2 \times 1$:
+
+!!! manca
+
+Ricapitolando, abbiamo moltiplicato una matrice $2 \times 3$ per una matrice $3 \times 1$ e abbiamo ottenuto una matrice $2 \times 1$. In altre parole, la matrice ottenuta dalla moltiplicazione è quella matrice le cui entrate sono date dalla moltiplicazione di ciascuna delle due righe della prima matrice con la colonna della seconda matrice.
+
+In questo modo, se volessimo aggiungere una seconda colonna di quantitativi
+
+$$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    n'_P \\
+    n'_L \\
+    n'_U \\
+  \end{array}
+\end{pmatrix}
+$$
+
+quella che andremo a ottenere è una situazione del tipo:
+
+$$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    c_P & c_L & c_U \\
+    c'_P & c'_L & c'_U \\
+  \end{array}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  \begin{array}{rrr}
+    n_P & n'_P \\
+    n_L & n'_L \\
+    n_U & n'_U \\
+  \end{array}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  (c_P \cdot n_P + c_L \cdot n_L + c_U \cdot n_U) & (c_P \cdot n'_P + c_L \cdot n'_L + c_U \cdot n'_U) \\
+  (c'_P \cdot n_P + c'_L \cdot n_L + c'_U \cdot n_U) & (c'_P \cdot n'_P + c'_L \cdot n'_L + c'_U \cdot n'_U) \\
+\end{pmatrix}
+$$
+
+**Definizione**  
+Sia $A \in M_{1,n} (\mathbb{R})$ e sia $B \in M_{n,1} (\mathbb{R})$; allora definiamo il prodotto $A \cdot B$ come il numero dato da 
+
+$A \cdot B = a_{11} \cdot b_{11} + \dots + a_{1n} \cdot b_{n1} = sum...$  !!!
+
+in generale, il prodotto $A \cdot B$ è la matrice $m \times n$ la cui entrata di posto $i,j$ è data da
+
+$(A \cdot B)_{ij} = A_i \cdot B_j = a_{i1} \cdot b_{1j} + \dots + a_{ip} \cdot b_{pj} = sum...$ !!!
+
+**Osservazione**  
+Il prodotto tra due matrici $A$ e $B$ è definito solo se il numero di colonne di $A$ coincide con il numero di righe di $B$.
+
+> Esempio moltiplicazione due matrici ($2 \times 3$ per $3 \times 2$ e $3 \times 3$ per $3 \times 2$). Fare esercizi.
+
+**Definizione**  
+Sia $n \in \mathbb{N}, n>0$, allora la matrice unità è quella matrice quadrata $n \times n$ le cui entrate sono tutte nulle, fuorché quella della diagonale principale, che sono tutte uguali a $1$; denotiamo questa matrice con $1_n$ oppure $I_n$ oppure $Id_n$.
+
+quindi vale che 
+
+$(1_n)_{ij} := 0\ se\ i \neq j,\ 1\ se\ i = j$
+
+> Esempio per vedere che $A \cdot B \neq B \cdot A$
+
