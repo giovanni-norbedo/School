@@ -934,7 +934,226 @@ Esiste un insieme che chiamo $\mathbb{N}$
       - $\forall n,\ n \in \mathcal{S} \Rightarrow \sigma(n) \in \mathcal{S}$
     - Allora $\mathcal{S} = \mathbb{N}$
 
-**Idea**  
+**Idea fondamentale**  
 $\sigma(0) = 1$  
 $\sigma(n) = n + 1$  
 se parto da $0$ e sommo $1$, trovo tutti i numeri.
+
+**Osservazione**  
+Il principio di induzione posso verificarlo anche per i numeri $n>n_0, n_0 \in \mathbb{N}, n_0 \geq 0$, verificando $P(n_0)$ e poi $\forall n \geq n_0, P(n) \Rightarrow P(n+1)$.  
+
+> Esempio $0+1+2+\dots+n = \frac{n(n+1)}{2}$
+>
+> Esempio $0+1+4+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}$
+>
+> Esempio $0+1+4+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}$
+>
+> Esempio con le rette nel piano
+
+#### Diseguaglianza di Bernulli
+
+Sia $a>-1, a \in \mathbb{R}$
+
+Allora $\forall n \in \mathbb{N}$ vale
+
+$(1+a)^n \geq 1 + na$
+
+#### Diseguaglianza di Bernulli migliorata
+
+Sia $a>0, a \in \mathbb{R}$
+
+Allora $\forall n \in \mathbb{N}, n \geq 1$ vale
+
+$(1+a)^n \geq 1 + na + \frac{n(n-1)}{2}a^2$
+
+### Successioni
+
+**Definizione**  
+Sia $A$ un insieme,  
+sia $f : \mathbb{N} \rightarrow A$,  
+quindi saranno determinati  
+
+$f(0) = a_0$  
+$f(1) = a_1$  
+$f(2) = a_2$  
+$\vdots$  
+$f(n) = a_n$  
+
+questa $f$ si chiama (tradizionalmente)  
+**successione a valori in $A$**
+
+la rappresento con $(a_n)_n$
+
+### Sommatoria
+
+**Osservazione**  
+Ora usiamo l'induzione per introdurre in modo rigoroso il simbolo di **sommatoria**.
+
+$\displaystyle\sum_{i=0}^{n} a_i = a_0 + a_1 + a_2 + \dots + a_n$
+
+Si ha che
+
+$s_0 = a_0$  
+$\forall n, s_{n+1} = s_n + a_{n+1}$  
+
+### Produttoria
+
+Analogamente
+
+$\displaystyle\prod_{i=1}^{n} a_i = a_0 + a_1 + a_2 + \dots + a_n$
+
+Si ha che
+
+$p_0 = a_0$  
+$\forall n, p_{n+1} = p_n + a_{n+1}$  
+
+## Calcolo combinatorio
+
+Per contare il numero di elementi di insiemi a partire da altri insiemi.
+
+---
+
+1- Se $A$ insieme di $n$ elementi e $B$ insieme di $m$ elementi, scriviamo
+
+$|A| = n,\ |B| = m$
+
+allora
+
+$|A \times B| = n \cdot m$
+
+---
+
+2- $|A| = n,\ |B| = m$,
+il numero delle funzioni da a $A$ a $B$
+
+$B^A =$ {numero delle funzioni da a $A$ a $B$}
+
+$|B^A| = |B|^{|A|} = m^n$
+
+sono **disposizioni con ripetizione**
+
+---
+
+3- $|A| = n,\ |B| = m$ con $m \geq n$,
+
+$D =$ {funzioni iniettive da $A$ a $B}
+
+$|D| = m(m-1)(m-2)\dots(m-n+1)$
+
+sono **disposizioni di m oggetti a n a n**
+
+> Ho usato $D$ invece di $C$
+
+---
+
+4- $|A| = |B| = n$, funzioni biettive tra $A$ e $B$
+
+$P =$ {biezioni da $A$ in sé stesso}
+
+$|P| = n(n-1)(n-2)\dots(2)(1)(0!) = n!$
+
+sono **permutazioni di n oggetti**
+
+---
+
+5- Sia $|A| = n$, $0 \leq k \leq n$,  
+il numero dei sottoinsiemi di $A$ con $k$ elementi
+
+$C_k^n = \binom{n}{k} = \frac{n!}{k!(n-k)!}$ {numero dei sottoinsiemi di $A$ con $k$ elementi}
+
+sono **combinazioni di n oggetti a k a k**
+
+---
+
+**Osservazione**  
+$D = C_k^n \cdot k!$  
+sono le combinazioni di n oggetti a k a k ordinate, ognuna genera $k!$ disposizioni.
+
+### Il coefficiente binomiale
+
+$\binom{0}{0}=1$
+
+$\binom{n}{0}=1$
+
+$\binom{n}{n}=1$
+
+$\binom{n}{k} = \binom{n}{n-k}$
+
+> Dimostrabile con gli insiemi o con la formula
+
+Per $1 \leq k \leq n-1$
+$\binom{n-1}{k-1} + \binom{n-1}{k} = \binom{n}{k}$
+
+> Dimostrabile con gli insiemi o con la formula
+
+### Triangolo di Tartaglia
+
+$$
+\begin{array}{cccccccccccccccc}
+    &   &   &   &   &   & 1 &   &   &   &   &   \\
+    &   &   &   &   & 1 &   & 1 &   &   &   &   \\
+    &   &   &   & 1 &   & 2 &   & 1 &   &   &   \\
+    &   &   & 1 &   & 3 &   & 3 &   & 1 &   &   \\
+    &   & 1 &   & 4 &   & 6 &   & 4 &   & 1 &   \\
+    & 1 &   & 5 &   & 10&   &10&   & 5 &   & 1 \\
+\end{array}
+$$
+
+$$
+\begin{array}{cccccccccccccccc}
+    &   &   &   &   &   & \binom{0}{0} &   &   &   &   &   \\
+    &   &   &   &   & \binom{1}{0} &   & \binom{1}{1} &   &   &   &   \\
+    &   &   &   & \binom{2}{0} &   & \binom{2}{1} &   & \binom{2}{2} &   &   &   \\
+    &   &   & \binom{3}{0} &   & \binom{3}{1} &   & \binom{3}{2} &   & \binom{3}{3} &   &   \\
+    &   & \binom{4}{0} &   & \binom{4}{1} &   & \binom{4}{2} &   & \binom{4}{3} &   & \binom{4}{4} &   \\
+    & \binom{5}{0} &   & \binom{5}{1} &   & \binom{5}{2} &   & \binom{5}{3} &   & \binom{5}{4} &   & \binom{5}{5} \\
+\end{array}
+$$
+
+### Teorema del binomio di Newton
+
+Siano $a,b \in \mathbb{R}$ (o $\in \mathbb{C}$),  
+sia $n \in \mathbb{N},\ n \geq 1$  
+
+allora $(a+b)^n = \displaystyle\sum_{j=o}^n \binom{n}{j} a^{n-j} b^j$
+
+> Dimostrabile con l'induzione
+
+**Osservazione**  
+$\displaystyle\sum_{j=o}^n \binom{n}{j} = 2^n$  
+che sono tutti i sottoinsiemi possibili
+
+> Dimostrabile con $(1 + 1)^n$
+
+**Osservazione**  
+$\displaystyle\sum_{j=o}^n (-1)^j \binom{n}{j} = 0$  
+che sono tutti i sottoinsiemi possibili
+
+> Dimostrabile con $(1 - 1)^n$
+
+## I numeri reali
+
+**Osservazione**  
+A partire dai numeri naturali $\mathbb{N}$, è possibile costruire i numeri interi
+
+$\mathbb{Z} = \{\dots, -2, -1, 0, 1, 2, \dots\}$
+
+A partire dai numeri interi $\mathbb{Z}$, è possibile costruire i numeri razionali
+
+$\mathbb{Q} = \{\frac{p}{q} con p \in \mathbb{Z}, q \in \mathbb{N}^+\}$
+
+> In $\mathbb{Q}$ ci sono delle classi di equivalenza, per esempio $\frac{1}{2} = \frac{2}{4} = \frac{3}{6} = \frac{4}{8} = \frac{5}{10} = \dots$
+
+> I numeri razionali non vanno bene per misurare la lunghezza dei segmenti (come la diagonale del quadrato con lato unitario).
+
+**Teorema**  
+Non esistono $k.m \in \mathbb{N}$ tali che $(\frac{k}{m})^2 = 2$.
+
+**Dimostrazione**  
+Supponiamo, per assurdo, che esistano.  
+Non è restrittivo supporre che $k$ e $m$ non abbiano fattori in comune,  
+allora
+
+$\frac{k^2}{m^2} = 2 \Leftrightarrow k^2 = 2m^2 \Leftrightarrow 2$ divide $k^2$
+
+$k = p_1^{n_1} \cdot p_2^{n_2} \cdot p_

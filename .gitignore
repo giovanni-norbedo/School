@@ -53,6 +53,7 @@ dkms.conf
 
 # EPUB
 *.epub
+*.pdf
 epub/
 
 # Visual Studio Code

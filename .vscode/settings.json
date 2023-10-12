@@ -1,13 +1,17 @@
 {
     "cSpell.words": [
+        "Bernulli",
+        "binom",
         "bmatrix",
         "contradditio",
         "datur",
         "iniettiva",
+        "iniettive",
         "mathbb",
         "mathcal",
         "mathscr",
         "overrightarrow",
+        "Peano",
         "ponens",
         "surgettiva",
         "tertium",
@@ -19,5 +23,6 @@
     ],
     "markdownlint.config": {
         "MD024" : false,
+        "MD028" : false,
     }
 }
