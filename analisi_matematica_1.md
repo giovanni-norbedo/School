@@ -1156,4 +1156,191 @@ allora
 
 $\frac{k^2}{m^2} = 2 \Leftrightarrow k^2 = 2m^2 \Leftrightarrow 2$ divide $k^2$
 
-$k = p_1^{n_1} \cdot p_2^{n_2} \cdot p_
+Se  
+
+$k = p_1^{n_1} \cdot p_2^{n_2} \cdot p_3^{n_3} \cdot \dots p_l^{n_l}$
+
+allora
+
+$k^2 = p_1^{2n_1} \cdot p_2^{2n_2} \cdot p_3^{2n_3} \cdot \dots p_l^{2n_l}$
+
+allora $2$ divide $k$
+
+allora $k = 2n$
+
+allora 
+
+$\frac{4n^2}{m^2} = 2 \Leftrightarrow 4n^2 = 2m^2 \Leftrightarrow 2n^2 = m^2 \Leftrightarrow 2$ divide $m^2$
+
+allora $2$ divide $m$
+
+quindi $2$ divide $k$ e $2$ divide $m$
+
+allora hanno un fattore in comune, quindi non sono primi fra loro, che è un **assurdo**.
+
+> Quindi in $\mathbb{Q}$ non si può risolvere l'equazione $x^2 = 2$
+
+### Introduzione assiomatica di $\mathbb{R}$
+
+Esiste un insieme $\mathbb{R}$ tale che
+
+---
+
+$A)$ Su $\mathbb{R}$, è definita un'operazione di **somma** o **addizione**
+
+$+ : \mathbb{R} \times \mathbb{R} \to \mathbb{R}$  
+$(x, y) \mapsto x + y$  
+
+$A_1)$ La somma è **associativa**
+
+$\forall x, y, z$ vale che $x + (y + z) = (x + y) + z$
+
+$A_2)$ Esiste l'**elemento neutro**
+
+$\exists 0 \in \mathbb{R} : 0 + x = x + 0 = x$
+
+$A_3)$ Esiste l'**opposto**
+
+$\forall x \in \mathbb{R}, \exists x' \in \mathbb{R} : x + x' = x' + x = 0$
+
+$A_4)$ La somma è **commutativa**
+
+$\forall x, y$ vale che $x + y = y + x$
+
+> $(\mathbb{R}, +)$ è un **gruppo abeliano**.
+
+---
+
+$M)$ Su $\mathbb{R}$, è definita un'operazione di **prodotto** o **moltiplicazione**
+
+$\cdot : \mathbb{R} \times \mathbb{R} \to \mathbb{R}$  
+$(x, y) \mapsto x \cdot y$
+
+$M_1)$ La moltiplicazione è **associativa**
+
+$\forall x, y, z$ vale che $x \cdot (y \cdot z) = (x \cdot y) \cdot z$
+
+$M_2)$ Esiste l'**elemento neutro**
+
+$\exists 1 \in \mathbb{R} : 1 \cdot x = x \cdot 1 = x$
+
+$M_3)$ Esiste l'**opposto**
+
+$\forall x \in \mathbb{R}, \exists x' \in \mathbb{R} : x \cdot x' = x' \cdot x = 1$
+
+$M_4)$ La moltiplicazione è **commutativa**
+
+$\forall x, y$ vale che $x \cdot y = y \cdot x$
+
+---
+
+$D)$ Esiste la proprietà **distributiva** che unisce la somma e la moltiplicazione
+
+---
+
+$\forall x, y, z$ vale che $x \cdot (y + z) = (x \cdot y) + (x \cdot z)$
+
+> $(\mathbb{R}, +, \cdot)$ è un **campo**.
+
+---
+
+$O)$ Su $\mathbb{R}$, è definito un **ordinamento totale** che chiamo $\geq$ "maggiore o uguale"
+
+$O_1)$ $\forall x, y, z \in \mathbb{R}$ vale che $x \geq y \Rightarrow x + z \geq y + z$
+
+$O_2)$ $\forall x, y, z \in \mathbb{R}$ vale che $x \geq y \wedge z \geq 0 \Rightarrow x \cdot z \geq y \cdot z$
+
+---
+
+### Assioma di Dedekind
+
+$S)$ Siamo $A$ e $B$ sottoinsiemi di $\mathbb{R}$ con $A \neq \emptyset$ e $B \neq \emptyset$.
+
+Supponiamo che $\forall a \in A, \forall b \in B, a \leq b$
+
+allora 
+
+$\exists \xi \in \mathbb{R} : \forall a \in A, \forall b \in B$
+
+$a \leq \xi \leq b$
+
+---
+
+Dagli assiomi posso derivare le *normali* proprietà:
+
+- $\forall x \in \mathbb{R}, x \cdot 0 = 0 \wedge \forall x,y \in \mathbb{R}, x \cdot y = 0 \Rightarrow x = 0 \vee y = 0$  
+
+- $(-a) \cdot (-b) = ab$
+
+- $(-a) \cdot b = - ab$
+
+- $1 > 0$ e $\forall a \in \mathbb{R}, a^2 \geq 0$
+
+#### Le regole dei segni
+
+- $a > 0, b > 0 \Rightarrow ab > 0$  
+- $a < 0, b < 0 \Leftrightarrow ab > 0$  
+- $a > 0, b < 0 \Leftrightarrow ab < 0$  
+- $a < 0, b > 0 \Leftrightarrow ab < 0$  
+
+---
+
+## Intervalli
+
+Siano $a, b \in \mathbb{R}$ con $a < b$,
+
+sono **intervalli limitati**:
+
+$[a, b] = \{x \in \mathbb{R} : a \leq x \leq b\}$  
+$]a, b] = \{x \in \mathbb{R} : x < a \leq b\}$  
+$[a, b[ = \{x \in \mathbb{R} : a \leq x < b\}$  
+$]a, b[ = \{x \in \mathbb{R} : a < x < b\}$  
+
+Sia $a \in \mathbb{R}$,
+
+sono **intervalli illimitati**:
+
+$]-\infty, a] = \{x \in \mathbb{R} : x \leq a\}$  
+$]-\infty, a[ = \{x \in \mathbb{R} : a < x\}$  
+$[a, +\infty[ = \{x \in \mathbb{R} : a \geq x\}$  
+$]a, +\infty[ = \{x \in \mathbb{R} : a > x\}$
+
+> Sono illimitati inferiormente e limitati superiormente.
+
+**Osservazione**  
+$\mathbb{R} = ]-\infty, +\infty[$
+
+**Osservazione**  
+Può essere comodo pensare che anche $\{a\}$ (cioè un insieme di un solo punto) è un intervallo "degenere".
+
+**Osservazione**  
+$-\infty$ e $+\infty$ non sono numeri reali, ma soltanto simboli.
+
+> Scriviamo $\tilde{\mathbb{R}} = \mathbb{R} \cup \{-\infty, +\infty\}$, chiamata "**retta estesa**".
+
+## Insiemi limitati
+
+Sia $a \in \mathbb{R}$,  
+$A$ si dice (insieme) limitato superiormente se 
+
+$\exists M \in \mathbb{R} : \forall a \in A, a \leq M$
+
+**Definizione**  
+$A \subset \mathbb{R}$ si dice limitato se è limitato superiormente ed inferiormente.
+
+**Osservazione**  
+$A$ è limitato $\Leftrightarrow \exists R > 0 : A \subset [-R, +R]$
+
+**Osservazione**  
+Sul piano definisco un **insieme limitato** se riesco a metterlo in una circonferenza di raggio $R$.
+
+**Osservazione**  
+¿ Cosa significa che $A$ non sia superiormente limitato?  
+(senza usare la negazione)
+
+$\neg (\exists M \in \mathbb{R} : \forall a \in A, a \leq M)$
+
+$\forall M \in \mathbb{R} : \exists a \in A : a > M$
+
+## Maggioranti, minoranti, massimi e minimi
+
