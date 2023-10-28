@@ -28,7 +28,8 @@ $3x + y -2z = 0$
 
 Risolvere questa equazione significa determinare una (o tutte) le terne di numeri $(x,y,z)$ tali che, se sostituiamo tali numeri alle variabili nel membro sinistro, otteniamo zero.
 
-**Osservazione**: nella prima equazione ci veniva chiesto di determinare *un numero* , nella seconda ogni sostituzione è costituita da *tre numeri* ; diciamo quindi che la prima equazione è in  *una variabile* , la seconda in *tre variabili*.
+**Osservazione**  
+Nella prima equazione ci veniva chiesto di determinare *un numero* , nella seconda ogni sostituzione è costituita da *tre numeri* ; diciamo quindi che la prima equazione è in  *una variabile* , la seconda in *tre variabili*.
 
 Una prima soluzione è data dalla scelta:  
 
@@ -137,7 +138,7 @@ $$
 \begin{cases}
     \begin{align*}
         3x + 1y - 2z &= 0 \\
-    - 2x - 2y + 2z &= 0 \\  
+      - 2x - 2y + 2z &= 0 \\  
         2x + 0y - 1z &= 0
     \end{align*}
 \end{cases}
@@ -162,8 +163,8 @@ Ora vorrei calcolare le soluzioni di questo sistema. Per farlo usiamo un teorema
 > - ogni riga, dopo la prima, inizia con almeno uno 0 in più della riga soprastante;
 > - se una riga è nulla, allora ogni riga sottostante è nulla.
 
-**Definizione**:  
-Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.*
+**Definizione**  
+Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
 
 Andremo a manipolare il sistema al fine di trovarne uno equivalente (ovvero con le stesse soluzioni) più semplicemente da risolvere, ovvero nella forma :
 
@@ -320,22 +321,21 @@ Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
 ![somma di due vettori](./img/somma_vettori.png)
 
-**Attenzione**:  
-se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
+**Attenzione**: se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
 
-**Osservazione**:  
+**Osservazione**  
 $\overrightarrow{AB} + \overrightarrow{BB} = \overrightarrow{AB}$ e $\overrightarrow{AA} + \overrightarrow{AB} = \overrightarrow{AB}$
 
-**Proposizione**:  
+**Proposizione**  
 La somma di vettori applicati, quando è possibile eseguirla, soddisfa la proprietà associativa.
 
 Nei numeri reali, la proprietà associativa della somma dice che per ogni $a,b,c \in \mathbb{R}$ vale che  
 
-$$(a+b) + c = a + (b+c)$$
+$(a+b) + c = a + (b+c)$
 
 per questo motivo possiamo scrivere $a+b+c$ senza ambiguità.
 
-**Dimostrazione**:  
+**Dimostrazione**  
 Dobbiamo dimostrare che per ogni vettore applicato $\overrightarrow{AB}, \overrightarrow{BC}, \overrightarrow{CD}$ vale che
 
 $(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD})$
@@ -349,7 +349,8 @@ $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrighta
 
 $\square$
 
-**Definizione**: dato un vettore applicato $\overrightarrow{AB}$ e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot \overrightarrow{AB}$ in questo modo:
+**Definizione**  
+Dato un vettore applicato $\overrightarrow{AB}$ e un numero reale $a \in \mathbb{R}$, otteniamo $a \cdot \overrightarrow{AB}$ in questo modo:
 
 - se $a=0,\ a \cdot \overrightarrow{AB} := \overrightarrow{AA}$
 - se $a>0,\ a \cdot \overrightarrow{AB} :=$ vettore applicato in $A$ con *stessa direzione e stesso verso* di $\overrightarrow{AB}$ e modulo $a \cdot$ [modulo di $\overrightarrow{AB}$] (il modulo di $\overrightarrow{AB}$ si può indicare con $|\overrightarrow{AB}|$ e quindi possiamo scrivere "modulo uguale ad a $\cdot |\overrightarrow{AB}|$)
@@ -357,25 +358,32 @@ $\square$
 
 Per ottenere una teoria "più comprensiva" introduciamo un nuovo oggetto, i vettori liberi.
 
-**Definizione**: due vettori applicati $\overrightarrow{AB}$ e $\overrightarrow{CD}$ si dicono **equipollenti** se e solo se $\overrightarrow{AB}$ e $\overrightarrow{CD}$ hanno la medesima direzione, il medesimo verso e il medesimo modulo (cambia il PDA).
+**Definizione**  
+Due vettori applicati $\overrightarrow{AB}$ e $\overrightarrow{CD}$ si dicono **equipollenti** se e solo se $\overrightarrow{AB}$ e $\overrightarrow{CD}$ hanno la medesima direzione, il medesimo verso e il medesimo modulo (cambia il PDA).
 
 Si verifica che quella di equipollenza è una relazione di equivalenza, ovvero essa è riflessiva, simmetrica e transitiva.
 
-**Definizione**: dato un vettore applicato $\overrightarrow{AB}$, si definisce la sua classe di equipollenza.
+**Definizione**  
+Dato un vettore applicato $\overrightarrow{AB}$, si definisce la sua classe di equipollenza.
 
 $[\overrightarrow{AB}] := \{\text{vettori applicati}\ \overrightarrow{CD}\ \text{tale che}\ \overrightarrow{AB} \equiv \overrightarrow{CD}\}$
 
-**Proposizione**: dai risultati della geometria euclidea segue che dato un vettore applicato $\overrightarrow{AB}$ e un punto $C$, allora esiste sempre un vettore applicato $\overrightarrow{CD}$ equipollente ad $\overrightarrow{AB}$;  
+**Proposizione**  
+Dai risultati della geometria euclidea segue che dato un vettore applicato $\overrightarrow{AB}$ e un punto $C$, allora esiste sempre un vettore applicato $\overrightarrow{CD}$ equipollente ad $\overrightarrow{AB}$;  
 
 da questo segue che data una classe di equipollenza denotata $\vec{V}$, e dato un punto $C$ nel piano, esiste dunque un vettore applicato che appartiene a $\vec{V}$ e che ha punto iniziale $C$.
 
-**Osservazione**: se $\overrightarrow{AB} \equiv \overrightarrow{CD}$ allora $[\overrightarrow{AB}] = [\overrightarrow{CD}]$; si dice che $\overrightarrow{AB}$ e $\overrightarrow{CD}$ sono dei **rappresentanti** della medesima classe di equipollenza.
+**Osservazione**  
+Se $\overrightarrow{AB} \equiv \overrightarrow{CD}$ allora $[\overrightarrow{AB}] = [\overrightarrow{CD}]$; si dice che $\overrightarrow{AB}$ e $\overrightarrow{CD}$ sono dei **rappresentanti** della medesima classe di equipollenza.
 
-**Definizione**: una classe di equipollenza $\vec{V}$ di vettori applicati si dice **vettore libero**.
+**Definizione**  
+Una classe di equipollenza $\vec{V}$ di vettori applicati si dice **vettore libero**.
 
-**Osservazione**: tutti i vettori applicati nulli sono equipollenti e dunque formano una sola classe di equipollenza che denotiamo $\overrightarrow{O}$.
+**Osservazione**  
+Tutti i vettori applicati nulli sono equipollenti e dunque formano una sola classe di equipollenza che denotiamo $\overrightarrow{O}$.
 
-**Definizione**: dati due vettori liberi $\vec{U}$ e $\vec{V}$ definiamo la loro somma $\vec{U} + \vec{V}$ nella maniera seguente:
+**Definizione**  
+Dati due vettori liberi $\vec{U}$ e $\vec{V}$ definiamo la loro somma $\vec{U} + \vec{V}$ nella maniera seguente:
 
 1. scegliamo un rappresentante $\overrightarrow{AB}$ per $\vec{U}$, ovvero $\vec{U} = [\overrightarrow{AB}]$
 2. per la proposizione che abbiamo enunciato prima, possiamo scegliere un vettore applicato e un $\vec{V}$ tale che il suo punto iniziale sia $B$, ovvero un vettore $\overrightarrow{BC} \in \vec{V}$, ovvero $\vec{V} = [\overrightarrow{BC}]$
@@ -470,7 +478,7 @@ tali per cui per ogni $\lambda, \mu \in \mathbb{R}$ e per ogni $u, v, w \in V$ s
 Ciò che abbiamo visto finora ci mostra che $V_2$ (insieme dei vettori liberi nel piano) è un $\mathbb{R}$-spazio vettoriale.
 
 **Notazione**  
-un $\mathbb{R}$-spazio vettoriale si dice anche uno spazio vettoriale di $\mathbb{R}$.
+Un $\mathbb{R}$-spazio vettoriale si dice anche uno spazio vettoriale di $\mathbb{R}$.
 
 Esempio:  
 consideriamo $V = \mathbb{R}$
@@ -600,9 +608,9 @@ che è quindi il vettore nullo.
 $\square$
 
 **Dimostrazione**  
-!!! Per esercizio. Il vettore opposto è unico.
+Per esercizio. Il vettore opposto è unico.
 
-...
+> Dimostrato $\checkmark$
 
 Consideriamo ora $\mathbb{R}^2$ con $+$ e $\cdot$ introdotti in precedenza ("*le operazioni componente per componente*"). Abbiamo visto che $\mathbb{R}^2$ è un $\mathbb{R}$-spazio vettoriale. Ora consideriamo il seguente sottoinsieme $W \subseteq \mathbb{R}^2$
 
@@ -629,18 +637,30 @@ Infine consideriamo $v \in W$ e $\lambda \in \mathbb{R}$; vediamo che $\lambda \
 
 $v \in W \Rightarrow v_1 - 3 v_2 = 0$  
 
-allora ...
+allora $\lambda \cdot (v_1 - 3 v_2) = \lambda \cdot 0 = 0$, quindi $(\lambda v_1) - 3(\lambda v_2) = 0$, ovvero $\lambda, v \in W$.
 
 **Definizione**  
 Sia $V$ un $\mathbb{R}$-spazio vettoriale, un sottoinsieme $W \subseteq V$ si dice un **sottospazio vettoriale** di $V$ se valgono:
 
-1. il vettore nullo di $V$ appartiene a $W$
-...
+1. il vettore nullo di $V$ appartiene a $W$ (stringatamente $0 \in W$)
+2. $\forall v, w \in W, vale che v + w \in W$ (**chiusura rispetto alla somma**)
+3. $\forall \lambda \in \mathbb{R}$, $\forall v \in W$, vale che $\lambda \cdot v \in W$ (**chiusura rispetto alla moltiplicazione per uno scalare**)
 
 **Esempio**  
 $\mathbb{R}^2 \leftrightarrow$ {punti del piano}
 
-...
+$W = \{(x,y) \in \mathbb{R}^2 : x - 3y = 0\}$
+
+(è una retta nel piano cartesiano)
+
+**Esempio**  
+$\mathbb{R}^2 \leftrightarrow$ {punti del piano}
+
+$C = \{(x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1\}$
+
+(è una circonferenza nel piano cartesiano)
+
+Non è un sottospazio vettoriale di $\mathbb{R}^2$, perché $(0,0) \notin W$
 
 ---
 
@@ -663,17 +683,39 @@ dove $a_{ij}$ è un numero reale, ovvero
 
 $a_{ij} \in \mathbb{R}$, $\forall i \in \{1, 2, \dots, m\}$ e $\forall j \in \{1, 2, \dots, n\}$
 
-**Esempio**  
-!!! ESEMPIO MATRICE FOTO
+**Esempio**
+Sia $A$ una matrice $3 \times 4$ a coefficienti reali
+
+$$
+A =
+\left[ {\begin{array}{cccc}
+  1 & 2 & 3 & 4\\
+  5 & 6 & 7 & 8\\
+  9 & 10 & 11 & 12\\
+\end{array} } \right]
+$$
+
+$a_{1,1} = 1$  
+$a_{1,2} = 2$  
+$a_{1,3} = 3$  
+$a_{1,4} = 4$  
+$a_{2,1} = 5$  
+$a_{2,2} = 6$  
+$a_{2,3} = 7$  
+$a_{2,4} = 8$  
+$a_{3,1} = 9$  
+$a_{3,2} = 10$  
+$a_{3,3} = 11$  
+$a_{3,4} = 12$
 
 **Definizione**  
 Sia $A = (a_{ij})$ una matrice a coefficienti reali
 
-per ogni $i \in \{1, 2, \dots, m\}$ la i-esima riga è la matrice
+per ogni $i \in \{1, 2, \dots, m\}$ la $i$-esima riga è la matrice
 
 $A_j = (a_{i1}, a_{i2}, \dots, a_{in})$
 
-per ogni $j \in \{1, 2, \dots, n\}$ la j-esima colonna la matrice
+per ogni $j \in \{1, 2, \dots, n\}$ la $j$-esima colonna la matrice
 
 $$
 A_i =
@@ -782,7 +824,7 @@ $(\lambda \cdot A)_{i,j} := \lambda \cdot A_{i,j}$
 L'insieme $M_{m,n} (\mathbb{R})$ con le operazioni di somma e moltiplicazione per uno scalare definite sopra è un $\mathbb{R}$-spazio vettoriale.
 
 **Dimostrazione**  
-!!! Per esercizio.
+Per esercizio.
 
 **Esempio**  
 Sia $\lambda = 3$, e sia
@@ -916,9 +958,27 @@ Riusciamo a capire quali condizioni dobbiamo imporre a $e, f, g, h$ affinché la
 
 $$
 e \cdot E + f \cdot F + g \cdot G + h \cdot H =
+\begin{pmatrix}
+  e & 0 \\
+  0 & 0
+\end{pmatrix} +
+\begin{pmatrix}
+  0 & f \\
+  0 & 0
+\end{pmatrix} +
+\begin{pmatrix}
+  0 & 0 \\
+  g & 0
+\end{pmatrix} +
+\begin{pmatrix}
+  0 & 0 \\
+  0 & h
+\end{pmatrix} =
+\begin{pmatrix}
+  e & f \\
+  g & h
+\end{pmatrix}
 $$
-
-!!! somma matrici
 
 Quindi, affinché valga
 
@@ -944,7 +1004,7 @@ $$
 \end{pmatrix}
 $$
 
-quindi
+quindi se e solo se
 
 $e = 0,\ f = 0,\ g = 0,\ h = 0$
 
@@ -985,51 +1045,128 @@ $$
 
 abbiamo quindi ottenuto la matrice nulla come combinazione lineare delle matrici $A$ e $B$, cui coefficienti non sono tutti nulli, pertanto le matrici $A$ e $B$ non sono linearmente indipendenti.
 
-Ritorniamo alla situazione delle matrici $2 \times 2$ e consideriamo il seguente insieme 
+Ritorniamo alla situazione delle matrici $2 \times 2$ e consideriamo il seguente insieme
 
 $$
 T_{2,2} (\mathbb{R}) := \{A \in M_{2,2} \in (\mathbb{R}) : a_{21} = 0\} =
+\left\{
+  \begin{pmatrix*}[r]
+    a_{11} & a_{12} \\
+    0 & a_{22}
+  \end{pmatrix*}
+  \in M_{2,2}(\mathbb{R})
+  : a_{11}, a_{12}, a_{22} \in \mathbb{R}
+\right\}
 $$
-!!! finisci
 
-Dunque ... !!! foto
+Dunque
+$\begin{pmatrix}
+  1 & 2 \\
+  0 & 1
+\end{pmatrix} 
+\in T_{2,2} (\mathbb{R})$
+, ma
+$\begin{pmatrix}
+  0 & 0 \\
+  1 & 1
+\end{pmatrix}
+\notin T_{2,2} (\mathbb{R})$.
 
 L'insieme $T_{2,2} (\mathbb{R})$ è l'insieme delle matrici $2 \times 2$ a coefficienti in $\mathbb{R}$ triangolari superiori. Notiamo che $T_{2,2} (\mathbb{R}) \subseteq M_{2,2} (\mathbb{R})$.
 
 Vale che:
 
-1:
-
-$$
-\begin{pmatrix}
+1: $\begin{pmatrix}
    0 & 0 \\
    0 & 0
 \end{pmatrix}
-\in T_{2,2} (\mathbb{R})
-$$
+\in T_{2,2} (\mathbb{R})$
 
-2:
+2: Se $A,B \in T_{2,2} (\mathbb{R})$, allora 
 
-se $A,B \in T_{2,2} (\mathbb{R})$, allora
+$A =
+\begin{pmatrix}
+   a_{11} & a_{12} \\
+   0 & a_{22}
+\end{pmatrix}
+$
+e
+$B =
+\begin{pmatrix}
+   b_{11} & b_{12} \\
+   0 & b_{22}
+\end{pmatrix}
+$
 
-... !!! foto
+quindi
+$A + B =
+\begin{pmatrix}
+   a_{11} + b_{11} & a_{12} + b_{12} \\
+   0 & a_{22} + b_{22}
+\end{pmatrix}
+$
 
-Abbiamo dimostrato quindi che $T_{2,2} (\mathbb{R})$ è un sottoinsieme vettoriale di $M_{2,2} (\mathbb{R})$.
+pertanto $A + B \in T_{2,2} (\mathbb{R})$.
+
+3: Se $A \in T_{2,2} (\mathbb{R})$ e $\lambda \in \mathbb{R}$, allora
+
+$A =
+\begin{pmatrix}
+   a_{11} & a_{12} \\
+   0 & a_{22}
+\end{pmatrix}
+$, quindi
+$\lambda \cdot A =
+\begin{pmatrix}
+   \lambda \cdot a_{11} & \lambda \cdot a_{12} \\
+   0 & \lambda \cdot a_{22}
+\end{pmatrix}
+$
+
+pertanto $\lambda \cdot A \in T_{2,2} (\mathbb{R})$.
+
+Abbiamo verificato quindi che $T_{2,2} (\mathbb{R})$ è un sottoinsieme vettoriale di $M_{2,2} (\mathbb{R})$.
 
 Notiamo che l'analogo di $T_{2,2} (\mathbb{R})$ per matrici $3 \times 3$ è
 
-$$
+$
 T_{3,3} (\mathbb{R}) =
-$$
-
-!!! finisci foto
+\left\{
+  \begin{pmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    0 & a_{22} & a_{23} \\
+    0 & 0 & a_{33}
+  \end{pmatrix},
+  \forall i, \forall j, a_{ij} \in \mathbb{R}
+\right\}
+$
 
 **Definizione**  
-Sia $A \in M_{n} (\mathbb{R})$; allora la **diagonale principale** è la partte di $A$ data dalle entrate di posto $i,i$ per $i \in \{1,2, \dots, n\}$.
+Sia $A \in M_{n} (\mathbb{R})$; allora la **diagonale principale** è la parte di $A$ data dalle entrate di posto $i,i$ per $i \in \{1,2, \dots, n\}$.
 
-!!! matrice con diagonale
+**Definizione**
+Siano $A,B \in M_{m,n} (\mathbb{R})$, definiamo la **trasposta** di $A$ come quella matrice, che indichiamo con ${}^tA$, che è un elemento di $M_{n,m} (\mathbb{R})$ determinato dalla seguente proprietà: l'entrata di posto $i,j$ di ${}^tA$ è uguale alla entrata di posto $j,i$ di $A$, ovvero
 
-!!! inizio lezione 11.10
+$({}^tA)_{ij} := A_{ji}$  
+
+$\forall i \in \{1, \dots, n\}$  
+$\forall j \in \{1, \dots, m\}$  
+
+**Esempio**  
+$A =
+\begin{pmatrix*}[r]
+   1 & 2 & 3 \\
+   -3 & -2 & -1
+\end{pmatrix*}
+$
+
+${}^tA =
+\begin{pmatrix}
+   1 & -3 \\
+   2 & -2 \\
+   3 & -1
+\end{pmatrix}
+$
 
 **Proposizione**  
 Siano $A,B \in M_{m,n} (\mathbb{R})$, allora
@@ -1040,7 +1177,7 @@ Siano $A,B \in M_{m,n} (\mathbb{R})$, allora
 **Dimostrazione 1.**  
 Notiamo che
 
-$^t(A + B) \in M_{m,n} (\mathbb{R})$ 
+$^t(A + B) \in M_{m,n} (\mathbb{R})$
 
 $^tA \in M_{m,n} (\mathbb{R})$
 
@@ -1061,7 +1198,7 @@ $(^t(A+B))_{ij} = (A + B)_{ji} = A_{ji} + B_{ji}$
 
 $(^tA +\ ^tB)_{ij} = (^tA)_{ij} + (^tB)_{ij} = A_{ji} + B_{ji}$
 
-quindi le due quantità sono uguali. 
+quindi le due quantità sono uguali.
 
 $\square$
 
@@ -1133,11 +1270,60 @@ $c_P \cdot n_P + c_L \cdot n_L + c_U \cdot n_U$
 
 Facciamo una matrice $1 \times 3$ con i costi unitari e una matrice $3 \times 1$ con il numero delle unità.
 
-!!! matrici ccc e nnn
+$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    c_P & c_L & c_U \\
+  \end{array}
+\end{pmatrix}$
+e
+$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    n_P \\
+    n_L \\
+    n_U \\
+  \end{array}
+\end{pmatrix}
+$
 
 Più in generale, se abbiamo una matrice riga $1 \times n$ e una matrice colonna $n \times 1$, definiamo il loro prodotto righe per colonne come:
 
-!!! moltiplicazione riga (a11 ... a1n) colonna b11 bn1 := a11 \cdot b11 + ... + a1n \cdot bn1 = sum n k=1 a1k \cdot bk1
+$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    c_P & c_L & c_U
+  \end{array}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  \begin{array}{rrr}
+    n_P \\
+    n_L \\
+    n_U \\
+  \end{array}
+\end{pmatrix}
+:=
+c_p \cdot n_p + c_l \cdot n_l + c_u \cdot n_u
+$
+
+Più in generale, se abbiamo una matrice riga $1 \times n$ e una matrice colonna $n \times 1$, definiamo il loro prodotto righe per colonne come:
+
+$
+\begin{pmatrix}
+  a_{11} & a_{12} & \dots & a_{1n}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  b_{11} \\
+  b_{21} \\
+  \vdots \\
+  b_{n1}
+\end{pmatrix}
+:=
+a_{11} \cdot b_{11} + a_{12} \cdot b_{21} + \dots + a_{1n} \cdot b_{n1} =
+\displaystyle\sum_{k=1}^{n} a_{k1} \cdot b_{k1}
+$
 
 Supponiamo che in un altro negozio valga
 
@@ -1147,7 +1333,7 @@ $c'_U = -1 \$$
 
 Per tenere sotto controllo i due totali di spesa potrei impacchettare le due righe dei costi unitari in un unica matrice.
 
-$$
+$
 \begin{pmatrix}
   \begin{array}{rrr}
     c_P & c_L & c_U \\
@@ -1155,11 +1341,11 @@ $$
   \end{array}
 \end{pmatrix}
 \in M_{2,2} (\mathbb{R})
-$$
+$
 
-Potrebbe essere ragionevole definire !!! manca
+Potrebbe essere ragionevole definire il prodotto di
 
-$$
+$
 \begin{pmatrix}
   \begin{array}{rrr}
     c_P & c_L & c_U \\
@@ -1174,12 +1360,19 @@ $$
     n_U \\
   \end{array}
 \end{pmatrix}
-$$
-
+$
 
 come la matrice $2 \times 1$:
 
-!!! manca
+$
+\begin{pmatrix}
+  \begin{array}{rrr}
+    c_P \cdot n_P + c_L \cdot n_L + c_U \cdot n_U \\
+    c'_P \cdot n_P + c'_L \cdot n_L + c'_U \cdot n_U \\
+  \end{array}
+\end{pmatrix}
+\in M_{2,1} (\mathbb{R})
+$
 
 Ricapitolando, abbiamo moltiplicato una matrice $2 \times 3$ per una matrice $3 \times 1$ e abbiamo ottenuto una matrice $2 \times 1$. In altre parole, la matrice ottenuta dalla moltiplicazione è quella matrice le cui entrate sono date dalla moltiplicazione di ciascuna delle due righe della prima matrice con la colonna della seconda matrice.
 
@@ -1220,13 +1413,15 @@ $$
 $$
 
 **Definizione**  
-Sia $A \in M_{1,n} (\mathbb{R})$ e sia $B \in M_{n,1} (\mathbb{R})$; allora definiamo il prodotto $A \cdot B$ come il numero dato da 
+Sia $A \in M_{1,n} (\mathbb{R})$ e sia $B \in M_{n,1} (\mathbb{R})$; allora definiamo il prodotto $A \cdot B$ come il numero (o equivalentemente la matrice $1 \times 1$) dato da
 
-$A \cdot B = a_{11} \cdot b_{11} + \dots + a_{1n} \cdot b_{n1} = sum...$  !!!
+$A \cdot B = a_{11} \cdot b_{11} + \dots + a_{1n} \cdot b_{n1} = \displaystyle\sum_{k=1}^{n} a_{k1} \cdot b_{k1}$
 
-in generale, il prodotto $A \cdot B$ è la matrice $m \times n$ la cui entrata di posto $i,j$ è data da
+(questo è il prodotto di una riga per una colonna)
 
-$(A \cdot B)_{ij} = A_i \cdot B_j = a_{i1} \cdot b_{1j} + \dots + a_{ip} \cdot b_{pj} = sum...$ !!!
+in generale, se $A \in M_{m,p} (\mathbb{R})$ e $B \in M_{p,n} (\mathbb{R})$, allora il prodotto $A \cdot B$ è la matrice $m \times n$ la cui entrata di posto $i,j$ è data da
+
+$(A \cdot B)_{ij} = A_{(i)} \cdot B^{(j)} = a_{i1} \cdot b_{1j} + \dots + a_{ip} \cdot b_{pj} = \displaystyle\sum_{k=1}^{p} a_{ik} \cdot b_{kj}$
 
 **Osservazione**  
 Il prodotto tra due matrici $A$ e $B$ è definito solo se il numero di colonne di $A$ coincide con il numero di righe di $B$.
@@ -1236,9 +1431,884 @@ Il prodotto tra due matrici $A$ e $B$ è definito solo se il numero di colonne d
 **Definizione**  
 Sia $n \in \mathbb{N}, n>0$, allora la matrice unità è quella matrice quadrata $n \times n$ le cui entrate sono tutte nulle, fuorché quella della diagonale principale, che sono tutte uguali a $1$; denotiamo questa matrice con $1_n$ oppure $I_n$ oppure $Id_n$.
 
-quindi vale che 
+quindi vale che
 
 $(1_n)_{ij} := 0\ se\ i \neq j,\ 1\ se\ i = j$
 
 > Esempio per vedere che $A \cdot B \neq B \cdot A$
 
+**Proposizione**  
+Siano $A, B \in M_{m,p}(\mathbb{R})$ e sia $C, D \in M_{p,n}(\mathbb{R})$,  
+allora valgono le seguenti uguaglianze:
+
+1. $(A+B) \cdot C = A \cdot C + B \cdot C$ (**proprietà distributiva a destra**)
+2. $A \cdot (C + D) = A \cdot C + A \cdot D$ (**proprietà distributiva a sinistra**)
+
+**Proposizione**  
+Sia $A \in M_{m,p}(\mathbb{R})$, $B \in M_{p,q}(\mathbb{R})$ e $C \in M_{q,n}(\mathbb{R})$,  
+allora vale che
+
+$(A \cdot B) \cdot C = A \cdot (B \cdot C)$ (**proprietà associativa del prodotto**)
+
+**Proposizione**  
+Sia $A \in M_{m,p}(\mathbb{R})$ e $B \in M_{p,n}(\mathbb{R})$,  
+allora
+
+${}^t (A \cdot B) \neq {}^tA \cdot {}^tB$  
+$m \times n$ , $p \times m$ , $n \times p$
+
+Le matrici ${}^tA \cdot {}^tB$ **non** si possono moltiplicare tra loro in generale (ne $m \neq n$).
+
+Vale invece che
+
+${}^t (A \cdot B) = {}^tB \cdot {}^tA$  
+$m \times n$ , $n \times p$ , $p \times m$
+
+**Dimostrazione**  
+Per mostrare che ${}^t (A \cdot B)$ è uguale a ${}^tB \cdot {}^tA$, mostriamo che tutte le loro entrate sono uguali: sta dunque $i \in \{1, \dots, n\}$ e sia $j \in \{1, \dots, m\}$; allora
+
+$({}^t(A \cdot B))_{ij} = (A \cdot B)_{ji} = A_{(j)} \cdot B^{(i)}$
+
+$({}^tA \cdot {}^tB)_{ij} = ({}^tB)_{(i)} \cdot ({}^tA)^{(j)} = B^{(j)} \cdot A_{(j)}$
+
+questo mostra che le due matrici sono uguali.
+
+**Proposizione**  
+Sia $A \in M_{m,n}(\mathbb{R})$, allora  
+
+$1_m \cdot A = A$ e $A \cdot 1_m = A$
+
+**Osservazione**  
+Nel caso delle matrici quadrate, la matrice unità $1_n$ funge dunque da elemento neutro per il prodotto righe per colonne:
+
+per ogni $A \in M_{n}(\mathbb{R})$ vale che
+
+$1_n \cdot A = A$ e $A \cdot 1_n = A$
+
+**Osservazione**  
+Nei numeri reali, dato $a \in \mathbb{R}$, diciamo che $b$ è inverso di $a$ se vale che $a \cdot b = b \cdot a = 1$; ogni numero reale non nullo ammette un unico inverso; l'inverso di $a \in \mathbb{R} \setminus 0$ si denota $a^{-1}$.
+
+**Definizione**  
+Sia $A \in M_{m,n}(\mathbb{R})$; A si dice invertibile se esiste $B \in M_{m,n}(\mathbb{R})$ tale che valga:
+
+$A \cdot B = B \cdot A = 1_n$
+
+**Proposizione**  
+Sia $A, B \in M_{m,n}(\mathbb{R})$, allora
+
+1. se $A$ è invertibile, allora l'inversa di $A$ è unica
+2. se $A$ e $B$ sono invertibili, allora anche $A \cdot B$ è invertibile e la sua inversa è $B^{-1} \cdot A^{-1}$
+
+**Dimostrazione**  
+1- siano $B, C$ entrambe inverse di $A$, allora
+
+$A \cdot B = B \cdot A = 1_n$  
+$A \cdot C = C \cdot A = 1_n$  
+
+allora
+
+$B = B \cdot 1_n = B \cdot (A \cdot C) = (B \cdot A) \cdot C = 1_n \cdot C = C$
+
+2- mostriamo che $B^{-1} \cdot A^{-1}$ è inversa di $A \cdot B$ :
+
+$(A \cdot B) \cdot (B^{-1} \cdot A^{-1}) = A \cdot (B \cdot B^{-1}) \cdot A^{-1} =
+A \cdot 1_n \cdot A^{-1} = A \cdot A^{-1} = 1_n$
+
+analogamente
+
+$(B^{-1} \cdot A^{-1}) \cdot (A \cdot B) = B^{-1} \cdot (A^{-1} \cdot A) \cdot B = B^{-1} \cdot 1_n \cdot B = B^{-1} \cdot B = 1_n$
+
+**Osservazione**
+L'analogia tra invertibilità rispetto al prodotto di due numeri reali e l'invertibilità rispetto al prodotto righe per colonne di matrici *non* si estende fino al punto di dire che ogni matrice non nulla è invertibile.
+
+**Esempio**  
+Consideriamo la matrice $A \in M_{2}(\mathbb{R})$,
+
+$
+A=
+\begin{pmatrix}
+  1 & 1 \\
+  1 & 1
+\end{pmatrix}
+$
+
+mostriamo che $A$$ non è invertibile; supponiamo che esiste un'inversa $B$
+
+$
+B =
+\begin{pmatrix}
+  b_{11} & b_{12} \\
+  b_{21} & b_{22}
+\end{pmatrix}
+$
+
+dovrebbe essere che
+
+$
+A \cdot B =
+\begin{pmatrix}
+  \textcircled{1} & 0 \\
+  \textcircled{0} & 1
+\end{pmatrix}
+$
+
+quindi in particolare
+
+$(1 , 1) \cdot
+\begin{pmatrix}
+  b_{11} \\
+  b_{21} \\
+\end{pmatrix}
+= 1
+$, ovvero $b_{11} + b_{21} = 1$
+
+$(1 , 1) \cdot
+\begin{pmatrix}
+  b_{11} \\
+  b_{21} \\
+\end{pmatrix}
+= 0
+$, ovvero $b_{12} + b_{21} = 0$
+
+e questo è impossibile perché implicherebbe $1 = 0$.
+
+Fermiamoci un attimo! Se ci guardiamo indietro, vediamo che ogniqualvolta abbiamo usato i numeri reali, abbiamo solamente utilizzato le loro proprietà rispetto a somma e moltiplicazione. Queste  sono infatti le proprietà che lo rendono un campo.
+
+**Definizione**  
+Sia K un insieme su cui siano definite un'operazione di somma e una operazione di moltiplicazione, ovvero
+
+$+ : K \times K \rightarrow K$  
+$(a,b) \mapsto a + b$
+
+$\cdot : K \times K \rightarrow K$  
+$(a,b) \mapsto a \cdot b$
+
+tale per cui siano soddittive le seguenti proprietà:
+
+K1: commutatività:  
+$\forall a, b \in K, a + b = b + a, a \cdot b = b \cdot a$  
+
+K2: associatività:  
+$\forall a, b, c \in K, (a + b) + c = a + (b + c), (a \cdot b) \cdot c = a \cdot (b \cdot c)$  
+
+K3: esistenza dell'elemento neutro:  
+$\exists 0 \in K$, tale che $\forall a \in K, a + 0 = 0 + a = a$  
+$\exists 1 \in K$, tale che $\forall a \in K, a \cdot 1 = 1 \cdot a = a$  
+e inoltre $0 \neq 1$
+
+K4: esistenza di opposto e inverso:  
+$\forall a \in K, \exists b \in K$, tale che a + b = b + a = 0$  
+(denotiamo $b$ con $-a$)  
+$\forall a \in K \setminus \{0\}, \exists c \in K$, tale che a \cdot c = c \cdot a = 1$  
+(denotiamo $c$ con $a^{-1}$ o con $1/a$)
+
+K5: distributività: $\forall a, b, c \in K, a \cdot (b + c) = (a \cdot b) + (a \cdot c)$
+
+un tale insieme si dice **campo**.
+
+**Esempio**  
+$\mathbb{Q}$ è un **campo**  
+$\mathbb{R}$ è un **campo**  
+$\mathbb{C}$ è un **campo**  
+$\mathbb{N}$ non è un campo  
+$\mathbb{Z}$ non è un campo  
+
+**Osservazione**  
+L'insieme delle funzioni razionali
+
+$\{\frac{p}{q}, \text{p e q sono polinomi in una variabile}\}$
+
+può essere dotata di somma e prodotto in modo da renderlo un campo.
+
+**Esempio**  
+L'insieme $\mathbb{Z}_2 = \{0, 1\}$ su cui definiamo una somma e un prodotto nel modo seguente
+
+$+ : \mathbb{Z}_2 \times \mathbb{Z}_2 \rightarrow \mathbb{Z}_2$  
+$(a,b) \mapsto a + b$
+
+$\cdot : \mathbb{Z}_2 \times \mathbb{Z}_2 \rightarrow \mathbb{Z}_2$  
+$(a,b) \mapsto a \cdot b$
+
+| + | 0 | 1 |
+| --- | --- | --- |
+| 0 | 0 | 1 |
+| 1 | 1 | 0 |
+
+| $\cdot$ | 0 | 1 |
+| --- | --- | --- |
+| 0 | 0 | 0 |
+| 1 | 0 | 1 |
+
+è un campo.
+
+Pertanto la precedente nozione di $\mathbb{R}$-spazio vettoriale sarà d'ora in poi sostituita da quella di $K$-spazio vettoriale, con $K$ un campo.
+
+## Sistemi lineari
+
+**Definizione**  
+Sia $K$ un campo; un sistema di $m$ equazioni in $n$ incognite a coefficienti in $K$ è un sistema di equazioni della forma seguente
+
+$a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1$  
+$a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2$  
+$\vdots$  
+$a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m$  
+
+dove ogni $a_{ij}$ è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$, $j \in \{1, \dots, n\}$ e ogni $b$; è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$; $x_1, \dots, x_n$ sono dette **incognite**, mentre gli elementi $b_1, \dots, b_m$ sono detti i **termini noti** e gli elementi $a_{ij}$ sono detti i **coefficienti** del sistema;
+
+!!!
+
+Un sistema lineare può essere scritto nella forma
+
+$A \cdot X = b$
+
+**Esempio**  
+Consideriamo il sistema
+
+$
+\left\{
+  \begin{array}{l}
+    x_1 +2x_2 = 3 & \\
+    x_1 +2x_2 = 5 & \\
+  \end{array}
+\right.
+$
+
+$
+A =
+\begin{pmatrix}
+  1 & 2 \\
+  1 & 2
+\end{pmatrix}
+,\
+x =
+\begin{pmatrix}
+  x_1 \\
+  x_2
+\end{pmatrix}
+,\
+b =
+\begin{pmatrix}
+  3 \\
+  5
+\end{pmatrix}
+$
+
+Il sistema **non è omogeneo**: almeno un termine noto non è nullo.  
+Il sistema **è incompatibile**: infatti esso non ha soluzioni.
+
+Se
+$
+s = \begin{pmatrix}
+  s_1 \\
+  s_2 \\
+\end{pmatrix}
+$
+fosse una soluzione, allora verrebbe che:
+
+$
+\left\{
+  \begin{array}{l}
+    s_1 + 2s_2 = 3 & \\
+    s_1 + 2s_2 = 5 & \\
+  \end{array}
+\right.
+\Rightarrow
+3 = 5
+$
+
+Che è impossibile.
+
+**Esempio**  
+Consideriamo il sistema
+
+$
+\left\{
+  \begin{array}{l}
+    x_1 +2x_2 = 3 & \\
+    x_1 -x_2 = 1 & \\
+  \end{array}
+\right.
+$
+
+Non è chiamo a priori se il sistema sia compatibile o meno.
+
+Per sostituzione ottengo
+
+$
+\left\{
+  \begin{array}{l}
+    x_1 = \frac{5}{3} & \\
+    x_2 = \frac{2}{3} & \\
+  \end{array}
+\right.
+$
+
+Il sistema ha dunque un'unica soluzione
+$
+s =
+\begin{pmatrix}
+  \frac{5}{3} \\
+  \frac{2}{3}
+\end{pmatrix}
+$
+, esso è quindi compatibile (è non omogeneo).
+
+Il motivo per il quale siamo certi che ci sia un'unica soluzione è che per ottenere il sistema finale abbiamo trasformato il sistema iniziale tramite operazioni che non cambiano l'insieme delle soluzioni.
+
+**Definizione**  
+Due sistemi lineari si dicono **equivalenti** se ammettono le medesime soluzioni (ovvero gli insiemi delle soluzioni sono uguali).
+
+**Esempio**  
+Consideriamo il sistema:
+
+$
+\left\{
+  \begin{array}{l}
+    x_1 +2x_2 = 3 & \\
+    2x_1 + 4x_2 = 6 & \\
+  \end{array}
+\right.
+$
+
+$
+A =
+\begin{pmatrix}
+  1 & 2 \\
+  2 & 4
+\end{pmatrix}
+,\
+x =
+\begin{pmatrix}
+  x_1 \\
+  x_2
+\end{pmatrix}
+,\
+b =
+\begin{pmatrix}
+  3 \\
+  6
+\end{pmatrix}
+$
+
+$x_1 = 3 - 2x_2$  
+$2(3 - 2x_2) = 6 - 4x_2$  
+$6 - 4x_2 + 4x_2 = 6$  
+$6 = 6$ sempre vera per ogni $x_2$
+
+Il sistema è pertanto equivalente ad un'unica equazione
+
+$x_1 = 3 - 2x_2$
+
+Le soluzioni di questa equazione si possono esprimere cosi:
+
+se a $x_2$ assegno il valore $t \in \mathbb{R}$ allora a $x_1$ devo assegnare il valore $3 - 2t$, ovvero le soluzioni sono della forma
+
+$
+\left\{
+  \begin{array}{l}
+    \begin{pmatrix}
+      3 -2t \\
+      t
+    \end{pmatrix}
+    : t \in \mathbb{R}
+  \end{array}
+\right\}
+$ $\leftarrow$ vediamo che le soluzioni sono infinite
+
+$
+\begin{pmatrix}
+  3 \\
+  0
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+  -2 \\
+  1
+\end{pmatrix}
+$ $\leftarrow$ graficamente queste soluzioni corrispondono ai punti di una retta che passa per il punto $(3, 0)$.
+
+### Teorema di Cramer
+
+Consideriamo un sistema lineare con $n$ equazioni ad $n$ incognite
+
+$AX = b$
+
+ovvero la matrice $A$ è quadrata, $A \in M_{n}(K)$, supponiamo inoltre che $A$ sia invertibile, allora esiste un'unica soluzione del sistema ed essa è data da $s = A^{-1} \cdot b$.
+
+**Osservazione**  
+Questo teorema non ci dice soltanto che una soluzione esiste, ma ci fornisce anche un modo per calcolarla.
+
+**Dimostrazione**  
+Per dimostrare il teorema, dimostriamo due cose:
+
+1. che $A^{-1} \cdot b$ è soluzione del sistema.
+2. che $A^{-1} \cdot b$ è l'unica soluzione del sistema.
+
+1- $A^{-1} \cdot b$ è soluzione del sistema se e solo se, se sostituiamo $X$ con $A^{-1} \cdot b$, otteniamo una uguaglianza vera nel sistema (notiamo che la sostituzione ha senso dato che $X$ è una matrice $n \times 1$ e $A^{-1} \cdot b$ è una matrice $n \times 1$).
+
+$A \cdot (A^{-1} \cdot b) \xlongequal{?} b$  
+$(A \cdot A^{-1}) \cdot b \xlongequal{?} b$  
+$1_n \cdot b \xlongequal{?} b$  
+$b = b$  
+vero!
+
+$\square$
+
+Abbiamo verificato che l'uguaglianza è vera, dunque $A^{-1} \cdot b$ è soluzione del sistema, il quale è quindi compatibile.
+
+2- per dimostrare che $A^{-1} \cdot b$ sia l'unica soluzione del sistema, supponiamo che ve ne sia un'altra, ovvero che $s' \in M_{n,1}(K)$ sia soluzione del sistema e mostriamo che deve essere $s' = A^{-1} \cdot b$
+
+(ovvero mostriamo che dal fatto che $s'$ è soluzione del sistema, discende che $s'$ deve essere uguale a $A^{-1} \cdot b$)
+
+abbiamo quindi supposto che
+
+$A \cdot s' = b$
+
+ora moltiplico entrambi i membri a sinistra per $A^{-1}$
+
+$A^{-1} \cdot (A \cdot s') = A^{-1} \cdot b$  
+$(A^{-1} \cdot A) \cdot s' = A^{-1} \cdot b$  
+$1_n \cdot s' = A^{-1} \cdot b$  
+$s' = A^{-1} \cdot b$  
+
+Quindi $s' = A^{-1} \cdot b$.
+
+$\square$
+
+**Notazione**  
+D'ora in poi andremo ad identificare i seguenti due spazi vettoriali:
+
+$
+\begin{pmatrix}
+  b_1 \\
+  \vdots \\
+  b_m
+\end{pmatrix}
+\in M_{m,1}(K)
+$
+e
+$
+\begin{pmatrix}
+  b_1 \\
+  \vdots \\
+  b_m
+\end{pmatrix}
+\in K^m
+$ (**isomorfi**)
+
+in questo senso, diremo ad esempio che un elemento $s \in K^n$ è soluzione di un sistema lineare $AX = b$.
+
+### Teorema di struttura per sistemi lineari omogenei
+
+Consideriamo un sistema lineare omogeneo di $m$ equazioni ad $n$ incognite
+
+$AX = 0$
+
+($0$ è la matrice $n \times 1$ con tutte le entrate nulle)
+
+siano $s, s' \in K^n$ due soluzioni del sistema e sia $\lambda \in K$; allora
+
+1. $s + s'$ è soluzione del sistema lineare
+2. $\lambda s$ è soluzione del sistema lineare
+
+pertanto ricordando che il vettore nullo $0 \in K^n$ è sempre soluzione del sistema omogeneo, otteniamo che l'insieme delle soluzioni di $AX = 0$, ovvero l'insieme
+
+$\left\{r \in K^n : A \cdot r = 0\right\}$
+
+è un sottospazio vettoriale di $K^n$.
+
+**Osservazione**  
+Vale che, se $A \in M_{n,m}(K)$ e $s \in K^n$ e $\lambda \in K$, allora $A \cdot (\lambda \cdot s) = \lambda \cdot (A \cdot s)$.
+
+**Dimostrazione**  
+1- Dato che $s, s'$ siano soluzioni, vale che
+
+$A \cdot s = 0$ e $A \cdot s' = 0$
+
+per mostrare che $s + s'$ è soluzione dobbiamo dimostrare che
+
+$A \cdot (s + s') = 0$
+
+$A \cdot (s + s') = A \cdot s + A \cdot s' = 0 + 0 = 0$
+
+(il prodotto righe per colonne soddisfa la proprietà distributiva)
+
+Quindi $s + s'$ è soluzione.
+
+$\square$
+
+2- Dato che $s$ è soluzione, vale che
+
+$A \cdot s = 0$
+
+per mostrare che $\lambda \cdot s$ è soluzione dobbiamo dimostrare che
+
+A $\cdot (\lambda \cdot s) = 0$
+
+A $\cdot (\lambda \cdot s) = \lambda \cdot (A \cdot s) = \lambda \cdot 0 = 0$
+
+Quindi $\lambda \cdot s$ è soluzione.
+
+$\square$
+
+**Osservazione**  
+Sia $A \in M_{n,m}(K)$ e $A$ invertibile;  
+consideriamo il sistema lineare omogeneo
+
+$AX = 0$
+
+allora per il teorema di Cramer, $A^{-1} \cdot 0$ è l'unica soluzione del sistema  
+e dato che $A^{-1} \cdot 0 = 0$ abbiamo che $0$ è l'unica soluzione di un tale sistema lineare omogeneo.
+
+### Teorema di struttura per sistemi lineari qualsiasi
+
+Consideriamo un sistema lineare  
+$AX = b$ con $A \in M_{m,n}(K)$ e $b \in K^n$,  
+e sia $\tilde{s}$ una sua soluzione;
+
+allora un elemento $s \in K^n$ è soluzione di $AX = b$  
+se e solo se possiamo scrivere $s = \tilde{s} + s_0$,  
+dove $s_0$ è una soluzione del sistema lineare omogeneo $AX = 0$.
+
+In altre parole, l'insieme delle soluzioni di $AX = b$ è l'insieme
+
+$\left\{s \in K^n : s = \tilde{s} + s_0\right\}$ per $s_0$ soluzione di $AX = 0$
+
+(il sistema $AX = 0$ si dice il sistema lineare omogeneo associato al sistema $AX = b$).
+
+**Dimostrazione**  
+$s \in K^n$ è soluzione di $AX = b$ $\Leftrightarrow$ $\exists s \in K^n$ soluzione di $AX = 0$ tale che $s = \tilde{s} + s_0$
+
+"$\Rightarrow$"  
+supponiamo che $s$ sia soluzione di $AX = 0$
+
+dobbiamo mostrare che esiste $s \in K^n$ soluzione di $AX = 0$ tale che $s = \tilde{s} + s_0$; definiamo $s_0 = s - \tilde{s}$; allora vale che $s = \tilde{s} + s_0$; ci resta da verificare che $s_0$ così ottenuto è soluzione del sistema lineare omogeneo associato; calcoliamo dunque $A \cdot s_0$ e verifichiamo che valga $0$:
+
+$A \cdot s_0 = A(s - \tilde{s}) = As - A\tilde{s} = b - b = 0$
+
+(per definizione; per la proprietà distributiva; per ipotesi)
+
+$\square$
+
+"$\Leftarrow$"  
+supponiamo che $\exists s_0 \in K^n$ soluzione di $AX = 0$ tale che $s = \tilde{s} + s_0$; dobbiamo mostrare che $s$ è soluzione di $AX = b$; calcoliamo dunque $A \cdot s$ e verifichiamo che sia uguale a $b$.
+
+$A \cdot s = A(\tilde{s} + s_0) = A\tilde{s} + A s_0 = b + 0 = b$
+
+(per ipotesi; per la proprietà distributiva; per ipotesi)
+
+$\square$
+
+Quindi, data una soluzione particolare $\tilde{s}$ di $AX = b$, possiamo scrivere che l'insieme di tutte le soluzioni di $AX = b$ è
+
+$\left\{\tilde{s} + s_0 : s_0 \text{ soluzione di } AX = 0 \right\}$
+
+**Osservazione**  
+Le soluzioni di $AX = b$ formano un sottospazio vettoriale di $K^n$ se e solo se $b = 0$. Infatti
+
+"$\Rightarrow$"  
+se le soluzioni di $AX = b$ sono un sottospazio vettoriale di $K^n$ allora $0 \in K^n$ è soluzione, dunque $A \cdot 0 = b$, pertanto $b = 0$.
+
+"$\Leftarrow$"  
+se $b = 0$, allora il sistema è omogeneo e la tesi segue dal teorema di struttura per sistemi lineari omogenei.
+
+**Esempio**  
+Consideriamo il sistema
+
+$x + 2y -3z = -1$ con coefficienti in $\mathbb{Q}$
+
+$
+A = (1 2 -3)
+,\
+X =
+\begin{pmatrix}
+  x \\
+  y \\
+  z \\
+\end{pmatrix}
+,\
+b = (-1)
+$
+
+consideriamo $\tilde{s} = \begin{pmatrix}
+  -1 \\
+  0 \\
+  0 \\
+\end{pmatrix}$ soluzione di $AX = b$
+
+per calcolare tutte le soluzioni di $AX = b$,  
+determiniamo tutte le soluzioni di $AX = b$, ovvero di  
+
+$x +2y -3z = 0$
+
+vediamo che il sistema $AX = 0$ è equivalente a
+
+$x = -2y + 3z$
+
+quindi possiamo assegnare un qualsiasi valore $u$ ad $y$ e un qualsiasi valore $v$ a $z$: quindi le soluzioni di $AX = 0$ si possono scrivere come
+
+$
+\begin{pmatrix}
+  -2u + 3v \\
+  u \\
+  v
+\end{pmatrix}
+$ per $u, v \in \mathbb{Q}$
+
+notiamo che
+
+$
+\begin{pmatrix}
+  -2u + 3v \\
+  u \\
+  v
+\end{pmatrix} = u \cdot
+\begin{pmatrix}
+  -2 \\
+  1 \\
+  0
+\end{pmatrix} + v \cdot
+\begin{pmatrix}
+  3 \\
+  0 \\
+  1
+\end{pmatrix}
+$
+
+Le soluzioni di $AX = b$ sono allora:
+
+$
+\begin{pmatrix}
+  -1 \\
+  0 \\
+  0
+\end{pmatrix} + u \cdot
+\begin{pmatrix}
+  -2 \\
+  1 \\
+  0
+\end{pmatrix} + v \cdot
+\begin{pmatrix}
+  3 \\
+  0 \\
+  1
+\end{pmatrix}, u, v \in \mathbb{Q}
+$
+
+Il nostro obbiettivo ora diventa essere in grado si risolvere un qualsiasi sistema lineare (omogeneo e non). Per cominciare, ci focalizziamo su un sottoinsieme particolare di sistemi lineari, i cosiddetti sistemi lineari a scala.
+
+**Definizione**  
+Sia $A \in M_{n,m}(K)$ e sia $r \in \left\{0, 1, \dots, m\right\}$ il numero di righe non nulle di $A$; diciamo che $A$ è una **matrice a scala** se:
+
+- $r = 0$ (ovvero $A$ è una matrice nulla)
+- $0 > r$ e vale che $A_{(j)} \neq (0, 0, \dots, 0), \forall j \in \left\{0, 1, \dots, r\right\}$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $A_{i} \in \left\{0, 1, \dots, m\right\}$
+
+$j_i = min \left\{j : a_{ij \neq 0}\right\}$
+
+allora deve valere che $j_1 < j_2 < \dots < j_n$
+
+(tutti questi valori sono maggiori o uguali di $\overline{j}$);  
+gli elementi $a_{ij}$ sono detti elementi di **pivot**.
+
+> Vari esempi
+
+**Proposizione**  
+Sia $AX = b$ un sistema lineare dove $A \in M_{n,m}(K)$ e supponiamo che $A$ sia a scala, con $r$ righe non nulle; allora
+
+$AX = b$ è compatibile (ovvero ammette almeno una soluzione) se e solo se $b_{r+1} = b_{r+2} = \dots = b_m = 0$
+
+**Dimostrazione**  
+"$\Rightarrow$"  
+Sia $s \in K^n$ una soluzione, ovvero $s = \begin{pmatrix}
+  s_1 \\
+  s_2 \\
+  \vdots \\
+  s_m
+\end{pmatrix}$ soddisfa $As = b$
+
+per ipotesi, $A$ è a scala e dunque le righe $A_{(r + 1)},  \dots, A_{(m)}$ sono tutte nulle; le corrispondenti equazioni sono quindi
+
+$
+\left\{
+  \begin{array}{l}
+    0 \cdot x_1 + 0 \cdot x_2 + \dots + 0 \cdot x_n = b_{r+1} \\
+    \vdots \\
+    0 \cdot x_1 + 0 \cdot x_2 + \dots + 0 \cdot x_n = b_{m}
+  \end{array}
+\right. \Rightarrow
+\left\{
+  \begin{array}{l}
+    0 \cdot s_1 + 0 \cdot s_2 + \dots + 0 \cdot s_n = b_{r+1} \\
+    \vdots \\
+    0 \cdot s_1 + 0 \cdot s_2 + \dots + 0 \cdot s_n = b_{m}
+  \end{array}
+\right. \Rightarrow
+\left\{
+  \begin{array}{l}
+    b_{r+1} = 0 \\
+    \vdots \\
+    b_{m} = 0
+  \end{array}
+\right.
+$
+
+"$\Leftarrow$"  
+Supponiamo che $\forall i > r$ vale che $b_{i} = 0$ (ovvero $b_{r+1} = \dots = b_m = 0$), per costruire una soluzione, procediamo a ritroso partendo "dal basso", ovvero dalle ultime equazioni; per ipotesi, tutte le equazioni dalla $r+1$-esima alla $m$-esima sono del tipo 0=0 (la matrice $A$ è a scala)
+
+la prima equazione non identicamente nulla è la $b$ $r$-esima, che è della forma
+
+$a_{r,j_r} \cdot x_{jr} + a_{r,j_{r+1}} \cdot x_{j_{r+1}} + \dots + a_{r,n} \cdot x_{m} = b_{r}$
+
+dove $a_{r,j_r} \neq 0$; posso dunque esplicitare $x_{jr}$
+
+$x_{jr} = \frac{b_r - (a_{r,j_{r+1}} \cdot s_{j+1} + \dots + a_{r,n} \cdot s_n)}{a_{r,j_r}}$
+
+scegliendo i valori $s_{j_r}, \dots, s_n$ in questa, la soluzione che stiamo costruendo soddisferà l'ultima equazione.  
+Costruiamo ora la penultima equazione non nulla
+
+$a_{r-1,j_{r-1}} \cdot x_{j_{r-1}} + a_{r-1,j_{r-1+1}} \cdot x_{j_{r-1+1}} + \dots + a_{r-1,n} \cdot x_{n} = b_{r-1}$
+
+dato che $A$ è a scala. abbiamo che $j_{r-1} < j_{r}$
+
+Ora possiamo scegliere a nostro piacimento i valori
+
+$s_{j_{r-1}+1}, \dots, s_{j_{r-1}-1} \in K$
+
+$s_{j_{r-1}} = \frac{b_{r-1} - (a_{r-1,j_{r-1+1}} \cdot s_{j_{r-1}+1} + \dots + a_{r-1,n} \cdot s_n)}{a_{r-1,j_{r-1}}}$
+
+e in questa maniera abbiamo determinato valori $s_{j_{r-1}}, \dots, s_n$ in modo che la soluzione che otterremo soddisfi le ultime due equazioni non nulle.
+
+A questo punto, ripetiamo lo stesso processo per tutte le altre righe.
+
+$\square$
+
+> Esempio
+
+**Definizione**  
+Siamo due sistemi lineari $AX = b$ e $A'X = b'$ con
+
+$A \in M_{n,m}(K)$ e $b \in K^m$  
+$A' \in M_{m,n}(K)$ e $b' \in K^{m'}$  
+
+(quindi i due sistemi hanno lo steso numero di incognite, ma possono avere un numero diverso di equazioni)
+
+si dicono **equivalenti** se hanno le medesime soluzioni.
+
+**Definizione**  
+Sia $AX = b$ un sistema lineare, allora la matrice ottenuta aggiungendo ad $A$ la colonna data da$b$, ovvero $(A|b)$ è detta la **matrice completa** del sistema $AX = b$.
+
+**Esempio**  
+Dato il sistema
+
+$
+\left\{
+  \begin{array}{l}
+    2x_1 + x_2 = 3 \\
+    -x_1 + 2x_2 = 5
+  \end{array}
+\right.
+$
+
+Le due matrici sono
+
+$A = \begin{pmatrix}
+  \begin{array}{rr}
+    2 & -1 \\
+    -1 & 2
+  \end{array}
+\end{pmatrix},\
+b = \begin{pmatrix}
+  3 \\
+  5
+\end{pmatrix}$
+
+Quindi la matrice completa è
+
+$(A|b) =
+\begin{pmatrix}
+  \begin{array}{rrr}
+    2 & -1 & 3 \\
+    -1 & 2 & 5
+  \end{array}
+\end{pmatrix}$
+
+---
+
+Introduciamo tre *operazioni elementari* che trasformano un sistema lineare in un sistema lineare equivalente:
+
+**OE1**:  
+Scambio di equazioni del sistema.  
+Dati $i,j \in \{1, \dots, m\}$, scambiamo di posto la $i$-esima e l'equazione $j$-esima.
+Equivale a scambiare due righe della matrice completa.
+
+**OE2**:  
+Moltiplicazione di un'equazione per uno scalare non nullo.  
+Dati $i \in \{1, \dots, m\}$ e $\lambda \in K$, moltiplichiamo l'equazione $i$-esima per $\lambda$.  
+Equivale a moltiplicare per $\lambda$ l'equazione $i$-esima della matrice completa.
+
+**OE3**:  
+Somma ad un'equazione un multiplo di un'altra equazione.  
+Dati $i,j \in \{1, \dots, m\}$ e $\lambda \in K$, sommiamo all'equazione $i$-esima la $j$-esima equazione, dopo aver moltiplicato quest'ultima per $\lambda$.  
+Equivale a sommare alla riga $i$-esima dalla matrice completa, $\lambda$ volte l'equazione $j$-esima.
+
+**Proposizione**  
+Se applichiamo a un sistema lineare $AX = b$ una delle tre operazioni elementari, OE1, OE2, OE3, otteniamo un sistema lineare equivalente.
+
+Se mostriamo che possiamo trasformare un sistema lineare in uno equivalente a scala tramite queste tre operazioni, saremo quindi in grado si calcolare soluzioni di un qualsiasi sistema lineare.
+
+### Algoritmo di Gauss (di gradinizzazione)
+
+*Input*: matrice completa $(A|b)$ di un sistema lineare.
+*Output*: matrice completa $(\tilde{A}|\tilde{b})$ tale che $\tilde{A}$ è a scala e $\tilde{A}X = \tilde{b}$ è equivalente a $AX = b$.
+
+$1)$ Determino $\overline{j}$ indice colonna minima per cui abbiamo una colonna non nulla di $A$.
+
+$\overline{j} = min \left\{j : A^{(j)} \neq 0\right\}$
+
+$A =
+\begin{pmatrix}
+  0 & 0 & \textcircled{*} & \dots & * \\
+  0 & 0 & * & \dots & * \\
+  0 & 0 & * & \dots & * \\
+\end{pmatrix}$
+
+$2)$ Determino un indice $\overline{i}$ tale per cui l'elemento $a_{ij}$ è non nullo (l'esistenza di un tale $\overline{i}$ dipende dalla scelta di $\overline{j}$).
+
+$3)$ Scambio le righe $\overline{i}$ e $1$; in questo modo posso supporre che l'elemento $a_{1j}$ sia non nullo.
+
+$\begin{pmatrix}
+  0 & 0 & a_{1j} & * & * \\
+  0 & 0 & \textcircled{*} & * & * \\
+  0 & 0 & \textcircled{*} & * & * \\
+\end{pmatrix}$
+
+$4)$ Moltiplico la prima riga per $\frac{1}{a_{1j}}$.
+
+$\begin{pmatrix}
+  0 & 0 & 1 & * & * \\
+  0 & 0 & \textcircled{*} & * & * \\
+  0 & 0 & \textcircled{*} & * & * \\
+\end{pmatrix}$
+
+$5)$ Per ogni $i \in \{2, \dots, m\}$, sommo alla riga $i$-esima un opportuno multiplo della prima riga; più precisamente, sostituisco l'$i$-esima riga con 
+
+$A_{(i)} - a_{1\overline{j}} A_{(1)}$
+
+$\begin{pmatrix}
+  0 & 0 & 1 & * & * \\
+  0 & 0 & 0 & * & * \\
+  0 & 0 & 0 & * & * \\
+\end{pmatrix}$
+
+$6)$ Ripeto il procedimento precedente sulla sottomatrice con righe $\{2, \dots, m\}$ e colonne $\{\overline{j} + 1, \dots, n\}$.
+
+$\begin{pmatrix}
+  0 & 0 & 1 & * & * \\
+  0 & 0 & 0 & \textcircled{*} & \textcircled{*} \\
+  0 & 0 & 0 & \textcircled{*} & \textcircled{*} \\
+\end{pmatrix}$
+
+Questo algoritmo termina in un tempo finito e restituisce un risultato che rispetta le prescrizioni.della specificazione.
+
+> Esempio
