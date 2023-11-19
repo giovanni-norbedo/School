@@ -1130,14 +1130,14 @@ Notiamo che l'analogo di $T_{2,2} (\mathbb{R})$ per matrici $3 \times 3$ è
 
 $$
 T_{3,3} (\mathbb{R}) =
-\left\{
+\left\lbrace
   \begin{pmatrix}
     a_{11} & a_{12} & a_{13} \\
     0 & a_{22} & a_{23} \\
     0 & 0 & a_{33}
   \end{pmatrix},
   \forall i, \forall j, a_{ij} \in \mathbb{R}
-\right\}
+\right\rbrace
 $$
 
 **Definizione**  
@@ -1666,7 +1666,7 @@ $A \cdot X = b$
 Consideriamo il sistema
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     x_1 +2x_2 = 3 & \\
     x_1 +2x_2 = 5 & \\
@@ -1707,7 +1707,7 @@ $$
 fosse una soluzione, allora verrebbe che:
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     s_1 + 2s_2 = 3 & \\
     s_1 + 2s_2 = 5 & \\
@@ -1723,7 +1723,7 @@ Che è impossibile.
 Consideriamo il sistema
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     x_1 +2x_2 = 3 & \\
     x_1 -x_2 = 1 & \\
@@ -1736,7 +1736,7 @@ Non è chiamo a priori se il sistema sia compatibile o meno.
 Per sostituzione ottengo
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     x_1 = \frac{5}{3} & \\
     x_2 = \frac{2}{3} & \\
@@ -1765,7 +1765,7 @@ Due sistemi lineari si dicono **equivalenti** se ammettono le medesime soluzioni
 Consideriamo il sistema:
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     x_1 +2x_2 = 3 & \\
     2x_1 + 4x_2 = 6 & \\
@@ -1807,7 +1807,7 @@ Le soluzioni di questa equazione si possono esprimere cosi:
 se a $x_2$ assegno il valore $t \in \mathbb{R}$ allora a $x_1$ devo assegnare il valore $3 - 2t$, ovvero le soluzioni sono della forma
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     \begin{pmatrix}
       3 -2t \\
@@ -1815,7 +1815,7 @@ $$
     \end{pmatrix}
     : t \in \mathbb{R}
   \end{array}
-\right\}
+\right\rbrace
 $$
 
 vediamo che le soluzioni sono infinite;
@@ -1920,7 +1920,7 @@ siano $s, s' \in K^n$ due soluzioni del sistema e sia $\lambda \in K$; allora
 
 pertanto ricordando che il vettore nullo $0 \in K^n$ è sempre soluzione del sistema omogeneo, otteniamo che l'insieme delle soluzioni di $AX = 0$, ovvero l'insieme
 
-$\left\{r \in K^n : A \cdot r = 0\right\}$
+$\left\lbrace r \in K^n : A \cdot r = 0\right\rbrace$
 
 è un sottospazio vettoriale di $K^n$.
 
@@ -1979,7 +1979,7 @@ dove $s_0$ è una soluzione del sistema lineare omogeneo $AX = 0$.
 
 In altre parole, l'insieme delle soluzioni di $AX = b$ è l'insieme
 
-$\left\{s \in K^n : s = \tilde{s} + s_0\right\}$ per $s_0$ soluzione di $AX = 0$
+$\left\lbrace s \in K^n : s = \tilde{s} + s_0\right\rbrace$ per $s_0$ soluzione di $AX = 0$
 
 (il sistema $AX = 0$ si dice il sistema lineare omogeneo associato al sistema $AX = b$).
 
@@ -2008,7 +2008,7 @@ $\square$
 
 Quindi, data una soluzione particolare $\tilde{s}$ di $AX = b$, possiamo scrivere che l'insieme di tutte le soluzioni di $AX = b$ è
 
-$\left\{\tilde{s} + s_0 : s_0 \text{ soluzione di } AX = 0 \right\}$
+$\left\lbrace \tilde{s} + s_0 : s_0 \text{ soluzione di } AX = 0 \right\rbrace$
 
 **Osservazione**  
 Le soluzioni di $AX = b$ formano un sottospazio vettoriale di $K^n$ se e solo se $b = 0$. Infatti
@@ -2110,9 +2110,9 @@ Il nostro obbiettivo ora diventa essere in grado si risolvere un qualsiasi siste
 Sia $A \in M_{n,m}(K)$ e sia $r \in \left\{0, 1, \dots, m\right\}$ il numero di righe non nulle di $A$; diciamo che $A$ è una **matrice a scala** se:
 
 - $r = 0$ (ovvero $A$ è una matrice nulla)
-- $0 > r$ e vale che $A_{(j)} \neq (0, 0, \dots, 0), \forall j \in \left\{0, 1, \dots, r\right\}$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $A_{i} \in \left\{0, 1, \dots, m\right\}$
+- $0 > r$ e vale che $A_{(j)} \neq (0, 0, \dots, 0), \forall j \in \left\lbrace 0, 1, \dots, r\right\rbrace$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $A_{i} \in \left\lbrace 0, 1, \dots, m\right\rbrace$
 
-$j_i = min \left\{j : a_{ij \neq 0}\right\}$
+$j_i = min \left\lbrace j : a_{ij \neq 0}\right\rbrace$
 
 allora deve valere che $j_1 < j_2 < \dots < j_n$
 
@@ -2138,21 +2138,21 @@ Sia $s \in K^n$ una soluzione, ovvero $s = \begin{pmatrix}
 per ipotesi, $A$ è a scala e dunque le righe $A_{(r + 1)},  \dots, A_{(m)}$ sono tutte nulle; le corrispondenti equazioni sono quindi
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     0 \cdot x_1 + 0 \cdot x_2 + \dots + 0 \cdot x_n = b_{r+1} \\
     \vdots \\
     0 \cdot x_1 + 0 \cdot x_2 + \dots + 0 \cdot x_n = b_{m}
   \end{array}
 \right. \Rightarrow
-\left\{
+\left\lbrace
   \begin{array}{l}
     0 \cdot s_1 + 0 \cdot s_2 + \dots + 0 \cdot s_n = b_{r+1} \\
     \vdots \\
     0 \cdot s_1 + 0 \cdot s_2 + \dots + 0 \cdot s_n = b_{m}
   \end{array}
 \right. \Rightarrow
-\left\{
+\left\lbrace
   \begin{array}{l}
     b_{r+1} = 0 \\
     \vdots \\
@@ -2210,7 +2210,7 @@ Sia $AX = b$ un sistema lineare, allora la matrice ottenuta aggiungendo ad $A$ l
 Dato il sistema
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     2x_1 + x_2 = 3 \\
     -x_1 + 2x_2 = 5
@@ -2276,7 +2276,7 @@ Se mostriamo che possiamo trasformare un sistema lineare in uno equivalente a sc
 
 $1)$ Determino $\overline{j}$ indice colonna minima per cui abbiamo una colonna non nulla di $A$.
 
-$\overline{j} = min \left\{j : A^{(j)} \neq 0\right\}$
+$\overline{j} = min \left\lbrace j : A^{(j)} \neq 0\right\rbrace$
 
 $$
 A =
@@ -2369,7 +2369,7 @@ In $K^n$ possiamo considerare
 
 $$
 B =
-\left\{
+\left\lbrace
   \begin{pmatrix}
     1 \\
     0 \\
@@ -2389,7 +2389,7 @@ B =
     \vdots \\
     1
   \end{pmatrix}
-\right\}
+\right\rbrace
 $$
 
 si può dimostrare che $B$ è una base di $K^n$.
@@ -2417,7 +2417,7 @@ In $M_{m, n}(K)$ possiamo considerare
 
 $$
 B =
-\left\{
+\left\lbrace
   \begin{pmatrix}
     1 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0 \\
@@ -2437,7 +2437,7 @@ B =
     0 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0
   \end{pmatrix}
-\right\}
+\right\rbrace
 $$
 
 si può dimostrare che $B$ è una base di $M_{m, n}(K)$.
@@ -2476,7 +2476,7 @@ $$
 allora l'essere $v$ una combinazione lineare di $v_1 \dots, v_n$ equivale ad avere
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     \lambda_1 a_{11} + \dots + \lambda_s a_{s1} = b_1 \\
     \vdots \\
@@ -2530,7 +2530,7 @@ $$
 ammette come unica soluzione la soluzione nulla:
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     \lambda_1 = 0 \\
     \vdots \\
@@ -2581,13 +2581,13 @@ si può dimostrare che, se definiamo
 
 $$
 C =
-\left\{
+\left\lbrace
   \begin{pmatrix}
     c_{11} & \dots & c_{1k} \\
     \vdots & \ddots & \vdots \\
     c_{n1} & \dots & c_{nk}
   \end{pmatrix}
-\right\}
+\right\rbrace
 $$
 
 allora $w_1, \dots, w_k$ sono linearmente indipendenti se e solo se il sistema lineare omogeneo $C \cdot X = 0$ ammette una soluzione non tutta nulla; osserviamo la matrice $C$; essa ha $n$ righe e $k$ colonne; per ipotesi $k>n$, quindi ci sono più colonne che righe; se, tramite l'algoritmo di gradinizzazione di Gauss portiamo $C$ nella forma a scala, otterremo dunque una matrice del tipo:
@@ -2625,7 +2625,7 @@ Sia $V$ uno spazio vettoriale su $K$ finitamente generato
 indichiamo la dimensione di $V$ con $dim_k V$ (o anche $dim V$).
 
 **Esempio**  
-$dimR^2 = 2$ (infatti $\left\{\begin{pmatrix}1 \\ 0\end{pmatrix}, \begin{pmatrix}0 \\ 1\end{pmatrix}\right\}$ è base di $R^2$)  
+$dimR^2 = 2$ (infatti $\left\lbrace \begin{pmatrix}1 \\ 0\end{pmatrix}, \begin{pmatrix}0 \\ 1\end{pmatrix}\right\rbrace$ è base di $R^2$)  
 $dim_k K^2 = 2$  
 $dim_k K^n = n$  
 $dim_k M_{m,n}(K) = m \cdot n$ (...)
@@ -2715,7 +2715,7 @@ $rg(A) = 1$ perché le righe (o le colonne) sono proporzionali.
 **Teorema (di dimensione per soluzioni di sistemi lineari)**  
 Sia $A \in M_{m,n}(K)$; sia
 
-$W = \left\{s \in K^n : As = 0\right\} \subseteq K^n$
+$W = \left\lbrace s \in K^n : As = 0\right\rbrace \subseteq K^n$
 
 ovvero $W$ è l'insieme delle soluzioni del sistema lineare omogeneo associato ad $A$; allora
 
@@ -2767,7 +2767,7 @@ $\square$
 Consideriamo il sistema lineare
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     x_1 - 2x_2 + 3x_3 - x_4 = 1 \\
     x_2 - x_4 = 2
@@ -2801,14 +2801,14 @@ $$
 ...
 
 $$
-\left\{
+\left\lbrace
   \begin{array}{l}
     x_1 - 2x_2 + 3x_3 - x_4 = 1 \\
     x_2 - x_4 = 2
   \end{array}
 \right.
 \Leftrightarrow
-\left\{
+\left\lbrace
   \begin{array}{l}
     x_1 = 2x_2 - 3c_3 + x_4 + 1 \\
     x_2 = x_4 + 2
