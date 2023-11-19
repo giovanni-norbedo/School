@@ -1047,8 +1047,7 @@ abbiamo quindi ottenuto la matrice nulla come combinazione lineare delle matrici
 Ritorniamo alla situazione delle matrici $2 \times 2$ e consideriamo il seguente insieme
 
 $$
-T_{2,2} (\mathbb{R}) := \{A \in M_{2,2} \in (\mathbb{R}) : a_{21} = 0\} =
-\left\{
+T_{2,2} (\mathbb{R}) := \{A \in M_{2,2} \in (\mathbb{R}) : a_{21} = 0\} = \left\{
   \begin{pmatrix*}[r]
     a_{11} & a_{12} \\
     0 & a_{22}
