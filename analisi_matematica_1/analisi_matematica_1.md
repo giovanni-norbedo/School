@@ -787,7 +787,7 @@ indicato da $f(A)$.
 **Definizione**  
 Sia $f : A \rightarrow B$ una funzione,  
 sia $A' \subseteq A$,  
-$f(A') = \left\{ f(x) : x \in A' \right\}$
+$f(A') = \{ f(x) : x \in A' \}$
 
 !!! IMMAGINE insiemi A e A'
 
@@ -848,7 +848,7 @@ $f$ è *iniettiva* e *suriettiva*, quindi **biettiva**.
 
 ## I numeri naturali
 
-$\mathbb{N} = \left\{ 0, 1, 2, 3, \cdots \right\}$
+$\mathbb{N} = \{ 0, 1, 2, 3, \cdots \}$
 
 > Sono quelli che servono per contare (con lo zero).
 
@@ -1742,11 +1742,11 @@ Come i reali, $a$ è scalare.
 
 **Rappresentazione di complessi**  
 Chiamo  
-$\bold{1} = (1, 0)$  
+$\textbf{1} = (1, 0)$  
 $i = (0, 1)$
 
-$\bold{1} + i = (1, 1)$  
-$\bold{1} \cdot \bold{1} = (1, 0) = 1$  
+$\textbf{1} + i = (1, 1)$  
+$\textbf{1} \cdot \textbf{1} = (1, 0) = 1$  
 $i \cdot i = (-1, 0) = -1$  
 
 $x^2 = -1 \rightarrow x = (0, 1) = i$
