@@ -495,7 +495,7 @@ in questo caso $A=B=\mathbb{R}$, quindi
 
 $\mathbb{R} \times \mathbb{R} = \mathbb{R}^2$
 
-![grafico piano cartesiano come prodotto cartesiano](img/grafico_piano_cartesiano_come_prodotto_cartesiano.png)
+![grafico piano cartesiano come prodotto cartesiano](../img/grafico_piano_cartesiano_come_prodotto_cartesiano.png)
 
 Similmente
 
@@ -512,7 +512,7 @@ $B = \{b_1,b_2,b_3,b_4\}$
 
 $A \times B = \{(a_i,b_j) : i = (1,2,3,4,5),\ j = (1,2,3,4)\}$  
 
-![esempio prodotto cartesiano tra A e B](img/esempio_prodotto_cartesiano_tra_A_e_B.png)
+![esempio prodotto cartesiano tra A e B](../img/esempio_prodotto_cartesiano_tra_A_e_B.png)
 
 **Osservazione**:  
 numeri divisibili per $3 = \{n \in \mathbb{N} : \exists k \in \mathbb{N} : (n = 3k)\} = \{n \in \mathbb{N} : \mathcal{P}(n)\}$  
@@ -531,7 +531,7 @@ $B = \{$ragazze in quest'aula$\}$
 $\mathcal{P}(x) :$ $x$ è amico di $y$  
 *Relazione* di "amicizia" tra due insiemi
 
-![relazione di amicizia](img/relazione_di_amicizia.png)
+![relazione di amicizia](../img/relazione_di_amicizia.png)
 
 ---
 
@@ -553,7 +553,7 @@ Per esempio, 3 divide 12, ma 3 non divide 5, poiché $\nexists k \in \mathbb{Z} 
 
 #### Grafico della relazione
 
-![grafico relazione divide](img/grafico_relazione_divide.png)
+![grafico relazione divide](../img/grafico_relazione_divide.png)
 
 #### Esempio
 
@@ -567,7 +567,7 @@ cioè 2 numeri sono in relazione se la loro differenza è un multiplo di 3.
 
 Si chiama **congruenza modulo 3**, indicata con $m \equiv_3 n$.
 
-![grafico relazione congruenza modulo 3](img/grafico_relazione_congruenza_modulo_3.png)
+![grafico relazione congruenza modulo 3](../img/grafico_relazione_congruenza_modulo_3.png)
 
 ---
 
@@ -1168,7 +1168,7 @@ allora $2$ divide $k$
 
 allora $k = 2n$
 
-allora 
+allora
 
 $\frac{4n^2}{m^2} = 2 \Leftrightarrow 4n^2 = 2m^2 \Leftrightarrow 2n^2 = m^2 \Leftrightarrow 2$ divide $m^2$
 
@@ -1258,7 +1258,7 @@ $S)$ Siamo $A$ e $B$ sottoinsiemi di $\mathbb{R}$ con $A \neq \emptyset$ e $B \n
 
 Supponiamo che $\forall a \in A, \forall b \in B, a \leq b$
 
-allora 
+allora
 
 $\exists \xi \in \mathbb{R} : \forall a \in A, \forall b \in B$
 
@@ -1318,10 +1318,10 @@ $-\infty$ e $+\infty$ non sono numeri reali, ma soltanto simboli.
 
 > Scriviamo $\tilde{\mathbb{R}} = \mathbb{R} \cup \{-\infty, +\infty\}$, chiamata "**retta estesa**".
 
-## Insiemi limitati
+### Insiemi limitati
 
 Sia $a \in \mathbb{R}$,  
-$A$ si dice (insieme) limitato superiormente se 
+$A$ si dice (insieme) limitato superiormente se
 
 $\exists M \in \mathbb{R} : \forall a \in A, a \leq M$
 
@@ -1342,5 +1342,571 @@ $\neg (\exists M \in \mathbb{R} : \forall a \in A, a \leq M)$
 
 $\forall M \in \mathbb{R} : \exists a \in A : a > M$
 
-## Maggioranti, minoranti, massimi e minimi
+### Maggioranti, minoranti, massimi e minimi
 
+**Definizione**  
+Sia $A \subseteq \mathbb{R}$, sia $M \in \mathbb{R}$,  
+se $\forall a \in A, a \leq M$ allora $M$ si dice **maggiorante** di $A$.
+
+**Osservazione**  
+Se $A$ ha un maggiorante, allora ne ha infiniti.
+
+**Definizione**  
+Sia $A \subseteq \mathbb{R}$, sia $m \in \mathbb{R}$,  
+se $\forall a \in A, a \geq m$ allora $m$ si dice **minorante** di $A$.
+
+**Osservazione**  
+Se $A$ ha un minorante, allora ne ha infiniti.
+
+**Definizione**  
+Sia $A \subseteq \mathbb{R}$, sia $\mu \in \mathbb{R}$,  
+se $\mu$ maggiorante di $A$ e $\mu \in A$ allora $\mu$ si dice **massimo** di $A$.  
+
+$$
+\left\{
+  \begin{array}{l}
+    \mu \in A \\
+    \forall a \in A, a \leq \mu
+  \end{array}
+\right.
+$$
+
+**Definizione**  
+Sia $A \subseteq \mathbb{R}$, sia $\nu \in \mathbb{R}$,  
+se $\nu$ minorante di $A$ e $\nu \in A$ allora $\nu$ si dice **minimo** di $A$.
+
+$$
+\left\{
+  \begin{array}{l}
+    \nu \in A \\
+    \forall a \in A, a \geq \nu
+  \end{array}
+\right.
+$$
+
+### Estremo superiore ed estremo inferiore
+
+**Definizione**  
+Sia $A$ superiormente limitato,  
+chiamo **estremo superiore** di $A$ il minimo dei maggioranti di $A$.
+
+**Definizione**  
+Sia $A$ inferiormente limitato,  
+chiamo **estremo inferiore** di $A$ il massimo dei minoranti di $A$.
+
+**Osservazione**  
+Sia $A$ un insieme, supponiamo che $\mu_1$ e $\mu_2$ siano due massimi,  
+sia ha $\mu_1 = \mu_2$, cioè il massimo, se esiste, è unico.
+
+infatti
+
+$\mu_1$ è massimo $\Rightarrow \mu_1$ è maggiorante  
+$\mu_2$ è massimo $\Rightarrow \mu_2 \in A$  
+$\Rightarrow \mu_2 \leq \mu_1$
+
+e viceversa
+
+$\mu_1$ è massimo $\Rightarrow \mu_1 \in A$  
+$\mu_2$ è massimo $\Rightarrow \mu_2$ è minorante  
+$\Rightarrow \mu_1 \leq \mu_2$
+
+perciò $\mu_1 = \mu_2$, quindi il massimo è unico.
+
+### Teorema dell'esistenza dell'estremo superiore
+
+sia $A \subseteq \mathbb{R}, A \neq \emptyset$ e $A$ superiormente limitato,  
+allora $\exists \xi \in \mathbb{R} : \xi$ **estremo superiore** di $A$.
+
+**Dimostrazione**  
+$A \subseteq \mathbb{R}$ e $A \neq \emptyset$ (per ipotesi)
+
+sia $A^* =$ $\{\text{maggioranti di } A\}$,  
+allora $A^* \neq \emptyset$ (perché $A$ è superiormente limitato)  
+e $\forall a \in A, \forall b \in A^*, a \leq b$ (per definizione di maggiorante)  
+
+Alla coppia $A, A^*$ posso applicare $S)$  
+quindi $\exists \xi \in \mathbb{R} : \forall a \in A, \forall b \in A^*, a \leq \xi \leq b$  
+
+in particolare $\forall a \in A, a \leq \xi \Rightarrow \xi$ è maggiorante  
+
+quindi $\forall b \in A^*, \xi \leq b$ e $\xi \in A^* \Rightarrow \xi$ è il minimo dei maggioranti
+
+$\square$
+
+---
+
+**Per esercizio**  
+Se $A \subseteq \mathbb{R}, A \neq \emptyset$ e $A$ inferiormente limitato,  
+allora $\exists \eta \in \mathbb{R} : \eta$ **estremo inferiore** di $A$.
+
+Sia $A_* =$ $\{\text{minoranti di } A\}$,  
+allora $A_* \neq \emptyset$ (per più $A$ è inferiormente limitato)  
+e $\forall a \in A, \forall b \in A_*, a \geq b$ (per definizione di minorante)
+
+Alla coppia $A, A_*$ posso applicare $S)$  
+quindi $\exists \eta \in \mathbb{R} : \forall b \in A_*, \forall a \in A, b \leq \eta \leq a$
+
+in particolare $\forall a \in A, a \geq \eta \Rightarrow \eta$ è minorante
+
+quindi $\forall b \in A_*, \eta \geq b$ e $\eta \in A_* \Rightarrow \eta$ è il massimo dei minoranti.
+
+$\square$ ???
+
+### Teorema le proprietà dell'estremo superiore
+
+Sia $A \subseteq \mathbb{R}, A \neq \emptyset$  
+sia $\alpha \in \mathbb{R}$  
+
+$$
+\alpha = supA \Leftrightarrow
+\left\{
+  \begin{array}{l}
+    1) & \forall a \in A, a \leq \alpha \\
+    2) & \forall \varepsilon > 0, \exists \=a \in A : \=a > \alpha - \varepsilon
+  \end{array}
+\right.
+$$
+
+**Dimostrazione**  
+Sia $\alpha = supA$, cioè $\alpha$ è il minimo dei maggioranti,  
+ma allora $\alpha$ è un maggiorante, allora vale (1),  
+allora $\forall \varepsilon > 0, \alpha - \varepsilon$ non è un maggiorante.
+
+$\square$
+
+**Osservazione**  
+Se un insieme ha minimo (o massimo), il minimo è l'estremo inferiore (o il massimo è l'estremo superiore).
+
+### Conseguenze dell'esistenza dell'estremo superiore
+
+---
+
+$1)$ $\mathbb{N}$ **è superiormente limitato**
+
+**Dimostrazione**  
+Per assurdo supponiamo che  
+$\exists M \in \mathbb{R} : \forall n, n \leq M$
+
+allora $\mathbb{N}$ è non vuoto e $\mathbb{N}$ è superiormente limitato  
+$\Rightarrow \exists \xi \in \mathbb{R} : \xi = sup \mathbb{N}$
+
+Applico la seconda proprietà del $sup$ con $\varepsilon = 1$
+
+Allora $\exists \=n \in \mathbb{R} : \=n > \xi - 1$
+
+ma allora $\=n + 1 > \xi = sup \mathbb{N}$
+
+che è impossibile
+
+$\square$
+
+---
+
+$2)$ **Proprietà di Archimede**
+
+Siano $\varepsilon, M \in \mathbb{R}, \varepsilon > 0, M > 0$  
+allora $\exists \=n \in \mathbb{R} : \=n \cdot \varepsilon > M$
+
+**Dimostrazione**  
+Per assurdo $\forall n \in \mathbb{N}, \varepsilon \leq M$  
+allora $E = \{n \cdot \varepsilon : n \in \mathbb{N}\}$ è superiormente limitato (e non vuoto)  
+
+sia $\xi \in \mathbb{R}, \xi = sup E$
+
+Applico la seconda proprietà del $sup$ con $\varepsilon$ delle ipotesi  
+$\exists \=n \in \mathbb{N} : \=n \cdot \varepsilon > \xi - \varepsilon$
+
+ma allora $(\=n + 1) \cdot \varepsilon > \xi = sup E$
+
+che è impossibile
+
+$\square$
+
+---
+
+$3)$ $\frac{1}{n}$ **diventa "piccolo quanto si vuole"**
+
+Sia $\varepsilon > 0$ allora $\exists \=n \in \mathbb{N} : 0 < \frac{1}{n} < \varepsilon$
+
+**Dimostrazione**  
+Considero la proprietà di Archimede con $\varepsilon$ delle ipotesi e $M = 1$
+
+per Archimede  
+$\exists \=n \in \mathbb{N} : \varepsilon \=n > M = 1$  
+cioè $\varepsilon \=n > 1$  
+ma allora $0 < \frac{1}{n} < \varepsilon$
+
+$\square$
+
+---
+
+$4)$ **"Densità di $\mathbb{Q}$ in $\mathbb{R}$"**
+
+**Teorema**  
+$\mathbb{Q}$ è denso in $\mathbb{R}$, cioè
+
+siano $a, b \in \mathbb{R}$ con $a < b$  
+allora $\exists q \in \mathbb{Q} : a < q < b$  
+con $q = \frac{k}{n}, n \neq 0$
+
+**Dimostrazione**  
+Se $a < 0 < b$ allora $q = 0$.
+
+Se $a < b < 0$ allora posso cambiare il segno, quindi $-\frac{k}{n}$ va bene.
+
+Quindi l'unico caso da considerare è $0 \leq a < b$.
+
+Chiamo $\varepsilon = b - a$
+
+$\exists n \in \mathbb{N} : 0 < \frac{1}{n} < b - a$
+
+ora sommo $\frac{1}{n}$ "tante volte"
+
+$\exists k : \frac{k - 1}{n} \leq a \leq \frac{k}{n}$
+
+Sono sicuro che $a < \frac{k}{n} < b$?
+
+Sì, perché $\frac{1}{n} < b - a$
+
+---
+
+$5)$ **Intervalli chiusi, limitati, inscatolati e dimezzati**
+
+**Definizione**  
+Sia $(I_n)_n$ una successione di intervalli  
+
+$(I_n)_n = I_0, I_1, \ldots, I_n$
+
+$I_i = [a_i, b_i]$
+
+**Definizione**  
+Gli intervalli si dicono inscatolati  
+se $\forall n, I_{n+1} \subset I_n$
+
+**Definizione**  
+La successione $(I_n)_n$ si dice di intervalli chiusi, limitati, inscatolati e dimezzati se
+
+$\forall n, I_{n+1} \subset I_n$
+
+$a_{n+1} = a_n, b_{n+1} = \frac{a_n + b_n}{2}$ oppure $a_{n+1} = \frac{a_n + b_n}{2}, b_{n+1} = b_n$
+
+**Teorema di Cantor forma debole**  
+Sia $(I_n)_n$ una successione di intervalli chiusi, limitati e inscatolati  
+allora l'intersezione di tutti gli intervalli è **non** vuota.
+
+$\bigcap\limits_n I_n \neq \emptyset$
+
+**Teorema di Cantor forma forte**  
+Sia $(I_n)_n$ una successione di intervalli chiusi, limitati, inscatolati e dimezzati  
+allora $\bigcap\limits_n I_n \neq \emptyset$ è un insieme con unico punto
+
+$\exists \xi \in \mathbb{R} : \bigcap\limits_n I_n = \{ \xi \}$
+
+**Osservazione**  
+Se gli intervalli non sono chiusi, il teorema non vale.
+
+$I_0 = ]0, 1]$  
+$I_1 = [0, \frac{1}{2}]$  
+$\vdots$  
+$I_n = [0, \frac{1}{n}]$
+
+$\bigcap\limits_n\ ]0, \frac{1}{n}] = \emptyset$
+
+infatti se $x \leq 0$ allora $x \notin\ ]0, \frac{1}{n}], \forall n$
+
+se $x > 0$ allora $\exists \=n : x > \frac{1}{\=n + 1} > 0$  
+allora $x \notin\ ]0, \frac{1}{n + 1}]$
+
+**Osservazione**  
+Se gli $I_n$ sono chiusi e non inscatolati, di nuovo il teorema non vale.
+
+$\bigcap\limits_n\ ]n, +\infty[\ = \emptyset$
+
+---
+
+**Dimostrazione della forma debole del teorema di Cantor**  
+$A = \{a_n : n \in \mathbb{N}\}$ estremi sinistri  
+$B = \{b_n : n \in \mathbb{N}\}$ estremi destri  
+
+ho che $\forall n, \forall m, a_n \leq b_m$
+
+infatti se $n \leq m$ allora $[a_n, b_n] \supseteq [a_m, b_m]$  
+e quindi $a_n \leq b_m$
+
+e se $m \leq n$ allora $[a_n, b_n] \subseteq [a_m, b_m]$  
+e quindi $a_n \leq b_m$
+
+chiamo $\alpha = sup A$ (c'è perché A è superiormente limitato)
+
+ho che $\forall n, a_n \leq b_m \Rightarrow \alpha \leq b_m$
+
+$b_m$ è un maggiorante di $A \Rightarrow b_m \geq$ minimo dei maggioranti $= sup A = \alpha$
+
+ho scoperto che $\forall m$, $B$ è inferiormente limitato ($\alpha$ è minorante)
+
+allora $\beta = inf B$ e ho che $\beta \geq \alpha$ ($\beta$ massimo dei minoranti)
+
+ho che $[\alpha, \beta] \subseteq [a_n, b_n], \forall n$  
+allora $[\alpha, \beta] \supseteq \bigcap\limits_n I_n \Rightarrow \bigcap\limits_n I_n \neq \emptyset$
+
+$\square$
+
+**Osservazione**  
+"Male che vada" $\alpha = \beta$.
+
+**Per esercizio**  
+Provare che $\bigcap\limits_n I_n = [\alpha, \beta]$ !!!
+
+---
+
+**Dimostrazione della forma forte del teorema di Cantor**  
+Dalla forma debole ho che  
+$\bigcap\limits_n I_n = [\alpha, \beta]$
+
+con $\alpha = sup A$ e $\beta = inf B$
+
+so che $b_n - a_n = \frac{b_{n-1} - a_{n-1}}{2} = \frac{b_{n-2} - a_{n-2}}{4} = \frac{b_{n-3} - a_{n-3}}{8} = \dots = \frac{b_0 - a_0}{2^n}$
+
+per induzione so che $n \leq 2^n$
+
+allora $\frac{b_{0} - a_{0}}{2^n} \leq \frac{b_0 - a_0}{n}$
+
+supponiamo che $\alpha < \beta$ per assurdo;
+
+allora $\forall n, b_n - a_n \geq \beta - \alpha$
+
+ma $\frac{b_n - a_n}{n} \geq b_n - a_n$
+
+ossia $\forall n, \frac{b_n - a_n}{n} \geq \beta - \alpha > 0$
+
+è possibile? No, per Archimede.
+
+Quindi $\alpha = \beta$
+
+$\square$
+
+## Disuguaglianza triangolare
+
+$|x + y| \leq |x| + |y|$
+
+## Funzioni potenza e radice
+
+## Funzione valore assoluto
+
+## Funzioni trigonometriche
+
+## I numeri complessi
+
+Considero $\mathbb{R}^2 = \mathbb{R} \times \mathbb{R}$ (piano cartesiano o vettori)
+
+$\mathbb{R}^2 = \{(a,b) : a \in \mathbb{R}, b \in \mathbb{R}\}$
+
+Operazione di addizione su $\mathbb{R}^2$  
+$(a, b) + (c, d) = (a+c,\ b+d)$
+
+Proprietà:
+
+- associativa
+- $\exists$ neutro $(0, 0)$
+- $\exists$ opposto $-(a, b) = (-a, -b)$
+- commutativa
+
+$(\mathbb{R}^2, +)$ è un gruppo abeliano
+
+Operazione di moltiplicazione su $\mathbb{R}^2$  
+$(a, b) \cdot (c, d) = (a \cdot c - b \cdot d, a \cdot d + b \cdot c)$
+
+Proprietà:
+
+- associativa
+- $\exists$ neutro $(1, 0)$
+- $\exists$ reciproco
+- commutativa
+
+Esiste anche la proprietà distributiva
+
+$(\mathbb{R}^2, +, \cdot)$ è un campo
+
+lo chiamo campo dei numeri complessi $\mathbb{C}$.
+
+**Osservazione**  
+Dentro a $\mathbb{C} = \{(a, b) \in \mathbb{R}\ \text{con}\ +, \cdot\}$
+
+Considero i numeri $(a, 0)$
+
+$(a, 0) + (b, 0) = (a+b, 0)$  
+$(a, 0) \cdot (b, 0) = (a \cdot b, 0)$  
+$(a, 0) \cdot (c, d) = (a \cdot c, a \cdot d)$
+
+Come i reali, $a$ è scalare.
+
+**Rappresentazione di complessi**  
+Chiamo  
+$\bold{1} = (1, 0)$  
+$i = (0, 1)$
+
+$\bold{1} + i = (1, 1)$  
+$\bold{1} \cdot \bold{1} = (1, 0) = 1$  
+$i \cdot i = (-1, 0) = -1$  
+
+$x^2 = -1 \rightarrow x = (0, 1) = i$
+
+$(a, b) = (a, 1) \cdot (1, 0) + (b, 0) \cdot (1, 0) = a(1, 0) + b(0, 1) = a + ib$
+
+$a$ si dice parte reale  
+$b$ si dice parte complessa (o immaginaria)  
+
+**Piano di Gauss**  
+Il piano di Gauss è un piano cartesiano $\mathbb{R} \times \mathbb{R}$, dove rappresento sulle ascisse le parti reali e sulle ordinate le parti immaginarie.
+
+Per esempio: $z = a + bi$ ha coordinata reale $a$ e immaginaria $b$.
+
+$a = Re(z)$  
+$b = Im(z)$  
+
+$z = Re(z) + i \cdot Im(z)$  
+$Re(z), Im(z) \in \mathbb{R}$
+
+**Definizione**  
+Sia $z = a + ib$, chiamo **complesso coniugato** di $z$,  
+il numero complesso $a - ib$.
+
+Chiamo coniugo la funzione
+
+$\overline{\square} : \mathbb{C} \longrightarrow \mathbb{C}$  
+$z \longmapsto \=z$
+
+$z_1, z_2 \in \mathbb{C}$  
+$\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$  
+$\overline{z_1 \cdot z_2} = \overline{z_1} \cdot \overline{z_2}$
+
+**Definizione**  
+Sia $z = a + ib$, chiamo **modulo** di $z$,  
+il numero reale $|z| = \sqrt{a^2 + b^2}$.
+
+(è la distanza dall'origine)
+
+$| \square | : \mathbb{C} \longrightarrow [0, +\infty[$  
+$z \longmapsto |z|$
+
+**Osservazione**  
+Se $z \in \mathbb{R}$
+
+$|z| = \sqrt{z^2}$
+
+Il modulo di $z$ è uguale al valore assoluto di $z$ come numero reale.
+
+**Proprietà**  
+$|z| \geq 0$  
+$|z| = 0 \Leftrightarrow z = 0$  
+$|z| \geq |Re(z)|,\ |z| \geq |Im(z)|$  
+$|\overline{z}| = |z|$  
+$|z_1 \cdot z_2| = |z_1| \cdot |z_2|$  
+$z \cdot \overline{z} = |z|^2$  
+$z^{-1} = \frac{\overline{z}}{|z|^2}$
+
+**Diseguaglianza triangolare**  
+$|z_1 + z_2| \leq |z_1| + |z_2|$  
+
+**Forma trigonometrica**  
+$|z|$ modulo  
+$\alpha$ argomento  
+
+$a = |z| \cos \alpha$  
+$b = |z| \sin \alpha$  
+
+$z = a + ib = |z| (\cos \alpha + i \sin \alpha)$
+
+$[\alpha] = \{\alpha + 2k \pi, k \in \mathbb{Z}\}$
+
+$1 \sim [1, 0]$  
+$i \sim [1, \frac{\pi}{2}]$  
+
+**Moltiplicazione**  
+$z_1 \sim [\rho_1, \alpha_1]$  
+$z_1 = \rho_1 (\cos \alpha_1 + i \sin \alpha_1)$
+
+$\mathbb{C} \setminus \{0\} \longrightarrow \ ]0, +\infty[ \times \{[\alpha]_{\equiv_{2\pi}}, \alpha \in \mathbb{R}\}$  
+$z \longmapsto (\rho, [\alpha])$
+
+$z_1 \cdot z_2 = \rho_1 \cdot \rho_2 (\cos (\alpha_1 + \alpha_2) + i \sin (\alpha_1 + \alpha_2))$
+
+**Formula di De Moivre**  
+Sia $z = a + ib \sim (\rho, [\alpha])$  
+
+quindi $z = \rho (\cos \alpha + i \sin \alpha)$
+
+allora $z^n = \rho^n (\cos (n \alpha) + i \sin (n \alpha))$
+
+**Radici**  
+Trovare i numeri $z \in \mathbb{C}$ che soddisfano $z^n = 1$
+
+In $\mathbb{R}$:  
+$x^n = 1$
+
+se sono in $[0, +\infty[$ considero la potenza $p_n$ n-esima,  
+ha un'unica soluzione in $[0, +\infty[$, che è $x = 1$
+
+se sono sui negativi,  
+per $n$ pari, soluzione $x= -1$  
+per $n$ dispari, soluzione $x = 1$
+
+quindi su $\mathbb{R}$:
+
+- soluzioni $x = 1$ e $x = -1$ se $n$ pari
+- soluzione $x = 1$ se $n$ dispari
+
+In $\mathbb{C}$:  
+$z^n = 1$  
+
+$z \sim (\rho, [\alpha])$  
+$z^n \sim (\rho^n, [n \alpha])$  
+$1 \sim (1, [0])$  
+
+$(\rho^n, [n \alpha]) = (1, [0])$
+
+deve essere $\rho^n = 1$ con $\rho \in \ ]0, +\infty[$,  
+ha una sola soluzione $\rho = 1$
+
+deve essere $[n \alpha] = 0$  
+$n \alpha = 0 + 2k \pi, k \in \mathbb{Z}$  
+$\alpha = \frac{2k \pi}{n}$
+
+per $k = 0$ ottengo $\alpha_1 = 0$  
+per $k = 1$ ottengo $\alpha_2 = \frac{2 \pi}{n}$  
+per $k = 2$ ottengo $\alpha_3 = \frac{4 \pi}{n}$  
+$\vdots$  
+per $k = n-1$ ottengo $\alpha_n = \frac{2(n-1) \pi}{n}$  
+per $k = n$ ottengo $\alpha_{n+1} = 2 \pi = 0$  
+per $k = n+1$ ottengo $\alpha_{n+2} = 2 \pi +\frac{2 \pi}{n} = \frac{2 \pi}{n}$
+
+quindi sono $n$ punti distinti.
+
+Le radici dell'unità sono:
+
+- $z_0 = 1 (\cos 0 + i \sin 0) = 1$  
+- $z_1 = 1 (\cos \frac{2 \pi}{n} + i \sin \frac{2 \pi}{n}) = \dots$  
+- $\vdots$
+- $z_n = 1 (\cos \frac{2(n+1) \pi}{n} + i \sin \frac{2(n+1) \pi}{n}) = \dots$
+
+**Esempio**  
+$z^5 = 1$  
+
+$z_1 = 1$  
+$z_2 = 1 (\cos (\frac{2 \pi}{5}) + i \sin (\frac{2 \pi}{5}))$  
+$z_3 = 1 (\cos (\frac{4 \pi}{5}) + i \sin (\frac{4 \pi}{5}))$  
+$z_4 = 1 (\cos (\frac{6 \pi}{5}) + i \sin (\frac{6 \pi}{5}))$  
+$z_5 = 1 (\cos (\frac{8 \pi}{5}) + i \sin (\frac{8 \pi}{5}))$
+
+### Teorema fondamentale dell'algebra
+
+$a_1, a_2, \dots, a_n \in \mathbb{C}, a_n \neq 0$
+
+considero l'equazione $a_0 + a_1z_1 + a_2z_2 + \dots + a_nz_n = 0$
+
+questa ha $n$ soluzioni in $\mathbb{C}$
+
+$a_0 + a_1z_1 + a_2z_2 + \dots + a_nz_n = a_n(z - z_1)(z - z_2)\dots(z - z_n)$  
+con $z_1, z_2, \dots, z_n \in \mathbb{C}$  
+
+(**algebricamente chiuso**)  

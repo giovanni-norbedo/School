@@ -196,7 +196,7 @@ Manipolo la seconda equazione per "eliminare la x", sottraendo tre volte la prim
 
 $(3x +y -2z) -3 \cdot (x + y -z) = 0 -3 \cdot 0$  
 
-$\cancel{3x} +y -2z \ \cancel{-3x} -3y +3x = 0$  
+$\cancel{3x} +y -2z \cancel{-3x} -3y +3x = 0$  
 
 $-2y + z = 0$
 
@@ -319,7 +319,7 @@ Il vettori applicati si possono sommare tra di loro, purché il punto finale del
 
 Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
-![somma di due vettori](./img/somma_vettori.png)
+![somma di due vettori](../img/somma_vettori.png)
 
 **Attenzione**: se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
 
@@ -345,7 +345,7 @@ Ora, vale che
 $(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AC} + \overrightarrow{CD} = \overrightarrow{AD}$  
 $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}$
 
-![proprietà associativa dei vettori](./img/proprietà_associativa_dei_vettori.png)
+![proprietà associativa dei vettori](../img/proprietà_associativa_dei_vettori.png)
 
 $\square$
 
@@ -996,8 +996,7 @@ $$
 \begin{pmatrix}
    0 & 0 \\
    0 & 0
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
    e & f \\
    g & h
@@ -1063,7 +1062,7 @@ Dunque
 $\begin{pmatrix}
   1 & 2 \\
   0 & 1
-\end{pmatrix} 
+\end{pmatrix}
 \in T_{2,2} (\mathbb{R})$
 , ma
 $\begin{pmatrix}
@@ -1082,46 +1081,47 @@ Vale che:
 \end{pmatrix}
 \in T_{2,2} (\mathbb{R})$
 
-2: Se $A,B \in T_{2,2} (\mathbb{R})$, allora 
+2: Se $A,B \in T_{2,2} (\mathbb{R})$, allora
 
-$A =
+$$A =
 \begin{pmatrix}
    a_{11} & a_{12} \\
    0 & a_{22}
-\end{pmatrix}
-$
-e
-$B =
+\end{pmatrix},\ B =
 \begin{pmatrix}
    b_{11} & b_{12} \\
    0 & b_{22}
 \end{pmatrix}
-$
+$$
 
 quindi
-$A + B =
+
+$$A + B =
 \begin{pmatrix}
    a_{11} + b_{11} & a_{12} + b_{12} \\
    0 & a_{22} + b_{22}
 \end{pmatrix}
-$
+$$
 
 pertanto $A + B \in T_{2,2} (\mathbb{R})$.
 
 3: Se $A \in T_{2,2} (\mathbb{R})$ e $\lambda \in \mathbb{R}$, allora
 
-$A =
+$$A =
 \begin{pmatrix}
    a_{11} & a_{12} \\
    0 & a_{22}
 \end{pmatrix}
-$, quindi
-$\lambda \cdot A =
+$$
+
+quindi
+
+$$\lambda \cdot A =
 \begin{pmatrix}
    \lambda \cdot a_{11} & \lambda \cdot a_{12} \\
    0 & \lambda \cdot a_{22}
 \end{pmatrix}
-$
+$$
 
 pertanto $\lambda \cdot A \in T_{2,2} (\mathbb{R})$.
 
@@ -1129,7 +1129,7 @@ Abbiamo verificato quindi che $T_{2,2} (\mathbb{R})$ è un sottoinsieme vettoria
 
 Notiamo che l'analogo di $T_{2,2} (\mathbb{R})$ per matrici $3 \times 3$ è
 
-$
+$$
 T_{3,3} (\mathbb{R}) =
 \left\{
   \begin{pmatrix}
@@ -1139,7 +1139,7 @@ T_{3,3} (\mathbb{R}) =
   \end{pmatrix},
   \forall i, \forall j, a_{ij} \in \mathbb{R}
 \right\}
-$
+$$
 
 **Definizione**  
 Sia $A \in M_{n} (\mathbb{R})$; allora la **diagonale principale** è la parte di $A$ data dalle entrate di posto $i,i$ per $i \in \{1,2, \dots, n\}$.
@@ -1153,20 +1153,20 @@ $\forall i \in \{1, \dots, n\}$
 $\forall j \in \{1, \dots, m\}$  
 
 **Esempio**  
-$A =
+$$A =
 \begin{pmatrix*}[r]
    1 & 2 & 3 \\
    -3 & -2 & -1
 \end{pmatrix*}
-$
+$$
 
-${}^tA =
+$${}^tA =
 \begin{pmatrix}
    1 & -3 \\
    2 & -2 \\
    3 & -1
 \end{pmatrix}
-$
+$$
 
 **Proposizione**  
 Siano $A,B \in M_{m,n} (\mathbb{R})$, allora
@@ -1270,14 +1270,12 @@ $c_P \cdot n_P + c_L \cdot n_L + c_U \cdot n_U$
 
 Facciamo una matrice $1 \times 3$ con i costi unitari e una matrice $3 \times 1$ con il numero delle unità.
 
-$
+$$
 \begin{pmatrix}
   \begin{array}{rrr}
     c_P & c_L & c_U \\
   \end{array}
-\end{pmatrix}$
-e
-$
+\end{pmatrix},\
 \begin{pmatrix}
   \begin{array}{rrr}
     n_P \\
@@ -1285,11 +1283,11 @@ $
     n_U \\
   \end{array}
 \end{pmatrix}
-$
+$$
 
 Più in generale, se abbiamo una matrice riga $1 \times n$ e una matrice colonna $n \times 1$, definiamo il loro prodotto righe per colonne come:
 
-$
+$$
 \begin{pmatrix}
   \begin{array}{rrr}
     c_P & c_L & c_U
@@ -1305,11 +1303,11 @@ $
 \end{pmatrix}
 :=
 c_p \cdot n_p + c_l \cdot n_l + c_u \cdot n_u
-$
+$$
 
 Più in generale, se abbiamo una matrice riga $1 \times n$ e una matrice colonna $n \times 1$, definiamo il loro prodotto righe per colonne come:
 
-$
+$$
 \begin{pmatrix}
   a_{11} & a_{12} & \dots & a_{1n}
 \end{pmatrix}
@@ -1323,7 +1321,7 @@ $
 :=
 a_{11} \cdot b_{11} + a_{12} \cdot b_{21} + \dots + a_{1n} \cdot b_{n1} =
 \displaystyle\sum_{k=1}^{n} a_{k1} \cdot b_{k1}
-$
+$$
 
 Supponiamo che in un altro negozio valga
 
@@ -1333,7 +1331,7 @@ $c'_U = -1 \$$
 
 Per tenere sotto controllo i due totali di spesa potrei impacchettare le due righe dei costi unitari in un unica matrice.
 
-$
+$$
 \begin{pmatrix}
   \begin{array}{rrr}
     c_P & c_L & c_U \\
@@ -1341,11 +1339,11 @@ $
   \end{array}
 \end{pmatrix}
 \in M_{2,2} (\mathbb{R})
-$
+$$
 
 Potrebbe essere ragionevole definire il prodotto di
 
-$
+$$
 \begin{pmatrix}
   \begin{array}{rrr}
     c_P & c_L & c_U \\
@@ -1360,11 +1358,11 @@ $
     n_U \\
   \end{array}
 \end{pmatrix}
-$
+$$
 
 come la matrice $2 \times 1$:
 
-$
+$$
 \begin{pmatrix}
   \begin{array}{rrr}
     c_P \cdot n_P + c_L \cdot n_L + c_U \cdot n_U \\
@@ -1372,7 +1370,7 @@ $
   \end{array}
 \end{pmatrix}
 \in M_{2,1} (\mathbb{R})
-$
+$$
 
 Ricapitolando, abbiamo moltiplicato una matrice $2 \times 3$ per una matrice $3 \times 1$ e abbiamo ottenuto una matrice $2 \times 1$. In altre parole, la matrice ottenuta dalla moltiplicazione è quella matrice le cui entrate sono date dalla moltiplicazione di ciascuna delle due righe della prima matrice con la colonna della seconda matrice.
 
@@ -1404,8 +1402,7 @@ $$
     n_L & n'_L \\
     n_U & n'_U \\
   \end{array}
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
   (c_P \cdot n_P + c_L \cdot n_L + c_U \cdot n_U) & (c_P \cdot n'_P + c_L \cdot n'_L + c_U \cdot n'_U) \\
   (c'_P \cdot n_P + c'_L \cdot n_L + c'_U \cdot n_U) & (c'_P \cdot n'_P + c'_L \cdot n'_L + c'_U \cdot n'_U) \\
@@ -1524,51 +1521,56 @@ L'analogia tra invertibilità rispetto al prodotto di due numeri reali e l'inver
 **Esempio**  
 Consideriamo la matrice $A \in M_{2}(\mathbb{R})$,
 
-$
+$$
 A=
 \begin{pmatrix}
   1 & 1 \\
   1 & 1
 \end{pmatrix}
-$
+$$
 
 mostriamo che $A$$ non è invertibile; supponiamo che esiste un'inversa $B$
 
-$
+$$
 B =
 \begin{pmatrix}
   b_{11} & b_{12} \\
   b_{21} & b_{22}
 \end{pmatrix}
-$
+$$
 
 dovrebbe essere che
 
-$
+$$
 A \cdot B =
 \begin{pmatrix}
-  \textcircled{1} & 0 \\
-  \textcircled{0} & 1
+  \underline{1} & 0 \\
+  \underline{0} & 1
 \end{pmatrix}
-$
+$$
 
 quindi in particolare
 
-$(1 , 1) \cdot
+$$
+(1 , 1) \cdot
 \begin{pmatrix}
   b_{11} \\
   b_{21} \\
 \end{pmatrix}
 = 1
-$, ovvero $b_{11} + b_{21} = 1$
+$$
 
-$(1 , 1) \cdot
+ovvero $b_{11} + b_{21} = 1$
+
+$$(1 , 1) \cdot
 \begin{pmatrix}
   b_{11} \\
   b_{21} \\
 \end{pmatrix}
 = 0
-$, ovvero $b_{12} + b_{21} = 0$
+$$
+
+ovvero $b_{12} + b_{21} = 0$
 
 e questo è impossibile perché implicherebbe $1 = 0$.
 
@@ -1583,7 +1585,7 @@ $(a,b) \mapsto a + b$
 $\cdot : K \times K \rightarrow K$  
 $(a,b) \mapsto a \cdot b$
 
-tale per cui siano soddittive le seguenti proprietà:
+tale per cui siano soddisfatte le seguenti proprietà:
 
 K1: commutatività:  
 $\forall a, b \in K, a + b = b + a, a \cdot b = b \cdot a$  
@@ -1664,16 +1666,16 @@ $A \cdot X = b$
 **Esempio**  
 Consideriamo il sistema
 
-$
+$$
 \left\{
   \begin{array}{l}
     x_1 +2x_2 = 3 & \\
     x_1 +2x_2 = 5 & \\
   \end{array}
 \right.
-$
+$$
 
-$
+$$
 A =
 \begin{pmatrix}
   1 & 2 \\
@@ -1691,21 +1693,21 @@ b =
   3 \\
   5
 \end{pmatrix}
-$
+$$
 
 Il sistema **non è omogeneo**: almeno un termine noto non è nullo.  
 Il sistema **è incompatibile**: infatti esso non ha soluzioni.
 
 Se
-$
+$$
 s = \begin{pmatrix}
   s_1 \\
   s_2 \\
 \end{pmatrix}
-$
+$$
 fosse una soluzione, allora verrebbe che:
 
-$
+$$
 \left\{
   \begin{array}{l}
     s_1 + 2s_2 = 3 & \\
@@ -1714,44 +1716,46 @@ $
 \right.
 \Rightarrow
 3 = 5
-$
+$$
 
 Che è impossibile.
 
 **Esempio**  
 Consideriamo il sistema
 
-$
+$$
 \left\{
   \begin{array}{l}
     x_1 +2x_2 = 3 & \\
     x_1 -x_2 = 1 & \\
   \end{array}
 \right.
-$
+$$
 
 Non è chiamo a priori se il sistema sia compatibile o meno.
 
 Per sostituzione ottengo
 
-$
+$$
 \left\{
   \begin{array}{l}
     x_1 = \frac{5}{3} & \\
     x_2 = \frac{2}{3} & \\
   \end{array}
 \right.
-$
+$$
 
 Il sistema ha dunque un'unica soluzione
-$
+
+$$
 s =
 \begin{pmatrix}
   \frac{5}{3} \\
   \frac{2}{3}
 \end{pmatrix}
-$
-, esso è quindi compatibile (è non omogeneo).
+$$
+
+esso è quindi compatibile (è non omogeneo).
 
 Il motivo per il quale siamo certi che ci sia un'unica soluzione è che per ottenere il sistema finale abbiamo trasformato il sistema iniziale tramite operazioni che non cambiano l'insieme delle soluzioni.
 
@@ -1761,16 +1765,16 @@ Due sistemi lineari si dicono **equivalenti** se ammettono le medesime soluzioni
 **Esempio**  
 Consideriamo il sistema:
 
-$
+$$
 \left\{
   \begin{array}{l}
     x_1 +2x_2 = 3 & \\
     2x_1 + 4x_2 = 6 & \\
   \end{array}
 \right.
-$
+$$
 
-$
+$$
 A =
 \begin{pmatrix}
   1 & 2 \\
@@ -1788,7 +1792,7 @@ b =
   3 \\
   6
 \end{pmatrix}
-$
+$$
 
 $x_1 = 3 - 2x_2$  
 $2(3 - 2x_2) = 6 - 4x_2$  
@@ -1803,7 +1807,7 @@ Le soluzioni di questa equazione si possono esprimere cosi:
 
 se a $x_2$ assegno il valore $t \in \mathbb{R}$ allora a $x_1$ devo assegnare il valore $3 - 2t$, ovvero le soluzioni sono della forma
 
-$
+$$
 \left\{
   \begin{array}{l}
     \begin{pmatrix}
@@ -1813,9 +1817,11 @@ $
     : t \in \mathbb{R}
   \end{array}
 \right\}
-$ $\leftarrow$ vediamo che le soluzioni sono infinite
+$$
 
-$
+vediamo che le soluzioni sono infinite;
+
+$$
 \begin{pmatrix}
   3 \\
   0
@@ -1826,7 +1832,9 @@ t
   -2 \\
   1
 \end{pmatrix}
-$ $\leftarrow$ graficamente queste soluzioni corrispondono ai punti di una retta che passa per il punto $(3, 0)$.
+$$
+
+graficamente queste soluzioni corrispondono ai punti di una retta che passa per il punto $(3, 0)$.
 
 ### Teorema di Cramer
 
@@ -1879,23 +1887,22 @@ $\square$
 **Notazione**  
 D'ora in poi andremo ad identificare i seguenti due spazi vettoriali:
 
-$
+$$
 \begin{pmatrix}
   b_1 \\
   \vdots \\
   b_m
 \end{pmatrix}
-\in M_{m,1}(K)
-$
-e
-$
+\in M_{m,1}(K),
 \begin{pmatrix}
   b_1 \\
   \vdots \\
   b_m
 \end{pmatrix}
 \in K^m
-$ (**isomorfi**)
+$$
+
+(**isomorfi**)
 
 in questo senso, diremo ad esempio che un elemento $s \in K^n$ è soluzione di un sistema lineare $AX = b$.
 
@@ -2018,7 +2025,7 @@ Consideriamo il sistema
 
 $x + 2y -3z = -1$ con coefficienti in $\mathbb{Q}$
 
-$
+$$
 A = (1 2 -3)
 ,\
 X =
@@ -2029,7 +2036,7 @@ X =
 \end{pmatrix}
 ,\
 b = (-1)
-$
+$$
 
 consideriamo $\tilde{s} = \begin{pmatrix}
   -1 \\
@@ -2048,17 +2055,19 @@ $x = -2y + 3z$
 
 quindi possiamo assegnare un qualsiasi valore $u$ ad $y$ e un qualsiasi valore $v$ a $z$: quindi le soluzioni di $AX = 0$ si possono scrivere come
 
-$
+$$
 \begin{pmatrix}
   -2u + 3v \\
   u \\
   v
 \end{pmatrix}
-$ per $u, v \in \mathbb{Q}$
+$$
+
+per $u, v \in \mathbb{Q}$
 
 notiamo che
 
-$
+$$
 \begin{pmatrix}
   -2u + 3v \\
   u \\
@@ -2074,11 +2083,11 @@ $
   0 \\
   1
 \end{pmatrix}
-$
+$$
 
 Le soluzioni di $AX = b$ sono allora:
 
-$
+$$
 \begin{pmatrix}
   -1 \\
   0 \\
@@ -2094,7 +2103,7 @@ $
   0 \\
   1
 \end{pmatrix}, u, v \in \mathbb{Q}
-$
+$$
 
 Il nostro obbiettivo ora diventa essere in grado si risolvere un qualsiasi sistema lineare (omogeneo e non). Per cominciare, ci focalizziamo su un sottoinsieme particolare di sistemi lineari, i cosiddetti sistemi lineari a scala.
 
@@ -2129,7 +2138,7 @@ Sia $s \in K^n$ una soluzione, ovvero $s = \begin{pmatrix}
 
 per ipotesi, $A$ è a scala e dunque le righe $A_{(r + 1)},  \dots, A_{(m)}$ sono tutte nulle; le corrispondenti equazioni sono quindi
 
-$
+$$
 \left\{
   \begin{array}{l}
     0 \cdot x_1 + 0 \cdot x_2 + \dots + 0 \cdot x_n = b_{r+1} \\
@@ -2151,7 +2160,7 @@ $
     b_{m} = 0
   \end{array}
 \right.
-$
+$$
 
 "$\Leftarrow$"  
 Supponiamo che $\forall i > r$ vale che $b_{i} = 0$ (ovvero $b_{r+1} = \dots = b_m = 0$), per costruire una soluzione, procediamo a ritroso partendo "dal basso", ovvero dalle ultime equazioni; per ipotesi, tutte le equazioni dalla $r+1$-esima alla $m$-esima sono del tipo 0=0 (la matrice $A$ è a scala)
@@ -2201,18 +2210,19 @@ Sia $AX = b$ un sistema lineare, allora la matrice ottenuta aggiungendo ad $A$ l
 **Esempio**  
 Dato il sistema
 
-$
+$$
 \left\{
   \begin{array}{l}
     2x_1 + x_2 = 3 \\
     -x_1 + 2x_2 = 5
   \end{array}
 \right.
-$
+$$
 
 Le due matrici sono
 
-$A = \begin{pmatrix}
+$$
+A = \begin{pmatrix}
   \begin{array}{rr}
     2 & -1 \\
     -1 & 2
@@ -2221,17 +2231,20 @@ $A = \begin{pmatrix}
 b = \begin{pmatrix}
   3 \\
   5
-\end{pmatrix}$
+\end{pmatrix}
+$$
 
 Quindi la matrice completa è
 
-$(A|b) =
+$$
+(A|b) =
 \begin{pmatrix}
   \begin{array}{rrr}
     2 & -1 & 3 \\
     -1 & 2 & 5
   \end{array}
-\end{pmatrix}$
+\end{pmatrix}
+$$
 
 ---
 
@@ -2266,49 +2279,723 @@ $1)$ Determino $\overline{j}$ indice colonna minima per cui abbiamo una colonna 
 
 $\overline{j} = min \left\{j : A^{(j)} \neq 0\right\}$
 
-$A =
+$$
+A =
 \begin{pmatrix}
-  0 & 0 & \textcircled{*} & \dots & * \\
+  0 & 0 & \underline{*} & \dots & * \\
   0 & 0 & * & \dots & * \\
   0 & 0 & * & \dots & * \\
-\end{pmatrix}$
+\end{pmatrix}
+$$
 
 $2)$ Determino un indice $\overline{i}$ tale per cui l'elemento $a_{ij}$ è non nullo (l'esistenza di un tale $\overline{i}$ dipende dalla scelta di $\overline{j}$).
 
 $3)$ Scambio le righe $\overline{i}$ e $1$; in questo modo posso supporre che l'elemento $a_{1j}$ sia non nullo.
 
-$\begin{pmatrix}
+$$
+\begin{pmatrix}
   0 & 0 & a_{1j} & * & * \\
-  0 & 0 & \textcircled{*} & * & * \\
-  0 & 0 & \textcircled{*} & * & * \\
-\end{pmatrix}$
+  0 & 0 & \underline{*} & * & * \\
+  0 & 0 & \underline{*} & * & * \\
+\end{pmatrix}
+$$
 
 $4)$ Moltiplico la prima riga per $\frac{1}{a_{1j}}$.
 
-$\begin{pmatrix}
+$$
+\begin{pmatrix}
   0 & 0 & 1 & * & * \\
-  0 & 0 & \textcircled{*} & * & * \\
-  0 & 0 & \textcircled{*} & * & * \\
-\end{pmatrix}$
+  0 & 0 & \underline{*} & * & * \\
+  0 & 0 & \underline{*} & * & * \\
+\end{pmatrix}
+$$
 
-$5)$ Per ogni $i \in \{2, \dots, m\}$, sommo alla riga $i$-esima un opportuno multiplo della prima riga; più precisamente, sostituisco l'$i$-esima riga con 
+$5)$ Per ogni $i \in \{2, \dots, m\}$, sommo alla riga $i$-esima un opportuno multiplo della prima riga; più precisamente, sostituisco l'$i$-esima riga con
 
 $A_{(i)} - a_{1\overline{j}} A_{(1)}$
 
-$\begin{pmatrix}
+$$
+\begin{pmatrix}
   0 & 0 & 1 & * & * \\
   0 & 0 & 0 & * & * \\
   0 & 0 & 0 & * & * \\
-\end{pmatrix}$
+\end{pmatrix}
+$$
 
 $6)$ Ripeto il procedimento precedente sulla sottomatrice con righe $\{2, \dots, m\}$ e colonne $\{\overline{j} + 1, \dots, n\}$.
 
-$\begin{pmatrix}
+$$
+\begin{pmatrix}
   0 & 0 & 1 & * & * \\
-  0 & 0 & 0 & \textcircled{*} & \textcircled{*} \\
-  0 & 0 & 0 & \textcircled{*} & \textcircled{*} \\
-\end{pmatrix}$
+  0 & 0 & 0 & \underline{*} & \underline{*} \\
+  0 & 0 & 0 & \underline{*} & \underline{*} \\
+\end{pmatrix}
+$$
 
 Questo algoritmo termina in un tempo finito e restituisce un risultato che rispetta le prescrizioni.della specificazione.
 
 > Esempio
+
+## Basi di spazi vettoriali e dimensione
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$; se esiste un sistema di generatori $\{v_1\ \dots, v_n\}$ finito di $V$, allora $V$ si dice **finitamente limitato**.
+
+**Teorema**  
+Sia $V$ uno spazio vettoriale su $K$ finitamente ...; un sottoinsieme ?, $B = \{v_1\ \dots, v_n\}$ è una base di $V$ in un unico modo, sia $v \in V$; dato che $B$ è in particolare un sistema generato per $V$, allora $v$ si scrive come combinazione lineare di $B$, $v, \lambda v_1 + \dots + \lambda v_n$ ... mostrare l'unicità di tale scrittura; supponiamo che ne esista un'altra
+
+allora $\lambda_1 v_1 + \dots + \lambda_n = \mu_1 v_1 + \dots + \mu_n v_n$, pertanto
+
+$(\lambda_1 + \mu_1) v_1 + \dots + (\lambda_n + \mu_n) v_n = 0$
+
+questa è una combinazione lineare nulla di $v_1, \dots, v_n$; dato che $B$ è linearmente indipendente, l'unica possibilità è che valga
+
+$\lambda_1 - \mu_1 = \dots = \lambda_n - \mu_n = 0$ se e solo se $\lambda_1 = \mu_1, \dots, \lambda_n = \mu_n$
+
+il che prova l'unicità della scrittura.
+
+"$\Leftarrow$"
+
+supponiamo che ogni $v \in V$ si scriva come unica combinazione lineare di $B$; allora in particolare $B$ è un sistema di generatori per $V$; dimostriamo che gli elementi di $B$ sono linearmente indipendenti; per farlo, supponiamo che esista una combinazione lineare nulla di $v_1, \dots, v_n$
+
+$\lambda_1 v_1 + \dots + \lambda_n v_n = 0$
+
+d'altra parte, possiamo scrivere $0 = 0 \cdot v_1 + \dots + 0 \cdot v_n$; dato che la scrittura di $0$ come combinazione lineare di $\{v1, \dots, v_n\}$ è unica,discende che $\lambda_1 = \dots = \lambda_n = 0$, ovvero che $v_1, \dots, v_n$ sono linearmente indipendenti.
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$ finitamente ...; sia $B = \{v_1\ \dots, v_n\}$ una base di $V$ e sia $v \in V$; allora possiamo scrivere $v = \lambda_1 v_1 + \dots + \lambda_n v_n$ in modo unico con $\lambda_1, \dots, \lambda_n \in K$; gli scalari $\lambda_1, \dots, \lambda_n$ sono detti le **coordinate** di $V$ rispetto a $B$.
+
+**Esempi**  
+In $K^n$ possiamo considerare
+
+$$
+B =
+\left\{
+  \begin{pmatrix}
+    1 \\
+    0 \\
+    \vdots \\
+    0
+  \end{pmatrix},
+  \begin{pmatrix}
+    0 \\
+    1 \\
+    \vdots \\
+    0
+  \end{pmatrix},
+  \dots,
+  \begin{pmatrix}
+    0 \\
+    0 \\
+    \vdots \\
+    1
+  \end{pmatrix}
+\right\}
+$$
+
+si può dimostrare che $B$ è una base di $K^n$.
+
+...
+
+è chiamata la **base standard** di $K^n$, per ogni vettore
+
+$$
+V =
+\begin{pmatrix}
+  v_1 \\
+  v_2 \\
+  \vdots \\
+  v_n
+\end{pmatrix}
+$$
+
+...
+
+**Esempio**  
+In $M_{m, n}(K)$ possiamo considerare
+
+!!! rivedi B
+
+$$
+B =
+\left\{
+  \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+  \end{pmatrix},
+  \begin{pmatrix}
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+  \end{pmatrix},
+  \dots,
+  \begin{pmatrix}
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+  \end{pmatrix}
+\right\}
+$$
+
+si può dimostrare che $B$ è una base di $M_{m, n}(K)$.
+
+**Osservazione**  
+In $K^n$, l'essere un sistema di generatori può essere parafrasato in termini di sistemi lineari; infatti, se $\{v_1, \dots, v_n\} \subseteq K^n$ è un sistema di generatori,
+allora per ogni $v \in K^n$ esistono $\lambda_1, \dots, \lambda_n \in K$ tali che $v = \lambda_1 v_1 + \dots + \lambda_n v_n$.
+
+Scriviamo
+
+$$
+v_1 =
+\begin{pmatrix}
+  a_{11} \\
+  a_{12} \\
+  \vdots \\
+  a_{1n}
+\end{pmatrix},
+\dots,
+v_s =
+\begin{pmatrix}
+  a_{s1} \\
+  a_{s2} \\
+  \vdots \\
+  a_{sn}
+\end{pmatrix},
+v_n =
+\begin{pmatrix}
+  b_1 \\
+  b_2 \\
+  \vdots \\
+  b_n
+\end{pmatrix}
+$$
+
+allora l'essere $v$ una combinazione lineare di $v_1 \dots, v_n$ equivale ad avere
+
+$$
+\left\{
+  \begin{array}{l}
+    \lambda_1 a_{11} + \dots + \lambda_s a_{s1} = b_1 \\
+    \vdots \\
+    \lambda_1 a_{s1} + \dots + \lambda_n a_{sn} = b_n
+  \end{array}
+\right.
+$$
+
+quindi $v$ è una combinazione lineare di $v_1, \dots, v_n$ se e solo se il sistema lineare
+
+$$
+\begin{pmatrix}
+  a_{11} & \dots & a_{s1} \\
+  \vdots & \ddots & \vdots \\
+  a_{1n} & \dots & a_{sn}
+\end{pmatrix}
+\begin{pmatrix}
+  \lambda_1 \\
+  \vdots \\
+  \lambda_n
+\end{pmatrix} =
+\begin{pmatrix}
+  b_1 \\
+  \vdots \\
+  b_n
+\end{pmatrix}
+$$
+
+è compatibile, ovvero ammette una soluzione.
+
+Analogamente, anche l'essere linearmente indipendenti può essere parafrasato in termini di sistemi lineari: con la notazione precedente, $v_1, \dots, v_n$ sono linearmente indipendenti se e solo se il sistema lineare omogeneo dato da:
+
+$$
+\begin{pmatrix}
+  a_{11} & \dots & a_{s1} \\
+  \vdots & \ddots & \vdots \\
+  a_{1n} & \dots & a_{sn}
+\end{pmatrix}
+\begin{pmatrix}
+  \lambda_1 \\
+  \vdots \\
+  \lambda_n
+\end{pmatrix} =
+\begin{pmatrix}
+  0 \\
+  \vdots \\
+  0
+\end{pmatrix}
+$$
+
+ammette come unica soluzione la soluzione nulla:
+
+$$
+\left\{
+  \begin{array}{l}
+    \lambda_1 = 0 \\
+    \vdots \\
+    \lambda_s = 0
+  \end{array}
+\right.
+$$
+
+---
+
+Consideriamo alcuni importanti risultati riguardo alle basi.
+
+**Teorema (di estrazione di una base)**  
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato; sia $\{v_1, \dots, v_k\}$ un sistema di generi di $V$; allora esiste $B \subseteq \{v_1, \dots, v_k\}$ tale che $B$ è una base di $V$.
+
+**Dimostrazione**  
+(idea) costruiamo questa base $B$ in maniera algoritmica e possiamo supporre che $V \neq \{0\}$ (perché il caso $V = \{0\}$ è di facile dimostrazione), useremo l'**algoritmo dello scarto**:
+
+1. inizializziamo $B = \{\}$
+2. consideriamo $v_1$; se $v_1 = 0$, non facciamo nulla; se $v_1 \neq 0$, aggiungiamo $v_1$ a $B$
+3. consideriamo $v_2$; se $v_2 \in span(v_1)$, lo scartiamo; altrimenti lo aggiungiamo a $B$
+4. consideriamo $v_3$; se $v_3 \in span(v_1, v_2)$, lo scartiamo; altrimenti lo aggiungiamo a $B$
+5. ...
+
+otteniamo un sottoinsieme di $\{v_1, \dots, v_k\}$ che si può dimostrare essere una base di $V$.
+
+**Teorema (del completamento o dell'estensione)**  
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato e siano $\{v_1, \dots, v_p\}$ vettori linearmente indipendenti; allora esiste una base $B$ di $V$ tale che $\{v_1, \dots, v_p\} \subseteq span(B)$ (ovvero $\{v_1, \dots, v_p\}$ possono essere completati a una base di $B$).
+
+**Dimostrazione**  
+(idea) dato che $B$ è finitamente limitato, esiste $\{w_1, \dots, w_r\}$ un sistema di generatori finito di $V$; allora $\{v_1, \dots, v_p\, w_1, \dots, w_r\}$ è anch'esso un sistema di generatori per $V$; ora applico a quest'ultimo insieme l'algoritmo dello scarto, ottenendo una base $B$ di $V$; per come è fatto l'algoritmo dello scarto e dato che $v_1, \dots, v_p$ sono linearmente indipendenti per ipotesi, essi saranno sempre scelti dall'algoritmo, e pertanto avremmo che $\{v_1, \dots, v_p\} \subseteq B$.
+
+---
+I due teoremi precedenti ci fanno capire perché le basi possono essere equivalentemente caratterizzate come sistemi di generatori minimali oppure come insiemi linearmente indipendenti massimali.
+
+**Lemma (di ...)**  
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato e sia $B = \{v_1, \dots, v_n\}$ una base di $V$; allora per ogni $k>n$ e per ogni scelta di vettori $w_1, \dots, w_k \in V$ vale che $w_1, \dots, w_k$ sono linearmente dipendenti.
+
+**Dimostrazione**  
+(idea) per ipotesi vale che
+
+$w_1 = c_{11} v_1 + \dots + c_{n1} v_n$  
+$w_2 = c_{12} v_1 + \dots + c_{n2} v_n$  
+$\vdots$  
+$w_k = c_{1k} v_1 + \dots + c_{nk} v_n$
+
+si può dimostrare che, se definiamo
+
+$$
+C =
+\left\{
+  \begin{pmatrix}
+    c_{11} & \dots & c_{1k} \\
+    \vdots & \ddots & \vdots \\
+    c_{n1} & \dots & c_{nk}
+  \end{pmatrix}
+\right\}
+$$
+
+allora $w_1, \dots, w_k$ sono linearmente indipendenti se e solo se il sistema lineare omogeneo $C \cdot X = 0$ ammette una soluzione non tutta nulla; osserviamo la matrice $C$; essa ha $n$ righe e $k$ colonne; per ipotesi $k>n$, quindi ci sono più colonne che righe; se, tramite l'algoritmo di gradinizzazione di Gauss portiamo $C$ nella forma a scala, otterremo dunque una matrice del tipo:
+
+una matrice con disegnata una scala dentro:
+$$
+\tilde{C} =
+\begin{pmatrix} * & * & * & \dots & * \\
+  0 & * & * & \dots & * \\
+  0 & 0 & * & \dots & * \\
+  0 & 0 & 0 & \dots & * \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & 0 & \dots & 0
+\end{pmatrix}
+$$
+
+dato che si sono più colonne che righe, almeno uno di questi scalini sarà lungo più di $1$, il che significa che almeno un'incognita nel sistema lineare può essere scritta linearmente e quindi in particolare può essere scelta non nulla, determinando dunque una soluzione non tutta nulla dell'equazione.
+
+**Teorema**  
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato; siano $\{v_1, \dots, v_n\}$ e $\{w_1, \dots, w_m\}$ due basi di $V$; allora $n = m$.
+
+(equivalentemente due basi di uno spazio vettoriale su $K$ finitamente generato, hanno lo stesso numero di elementi)
+
+**Dimostrazione**  
+Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di S... (perché altrimenti $\{w_1, \dots, w_m\} non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di S... (perché altrimenti $\{v_1, \dots, v_n\} non sarebbero linearmente indipendenti); quindi $n = m$.
+
+### Dimensione e rango
+
+**Definizione**
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato
+
+- se $V = \{0\}$, definiamo la dimensione di $V$ come $0$
+- se $V \neq \{0\}$ definiamo la dimensione di $V$ come il numero di elementi di una sua qualsiasi base
+
+indichiamo la dimensione di $V$ con $dim_k V$ (o anche $dim V$).
+
+**Esempio**  
+$dimR^2 = 2$ (infatti $\left\{\begin{pmatrix}1 \\ 0\end{pmatrix}, \begin{pmatrix}0 \\ 1\end{pmatrix}\right\}$ è base di $R^2$)  
+$dim_k K^2 = 2$  
+$dim_k K^n = n$  
+$dim_k M_{m,n}(K) = m \cdot n$ (...)
+
+**Osservazione**  
+Il concetto di dimensione si applica anche ai sottospazi vettoriali di uno spazio vettoriale.
+
+**Proprietà**  
+Sia $V$ uno spazio vettoriale finitamente generato; sia $W \subseteq V$ un sottospazio vettoriale allora:
+
+1. $dim W \leq dim V$
+2. $dim W = dim V \Leftrightarrow W = V$
+
+**Dimostrazione**  
+Con la dimostrazione abbiamo associato un numero ad uno spazio vettoriale finitamente generato. Tramite questa nozione, associamo un numero a una matrice.
+
+**Osservazione**  
+Se $A \in M_{m,n}(K)$, allora le colonne di $A$ sono elementi di $K^m$.
+
+$A^{(1)}, \dots, A^{(m)} \in K^m$
+
+**Definizione**  
+Sia $A \in M_{m,n}(K)$; definiamo il **rango** di $A$, e lo denotiamo $rg(A)$.
+
+Il numero naturale
+
+$rg(A) = dim(span(A^{(1)}, \dots, A^{(m)})$)
+
+**Osservazione**  
+Se $A \in M_{m,n}(K)$, allora
+
+- $rg(A) \leq m$
+- $rg(A) \leq n$
+
+**Osservazione**  
+Se $A \in M_{m,n}(K)$, allora
+
+- $rg(A) \leq m$, infatti $A^{(1)}, \dots, A^{(m)} \in K^m$, dunque $span(A^{(1)}, \dots, A^{(m)}) \subseteq K^{m}$, dunque $dim(span(A^{(1)}, \dots, A^{(m)})) \leq dim(K^m)$
+- $rg(A) \leq n$, infatti $A^{(1)}, \dots, A^{(n)}$ ha $n$ generatori, pertanto una base $span(A^{(1)}, \dots, A^{(n)})$ ha al più $n$ generatori, quindi $dim(span(A^{(1)}, \dots, A^{(n)})) \leq n$
+
+quindi $rg(A) \leq min\{m, n\}$
+
+**Esempio**  
+Consideriamo
+
+$$
+A =
+\begin{pmatrix}
+  2 & 1 & 3 \\
+  1 & 0 & -1
+\end{pmatrix}
+$$
+
+$rg(A) = dim(span(\begin{pmatrix} 2 \\ 1 \end{pmatrix}), \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 3 \\ -1 \end{pmatrix})$
+
+vale che $rg(A) \leq min\{2, 3\} = 2$
+
+se fosse $rg(A) = 1$, allora tutte le colonne sarebbero proporzionali tra loro (ovvero ottenibili una dall'altra tramite moltiplicazione per uno scalare), ma questo non è il caso di $A$. pertanto $rg(A) = 2$.
+
+**Esempio**  
+Qual è il rango della matrice unità?
+
+$rg(1_n) = dim(span(\begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{pmatrix}, \dots, \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix})) = dim(K^n) = n$
+
+**Proposizione**  
+Sia $A \in M_{m,n}(K)$ e sia $\tilde{A}$ una matrice ottenuta da $A$ applicando le $3$ operazioni elementari $OE1$, $OE2$ e $OE3$; allora
+
+1. $rg(\tilde{A}) = rg(A)$
+2. se $\tilde{A}$ è a scala, allora $rg(\tilde{A}) =$ numero di righe non nulle di $\tilde{A}$
+
+**Proposizione**  
+$rg(A) = rg({}^t A)$
+
+Questo ci dà un algoritmo per calcolare il rango di una matrice.
+
+**Esempio**  
+$$
+A =
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6
+\end{pmatrix}
+$$
+
+$rg(A) = 1$ perché le righe (o le colonne) sono proporzionali.
+
+**Teorema (di dimensione per soluzioni di sistemi lineari)**  
+Sia $A \in M_{m,n}(K)$; sia
+
+$W = \left\{s \in K^n : As = 0\right\} \subseteq K^n$
+
+ovvero $W$ è l'insieme delle soluzioni del sistema lineare omogeneo associato ad $A$; allora
+
+$dim W = n - rg(A)$
+
+**Dimostrazione**  
+Seguirà dalla teoria delle applicazioni lineari.
+
+**Teorema (di Rouchè - Capelli)**  
+SIa $A \in M_{m,n}(K)$ e sia $B \in K^n$, allora il sistema lineare $A \cdot X = b$ è compatibile (ovvero ammette almeno una soluzione) se e solo se $rg(A) = rg(A|B)$; in tal caso la generica soluzione del sistema dipende da $n - rg(A)$ parametri liberi.
+
+**Dimostrazione**  
+Per mostrare la prima parte del teorema, notiamo che se $s \in K^n$, con $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$, allora
+
+$A \cdot s = b \Leftrightarrow s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$
+
+(questa osservazione si ottiene scrivendo esplicitamente il prodotto righe per colonne di $A$ per $s$); dimostriamo la prima parte
+
+"$\Rightarrow$"  
+Supponiamo che $A \cdot X = b$ sia compatibile; allora esiste $s \in K^n$ soluzione del sistema, dunque $A \cdot s = b$; per quanto osservato, questo equivale a dire che $s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$, il che significa che $b$ è combinazione lineare di $A^{(1)}, \dots, A^{(n)}$, ovvero delle colonne di $A$, pertanto $b \in span(A^{(1)}, \dots, A^{(n)})$, questo implica che $span(A^{(1)}, \dots, A^{(n)}) = span(A^{(1)}, \dots, A^{(n)}, b)$; infatti
+
+"$\subseteq$"  
+se $u \in span(A^{(1)}, \dots, A^{(n)})$, allora $u = \lambda_1 \cdot A^{(1)} + \cdot + \lambda_n \cdot A^{(n)}$ ...
+
+"$\supseteq$"  
+...
+
+Allora
+
+$dim(span(A^{(1)}, \dots, A^{(n)})) = dim(span(A^{(1)}, \dots, A^{(n)}, b))$  
+$rg(A) = rg(A|b)$
+
+"$\Leftarrow$"  
+Supponiamo che valga $rg(A) = rg(A|B)$; allora per definizione
+
+$dim(span(A^{(1)}, \dots, A^{(n)})) = dim(span(A^{(1)}, \dots, A^{(n)}, b))$
+
+dato che vale *sempre* che lo $span(A^{(1)}, \dots, A^{(n)}) \subseteq span(A^{(1)}, \dots, A^{(n)}, b)$, il fatto che le dimensioni di questi due sottospazi sono uguali implica che gli sottospazi stessi siano uguali; dunque
+
+$span(A^{(1)}, \dots, A^{(n)}) = span(A^{(1)}, \dots, A^{(n)}, b)$
+
+pertanto, dato che $b \in span(A^{(1)}, \dots, A^{(n)}, b)$, segue che $b \in span(A^{(1)}, \dots, A^{(n)})$, ma abbiamo osservato che quest'ultima condizione è equivalente al fatto che esista una soluzione $s \in K^n$ del sistema $A \cdot X = b$, ovvero che quest'ultimo sia compatibile.
+
+Abbiamo quindi mostrato la prima parte del teorema; ora mostriamo la seconda parte, ovvero che, quando il sistema $A \cdot X = b$ è compatibile, la sua generica soluzione dipende da $n - rg(A)$ parametri liberi; per farlo, usiamo il teorema di struttura per sistemi lineari e il teorema di dimensione per le soluzioni di un sistema lineare omogeneo, il primo ci dice che la generica soluzione $s$ del sistema $A \cdot X = b$ o della forma $s = \tilde{s} + s_o$ dove $\tilde{s}$ è una soluzione fissata di $A \cdot X = b$ ed $s_0$ è una soluzione del sistema omogeneo associato $AX = 0$; il teorema di dimensione ci dice che il sottospazio vettoriale $W$ delle soluzioni $AX = 0$ ha dimensione $n - rg(A)$; sia $k = n -rg(A)$; allora esiste una base $B$ di $W$ formata da $k$ elementi, $B = \{w_1, \dots, w_k\}$ e ogni elemento di $W$ è combinazione lineare in maniera unica di $B$; pertanto $s_0$ è della forma $s_0 = t_1 \cdot w_1 + \dots + t_k \cdot w_k$ per certe $t_1, \dots, t_k \in K$; in definitiva, la generica soluzione $s$ di $AX = b$ è della forma $s = \tilde{s} + t_1 \cdot w_1 + \dots + t_k \cdot w_k$ dove $t_1, \dots, t_k \in K$.
+
+$\square$
+
+**Esempio**  
+Consideriamo il sistema lineare
+
+$$
+\left\{
+  \begin{array}{l}
+    x_1 - 2x_2 + 3x_3 - x_4 = 1 \\
+    x_2 - x_4 = 2
+  \end{array}
+\right.
+$$
+
+usiamo il teorema di Rouchè - Capelli per dimostrare che il sistema sia compatibile
+
+$$
+A =
+\begin{pmatrix}
+  1 & -2 & 3 & -1 \\
+  0 & 1 & 0 & -1
+\end{pmatrix},
+B =
+\begin{pmatrix}
+  1 \\
+  2
+\end{pmatrix}
+$$
+
+$$
+(A|B) =
+\begin{pmatrix}
+  1 & -2 & 3 & -1 & 1 \\
+  0 & 1 & 0 & -1 & 2
+\end{pmatrix}
+$$
+
+...
+
+$$
+\left\{
+  \begin{array}{l}
+    x_1 - 2x_2 + 3x_3 - x_4 = 1 \\
+    x_2 - x_4 = 2
+  \end{array}
+\right.
+\Leftrightarrow
+\left\{
+  \begin{array}{l}
+    x_1 = 2x_2 - 3c_3 + x_4 + 1 \\
+    x_2 = x_4 + 2
+  \end{array}
+\right.
+$$
+
+...
+
+## Rango e determinante
+
+**Corollario**  
+Sia $A \in M_{n}(K)$, allora $rg(A) = n$ (ovvero il rango di $A$ è il massimo possibile) se e solo se per ogni $b \in K^n$, il sistema lineare $A \cdot X = b$ è compatibile.
+
+**Dimostrazione**  
+Abbiamo visto nella dimostrazione di Rouchè - Capelli che
+$A \cdot X = b$ è compatibile se e solo se $b \in span(A^{(1)}, \dots, A^{(n)})$, nella nostra dimostrazione abbiamo che $span(A^{(1)}, \dots, A^{(n)}) \subseteq K^n$, e vale che $dim_k K^n = n$; pertanto
+
+$rg(A) = n \Leftrightarrow dim\ span(A^{(1)}, \dots, A^{(n)}) = n \Leftrightarrow span(A^{(1)}, \dots, A^{(n)}) = K^n \Leftrightarrow \forall b \in K^n, b \in span(A^{(1)}, \dots, A^{(n)}) \Leftrightarrow \forall b \in K^n, AX = b$ è compatibile.
+
+$\square$
+
+Ritorniamo ora la teorema di Cramer, il quale ci dice che se $A \in M_{n}(K)$, ed $A$ è invertibile, allora $\forall b \in K^n$ il sistema lineare $A \cdot X = b$ è compatibile.
+
+**Proposizione**  
+Sia $A \in M_{n}(K)$, allora $rg(A) = n$ (ovvero il rango di $A$ è massimo) se e solo se $A$ è invertibile.
+
+**Dimostrazione**  
+"$\Leftarrow$"  
+Sia $A$ invertibile, allora per il teorema di Cramer, $\forall b \in K^n$ il sistema $A \cdot X = b$ è compatibile, dunque per il corollario precedente $rg(A) = n$.
+
+$"\Rightarrow$"  
+Supponiamo che $rg(A) = n$, vogliamo mostrare che una certa $B \in M_{n}(K)$ tale che $AB = BA = 1_n$; è sufficiente costruire $B$ tale che $AB = 1_n$; ora, vale che
+
+$AB = 1_n$ se e solo se $A \cdot B^{(i)} = \begin{pmatrix} 0 & \\ \vdots & \\ 1 & (i)\\ \vdots & \\ 0 & \end{pmatrix}$
+
+chiamiamo $e_i$ il vettore $\begin{pmatrix} 0 & \\ \vdots & \\ 1 & (i)\\ \vdots & \\ 0 & \end{pmatrix}$
+
+se e solo se tutti i sistemi lineari $A \cdot B^{(i)} = e_i$, con $i \in \{1, \dots, n\}$, hanno soluzione; dato che $rg(A) = n$, sappiamo che tutti questi sistemi lineari sono compatibili e dunque le loro soluzioni determinano le colonne di $B$.
+
+Da questo risultato otteniamo un algoritmo per determinare l'inversa di una matrice quadrata $A \in M_{n}(K)$ quando essa è invertibile.
+
+Abbiamo visto che per risolvere l'inversa di $A$ dobbiamo risolvere tutti i sistemi lineari del tipo $AX = e_i$, con $i \in \{1, \dots, n\}$. Cerchiamo di risolverli tutti contemporaneamente, ovvero consideriamo la matrice
+
+$$
+(A \begin{pmatrix}
+  1 & 0 & \dots & 0 \\
+  0 & 1 & \dots & 0 \\
+  \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & \dots & 1
+\end{pmatrix})
+$$
+
+Notiamo che dato che $A$ è invertibile, il suo rango è $n$, quindi la sua forma a scala dopo l'algoritmo di Gauss è
+
+$$
+\tilde{A} =
+\begin{pmatrix} * & * & * & \dots & * \\
+  0 & * & * & \dots & * \\
+  0 & 0 & * & \dots & * \\
+  0 & 0 & 0 & \dots & * \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & 0 & \dots & 1
+\end{pmatrix}
+$$
+
+infatti $\tilde{A}$ è una matrice $n \times n$ e dato che $rg(A) = n$, $\tilde{A}$ deve avere $n$ righe non nulle.
+
+Usando ancora operazioni elementari possiamo portare $\tilde{A}$ nella forma
+
+$$
+\begin{pmatrix}
+  0 & * & * & \dots & 0 \\
+  0 & 0 & * & \dots & 0 \\
+  0 & 0 & 1 & \dots & 0 \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & 0 & \dots & 1
+\end{pmatrix} \rightarrow
+\begin{pmatrix}
+  1 & 0 & 0 & \dots & 0 \\
+  0 & 1 & 0 & \dots & 0 \\
+  0 & 0 & 1 & \dots & 0 \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & 0 & \dots & 1
+\end{pmatrix}
+$$
+
+Riassumendo, usando operazioni elementari possiamo portare $A$ nella matrice $1_n$.
+
+Applichiamo ora queste operazioni elementari alla matrice $(A | 1_n)$
+
+otterremo una matrice del tipo $(1_n | B)$, con $B$ una certa matrice $M_{n}(K)$.
+
+Ora la matrice di partenza codificava i sistemi $AX = e_i$, le cui soluzioni sono le colonne dell'inversa di $A$. Le operazioni elementari non cambiano le soluzioni del sistema. L'ultima matrice codifica i sistemi lineari $1X = B^{(i)}$, pertanto le soluzioni di quest'ultimo sistema sono le colonne della matrice inversa di $A$. Le soluzioni di questo sistema sono proprio le colonne di $B$, il che ci mostra che $B$ è l'inversa di $A$.
+
+**Esempio**  
+Consideriamo
+
+$$
+A =
+\begin{pmatrix}
+  2 & 1 \\
+  5 & 3
+\end{pmatrix}
+$$
+
+abbiamo che $rg(A) = 2$, quindi $A$ è invertibile
+
+calcoliamo l'inversa di $A$
+
+$$
+(A | 1_n) =
+\begin{pmatrix}
+  2 & 1 & | & 1 & 0 \\
+  5 & 3 & | & 0 & 1
+\end{pmatrix}
+$$
+
+$$
+\begin{pmatrix}
+  1 & \frac{1}{2} & | & \frac{1}{2} & 0 \\
+  5 & 3 & | & 0 & 1
+\end{pmatrix} \rightarrow
+\begin{pmatrix}
+  1 & \frac{1}{2} & | & \frac{1}{2} & 0 \\
+  0 & \frac{1}{2} & | & -\frac{5}{3} & 1
+\end{pmatrix} \rightarrow
+\begin{pmatrix}
+  1 & \frac{1}{2} & | & \frac{1}{2} & 0 \\
+  0 & 1 & | & -5 & 2
+\end{pmatrix} \rightarrow
+\begin{pmatrix}
+  1 & 0 & | & 3 & -1 \\
+  0 & 1 & | & -5 & 2
+\end{pmatrix}
+$$
+
+pertanto $\begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$ è l'inversa di $\begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix}$.
+
+...
+
+!!! manca un'ora del 14/11
+
+!!! manca una lezione del martedì, tipo 1 o 7 novembre
+
+### Determinante
+
+**Proposizione**  
+Il determinante gode della seguenti 3 proprietà:
+
+$D1$: (multilinearità)  
+
+Sia $A \in M_n (K)$e supponiamo che $A_{(i)} = R_1 + R_2$ (la i-esima riga è la somma di due vettori riga), allora
+
+$$
+det ...
+$$
+
+inoltre se invece $A_{(i)}$...
+
+$$
+det ...
+$$
+
+analoghe proprietà valgono se al posto delle righe consideriamo le colonne.
+
+$D2$: (alternanza o antisimmetria)
+
+...
+
+$D3$: (normalizzazione)
+
+$det\ 1_n = 1$
+
+**Teorema (di caratterizzazione del determinante)**  
+Il determinante è l'unica funzione $M_n (K) \rightarrow K$ che soddisfa le proprietà $D1$, $D2$ e $D3$.
+
+**Esempio**  
+...
+
+**Corollario**  
+i) se $A$ ha due righe uguali, allora $det(A) = -det(A)$ (per $D2$) e dunque $det(A) = 0$; analogamente per le colonne.
+
+ii) se $A$ ha una riga nulla, allora $det(A) = 0$ (per $D1$).
+
+**Corollario**  
+...
+
+!!! ...
