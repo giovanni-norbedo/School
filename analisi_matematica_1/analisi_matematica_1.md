@@ -62,6 +62,7 @@ $p \vee q$
 | F   | F   |     F      |
 
 La disgiunzione non esclusiva $(XOR)$ si indica con $\veebar$ e la sua **tabella di verità** è:
+
 | $p$ | $q$ |  $p \veebar q$  |
 | --- | --- | :-------------: |
 | V   | V   |        F        |
@@ -235,19 +236,19 @@ $\neg (p \vee q) = \neg p \wedge \neg q$
 
 #### Esempi
 
-$\mathcal{P}(x) : \text{lo studente x è più alto di 1,7m.}$  
+$\mathcal{P}(x) :$ lo studente x è più alto di 1,7m.  
 è un *predicato*
 
-$\mathcal{P}(Pietro) = \text{Pietro è più alto di 1,7m.}$  
+$\mathcal{P}(Pietro) =$ Pietro è più alto di 1,7m.  
 è una *proposizione*
 
-$\mathcal{Q}(x,y) : \text{lo studente x è amico dello studente y.}$  
+$\mathcal{Q}(x,y) :$ lo studente x è amico dello studente y.  
 è un *predicato*
 
-$\mathcal{Q}(Pietro,Giorgio) : \text{lo studente Pietro è amico dello studente Giorgio.}$  
+$\mathcal{Q}(Pietro,Giorgio) :$ lo studente Pietro è amico dello studente Giorgio.  
 è una *proposizione*
 
-$\mathcal{S}(x,y,z) : \text{nell'ospedale x, il medico y, ha sbagliato la diagnosi z.}$
+$\mathcal{S}(x,y,z) :$ nell'ospedale x, il medico y, ha sbagliato la diagnosi z.
 
 **Osservazione**: un modo per trasformare predicati in proposizioni è utilizzare i **quantificatori**.
 
