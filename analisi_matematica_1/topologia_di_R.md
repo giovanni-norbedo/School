@@ -130,9 +130,9 @@ Sì, perché i suoi elementi (non ce ne sono) hanno tutte le proprietà che si v
 Siano $\{A_i, i \in I\}$ un insieme di insiemi aperti.  
 
 Considero $x_0 \in \bigcup\limits_{i \in I} A_i$  
-allora $\exists \=i : x_0 \in A_i$  
+allora $\exists \overline{i} : x_0 \in A_i$  
 ma $A_i$ è aperto,  
-$x_0 \in A_{\=i} \Rightarrow \exists r > 0 : \ ]x_0 - r, x_0 + r[ \ \subseteq A_i$  
+$x_0 \in A_{\overline{i}} \Rightarrow \exists r > 0 : \ ]x_0 - r, x_0 + r[ \ \subseteq A_i$  
 ma allora $\ ]x_0 - r, x_0 + r[ \ \subseteq \bigcup\limits_{i \in I} A_i$  
 allora $\bigcup\limits_{i \in I} A_i$ è aperto.
 
@@ -170,18 +170,18 @@ $\forall r > 0, \ ]x_0 - r, x_0 + r[ \ \cap E \neq \emptyset$
 
 (in ogni intorno di $x_0$ ci sono punti di $E$)
 
-I punti di chiusura si dicono la chiusura di $E$, e si indica con $\=E$.
+I punti di chiusura si dicono la chiusura di $E$, e si indica con $\overline{E}$.
 
 **Esempio**  
 $E = \ ]1, 2[$  
-$\=E = [1, 2]$  
+$\overline{E} = [1, 2]$  
 
 **Osservazione**  
-$E \subseteq \=E$
+$E \subseteq \overline{E}$
 
 **Esempio**  
 $E = \{\frac{1}{n}, n \in \mathbb{N}^*\}$  
-$\=E = E \cup \{0\}$  
+$\overline{E} = E \cup \{0\}$  
 $\dot{E} = \emptyset$  
 $\partial{E} = E \cup \{0\}$
 
@@ -194,9 +194,9 @@ $\dot{\mathbb{Q}} = \emptyset$
 **Teorema**  
 Sia $E \subseteq \mathbb{R}$, allora
 
-- $\=E$ è un insieme chiuso
-- $\=E$ è il più piccolo chiuso che contiene $E$
-- $E$ è chiuso se e solo se $E = \=E$
+- $\overline{E}$ è un insieme chiuso
+- $\overline{E}$ è il più piccolo chiuso che contiene $E$
+- $E$ è chiuso se e solo se $E = \overline{E}$
 
 ### Punti di accumulazione
 

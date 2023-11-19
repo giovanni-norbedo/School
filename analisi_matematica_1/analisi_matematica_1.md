@@ -1462,7 +1462,7 @@ $$
 \left\{
   \begin{array}{l}
     1) & \forall a \in A, a \leq \alpha \\
-    2) & \forall \varepsilon > 0, \exists \=a \in A : \=a > \alpha - \varepsilon
+    2) & \forall \varepsilon > 0, \exists \overline{a} \in A : \overline{a} > \alpha - \varepsilon
   \end{array}
 \right.
 $$
@@ -1492,9 +1492,9 @@ $\Rightarrow \exists \xi \in \mathbb{R} : \xi = sup \mathbb{N}$
 
 Applico la seconda proprietà del $sup$ con $\varepsilon = 1$
 
-Allora $\exists \=n \in \mathbb{R} : \=n > \xi - 1$
+Allora $\exists \overline{n} \in \mathbb{R} : \overline{n} > \xi - 1$
 
-ma allora $\=n + 1 > \xi = sup \mathbb{N}$
+ma allora $\overline{n} + 1 > \xi = sup \mathbb{N}$
 
 che è impossibile
 
@@ -1505,7 +1505,7 @@ $\square$
 $2)$ **Proprietà di Archimede**
 
 Siano $\varepsilon, M \in \mathbb{R}, \varepsilon > 0, M > 0$  
-allora $\exists \=n \in \mathbb{R} : \=n \cdot \varepsilon > M$
+allora $\exists \overline{n} \in \mathbb{R} : \overline{n} \cdot \varepsilon > M$
 
 **Dimostrazione**  
 Per assurdo $\forall n \in \mathbb{N}, \varepsilon \leq M$  
@@ -1514,9 +1514,9 @@ allora $E = \{n \cdot \varepsilon : n \in \mathbb{N}\}$ è superiormente limitat
 sia $\xi \in \mathbb{R}, \xi = sup E$
 
 Applico la seconda proprietà del $sup$ con $\varepsilon$ delle ipotesi  
-$\exists \=n \in \mathbb{N} : \=n \cdot \varepsilon > \xi - \varepsilon$
+$\exists \overline{n} \in \mathbb{N} : \overline{n} \cdot \varepsilon > \xi - \varepsilon$
 
-ma allora $(\=n + 1) \cdot \varepsilon > \xi = sup E$
+ma allora $(\overline{n} + 1) \cdot \varepsilon > \xi = sup E$
 
 che è impossibile
 
@@ -1526,14 +1526,14 @@ $\square$
 
 $3)$ $\frac{1}{n}$ **diventa "piccolo quanto si vuole"**
 
-Sia $\varepsilon > 0$ allora $\exists \=n \in \mathbb{N} : 0 < \frac{1}{n} < \varepsilon$
+Sia $\varepsilon > 0$ allora $\exists \overline{n} \in \mathbb{N} : 0 < \frac{1}{n} < \varepsilon$
 
 **Dimostrazione**  
 Considero la proprietà di Archimede con $\varepsilon$ delle ipotesi e $M = 1$
 
 per Archimede  
-$\exists \=n \in \mathbb{N} : \varepsilon \=n > M = 1$  
-cioè $\varepsilon \=n > 1$  
+$\exists \overline{n} \in \mathbb{N} : \varepsilon \overline{n} > M = 1$  
+cioè $\varepsilon \overline{n} > 1$  
 ma allora $0 < \frac{1}{n} < \varepsilon$
 
 $\square$
@@ -1614,7 +1614,7 @@ $\bigcap\limits_n\ ]0, \frac{1}{n}] = \emptyset$
 
 infatti se $x \leq 0$ allora $x \notin\ ]0, \frac{1}{n}], \forall n$
 
-se $x > 0$ allora $\exists \=n : x > \frac{1}{\=n + 1} > 0$  
+se $x > 0$ allora $\exists \overline{n} : x > \frac{1}{\overline{n} + 1} > 0$  
 allora $x \notin\ ]0, \frac{1}{n + 1}]$
 
 **Osservazione**  
@@ -1774,7 +1774,7 @@ il numero complesso $a - ib$.
 Chiamo coniugo la funzione
 
 $\overline{\square} : \mathbb{C} \longrightarrow \mathbb{C}$  
-$z \longmapsto \=z$
+$z \longmapsto \overline{z}$
 
 $z_1, z_2 \in \mathbb{C}$  
 $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$  
