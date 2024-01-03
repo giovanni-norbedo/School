@@ -399,7 +399,7 @@ $A =\{n \in \mathbb{N} : n\ pari \} = \{0,2,4,6 \dots\}$
 $U$ è l'insieme universo  
 $A$ è l'insieme  
 
-$\mathscr{C}_U A = \{x \in U : x \notin U\} = \{x \in U : \neg (x \in U)\}$
+$\mathscr{C}_U A = \{x \in U : x \notin A\} = \{x \in U : \neg (x \in A)\}$
 
 > L'insieme complemento si può scrivere anche $\overline{A}$.
 
@@ -432,7 +432,7 @@ Esiste un insieme (speciale) che è senza elementi, chiamato *insieme vuoto*, in
 
 ### Insieme delle parti
 
-$\mathcal{P}(A)$ è l'insieme dei sottoinsiemi di A
+$\mathcal{P}(A)$ è l'insieme dei sottoinsiemi di $A$.
 
 #### Esempio
 
@@ -538,7 +538,7 @@ $\mathcal{P}(x) :$ $x$ è amico di $y$
 
 ## Relazioni
 
-### Relazione dra due insiemi
+### Relazione tra due insiemi
 
 **Definizione**:  
 *Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
@@ -732,7 +732,7 @@ $[2]_{\equiv 3}$ }
 **Definizione**:  
 Siano $A, B$ insiemi  
 
-$f$ una "legge"  
+$f$ è una "legge"  
 che ad ogni valore di $A$ associa uno e un solo valore di $B$,
 cioè se $x \in A$ esiste uno e uno solo $y$ in $B$ tale che $y$ è associato a $x$ (scrivo $f(x) = y$).  
 
@@ -773,7 +773,7 @@ che tradizionalmente si dicono "*funzioni reali di variabile reale*".
 **Definizione**  
 Sia $f : A \rightarrow B$ una funzione,  
 se $x \in A$, il valore $f(x) \in B$  
-lo chiamo **valore immaginario di x**.
+lo chiamo **valore immaginario di $x$**.
 
 **Definizione**
 L'insieme delle immagini si chiama  
@@ -814,7 +814,7 @@ $g : B \rightarrow C$
 Diciamo **funzione composta**  
 $g \circ f : A \rightarrow C$  
 "g dopo f",  
-quindi $x \rightarrow g\Big(f(x)\Big)$.
+quindi $x \mapsto g\Big(f(x)\Big)$.
 
 > Esempio con $x^2$ e $y + 2$
 
@@ -889,7 +889,7 @@ Questa è un'operazione:
 
 ---
 
-Vale una proprietà che lega la somma la prodotto, la **distributiva**,
+Vale una proprietà che lega la somma al prodotto, la **distributiva**,
 
 $\forall m,n,k$ vale che $n \cdot (m + k) = (n \cdot m) + (n \cdot k)$
 
@@ -947,7 +947,7 @@ Il principio di induzione posso verificarlo anche per i numeri $n>n_0, n_0 \in \
 >
 > Esempio $0+1+4+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}$
 >
-> Esempio $0+1+4+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}$
+> Esempio $0+1+8+\dots+n^3 = (\frac{n(n+1)(2n+1)}{6})^2$
 >
 > Esempio con le rette nel piano
 
@@ -1011,7 +1011,7 @@ $\forall n, p_{n+1} = p_n + a_{n+1}$
 ## Calcolo combinatorio
 
 Per contare il numero di elementi di insiemi a partire da altri insiemi.
-
+e
 ---
 
 1- Se $A$ insieme di $n$ elementi e $B$ insieme di $m$ elementi, scriviamo
@@ -1255,11 +1255,9 @@ $O_2)$ $\forall x, y, z \in \mathbb{R}$ vale che $x \geq y \wedge z \geq 0 \Righ
 
 ### Assioma di Dedekind
 
-$S)$ Siamo $A$ e $B$ sottoinsiemi di $\mathbb{R}$ con $A \neq \emptyset$ e $B \neq \emptyset$.
+$S)$ Siano $A$ e $B$ sottoinsiemi di $\mathbb{R}$ con $A \neq \emptyset$ e $B \neq \emptyset$.
 
-Supponiamo che $\forall a \in A, \forall b \in B, a \leq b$
-
-allora
+Supponiamo che $\forall a \in A, \forall b \in B, a \leq b$, allora
 
 $\exists \xi \in \mathbb{R} : \forall a \in A, \forall b \in B$
 
@@ -1293,7 +1291,7 @@ Siano $a, b \in \mathbb{R}$ con $a < b$,
 sono **intervalli limitati**:
 
 $[a, b] = \{x \in \mathbb{R} : a \leq x \leq b\}$  
-$]a, b] = \{x \in \mathbb{R} : x < a \leq b\}$  
+$]a, b] = \{x \in \mathbb{R} : a < x \leq b\}$  
 $[a, b[ = \{x \in \mathbb{R} : a \leq x < b\}$  
 $]a, b[ = \{x \in \mathbb{R} : a < x < b\}$  
 
@@ -1415,7 +1413,7 @@ perciò $\mu_1 = \mu_2$, quindi il massimo è unico.
 
 ### Teorema dell'esistenza dell'estremo superiore
 
-sia $A \subseteq \mathbb{R}, A \neq \emptyset$ e $A$ superiormente limitato,  
+Sia $A \subseteq \mathbb{R}, A \neq \emptyset$ e $A$ superiormente limitato,  
 allora $\exists \xi \in \mathbb{R} : \xi$ **estremo superiore** di $A$.
 
 **Dimostrazione**  
@@ -2154,3 +2152,702 @@ $(]x_0 - r_0, x_0 + r_0[ \ \cap E) \setminus \{x_0\} = \emptyset$
 
 **Conseguenza**  
 Gli insiemi finiti non hanno (mai) punto di accumulazione.
+
+### Teorema 1 di Bolzano-Weierstrass
+
+Sia $E \subseteq \mathbb{R}$, $E$ infinito e limitato  
+allora $\exists \xi \in \mathbb{R} : \xi$ è punto di accumulazione per $E$,  
+cioè $\mathscr{D}E \neq \emptyset$
+
+**Dimostrazione**  
+$E$ è limitato, cioè  
+
+- superiormente limitato $(\Leftarrow \exists M : \forall x \in E, x \leq M)$
+- inferiore limitato $(\Leftarrow \exists k : \forall x \in E, x \geq k)$
+
+e non vuoto
+
+$\exists \alpha = inf E$  
+$\exists \beta = sup E$
+
+$\alpha, \beta \in \mathbb{R}$
+
+cioè $\exists \alpha, \beta \in \mathbb{R} : E \subseteq [\alpha, \beta]$
+
+chiamo $a_0 = \alpha$ e $b_0 = \beta$  
+considero $c_0 = \frac{a_0 + b_0}{2}$ punto medio  
+considero $[a_0, c_0]$ e $[c_0, b_0]$  
+almeno uno dei due contiene infiniti punti di $E$,  
+ne scelgo uno che contiene infiniti punti di $E$,  
+
+lo chiamo $[a_1, b_1]$  
+considero $c_1 = \frac{a_1 + b_1}{2}$ punto medio  
+o $[a_1, c_1]$ o $[c_1, b_1]$ contiene infiniti punti di $E$  
+ne scelgo uno che contiene infiniti punti di $E$,  
+
+lo chiamo $[a_2, b_2]$  
+$\dots$
+
+Ripeto il procedimento e costruisco una successione di intorni chiusi, limitati, inscatolati e dimezzati
+
+$(I_n)_n,\ I_n = [a_n, b_n]$
+
+e ciascuno contiene infiniti punti di $E$.
+
+Applico la forma forte del teorema di Cantor
+
+$\exists \xi \in \mathbb{R} : \bigcap\limits_n [a_n, b_n] = \{\xi\}$
+
+per concludere provo che $\xi$ è punto di accumulazione per $E$
+
+Prendo $r > 0$
+
+devo provare che in $]\xi - r, \xi + r[$ ci sono infiniti punti di $E$
+
+basti che ci sia $[a_n, b_n] \subsetneq ]\xi - r, \xi + r[$
+
+$b_n - a_n = \frac{b_0 - a_0}{2^n}$
+
+$\xi \in [a_n, b_n]$
+
+$|\xi - a_n| \leq b_n - a_n = \frac{b_0 - a_0}{2^n}$  
+$|\xi - b_n| \leq b_n - a_n = \frac{b_0 - a_0}{2^n}$  
+
+$]\xi - r, \xi + r[\ \supseteq [a_n, b_n]$
+
+la condizione che lo garantisce è che
+
+$\frac{b_0 - a_0}{2^n} < r$
+
+la domanda finale è: c'è $n$ tale che $\frac{b_0 - a_0}{2^n} < r$?
+
+Sì, per Archimede
+
+$\frac{b_0 - a_0}{2^n} \leq \frac{b_0 - a_0}{n} < r$
+
+(per induzione $n \leq 2^n$)
+
+$\square$
+
+## Limiti di funzioni
+
+- chi sono gli intorni di un punto $x_0 \in \mathbb{R}$
+- chi sono gli intorni di $+ \infty$ e di $- \infty$
+- cosa significa che un punto $x_0 \in \mathbb{R}$ è un punto di accumulazione per un insieme $E$
+- (nuovo) cosa significa che $+ \infty$ è un punto di accumulazione per un insieme $E$
+- $\Updownarrow$
+- l'insieme $E$ è superiormente illimitato (cioè $\forall M > 0, \exists x \in E : x > M$)
+
+**Idea**  
+Ho $f : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$
+
+considero $x_0 \in \tilde{\mathbb{R}}$ con $x_0$ punto di accumulazione per $E$
+
+voglio dare un significato preciso al concetto:
+
+se $x \in E$ si avvicina a $x_0$  
+allora $f(x)$ si avvicina a un certo $L \in \tilde{\mathbb{R}}$
+
+**Definizione di limite**  
+Sia $f : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$  
+siano $x_0, L \in \tilde{\mathbb{R}}$, sia $x_0$ punto di accumulazione per $E$
+
+diciamo che $\lim\limits_{x \to x_0} f(x) = L$ se  
+
+$\forall V$ intorno di L,  
+$\exists U$ intorno di $x_0$ :  
+$\forall x \in E$,  
+$x \in U \setminus \{x_0\}$  
+$\Downarrow$  
+$f(x) \in V$  
+
+Interpretiamo la definizione nei vari casi:
+
+$1)$  Siano $x_0, L \in \mathbb{R}$  
+
+$\lim\limits_{x \to x_0} f(x) = L$  
+
+$\Updownarrow$  
+
+$\forall \varepsilon > 0,$  
+$\exists \delta > 0$  
+$\forall x \in E$  
+$0 < |x - x_0| < \delta$  
+$\Downarrow$  
+$|f(x) - L| < \varepsilon$
+
+$2)$ Siano $x_0 \in \mathbb{R}, L = + \infty$  
+
+$\lim\limits_{x \to x_0} f(x) = + \infty$
+
+$\Updownarrow$  
+
+$\forall M > 0$  
+$\exists \delta > 0$  
+$\forall x \in E$  
+$0 < |x - x_0| < \delta$  
+$\Downarrow$  
+$f(x) > M$
+
+$3)$ Siano $x_0 = + \infty, L \in \mathbb{R}$  
+
+$\lim\limits_{x \to + \infty} f(x) = L$
+
+$\Updownarrow$
+
+$\forall \varepsilon > 0$  
+$\exists M > 0$  
+$\forall x \in E$  
+$x > M$  
+$\Downarrow$  
+$|f(x) - L| < \varepsilon$
+
+$4)$ Siano $x_0 = + \infty, L = + \infty$
+
+$\lim\limits_{x \to + \infty} f(x) = + \infty$
+
+$\Updownarrow$
+
+$\forall N > 0$  
+$\exists M > 0$  
+$\forall x \in E$  
+$x > M$  
+$\Downarrow$  
+$f(x) > N$
+
+### Limiti destri e sinistri
+
+**Definizione**  
+Sia $f : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$  
+sia $x_0 \in \mathbb{R}$, $x_0$ punto di accumulazione per $E$  
+sia $L \in \tilde{\mathbb{R}}$
+
+$\lim\limits_{x \to x_0^+} f(x) = L$ tende da destra
+
+$\forall V\ di\ L, \exists U\ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \cap \ ]x_0, + \infty[ \ \Rightarrow \ f(x) \in V$
+
+$\lim\limits_{x \to x_0^-} f(x) = L$ tende da sinistra
+
+$\forall V\ di\ L, \exists U\ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \cap \ [ - \infty, x_0[ \ \Rightarrow \ f(x) \in V$
+
+**Osservazione**  
+È immediato che se $\lim\limits_{x \to x_0} f(x) = L$ allora $\lim\limits_{x \to x_0^+} f(x) = \lim\limits_{x \to x_0^-} f(x) = L$ e viceversa.
+
+### Prime proprietà dei limiti
+
+$1)$ **Unicità**
+
+**Teorema**  
+Sia $f : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$  
+sia $x_0 \in \mathbb{R}$, $x_0$ punto di accumulazione per $E$  
+siano $L_1, L_2 \in \tilde{\mathbb{R}}$ tali che  
+
+$\lim\limits_{x \to x_0} f(x) = L_1$  
+$\lim\limits_{x \to x_0} f(x) = L_2$
+
+allora $L_1 = L_2$.
+
+**Dimostrazione**  
+Per assurdo supponiamo che $L_1 \neq L_2$
+
+¿ esiste $V_1$ di $L_1$ e $V_2$ di $L_2$ tali che $V_1 \cap V_2 = \emptyset$? Sì!
+
+$|L_1 - L_2| > 0$ perché $L_1 \neq L_2$  
+$\searrow$ lo chiamo $3r$
+
+scelgo due intorni come sopra $V_1 \cap V_2 = \emptyset$.
+
+Applico la definizione di limite con $L_1$ e $V_1$
+
+$\lim\limits_{x \to x_0} f(x) = L_1$
+
+scelgo $V_1$
+
+$\exists U_1\ di\ x_0 : \forall x \in E, x \in U_1 \setminus \{x_0\} \Rightarrow \ f(x) \in V_1$
+
+ora con $L_2$ e $V_2$
+
+$\lim\limits_{x \to x_0} f(x) = L_2$
+
+scelgo $V_2$
+
+$\exists U_2\ di\ x_0 : \forall x \in E, x \in U_2 \setminus \{x_0\} \Rightarrow \ f(x) \in V_2$
+
+quindi scelgo $x \in U_1 \cap U_2 \setminus \{x_0\}$ con $x \in E$
+
+allora $f(x) \in V_1 \cap V_2$ 
+
+siamo giunti a un assurdo, perche $V_1 \cap V_2 = \emptyset$
+
+$\square$
+
+$2)$ **Permanenza del segno**  
+
+Sia $f : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$,  
+sia $x_0, L \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$  
+
+supponiamo che $L > 0$ ($L \in \ ]0, + \infty[$ oppure $L = + \infty$)
+
+Allora $\exists \overline{U}\ di\ x_0 : \forall x \in (\overline{U} \cap E) \setminus \{x_0\} \Rightarrow f(x) > 0$
+
+(a parole: se $f$ ha limite maggiore di zero, allora anche la funzione è maggiore di zero per $x$ in un opportuno intorno di $x_0$)
+
+**Dimostrazione**  
+$\lim\limits_{x \to x_0} f(x) = L \Leftrightarrow \forall V \ di\ L, \exists U \ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \Rightarrow \ f(x) \in V$
+
+ora se $L > 0$ (cioè se $L \in \ ]0, + \infty[$ oppure $L = + \infty$)
+
+posso scegliere come $V$ l'insieme $]0, + \infty[$
+
+(per esercizio verificare che è vero)
+
+Applico la definizione di limite e ho concluso.
+
+$\square$
+
+**Osservazione**  
+Se $\lim\limits_{x \to x_0} f(x) > 0$ allora $\exists U\ di\ x_0 : \forall x \in U \setminus \{x_0\},\ f(x) > 0$
+
+se $f(x) \leq 0$ ed esiste il limite, allora il limite è $\leq 0$
+
+$3)$ **Teorema del confronto**
+
+Siano $f, g : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$,  
+sia $x_0 \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$
+
+supponiamo che $\lim\limits_{x \to x_0} f(x) = + \infty$
+
+e che $\forall x \in E \setminus \{x_0\}$, $g(x) \geq f(x)$
+
+Allora $\lim\limits_{x \to x_0} g(x) = + \infty$
+
+**Dimostrazione**  
+Per esempio $x_0 \in \mathbb{R}$,  
+$\lim\limits_{x \to x_0} f(x) = + \infty$
+
+$\forall M > 0, \exists \delta > 0: \forall x \in E, 0 < |x - x_0| < \delta$  
+$\Downarrow$  
+$f(x) > M$  
+$\Downarrow$  
+$g(x) \geq f(x) > M$  
+$\Downarrow$  
+$\lim\limits_{x \to x_0} g(x) = + \infty$
+
+$\square$
+
+$4)$ **Teorema dei due carabinieri**  
+
+Siano $f, g, h : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$,  
+sia $x_0 \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$, $L \in \mathbb{R}$
+
+supponiamo che $\lim\limits_{x \to x_0} f(x) = \lim\limits_{x \to x_0} h(x) = L$
+
+e $\forall x \in E \setminus \{x_0\}, f(x) \leq g(x) \leq h(x)$
+
+Allora $\lim\limits_{x \to x_0} g(x) = L$
+
+**Dimostrazione**  
+Se che $L \in \mathbb{R}$,  
+sia $x_0 \in \mathbb{R}$,  
+$\lim\limits_{x \to x_0} f(x) = L$
+
+Sapendo che
+
+$\forall V \ di\ L, \exists U \ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \Rightarrow \ f(x) \in V$
+
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x \in E, 0 < |x - x_0| < \delta \Rightarrow |f(x) - L| < \varepsilon$  
+$\Updownarrow$  
+$- \varepsilon < f(x) - L < \varepsilon$  
+$\Downarrow$  
+$L - \varepsilon < f(x) < L + \varepsilon$
+
+Allora prendo
+
+$\forall \varepsilon > 0, \exists \delta_1 > 0: \forall x \in E, 0 < |x - x_0| < \delta_1 \Rightarrow L - \varepsilon < f(x) < L + \varepsilon$
+
+$\forall \varepsilon > 0, \exists \delta_2 > 0: \forall x \in E, 0 < |x - x_0| < \delta_2 \Rightarrow L - \varepsilon < h(x) < L + \varepsilon$
+
+se scelgo $\delta = min\{\delta_1, \delta_2\}$, allora valgono contemporaneamente
+
+le metto assieme
+
+$L - \varepsilon < f(x) \leq g(x) \leq h(x) < L + \varepsilon$
+
+quindi ho che
+
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x \in E, 0 < |x - x_0| < \delta \Rightarrow L - \varepsilon < g(x) < L + \varepsilon$
+
+cioè $\lim\limits_{x \to x_0} g(x) = L$
+
+$\square$
+
+$5)$ **Teorema (operazioni con i limiti)**  
+Siano $f, g : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$,  
+sia $x_0 \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$
+
+supponiamo  
+$\lim\limits_{x \to x_0} f(x) = l$  
+con $l \in \mathbb{R}$  
+$\lim\limits_{x \to x_0} g(x) = m$  
+con $m \in \mathbb{R}$
+
+Allora  
+
+$\lim\limits_{x \to x_0} f(x) \plusmn g(x) = l \plusmn m$  
+$\lim\limits_{x \to x_0} f(x) \cdot g(x) = l \cdot m$
+
+se $m \neq 0$,  
+$\lim\limits_{x \to x_0} f(x) \div g(x) = l \div m$  
+
+**Dimostrazione**  
+$\lim \limits_{x \to x_0} f(x) = l$  
+$\Updownarrow$  
+$\forall \varepsilon > 0, \exists \delta_1 > 0: \forall x \in E, 0 < |x - x_0| < \delta_1$  
+$\Downarrow$  
+$l - \frac{\varepsilon}{2} < f(x) < l + \frac{\varepsilon}{2}$  
+
+$\lim \limits_{x \to x_0} g(x) = m$  
+$\Updownarrow$  
+$\forall \varepsilon > 0, \exists \delta_2 > 0: \forall x \in E, 0 < |x - x_0| < \delta_2$  
+$\Downarrow$  
+$m - \frac{\varepsilon}{2} < g(x) < m + \frac{\varepsilon}{2}$
+
+se scelgo $\delta = min\{\delta_1, \delta_2\}$, allora valgono contemporaneamente
+
+sommo termine a termine e ottengo
+
+$l - \frac{\varepsilon}{2} + m - \frac{\varepsilon}{2} < f(x) + g(x) < l + \frac{\varepsilon}{2} + m + \frac{\varepsilon}{2}$
+
+quando $0 < |x - x_0| < \delta$  
+$(l + m) - \varepsilon < f(x) + g(x) < (l + m) + \varepsilon$
+
+ho $\lim \limits_{x \to x_0} f(x) + g(x) = l + m$
+
+$\square$
+
+**Idea nel caso del prodotto**  
+$|f(x)g(x) - lm| \leq |f(x)g(x) - f(x)m + f(x)m - lm|$  
+$\leq |f(x)g(x) - f(x)m| + |f(x)m - lm|$  
+$\leq |f(x)||g(x) - m| + |m||f(x) - l|$  
+con $f(x)$ che vicino a $x_0$ è come una costante, perché è limitata a $l \in \mathbb{R}$
+
+$6)$ **Teorema (limiti a $0$ e limiti a $+\infty$)**  
+Se $\lim\limits_{x \to x_0} f(x) = + \infty$, allora $\lim\limits_{x \to x_0} \frac{1}{f(x)}{}= 0$
+
+se $\lim\limits_{x \to x_0} f(x) = 0$ e f(x) > 0 per $x \neq x_0$, allora $\lim\limits_{x \to x_0} \frac{1}{f(x)} = + \infty$
+
+**Dimostrazione**  
+Sia $x_0 \in \mathbb{R}$,
+
+$\lim\limits_{x \to x_0} f(x) = + \infty$  
+$\Updownarrow$  
+$\forall M > 0, \exists \delta > 0: \forall x \in E, 0 < |x - x_0| < \delta$  
+$\Downarrow$  
+$f(x) > M > 0$  
+$\Updownarrow$  
+$0 < \frac{1}{f(x)} < \frac{1}{M} = \varepsilon$
+
+$\forall \varepsilon > 0$, fisso $M = \frac{1}{\varepsilon}$
+
+ottengo $\frac{1}{f(x)} < \frac{1}{M} = \varepsilon \Rightarrow 0 < \frac{1}{f(x)} < \varepsilon$
+
+conclusione $\lim\limits_{x \to x_0} \frac{1}{f(x)} = 0$
+
+$\square$
+
+$7)$ **Teorema (forme indeterminate)**  
+Sia $\lim\limits_{x \to x_0} f(x) = + \infty$ e  
+$\exists M > 0: \forall x \in E \setminus \{x_0\}$, $g(x) > -M$  
+allora $\lim\limits_{x \to x_0} f(x) + g(x) = + \infty$  
+(resta escluso il caso $+ \infty - \infty$) *FORMA INDETERMINATA*  
+
+Sia $\lim\limits_{x \to x_0} f(x) = + \infty$ e  
+$\exists \rho > 0: \forall x \in E \setminus \{x_0\}$, $g(x) > \rho$  
+allora $\lim\limits_{x \to x_0} f(x) \cdot g(x) = + \infty$  
+(resta escluso il caso $+ \infty \cdot 0$) *FORMA INDETERMINATA*
+
+**Dimostrazione**  
+$\lim\limits_{x \to x_0} f(x) = + \infty$  
+$\Updownarrow$  
+$\forall K > 0, \exists \delta > 0: \forall x \in E, 0 < |x - x_0| < \delta$  
+$\Downarrow$  
+$f(x) > K$  
+
+se scelgo $K = M + M_0$
+
+sappiamo che $\forall x \in E \setminus \{x_0\}$, $g(x) > - M_0$
+
+ho che $\forall M > 0, \exists \delta > 0: \forall x \in E,$  
+$0 < |x - x_0| < \delta \Rightarrow f(x) + g(x) > M$
+
+l'altro caso si dimostra analogamente.
+
+$\square$
+
+### Limiti fondamentali
+
+$\lim\limits_{x \to 0} \frac{sin(x)}{x} = 1$  
+
+**Dimostrazione**  
+$\forall \alpha \in ]0, \frac{\pi}{2}[$,  
+
+$\frac{sin(\alpha)}{2} \leq \frac{\alpha}{2} \leq \frac{tan(\alpha)}{2}$
+
+$1 \leq \frac{\alpha}{sin(\alpha)} \leq \frac{1}{cos(\alpha)}$
+
+$cos(\alpha) \leq \frac{sin(\alpha)}{\alpha} \leq 1$  
+$\forall \alpha \in ]0, \frac{\pi}{2}[$
+
+$\lim\limits_{x \to 0} cos(x) = 1$
+
+per il teorema dei due carabinieri e dato che la funzione è pari allora
+
+$\lim\limits_{x \to 0} \frac{sin(x)}{x} = 1$
+
+$\square$
+
+---
+
+$\lim\limits_{x \to 0} \frac{1 - cos(x)}{x^2} = \frac{1}{2}$
+
+$\lim\limits_{x \to 0} \frac{1 - cos(x)}{x^2} \cdot \frac{1 + cos(x)}{1 + cos(x)} = \lim \limits_{x \to 0} \frac{1 - cos^2(x)}{x^2(1 + cos(x))} = \lim \limits_{x \to 0} \frac{sin^2(x)}{x^2} \cdot \frac{1}{1 + cos(x)} = 1 \cdot \frac{1}{1 + 1} = \frac{1}{2}$
+
+---
+
+$\lim\limits_{x \to 0} \frac{tg(x)}{x} = 1$
+
+$\lim\limits_{x \to 0} \frac{sin(x)}{x} \cdot \frac{1}{cos(x)} = 1 \cdot \frac{1}{1} = 1$
+
+---
+
+$\lim\limits_{x \to 0} \frac{tg(x) - sin(x)}{x^3} = \frac{1}{2}$
+
+$\lim\limits_{x \to 0} \frac{tg(x) - sin(x)}{x^3} = \lim\limits_{x \to 0} \frac{\frac{sin(x)}{cos(x)} - sin(x)}{x^3} = \lim\limits_{x \to 0} \frac{sin(x) \cdot \frac{1 - cos(x)}{cos(x)}}{x^3} = \lim\limits_{x \to 0} \frac{sin(x)}{x} \cdot \frac{1 - cos(x)}{x^2} \cdot \frac{1}{cos(x)} = 1 \cdot \frac{1}{2} \cdot \frac{1}{1} = \frac{1}{2}$
+
+### Dimostrazioni limiti tramite definizione
+
+$\lim\limits_{x \to 0} \sqrt{x} = 0$
+
+infatti $\forall \varepsilon > 0, \exists \delta > 0: \forall x,$  
+$0 < x < \delta \stackrel{?}{\Rightarrow} |\sqrt{x}| < \varepsilon$  
+$\Updownarrow$  
+$0 \leq \sqrt{x} < \varepsilon$  
+$\Updownarrow$  
+$0 \leq x < \varepsilon^2$  
+
+basta prendere $\delta = \varepsilon^2$
+
+$x_0 > 0$, con $x_0 \in \mathbb{R}$,  
+$\lim\limits_{x \to x_0} \sqrt{x} = \sqrt{x_0}$
+
+infatti $\forall \varepsilon > 0, \exists \delta > 0: \forall x,$  
+$0 < |x - x_0| < \delta \stackrel{?}{\Rightarrow} |\sqrt{x} - \sqrt{x_0}| < \varepsilon$  
+
+$| \sqrt{x} - \sqrt{x_0} | = | (\sqrt{x} - \sqrt{x_0}) \cdot \frac{\sqrt{x} + \sqrt{x_0}}{\sqrt{x} + \sqrt{x_0}} | = \frac{|x - x_0|}{\sqrt{x} + \sqrt{x_0}} \leq \frac{|x - x_0|}{\sqrt{x}}$
+
+quindi $|x - x_0| \leq \varepsilon \sqrt{x_0}$  
+$\delta = \varepsilon \sqrt{x_0}$
+
+### Limite della funzione composta
+
+**Idea**  
+Suppongo $f: E \to \mathbb{R}$, $E \subseteq \mathbb{R}$  
+$x_0, y_0 \in \mathbb{\tilde{R}}$, con $x_0$ punto di accumulazione per $E$
+
+supponiamo $\lim\limits_{x \to x_0} f(x) = y_0$
+
+supponiamo $g : F \to \mathbb{R}$, $F \subseteq E$  
+$L \in \mathbb{\tilde{R}}$, $y_0$ punto di accumulazione per $F$
+
+supponiamo $f(E) \subseteq F$,  
+$y$ sia punto di accumulazione per $f(E)$,  
+
+![limite della funzione composta](/img/limite_della_funzione_composta.png)
+
+¿ cosa succede di $\lim\limits_{x \to x_0} g(f(x))$?
+
+posso dire che $\lim\limits_{x \to x_0} g(f(x)) = L$?
+
+Dobbiamo aggiungere delle ipotesi, infatti
+
+$\lim\limits_{y \to y_0} g(y) = L$
+
+$\forall W$ di $L$, $\exists V$ di $y: \forall y \in F$  
+$y \in V \setminus y_0 \Rightarrow g(y) \in W$
+
+$\lim\limits_{x \to x_0} f(x) = y_0$
+
+$\forall V$ di $y_0$, $\exists U$ di $x: \forall x \in E$  
+$x \in U \setminus x_0 \Rightarrow f(x) \in V$
+
+se cerco di concatenare
+
+$\forall W, \exists U$ ma $\forall V \exists U$  
+quindi $\forall W, \exists U: \forall x \in E,$  
+$x \in U \setminus x_0 \Rightarrow f(x) \in V$
+
+ma soltanto se $f(x) \in V \setminus y_0$ ho $g(f(x)) \in W$
+
+---
+
+#### Teorema
+
+Sia $\lim\limits_{x \to x_0} f(x) = y_0$  
+$\lim\limits_{y \to y_0} g(y) = L$
+
+Aggiungo due ipotesi supplementari
+
+$a)$ $\forall x \in E, x \neq x_0 \Rightarrow f(x) \neq y_0$  
+OPPURE  
+$b)$ $y_0 \in F$ e $g(y_0) = L$
+
+Allora $\lim\limits_{x \to x_0} g(f(x)) = y_0$
+
+**Osservazione**  
+Negli esercizi le ipotesi aggiuntive valgono (quasi) sempre.
+
+### Limite delle funzioni monotone
+
+**Osservazione**  
+Fino ad ora, tutti i nostri teoremi sui limiti avevano l'esistenza di qualche limite nelle ipotesi. Il teorema che vediamo ora ha l'esistenza di un limite nella tesi, senza che ci sia nelle ipotesi.
+
+**Teorema**  
+Sia $f: E \to \mathbb{R}$, $E \subseteq \mathbb{R}$  
+
+supponiamo che $x_0 = supE$, con $x_0 \notin E$  
+(per esempio: verificare che se $supE \notin E$ allora $supE$ è un punto di accumulazione per $E$)
+
+sia $f$ una funzione monotona,  
+allora esiste il limite $\lim\limits_{x \to x_0} f(x)$ e vale
+
+- $sup(f(E))$ se crescente
+- $inf(f(E))$ se decrescente
+
+**Dimostrazione (caso finito-finito)**  
+Supponiamo $x_0 \in \mathbb{R}$,  
+supponiamo che $f$ sia crescente  
+supponiamo che $sup(f(E)) = L \in \mathbb{R}$
+
+si tratta di provare che $\lim\limits_{x \to x_0} f(x) = L$
+
+$1)$ $L$ è il $sup(f(E)) \Rightarrow \forall x \in E, f(x) \in L$  
+$2)$ $L$ è il $sup(f(E)) \Rightarrow \forall \varepsilon > 0, \exists \overline{x} \in E: f(\overline{x}) > L - \varepsilon$
+
+adesso considero $x \in E, \overline{x} < x$  
+$f$ è crescente $\Rightarrow f(\overline{x}) \leq f(x)$
+
+metto tutto assieme
+
+$\forall \varepsilon > 0, \exists \overline{x} \in E: \forall x \in E,$  
+$\overline{x} < x < x_0 \Rightarrow L - \varepsilon < f(\overline{x}) \leq f(x) \leq L < L + \varepsilon$
+
+riassunto
+
+$\forall \varepsilon > 0, \exists \overline{x} \in E: \forall x \in E,$  
+$\overline{x} < x < x_0 \Rightarrow L - \varepsilon < f(x) < L + \varepsilon$  
+$\Updownarrow$  
+$|f(x) - L| < \varepsilon$
+
+$\square$
+
+**Corollario**  
+Sia $f: ]a, b[ \to \mathbb{R}$,  
+e sia $c \in ]a, b[$,
+
+allora  
+$\exists \lim\limits_{x \to c^-} f(x)$  
+$\exists \lim\limits_{x \to c^+} f(x)$
+
+e si ha $\lim\limits_{x \to c^-} f(x) \leq f(c) \leq \lim\limits_{x \to c^+} f(x)$
+
+### Limiti di successioni
+
+## Altro
+
+### Formule goniometriche
+
+#### Addizione e sottrazione
+
+$sin(\alpha + \beta) = sin(\alpha)cos(\beta) + cos(\alpha)sin(\beta)$  
+$sin(\alpha - \beta) = sin(\alpha)cos(\beta) - sin(\beta)cos(\alpha)$  
+$cos(\alpha + \beta) = cos(\alpha)cos(\beta) - sin(\alpha)sin(\beta)$  
+$cos(\alpha - \beta) = cos(\alpha)cos(\beta) + sin(\alpha)sin(\beta)$  
+
+$tan(\alpha + \beta) = \frac{tan(\alpha) + tan(\beta)}{1 - tan(\alpha)tan(\beta)}$  
+
+$tan(\alpha - \beta) = \frac{tan(\alpha) - tan(\beta)}{1 + tan(\alpha)tan(\beta)}$
+
+$cot(\alpha + \beta) = \frac{cot(\alpha)cot(\beta) - 1}{cot(\alpha) + cot(\beta)}$
+
+$cot(\alpha - \beta) = \frac{cot(\alpha)cot(\beta) + 1}{cot(\alpha) - cot(\beta)}$
+
+#### Duplicazione
+
+$sin(2\alpha) = 2sin(\alpha)cos(\alpha)$  
+$cos(2\alpha) = cos^2(\alpha) - sin^2(\alpha)$ 
+
+$tan(2\alpha) = \frac{2tan(\alpha)}{1 - tan^2(\alpha)}$  
+
+$cot(2\alpha) = \frac{cot^2(\alpha) - 1}{2cot^2(\alpha)}$
+
+#### Bisezione
+
+$sin(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 - \cos(\alpha)}{2}}$  
+
+$cos(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 + \cos(\alpha)}{2}}$  
+
+$tan(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}}$
+
+$cot(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 + \cos(\alpha)}{1 - \cos(\alpha)}}$
+
+#### Prostaferesi
+
+$sin(p) + sin(q) = 2sin(\frac{p + q}{2})cos(\frac{p - q}{2})$  
+
+$cos(p) + cos(q) = 2cos(\frac{p + q}{2})cos(\frac{p - q}{2})$  
+
+$sin(p) - sin(q) = 2sin(\frac{p - q}{2})cos(\frac{p + q}{2})$
+
+$cos(p) - cos(q) = -2sin(\frac{p + q}{2})sin(\frac{p - q}{2})$
+
+#### Werner
+
+$sin(\alpha)sin(\beta) = \frac{cos(\alpha - \beta) - cos(\alpha + \beta)}{2}$  
+
+$cos(\alpha)cos(\beta) = \frac{cos(\alpha - \beta) + cos(\alpha + \beta)}{2}$
+
+$sin(\alpha)cos(\beta) = \frac{sin(\alpha - \beta) + sin(\alpha + \beta)}{2}$
+
+### Limiti notevoli
+
+$\lim\limits_{x \to 0} \frac{ln(1 + x)}{x} = 1$
+
+$\lim\limits_{x \to 0} \frac{log_a(1 + x)}{x} = \frac{1}{ln(a)}$
+
+$\lim\limits_{x \to 0} \frac{e^x - 1}{x} = 1$
+
+$\lim\limits_{x \to 0} \frac{a^x - 1}{x} = ln(a)$
+
+$\lim\limits_{x \to \plusmn \infty} (1 + \frac{1}{x})^x = e$
+
+$\lim\limits_{x \to 0} \frac{(1 + x)^c - 1}{x} = c$
+
+$\lim\limits_{x \to 0} \frac{sin(x)}{x} = 1$
+
+$\lim\limits_{x \to 0} \frac{1- cos(x)}{x^2} = \frac{1}{2}$
+
+$\lim\limits_{x \to 0} \frac{tg(x)}{x} = 1$
+
+$\lim\limits_{x \to 0} \frac{arcsin(x)}{x} = 1$
+
+$\lim\limits_{x \to 0} \frac{arctg(x)}{x} = 1$
+
+$\lim\limits_{x \to \plusmn \infty} (1 + \frac{a}{x})^x = e^a$
+
+$\lim\limits_{x \to 0} (1 + x)^{\frac{1}{x}} = e$
+
+$\lim\limits_{x \to 0} \frac{e^x - 1}{tg(x)} = 1$
+
+$\lim\limits_{x \to 0} \frac{ln(cos(x))}{x^2} = -\frac{1}{2}$
+
+$\lim\limits_{x \to 0} \frac{1 - cos(x)}{x} = 0$

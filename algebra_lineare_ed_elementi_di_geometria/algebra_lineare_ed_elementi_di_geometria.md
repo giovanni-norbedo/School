@@ -148,21 +148,6 @@ Le proprietà A, B e C valgono anche in questo caso.
 
 Ora vorrei calcolare le soluzioni di questo sistema. Per farlo usiamo un teorema chiamato "*eliminazione di Gauss*" o "*eliminazione gaussiana*".
 
-> **AGGIUNTO**:
->
-> **Definizione**:  
-> L'**eliminazione gaussiana** è un metodo matematico algoritmico utilizzato per trasformare una matrice in una *matrice a scalini* o *matrice a scala*, semplificando così la risoluzione dei sistemi di equazioni lineari.
->
-> [Wikipedia](https://it.wikipedia.org/wiki/Metodo_di_eliminazione_di_Gauss) | [YouMath](https://www.youmath.it/lezioni/algebra-lineare/matrici-e-vettori/831-eliminazione-di-gauss.html)
->
-> **Esercizio**: data una matrice, ridurla in una matrice a scalini utilizzando il metodo di Gauss.
->
-> **Definizione**:  
-> Una **matrice a scalini** è una matrice $A$ avente le proprietà seguenti:
->
-> - ogni riga, dopo la prima, inizia con almeno uno 0 in più della riga soprastante;
-> - se una riga è nulla, allora ogni riga sottostante è nulla.
-
 **Definizione**  
 Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
 
@@ -643,7 +628,7 @@ allora $\lambda \cdot (v_1 - 3 v_2) = \lambda \cdot 0 = 0$, quindi $(\lambda v_1
 Sia $V$ un $\mathbb{R}$-spazio vettoriale, un sottoinsieme $W \subseteq V$ si dice un **sottospazio vettoriale** di $V$ se valgono:
 
 1. il vettore nullo di $V$ appartiene a $W$ (stringatamente $0 \in W$)
-2. $\forall v, w \in W, vale che v + w \in W$ (**chiusura rispetto alla somma**)
+2. $\forall v, w \in W,$ vale che $v + w \in W$ (**chiusura rispetto alla somma**)
 3. $\forall \lambda \in \mathbb{R}$, $\forall v \in W$, vale che $\lambda \cdot v \in W$ (**chiusura rispetto alla moltiplicazione per uno scalare**)
 
 **Esempio**  
@@ -1600,7 +1585,7 @@ e inoltre $0 \neq 1$
 K4: esistenza di opposto e inverso:  
 $\forall a \in K, \exists b \in K$, tale che a + b = b + a = 0$  
 (denotiamo $b$ con $-a$)  
-$\forall a \in K \setminus \{0\}, \exists c \in K$, tale che a \cdot c = c \cdot a = 1$  
+$\forall a \in K \setminus \{0\}, \exists c \in K$, tale che $a \cdot c = c \cdot a = 1$  
 (denotiamo $c$ con $a^{-1}$ o con $1/a$)
 
 K5: distributività: $\forall a, b, c \in K, a \cdot (b + c) = (a \cdot b) + (a \cdot c)$
@@ -2335,13 +2320,23 @@ Questo algoritmo termina in un tempo finito e restituisce un risultato che rispe
 
 > Esempio
 
+## Sistemi di generatori e indipendenza lineare
+
+Lezione del 31.10 !!!
+
 ## Basi di spazi vettoriali e dimensione
 
 **Definizione**  
 Sia $V$ uno spazio vettoriale su $K$; se esiste un sistema di generatori $\{v_1\ \dots, v_n\}$ finito di $V$, allora $V$ si dice **finitamente limitato**.
 
 **Teorema**  
-Sia $V$ uno spazio vettoriale su $K$ finitamente ...; un sottoinsieme ?, $B = \{v_1\ \dots, v_n\}$ è una base di $V$ in un unico modo, sia $v \in V$; dato che $B$ è in particolare un sistema generato per $V$, allora $v$ si scrive come combinazione lineare di $B$, $v, \lambda v_1 + \dots + \lambda v_n$ ... mostrare l'unicità di tale scrittura; supponiamo che ne esista un'altra
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato; un sottoinsieme $B \subseteq V$, $B = \{v_1\ \dots, v_n\}$ è una base di $V$ se e solo se $v \in V$ si può scrivere in modo unico come combinazione lineare di $B$.
+
+**Dimostrazione**  
+"$\Rightarrow$"  
+Sia $B$ una base di $V$, devo dimostrare che ogni $v \in V$ si può scrivere come combinazione lineare di $B$ in modo unico; sia $v \in V$; dato che $B$ è in particolare un sistema di generatori per $V$, allora $v$ si scrive come combinazione lineare di $B$, $v = \lambda v_1 + \dots + \lambda v_n$, dobbiamo mostrare l'unicità di tale scrittura; supponiamo che ne esista un'altra
+
+$v = \mu_1 v_1 + \dots + \mu_n v_n, \mu_i \in K$
 
 allora $\lambda_1 v_1 + \dots + \lambda_n = \mu_1 v_1 + \dots + \mu_n v_n$, pertanto
 
@@ -2362,7 +2357,7 @@ $\lambda_1 v_1 + \dots + \lambda_n v_n = 0$
 d'altra parte, possiamo scrivere $0 = 0 \cdot v_1 + \dots + 0 \cdot v_n$; dato che la scrittura di $0$ come combinazione lineare di $\{v1, \dots, v_n\}$ è unica,discende che $\lambda_1 = \dots = \lambda_n = 0$, ovvero che $v_1, \dots, v_n$ sono linearmente indipendenti.
 
 **Definizione**  
-Sia $V$ uno spazio vettoriale su $K$ finitamente ...; sia $B = \{v_1\ \dots, v_n\}$ una base di $V$ e sia $v \in V$; allora possiamo scrivere $v = \lambda_1 v_1 + \dots + \lambda_n v_n$ in modo unico con $\lambda_1, \dots, \lambda_n \in K$; gli scalari $\lambda_1, \dots, \lambda_n$ sono detti le **coordinate** di $V$ rispetto a $B$.
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato; sia $B = \{v_1\ \dots, v_n\}$ una base di $V$ e sia $v \in V$; allora possiamo scrivere $v = \lambda_1 v_1 + \dots + \lambda_n v_n$ in modo unico con $\lambda_1, \dots, \lambda_n \in K$; gli scalari $\lambda_1, \dots, \lambda_n$ sono detti le **coordinate** di $V$ rispetto a $B$.
 
 **Esempi**  
 In $K^n$ possiamo considerare
@@ -2392,14 +2387,10 @@ B =
 \right\rbrace
 $$
 
-si può dimostrare che $B$ è una base di $K^n$.
-
-...
-
-è chiamata la **base standard** di $K^n$, per ogni vettore
+si può dimostrare che $B$ è una base di $K^n$; tale base è chiamata la **base standard** di $K^n$; per ogni vettore
 
 $$
-V =
+v =
 \begin{pmatrix}
   v_1 \\
   v_2 \\
@@ -2408,34 +2399,32 @@ V =
 \end{pmatrix}
 $$
 
-...
+le coordinate di $v$ rispetto alla base standard sono $v_1, \dots, v_n$
 
 **Esempio**  
 In $M_{m, n}(K)$ possiamo considerare
-
-!!! rivedi B
 
 $$
 B =
 \left\lbrace
   \begin{pmatrix}
-    1 & 0 & 0 & 0 \\
-    0 & 0 & 0 & 0 \\
-    0 & 0 & 0 & 0 \\
-    0 & 0 & 0 & 0
+    1 & 0 & 0 & \dots \\
+    0 & 0 & 0 & \dots \\
+    0 & 0 & 0 & \dots \\
+    \vdots & \vdots & \vdots & \ddots
   \end{pmatrix},
   \begin{pmatrix}
-    0 & 1 & 0 & 0 \\
-    0 & 0 & 0 & 0 \\
-    0 & 0 & 0 & 0 \\
-    0 & 0 & 0 & 0
+    0 & 1 & 0 & \dots \\
+    0 & 0 & 0 & \dots \\
+    0 & 0 & 0 & \dots \\
+    \vdots & \vdots & \vdots & \ddots
   \end{pmatrix},
   \dots,
   \begin{pmatrix}
-    0 & 0 & 0 & 1 \\
-    0 & 0 & 0 & 0 \\
-    0 & 0 & 0 & 0 \\
-    0 & 0 & 0 & 0
+    \ddots & \vdots & \vdots & \vdots \\
+    \dots & 0 & 0 & 0 \\
+    \dots & 0 & 0 & 0 \\
+    \dots & 0 & 0 & 1
   \end{pmatrix}
 \right\rbrace
 $$
@@ -2553,7 +2542,7 @@ Sia $V$ uno spazio vettoriale su $K$ finitamente generato; sia $\{v_1, \dots, v_
 2. consideriamo $v_1$; se $v_1 = 0$, non facciamo nulla; se $v_1 \neq 0$, aggiungiamo $v_1$ a $B$
 3. consideriamo $v_2$; se $v_2 \in span(v_1)$, lo scartiamo; altrimenti lo aggiungiamo a $B$
 4. consideriamo $v_3$; se $v_3 \in span(v_1, v_2)$, lo scartiamo; altrimenti lo aggiungiamo a $B$
-5. ...
+5. $\dots$
 
 otteniamo un sottoinsieme di $\{v_1, \dots, v_k\}$ che si può dimostrare essere una base di $V$.
 
@@ -2564,9 +2553,10 @@ Sia $V$ uno spazio vettoriale su $K$ finitamente generato e siano $\{v_1, \dots,
 (idea) dato che $B$ è finitamente limitato, esiste $\{w_1, \dots, w_r\}$ un sistema di generatori finito di $V$; allora $\{v_1, \dots, v_p\, w_1, \dots, w_r\}$ è anch'esso un sistema di generatori per $V$; ora applico a quest'ultimo insieme l'algoritmo dello scarto, ottenendo una base $B$ di $V$; per come è fatto l'algoritmo dello scarto e dato che $v_1, \dots, v_p$ sono linearmente indipendenti per ipotesi, essi saranno sempre scelti dall'algoritmo, e pertanto avremmo che $\{v_1, \dots, v_p\} \subseteq B$.
 
 ---
+
 I due teoremi precedenti ci fanno capire perché le basi possono essere equivalentemente caratterizzate come sistemi di generatori minimali oppure come insiemi linearmente indipendenti massimali.
 
-**Lemma (di ...)**  
+**Lemma (di Steinitz)**  
 Sia $V$ uno spazio vettoriale su $K$ finitamente generato e sia $B = \{v_1, \dots, v_n\}$ una base di $V$; allora per ogni $k>n$ e per ogni scelta di vettori $w_1, \dots, w_k \in V$ vale che $w_1, \dots, w_k$ sono linearmente dipendenti.
 
 **Dimostrazione**  
@@ -2628,7 +2618,7 @@ indichiamo la dimensione di $V$ con $dim_k V$ (o anche $dim V$).
 $dimR^2 = 2$ (infatti $\left\lbrace \begin{pmatrix}1 \\ 0\end{pmatrix}, \begin{pmatrix}0 \\ 1\end{pmatrix}\right\rbrace$ è base di $R^2$)  
 $dim_k K^2 = 2$  
 $dim_k K^n = n$  
-$dim_k M_{m,n}(K) = m \cdot n$ (...)
+$dim_k M_{m,n}(K) = m \cdot n$ (una base è data dalle matrici con una sola entrata uguale a $1$ e tutte le altre uguali a $0$)
 
 **Osservazione**  
 Il concetto di dimensione si applica anche ai sottospazi vettoriali di uno spazio vettoriale.
@@ -2735,15 +2725,19 @@ $A \cdot s = b \Leftrightarrow s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b
 (questa osservazione si ottiene scrivendo esplicitamente il prodotto righe per colonne di $A$ per $s$); dimostriamo la prima parte
 
 "$\Rightarrow$"  
-Supponiamo che $A \cdot X = b$ sia compatibile; allora esiste $s \in K^n$ soluzione del sistema, dunque $A \cdot s = b$; per quanto osservato, questo equivale a dire che $s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$, il che significa che $b$ è combinazione lineare di $A^{(1)}, \dots, A^{(n)}$, ovvero delle colonne di $A$, pertanto $b \in span(A^{(1)}, \dots, A^{(n)})$, questo implica che $span(A^{(1)}, \dots, A^{(n)}) = span(A^{(1)}, \dots, A^{(n)}, b)$; infatti
+Supponiamo che $A \cdot X = b$ sia compatibile; allora esiste $s \in K^n$ soluzione del sistema, dunque $A \cdot s = b$; per quanto osservato, questo equivale a dire che $s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$, il che significa che $b$ è combinazione lineare di $A^{(1)}, \dots, A^{(n)}$, ovvero delle colonne di $A$, pertanto $b \in span(A^{(1)}, \dots, A^{(n)})$, questo implica che 
+
+$span(A^{(1)}, \dots, A^{(n)}) = span(A^{(1)}, \dots, A^{(n)}, b)$
+
+infatti
 
 "$\subseteq$"  
-se $u \in span(A^{(1)}, \dots, A^{(n)})$, allora $u = \lambda_1 \cdot A^{(1)} + \cdot + \lambda_n \cdot A^{(n)}$ ...
+se $u \in span(A^{(1)}, \dots, A^{(n)})$, allora $u = \lambda_1 \cdot A^{(1)} + \cdot + \lambda_n \cdot A^{(n)}$, pertanto $u = \lambda_1 A^{(1)} + \dots + \lambda_n A^{(n)} + 0 \cdot b$, ovvero $u \in span(A^{(1)}, \dots, A^{(n)}, b)$
 
 "$\supseteq$"  
-...
+se $u \in span(A^{(1)}, \dots, A^{(n)}, b)$, allora $u = \lambda_1 A^{(1)} + \dots + \lambda_n A^{(n)} + \lambda \cdot b$, ma $b = s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)}$, quindi $u = \lambda_1 A^{(1)} + \dots + \lambda_n A^{(n)} + \lambda \cdot (s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)}) = (\lambda_1 + \lambda \cdot s_1) A^{(1)} + \dots + (\lambda_n + \lambda \cdot s_n) A^{(n)}$, pertanto $u \in span(A^{(1)}, \dots, A^{(n)})$
 
-Allora
+allora
 
 $dim(span(A^{(1)}, \dots, A^{(n)})) = dim(span(A^{(1)}, \dots, A^{(n)}, b))$  
 $rg(A) = rg(A|b)$
@@ -2798,7 +2792,7 @@ $$
 \end{pmatrix}
 $$
 
-...
+$rg(A) = 2$ perché $A$ a scala e ho $2$ righe non nulle $rg(A|b) = 2$ perché $(A|b)$ è a scala e ha $2$ righe non nulle, dunque $rg(A) = rg(A|b)$, pertanto il sistema è compatibile e la generica soluzione dipende da $4 - 2 = 2$ parametri liberi per determinare tutte le soluzioni, cominceremo col calcolare una soluzione particolare:
 
 $$
 \left\lbrace
@@ -2816,7 +2810,65 @@ $$
 \right.
 $$
 
-...
+$$
+\Leftrightarrow
+\left\lbrace
+  \begin{array}{l}
+    x_1 = 2(x_4 + 2) - 3x_3 + x_4 + 1 \\
+    x_2 = x_4 + 2
+  \end{array}
+\right.
+\Leftrightarrow
+\left\lbrace
+  \begin{array}{l}
+    x_1 = -3x_3 + 3x_4 + 5 \\
+    x_2 = x_4 + 2
+  \end{array}
+\right.
+$$
+
+per determinare una soluzione particolare, assegno dei valori a $x_3$ e $x_4$ ottenendo $\tilde{s} = \begin{pmatrix} 5 \\ 2 \\ 0 \\ 0 \end{pmatrix}$; a questo punto determiniamo una base delle soluzioni del sistema $AX = 0$, ovvero
+
+$$
+\left\lbrace
+  \begin{array}{l}
+    x_2 - 2x_2 + 3x_3 - x_4 = 0 \\
+    x_2 - x_4 = 0
+  \end{array}
+\right.
+\Leftrightarrow
+\left\lbrace
+  \begin{array}{l}
+    x_1 = 3x_4 - 3x_3 \\
+    x_2 = x_4
+  \end{array}
+\right.
+$$
+
+le soluzioni sono della forma
+
+$$
+\begin{pmatrix}
+  -3x_3 + 3x_4 \\
+  x_4 \\
+  x_3 \\
+  x_4
+\end{pmatrix} = x_3
+\begin{pmatrix}
+  -3 \\
+  0 \\
+  1 \\
+  0
+\end{pmatrix} + x_4
+\begin{pmatrix}
+  3 \\
+  1 \\
+  0 \\
+  1
+\end{pmatrix}
+$$
+
+verificare che questi due vettori formano una base delle soluzioni di $AX = 0$.
 
 ## Rango e determinante
 
@@ -2840,7 +2892,7 @@ Sia $A \in M_{n}(K)$, allora $rg(A) = n$ (ovvero il rango di $A$ è massimo) se 
 "$\Leftarrow$"  
 Sia $A$ invertibile, allora per il teorema di Cramer, $\forall b \in K^n$ il sistema $A \cdot X = b$ è compatibile, dunque per il corollario precedente $rg(A) = n$.
 
-$"\Rightarrow$"  
+"$\Rightarrow$"  
 Supponiamo che $rg(A) = n$, vogliamo mostrare che una certa $B \in M_{n}(K)$ tale che $AB = BA = 1_n$; è sufficiente costruire $B$ tale che $AB = 1_n$; ora, vale che
 
 $AB = 1_n$ se e solo se $A \cdot B^{(i)} = \begin{pmatrix} 0 & \\ \vdots & \\ 1 & (i)\\ \vdots & \\ 0 & \end{pmatrix}$
@@ -2948,13 +3000,136 @@ $$
 
 pertanto $\begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$ è l'inversa di $\begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix}$.
 
+Andiamo ora ad associare ad ogni matrice quadrata $A \in M_{n}(K)$ un elemento di $K$ tramite il quale possiamo determinare se $A$ sua invertibile o meno.
+
+Questo elemento si chiamerà il **determinante** di $A$.
+
+Consideriamo $A \in M_2 (K)$, ovvero
+
+$$
+A =
+\begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix}
+$$
+
+Considero a questo punto la matrice:
+
+$$
+B =
+\begin{pmatrix}
+  a_{11} & -a_{12} \\
+  -a_{21} & a_{11}
+\end{pmatrix}
+$$
+
+Svolgiamo il prodotto righe per colonne:
+
+$$
+AB =
+\begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  a_{11} & -a_{12} \\
+  -a_{21} & a_{11}
+\end{pmatrix} =
+\begin{pmatrix}
+  a_{11}a_{22} - a_{12}a_{21} & -a_{11}a_{12} + a_{12}a_{11} \\
+  a_{21}a_{22} - a_{21}a_{22} & -a_{21}a_{12} + a_{11}a_{21}
+\end{pmatrix} =
+\begin{pmatrix}
+  a_{11}a_{22} - a_{12}a_{21} & 0 \\
+  0 & a_{11}a_{12} - a_{12}a_{21}
+\end{pmatrix}
+$$
+
+Notiamo quindi che
+
+$A$ è invertibile $\Leftrightarrow$ $a_{11}a_{22} - a_{12}a_{21} \neq 0$
+
+e in tal caso l'inversa di $A$ è data da
+
+$$
+\frac{1}{a_{11}a_{22} - a_{12}a_{21}} \cdot \begin{pmatrix}
+  a_{22} & -a_{12} \\
+  -a_{21} & a_{11}
+\end{pmatrix}
+$$
+
+(moltiplicazione per uno scalare)
+
+Infatti
+
+$$
+A \cdot (\frac{1}{a_{11} a_{22} - a_{12} a_{21}} B) = \frac{1}{a_{11}a_{22} - a_{12}a_{21}} \cdot (A \cdot B) = \frac{1}{a_{11}a_{22} - a_{12}a_{21}} \cdot \begin{pmatrix}
+  a_{11} a_{22} - a_{12} a_{21} & 0 \\
+  0 & a_{11}a_{12} - a_{12}a_{21}
+\end{pmatrix} = 1_2
+$$
+
+**Definizione**  
+Sia $A \in M_2 (K)$, $A = (a_{ij})$, definiamo il **determinante** di $A$ come lo scalare
+
+$det(A) = a_{11}a_{22} - a_{12}a_{21}, det(A) \in K$
+
+Questo abbiamo visto finora ci permette di enunciare.
+
+**Proposizione**  
+Sia $A \in M_2 (K)$, allora
+
+$A$ è invertibile $\Leftrightarrow$ $rg(A) = 2$ $\Leftrightarrow$ $det(A) \neq 0$
+
+in tal caso, se $A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$, vale che $A^{-1} = \frac{1}{det(A)} \cdot \begin{pmatrix} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{pmatrix}$.
+
+**Esempio**  
+$A = \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix}$, $det(A) = 2 \cdot 3 - 1 \cdot 5 = 1$
+
+$A^{-1} = \frac{1}{det(A)} \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$
+
+**Osservazione**  
+Se $A \in M_2 (\mathbb{R})$ e consideriamo i suoi due vettori colonna e supponiamo che valga $a_{ij} > 0,\ \forall i, j \in \{1, 2\}$, allora possiamo rappresentare i due vettori colonna nel piano:
+
+!!! immagine vettori
+
+si può verificare che se $\mathcal{P}$ è il parallelogramma determinato dai due vettori di $A$, allora
+
+$det(A) = area(\mathcal{P})$
+
+Andiamo ora a definire il determinante di una qualsiasi matrice quadrata.
+
+Lo faremo in maniera ricorsiva.
+
+**Definizione**  
+Sia $A \in M_n (K)$ e siano $i, j \in \{1, \ldots, n\}$ due indici fissati; definiamo la matrice $A_{ij} \in M_{n-1} (K)$ come la sottomatrice di $A$ ottenuta eliminando la $i$-esima riga e la $j$-esima colonna; tale matrice si dice il **minore** ij-esimo di $A$.
+
+**Esempio**  
+Se $A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{pmatrix}$, allora $A_{13} = \begin{pmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{pmatrix}$
+
+**Definizione**  
+Sia $A \in M_n (K)$; definiamo il **determinante** di $A$ in maniera ricorsiva nel modo seguente:
+
+- se $n = 1$, allora $A = (a_{11})$ e definiamo $det(A) = a_{11}$
+- se $n > 1$, allora definiamo
+
+$det(A) = \sum\limits_{i = 1}^n (-1)^{i + 1} \cdot a_{i1} \cdot det(A_{i1})$
+
+**Esempio**  
+notiamo che con la definizione precedente ritroviamo il determinante di una matrice $2 \times 2$:
+
+$$
+det \begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix} =
+(-1)
+$$
+
 ...
 
-!!! manca un'ora del 14/11
-
-!!! manca una lezione del martedì, tipo 1 o 7 novembre
-
-### Determinante
+### Determinante !!! ???
 
 **Proposizione**  
 Il determinante gode della seguenti 3 proprietà:
@@ -2998,3 +3173,5 @@ ii) se $A$ ha una riga nulla, allora $det(A) = 0$ (per $D1$).
 ...
 
 !!! ...
+
+---
