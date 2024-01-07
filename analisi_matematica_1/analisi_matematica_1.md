@@ -1,4 +1,15 @@
-# Analisi Matematica 1
+---
+title: "Analisi Matematica 1"
+author: Giovanni Norbedo
+date: 2023-2024
+header-includes:
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \rhead{Giovanni Norbedo}
+    - \cfoot{\thepage}
+geometry: margin=3cm
+output: pdf_document
+---
 
 ## Logica
 
@@ -8,8 +19,7 @@ $p,\ q,\ r,\ \dots$
 
 Una proposizione è una parte del discorso a cui si può assegnare un valore di verità o di falsità $(V, F)$.
 
-#### Esempio
-
+**Esempi**  
 $p:$ Giorgio è più alto di 1,80m. $\rightarrow V$  
 $q:$ Roma è la capitale della Francia. $\rightarrow F$  
 
@@ -85,8 +95,7 @@ $p \Rightarrow q$
 | F   | V   |         V         |
 | F   | F   |         V         |
 
-#### Esempio
-
+**Esempi**  
 $p :$ piove.  
 $q :$ prendo l'ombrello.  
 $p \Rightarrow q :$ se piove allora prendo l'ombrello.
@@ -140,8 +149,7 @@ $p \Leftrightarrow q = (p \Rightarrow q) \wedge (q \Rightarrow p)$
 | F   | V   |         V         |         F         |                    **F**                     |
 | F   | F   |         V         |         V         |                    **V**                     |
 
-#### Esempio
-
+**Esempi**  
 $p : \text{in un triangolo, 2 lati sono uguali.}$  
 $q : \text{in un triangolo, 2 angoli sono uguali.}$  
 $p \Leftrightarrow q$
@@ -154,6 +162,7 @@ Una tautologia è una proposizione (composta) che è sempre vera.
 
 #### tertium non datur  
 
+\
 $p \vee \neg p$  
 
 | $p$ | $\neg p$ | $p \vee \neg p$ |
@@ -165,6 +174,7 @@ $p \vee \neg p$
 
 #### non contradditio  
 
+\
 $\neg(p \wedge \neg p)$  
 
 | $p$ | $\neg p$ | $p \wedge \neg p$ | $\neg(p \wedge \neg p)$ |
@@ -176,6 +186,7 @@ $\neg(p \wedge \neg p)$
 
 #### modus ponens  
 
+\
 $(p \wedge (p \Rightarrow q)) \Rightarrow p$  
 
 | $p$ | $q$ | $p \Rightarrow q$ | $p \wedge (p \Rightarrow q)$ | $(p \wedge (p \Rightarrow q)) \Rightarrow p$ |
@@ -187,6 +198,7 @@ $(p \wedge (p \Rightarrow q)) \Rightarrow p$
 
 #### modus tollens  
 
+\
 $(\neg q \wedge (p \Rightarrow q)) \Rightarrow \neg p$  
 
 | $p$ | $q$ | $\neg p$ | $\neg q$ | $p \Rightarrow q$ | $\neg q \wedge (p \Rightarrow q)$ | $(\neg q \wedge (p \Rightarrow q)) \Rightarrow \neg p$ |
@@ -198,6 +210,7 @@ $(\neg q \wedge (p \Rightarrow q)) \Rightarrow \neg p$
 
 #### reductio ad absurdum
 
+\
 $\Big((p \wedge \neg q) \Rightarrow (r \wedge \neg r)\Big) \Leftrightarrow (p \Rightarrow q)$  
 
 | $p$ | $q$ | $r$ | $\neg q$ | $\neg r$ | $p \wedge \neg q$ | $r \wedge \neg r$ | $\Big((p \wedge \neg q) \Rightarrow (r \wedge \neg r)\Big)$ | $p \Rightarrow q$ |
@@ -234,8 +247,7 @@ $\neg (p \vee q) = \neg p \wedge \neg q$
 - TERZIARIO (3 variabili): $\mathcal{S}(x,y,z)$
 - $\dots$
 
-#### Esempi
-
+**Esempi**  
 $\mathcal{P}(x) :$ lo studente x è più alto di 1,7m.  
 è un *predicato*
 
@@ -264,8 +276,7 @@ $\exists$
 "esiste"
 Quantificatore Esistenziale
 
-#### Esempi
-
+**Esempi**  
 $\forall x, \mathcal{P}(x)$ è una proposizione  
 significa "ogni studente è più alto di 1,7m."
 
@@ -291,6 +302,7 @@ $\forall x, \exists y : \forall z, \mathcal{S}(x,y,z)$
 
 #### Negazione di proposizioni con i quantificatori
 
+\
 **Osservazione**: come posso fare la negazione di una frase con i quantificatori.
 
 **Importante**  
@@ -312,8 +324,7 @@ $\neg \Big(\forall x, \mathcal{P}(x)\Big) \neq \forall x, \neg \mathcal{P}(x)$
 poiché sarebbe
 "ogni studente non è più alto di 1,7m."
 
-#### Esempi
-
+**Esempi**  
 $\neg \Big(\forall x, \mathcal{P}(x)\Big) = \exists x : \neg \mathcal{P}(x)$  
 "esiste almeno uno studente che non è più alto di 1,7m."  
 
@@ -337,18 +348,17 @@ $\neg \Big(\forall x, \exists y : \forall z, \mathcal{S}(x,y,z)\Big)$
 $= \exists x : \forall y, \exists z : \neg \mathcal{S}(x,y,z)$  
 "esiste un ospedale in cui ogni medico ha determinato almeno una diagnosi."
 
-#### Esempio con la definizione di limite
-
-$\lim\limits_{x \to x_o} f(x) = l$  
-$x_0, l \in \mathbb{R}$  
+**Esempi**   con la definizione di limite
+$\lim\limits_{x \to x_o} f(x) = \ell$  
+$x_0, \ell \in \mathbb{R}$  
 
 $\forall \varepsilon > 0, \exists \delta > 0 : \forall x \in \mathbb{E},$  
-$0 < |x-x_0| < \delta \Rightarrow |f(x)-l| < \varepsilon$  
+$0 < |x-x_0| < \delta \Rightarrow |f(x) - \ell| < \varepsilon$  
 
 Modificando correttamente i quantificatori, la sua negazione è
 
 $\exists \varepsilon > 0 : \forall \delta > 0, \exists x \in \mathbb{E} :$  
-$\neg (0 < |x-x_0| < \delta \Rightarrow |f(x)-l| < \varepsilon)$  
+$\neg (0 < |x-x_0| < \delta \Rightarrow |f(x) - \ell| < \varepsilon)$  
 
 Poiché prima abbiamo visto che
 
@@ -357,7 +367,7 @@ $\neg(p \Rightarrow q) = p \wedge \neg q$
 allora la negazione diventa
 
 $\exists \varepsilon > 0 : \forall \delta > 0, \exists x \in \mathbb{E} :$  
-$0 < |x-x_0| < \delta \wedge |f(x)-l| \geq \varepsilon$
+$0 < |x-x_0| < \delta \wedge |f(x) - \ell| \geq \varepsilon$
 
 ---
 
@@ -386,8 +396,7 @@ Si possono rappresentare con i **diagrammi di Eulero-Venn**.
 - elencare gli elementi (**Forma estensiva**)
 - fisso un insieme "universo" (**Ambiente**) e poi caratterizzo gli elementi con una proprietà (**Forma intensiva**)
 
-#### Esempio
-
+**Esempi**  
 $A =\{n \in \mathbb{N} : n\ pari \} = \{0,2,4,6 \dots\}$
 
 ---
@@ -396,6 +405,7 @@ $A =\{n \in \mathbb{N} : n\ pari \} = \{0,2,4,6 \dots\}$
 
 #### Insieme complementare (o insieme complemento)
 
+\
 $U$ è l'insieme universo  
 $A$ è l'insieme  
 
@@ -405,14 +415,17 @@ $\mathscr{C}_U A = \{x \in U : x \notin A\} = \{x \in U : \neg (x \in A)\}$
 
 #### Intersezione
 
+\
 $A \cap B = \{x \in U : x \in A \wedge x \in B\}$
 
 #### Unione
 
+\
 $A \cup B = \{x \in U : x \in A \vee x \in B\}$  
 
 #### Qualche proprietà
 
+\
 $A \cap B = B \cap A$  
 $A \cup B = B \cup A$  
 
@@ -426,7 +439,7 @@ $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
 
 ### Insieme vuoto
 
-Esiste un insieme (speciale) che è senza elementi, chiamato *insieme vuoto*, indicato con $\emptyset$ (**unico** e $\forall A, \emptyset \subseteq A$).
+Esiste un insieme (speciale) che è senza elementi, chiamato *insieme vuoto*, indicato con $\varnothing$ (**unico** e $\forall A, \varnothing \subseteq A$).
 
 ---
 
@@ -434,20 +447,20 @@ Esiste un insieme (speciale) che è senza elementi, chiamato *insieme vuoto*, in
 
 $\mathcal{P}(A)$ è l'insieme dei sottoinsiemi di $A$.
 
-#### Esempio
-
+**Esempi**  
 Sia
 
 $A = \{a,b,c\}$  
 
 allora
 
-$\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}\}$  
+$\mathcal{P}(A) = \{\varnothing, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}\}$  
 
 Tutti i sottoinsiemi si dicono **propri**, tranne l'insieme $\{a,b,c\}$, detto **improprio**.
 
 #### Il numero di elementi di $\mathcal{P}(A)$ è $2^n$
 
+\
 $|\mathcal{P}(A)| = 2^n$
 
 con
@@ -464,7 +477,7 @@ possiamo rappresentare il sottoinsieme $S = \{a,d,e\}$ così:
 Dove inserisco $1$ se l'elemento è presente o $0$ se è assente.  
 
 Un altro esempio è  
-$\emptyset = \{\}$  corrisponde a $(0,0,0,0,0,0)$
+$\varnothing = \{\}$  corrisponde a $(0,0,0,0,0,0)$
 
 In questo modo, vediamo che tutte le possibilità sono rappresentabili da un numero binario di lunghezza $|A|$, quindi $2^n$ in decimale.  
 
@@ -524,8 +537,7 @@ I predicati binari sono quelli giusti per i prodotti cartesiani.
 
 Indicando in $A \times B$ l'insieme delle coppie che soddisfano $\mathcal{P}(x,y) \rightarrow$ *predicato binario*  
 
-#### Esempio
-
+**Esempi**  
 $A = \{$ragazzi in quest'aula$\}$  
 $B = \{$ragazze in quest'aula$\}$
 
@@ -544,9 +556,8 @@ $\mathcal{P}(x) :$ $x$ è amico di $y$
 *Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
 (se $A=B$, parliamo di relazione su $A$)
 
-#### Esempio
-
-$A = \mathbb{N} \setminus \{0\} = \{1,2,3, \dots\}$  
+**Esempi**  
+$A = \mathbb{N} \smallsetminus \{0\} = \{1,2,3, \dots\}$  
 
 Decidiamo che $n | m$ significa "n divide m", introducendo la relazione "$|$ divide".
 
@@ -554,10 +565,10 @@ Per esempio, 3 divide 12, ma 3 non divide 5, poiché $\nexists k \in \mathbb{Z} 
 
 #### Grafico della relazione
 
+\
 ![grafico relazione divide](../img/grafico_relazione_divide.png)
 
-#### Esempio
-
+**Esempi**  
 $A = \mathbb{Z} = \{\dots,-3,-2,-1,0,1,2,3,\dots\}$  
 $m = 3$ (è il modulo in base 3)
 
@@ -582,11 +593,10 @@ allora $x \rho y$
 - si dice **simmetrica** se $\forall x,y \in A, x \rho y \Rightarrow y \rho x$
 - si dice **transitiva** se $\forall x,y,z \in A, x \rho y \wedge y \rho z \Rightarrow x \rho z$
 
-#### Esempio
-
+**Esempi**  
 La relazione divide è transitiva:
 
-$x|y \wedge y|z \xRightarrow{?} x|z$
+$x|y \wedge y|z \stackrel{?}{\Rightarrow} x|z$
 
 $x|y \Leftrightarrow \exists k_1 : y = k_1 \cdot x$  
 $y|z \Leftrightarrow \exists k_2 : z = k_2 \cdot y = k_2 \cdot (k_1 \cdot x) =$
@@ -599,7 +609,7 @@ La relazione congruenza modulo m è transitiva:
 
 $x,y,z \in \mathbb{Z}$
 
-$x \equiv_m y \wedge y \equiv_m z \xRightarrow{?} x \equiv_m z$
+$x \equiv_m y \wedge y \equiv_m z \stackrel{?}{\Rightarrow}x \equiv_m z$
 
 $\exists k_1 \in \mathbb{Z} : x-y= k_1 \cdot m$  
 $\exists k_2 \in \mathbb{Z} : y-z= k_2 \cdot m$  
@@ -616,11 +626,10 @@ $\rho$ si dice **antisimmetrica** se
 
 $\forall x,y \in A, x \rho y \wedge y \rho x \Rightarrow x=y$
 
-#### Esempio
-
+**Esempi**  
 La relazione divide è antisimmetrica se e solo se
 
-$\forall x,y \in \mathbb{N} \setminus \{0\}, x | y \wedge y | x \Rightarrow x=y$
+$\forall x,y \in \mathbb{N} \smallsetminus \{0\}, x | y \wedge y | x \Rightarrow x=y$
 
 Dimostriamolo partendo da
 
@@ -643,7 +652,7 @@ per la legge dell'annullamento del prodotto
 
 o $k_1 \cdot k_2 - 1 = 0$ o $x = 0$
 
-ma poiché $x \in \mathbb{N} \setminus \{0\}$
+ma poiché $x \in \mathbb{N} \smallsetminus \{0\}$
 
 allora
 
@@ -688,8 +697,7 @@ $A$ insieme, $\rho$ relazione di equivalenza
 chiamo $[a]_\rho = \{b \in A : a \rho b\}$  
 cioè tutti gli elementi in relazione con $a$.  
 
-#### Esempio
-
+**Esempi**  
 $[0]_{\equiv_3} = \{ \dots, -9, -6, -3, +0, +3, +6, +9, \dots \}$
 
 $[1]_{\equiv_3} = \{\dots, -5, -2, +1, +3, +7, +10, +13, \dots\}$
@@ -721,8 +729,6 @@ $[1]_{\equiv 3},$
 
 $[2]_{\equiv 3}$ }
 
-> Formattato male (verticalmente e senza pendici), perché GitHub non riesce a fare il rendering di due underscore. Prima o poi spero di risolvere.
-
 ---
 
 ## Funzioni
@@ -747,8 +753,7 @@ $A$ si dice **dominio** della funzione.
 $B$ si dice **codominio** della funzione.  
 $f$ è una regola che ad ogni $x$ del dominio associa uno e uno solo elemento $y$ del codominio.
 
-#### Esempio
-
+**Esempi**  
 $A =$ {persone in quest'aula}  
 $B =$ {comuni italiani}  
 
@@ -919,7 +924,8 @@ esso è un insieme con una "**struttura algebrica**".
 ---
 
 **Osservazione**  
-Possiamo determinare degli **assiomi** ("prime proprietà che non vengono dimostrate ma assunte a priori") su $\mathbb{N}$ in modo che tutte le altre proprietà siano deducibili da questi?
+Possiamo determinare degli **assiomi** ("prime proprietà che non vengono dimostrate ma assunte a priori") su $\mathbb{N}$,  
+in modo che tutte le altre proprietà siano deducibili da questi?
 
 ### Assiomi di Giuseppe Peano
 
@@ -941,7 +947,8 @@ $\sigma(n) = n + 1$
 se parto da $0$ e sommo $1$, trovo tutti i numeri.
 
 **Osservazione**  
-Il principio di induzione posso verificarlo anche per i numeri $n>n_0, n_0 \in \mathbb{N}, n_0 \geq 0$, verificando $P(n_0)$ e poi $\forall n \geq n_0, P(n) \Rightarrow P(n+1)$.  
+Il principio di induzione posso verificarlo anche per i numeri $n>n_0, n_0 \in \mathbb{N}, n_0 \geq 0$,  
+verificando $P(n_0)$ e poi $\forall n \geq n_0, P(n) \Rightarrow P(n+1)$.  
 
 > Esempio $0+1+2+\dots+n = \frac{n(n+1)}{2}$
 >
@@ -953,6 +960,7 @@ Il principio di induzione posso verificarlo anche per i numeri $n>n_0, n_0 \in \
 
 #### Diseguaglianza di Bernulli
 
+\
 Sia $a>-1, a \in \mathbb{R}$
 
 Allora $\forall n \in \mathbb{N}$ vale
@@ -961,6 +969,7 @@ $(1+a)^n \geq 1 + na$
 
 #### Diseguaglianza di Bernulli migliorata
 
+\
 Sia $a>0, a \in \mathbb{R}$
 
 Allora $\forall n \in \mathbb{N}, n \geq 1$ vale
@@ -1011,7 +1020,7 @@ $\forall n, p_{n+1} = p_n + a_{n+1}$
 ## Calcolo combinatorio
 
 Per contare il numero di elementi di insiemi a partire da altri insiemi.
-e
+
 ---
 
 1- Se $A$ insieme di $n$ elementi e $B$ insieme di $m$ elementi, scriviamo
@@ -1181,7 +1190,7 @@ allora hanno un fattore in comune, quindi non sono primi fra loro, che è un **a
 
 > Quindi in $\mathbb{Q}$ non si può risolvere l'equazione $x^2 = 2$
 
-### Introduzione assiomatica di $\mathbb{R}$
+### Introduzione assiomatica di R
 
 Esiste un insieme $\mathbb{R}$ tale che
 
@@ -1255,7 +1264,7 @@ $O_2)$ $\forall x, y, z \in \mathbb{R}$ vale che $x \geq y \wedge z \geq 0 \Righ
 
 ### Assioma di Dedekind
 
-$S)$ Siano $A$ e $B$ sottoinsiemi di $\mathbb{R}$ con $A \neq \emptyset$ e $B \neq \emptyset$.
+$S)$ Siano $A$ e $B$ sottoinsiemi di $\mathbb{R}$ con $A \neq \varnothing$ e $B \neq \varnothing$.
 
 Supponiamo che $\forall a \in A, \forall b \in B, a \leq b$, allora
 
@@ -1277,12 +1286,11 @@ Dagli assiomi posso derivare le *normali* proprietà:
 
 #### Le regole dei segni
 
+\
 - $a > 0, b > 0 \Rightarrow ab > 0$  
 - $a < 0, b < 0 \Leftrightarrow ab > 0$  
 - $a > 0, b < 0 \Leftrightarrow ab < 0$  
 - $a < 0, b > 0 \Leftrightarrow ab < 0$  
-
----
 
 ## Intervalli
 
@@ -1413,14 +1421,14 @@ perciò $\mu_1 = \mu_2$, quindi il massimo è unico.
 
 ### Teorema dell'esistenza dell'estremo superiore
 
-Sia $A \subseteq \mathbb{R}, A \neq \emptyset$ e $A$ superiormente limitato,  
+Sia $A \subseteq \mathbb{R}, A \neq \varnothing$ e $A$ superiormente limitato,  
 allora $\exists \xi \in \mathbb{R} : \xi$ **estremo superiore** di $A$.
 
 **Dimostrazione**  
-$A \subseteq \mathbb{R}$ e $A \neq \emptyset$ (per ipotesi)
+$A \subseteq \mathbb{R}$ e $A \neq \varnothing$ (per ipotesi)
 
 sia $A^* =$ $\{\text{maggioranti di } A\}$,  
-allora $A^* \neq \emptyset$ (perché $A$ è superiormente limitato)  
+allora $A^* \neq \varnothing$ (perché $A$ è superiormente limitato)  
 e $\forall a \in A, \forall b \in A^*, a \leq b$ (per definizione di maggiorante)  
 
 Alla coppia $A, A^*$ posso applicare $S)$  
@@ -1435,11 +1443,11 @@ $\square$
 ---
 
 **Per esercizio**  
-Se $A \subseteq \mathbb{R}, A \neq \emptyset$ e $A$ inferiormente limitato,  
+Se $A \subseteq \mathbb{R}, A \neq \varnothing$ e $A$ inferiormente limitato,  
 allora $\exists \eta \in \mathbb{R} : \eta$ **estremo inferiore** di $A$.
 
 Sia $A_* =$ $\{\text{minoranti di } A\}$,  
-allora $A_* \neq \emptyset$ (per più $A$ è inferiormente limitato)  
+allora $A_* \neq \varnothing$ (per più $A$ è inferiormente limitato)  
 e $\forall a \in A, \forall b \in A_*, a \geq b$ (per definizione di minorante)
 
 Alla coppia $A, A_*$ posso applicare $S)$  
@@ -1453,18 +1461,20 @@ $\square$ ???
 
 ### Teorema le proprietà dell'estremo superiore
 
-Sia $A \subseteq \mathbb{R}, A \neq \emptyset$  
+Sia $A \subseteq \mathbb{R}, A \neq \varnothing$  
 sia $\alpha \in \mathbb{R}$  
 
 $$
 \alpha = supA \Leftrightarrow
 \left\{
   \begin{array}{l}
-    1) & \forall a \in A, a \leq \alpha \\
-    2) & \forall \varepsilon > 0, \exists \overline{a} \in A : \overline{a} > \alpha - \varepsilon
+    \forall a \in A, a \leq \alpha \\
+    \forall \varepsilon > 0, \exists \overline{a} \in A : \overline{a} > \alpha - \varepsilon
   \end{array}
 \right.
 $$
+
+Le chiamo (1) e (2).
 
 **Dimostrazione**  
 Sia $\alpha = supA$, cioè $\alpha$ è il minimo dei maggioranti,  
@@ -1477,8 +1487,6 @@ $\square$
 Se un insieme ha minimo (o massimo), il minimo è l'estremo inferiore (o il massimo è l'estremo superiore).
 
 ### Conseguenze dell'esistenza dell'estremo superiore
-
----
 
 $1)$ $\mathbb{N}$ **è superiormente limitato**
 
@@ -1593,11 +1601,11 @@ $a_{n+1} = a_n, b_{n+1} = \frac{a_n + b_n}{2}$ oppure $a_{n+1} = \frac{a_n + b_n
 Sia $(I_n)_n$ una successione di intervalli chiusi, limitati e inscatolati  
 allora l'intersezione di tutti gli intervalli è **non** vuota.
 
-$\bigcap\limits_n I_n \neq \emptyset$
+$\bigcap\limits_n I_n \neq \varnothing$
 
 **Teorema di Cantor forma forte**  
 Sia $(I_n)_n$ una successione di intervalli chiusi, limitati, inscatolati e dimezzati  
-allora $\bigcap\limits_n I_n \neq \emptyset$ è un insieme con unico punto
+allora $\bigcap\limits_n I_n \neq \varnothing$ è un insieme con unico punto
 
 $\exists \xi \in \mathbb{R} : \bigcap\limits_n I_n = \{ \xi \}$
 
@@ -1609,7 +1617,7 @@ $I_1 = [0, \frac{1}{2}]$
 $\vdots$  
 $I_n = [0, \frac{1}{n}]$
 
-$\bigcap\limits_n\ ]0, \frac{1}{n}] = \emptyset$
+$\bigcap\limits_n\ ]0, \frac{1}{n}] = \varnothing$
 
 infatti se $x \leq 0$ allora $x \notin\ ]0, \frac{1}{n}], \forall n$
 
@@ -1619,7 +1627,7 @@ allora $x \notin\ ]0, \frac{1}{n + 1}]$
 **Osservazione**  
 Se gli $I_n$ sono chiusi e non inscatolati, di nuovo il teorema non vale.
 
-$\bigcap\limits_n\ ]n, +\infty[\ = \emptyset$
+$\bigcap\limits_n\ ]n, +\infty[\ = \varnothing$
 
 ---
 
@@ -1646,7 +1654,7 @@ ho scoperto che $\forall m$, $B$ è inferiormente limitato ($\alpha$ è minorant
 allora $\beta = inf B$ e ho che $\beta \geq \alpha$ ($\beta$ massimo dei minoranti)
 
 ho che $[\alpha, \beta] \subseteq [a_n, b_n], \forall n$  
-allora $[\alpha, \beta] \supseteq \bigcap\limits_n I_n \Rightarrow \bigcap\limits_n I_n \neq \emptyset$
+allora $[\alpha, \beta] \supseteq \bigcap\limits_n I_n \Rightarrow \bigcap\limits_n I_n \neq \varnothing$
 
 $\square$
 
@@ -1688,11 +1696,39 @@ $\square$
 
 $|x + y| \leq |x| + |y|$
 
-## Funzioni potenza e radice
+## Funzioni Potenza e Radice
 
-## Funzione valore assoluto
+La notazione $f(x) = x^n$ rappresenta una funzione potenza, dove $x$ è la base e $n$ è l'esponente.  
+Alcune proprietà importanti:
 
-## Funzioni trigonometriche
+- $x^m \cdot x^n = x^{m+n}$
+- $\frac{x^m}{x^n} = x^{m-n}$
+- $(x^m)^n = x^{m \cdot n}$
+
+La funzione radice quadrata è indicata come $f(x) = \sqrt{x}$ o anche $f(x) = x^{1/2}$. La radice $n$-esima di $x$ è rappresentata come $f(x) = \sqrt[n]{x}$.  
+Alcune proprietà importanti:
+
+- $x^{\frac{1}{2}} = \sqrt{x}$
+- $\sqrt[n]{x} = x^{\frac{1}{n}}$
+- $\sqrt[n]{x^m} = x^{\frac{m}{n}}$
+- $\sqrt[n]{\sqrt[m]{x}} = x^{\frac{1}{n \cdot m}}$
+- $\sqrt[n]{x} \cdot \sqrt[n]{y} = \sqrt[n]{x \cdot y}$
+- $\sqrt[n]{x} \div \sqrt[n]{y} = \sqrt[n]{x \div y}$
+
+## Funzione Valore Assoluto
+
+La funzione valore assoluto di un numero reale $x$, indicata come $|x|$, restituisce la distanza di $x$ dall'origine sulla retta reale. Formalmente, è definita come:
+
+$|x| = \begin{cases} x & \text{se } x \geq 0 \\ -x & \text{se } x < 0 \end{cases}$
+
+## Funzioni Trigonometriche
+
+**Seno ($sin$) e Coseno ($cos$):**  
+$\sin(\theta) = \frac{opposto}{ipotenusa}, \quad \cos(\theta) = \frac{adiacente}{ipotenusa}$
+
+**Tangente ($tg$), Cotangente ($cot$), Secante ($sec$) e Cosecante ($\csc$):**  
+$\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}, \quad \cot(\theta) = \frac{1}{\tan(\theta)},$  
+$\sec(\theta) = \frac{1}{\cos(\theta)}, \quad \csc(\theta) = \frac{1}{\sin(\theta)}$
 
 ## I numeri complessi
 
@@ -1739,7 +1775,8 @@ $(a, 0) \cdot (c, d) = (a \cdot c, a \cdot d)$
 
 Come i reali, $a$ è scalare.
 
-**Rappresentazione di complessi**  
+### Rappresentazione di complessi
+
 Chiamo  
 $\textbf{1} = (1, 0)$  
 $i = (0, 1)$
@@ -1755,7 +1792,8 @@ $(a, b) = (a, 1) \cdot (1, 0) + (b, 0) \cdot (1, 0) = a(1, 0) + b(0, 1) = a + ib
 $a$ si dice parte reale  
 $b$ si dice parte complessa (o immaginaria)  
 
-**Piano di Gauss**  
+### Piano di Gauss
+
 Il piano di Gauss è un piano cartesiano $\mathbb{R} \times \mathbb{R}$, dove rappresento sulle ascisse le parti reali e sulle ordinate le parti immaginarie.
 
 Per esempio: $z = a + bi$ ha coordinata reale $a$ e immaginaria $b$.
@@ -1765,6 +1803,8 @@ $b = Im(z)$
 
 $z = Re(z) + i \cdot Im(z)$  
 $Re(z), Im(z) \in \mathbb{R}$
+
+### Complesso coniugato
 
 **Definizione**  
 Sia $z = a + ib$, chiamo **complesso coniugato** di $z$,  
@@ -1778,6 +1818,8 @@ $z \longmapsto \overline{z}$
 $z_1, z_2 \in \mathbb{C}$  
 $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$  
 $\overline{z_1 \cdot z_2} = \overline{z_1} \cdot \overline{z_2}$
+
+### Modulo di z
 
 **Definizione**  
 Sia $z = a + ib$, chiamo **modulo** di $z$,  
@@ -1795,7 +1837,8 @@ $|z| = \sqrt{z^2}$
 
 Il modulo di $z$ è uguale al valore assoluto di $z$ come numero reale.
 
-**Proprietà**  
+### Proprietà
+
 $|z| \geq 0$  
 $|z| = 0 \Leftrightarrow z = 0$  
 $|z| \geq |Re(z)|,\ |z| \geq |Im(z)|$  
@@ -1807,7 +1850,8 @@ $z^{-1} = \frac{\overline{z}}{|z|^2}$
 **Diseguaglianza triangolare**  
 $|z_1 + z_2| \leq |z_1| + |z_2|$  
 
-**Forma trigonometrica**  
+### Forma trigonometrica
+
 $|z|$ modulo  
 $\alpha$ argomento  
 
@@ -1821,23 +1865,26 @@ $[\alpha] = \{\alpha + 2k \pi, k \in \mathbb{Z}\}$
 $1 \sim [1, 0]$  
 $i \sim [1, \frac{\pi}{2}]$  
 
-**Moltiplicazione**  
+### Moltiplicazione
+
 $z_1 \sim [\rho_1, \alpha_1]$  
 $z_1 = \rho_1 (\cos \alpha_1 + i \sin \alpha_1)$
 
-$\mathbb{C} \setminus \{0\} \longrightarrow \ ]0, +\infty[ \times \{[\alpha]_{\equiv_{2\pi}}, \alpha \in \mathbb{R}\}$  
+$\mathbb{C} \smallsetminus \{0\} \longrightarrow \ ]0, +\infty[ \times \{[\alpha]_{\equiv_{2\pi}}, \alpha \in \mathbb{R}\}$  
 $z \longmapsto (\rho, [\alpha])$
 
 $z_1 \cdot z_2 = \rho_1 \cdot \rho_2 (\cos (\alpha_1 + \alpha_2) + i \sin (\alpha_1 + \alpha_2))$
 
-**Formula di De Moivre**  
+### Formula di De Moivre
+
 Sia $z = a + ib \sim (\rho, [\alpha])$  
 
 quindi $z = \rho (\cos \alpha + i \sin \alpha)$
 
 allora $z^n = \rho^n (\cos (n \alpha) + i \sin (n \alpha))$
 
-**Radici**  
+### Radici
+
 Trovare i numeri $z \in \mathbb{C}$ che soddisfano $z^n = 1$
 
 In $\mathbb{R}$:  
@@ -1910,9 +1957,9 @@ con $z_1, z_2, \dots, z_n \in \mathbb{C}$
 
 (**algebricamente chiuso**)  
 
-## Topologia di $\mathbb{R}$
+## Topologia di R
 
-### Distanza, palla, intorno di $x_0$, retta estesa
+### Distanza, palla, intorno di x0, retta estesa
 
 **Definizione**  
 Siano $x, y \in \mathbb{R}$, chiamo **distanza** (euclidea) di $x$ e $y$ li valore $d(x,y) = |x-y|$.
@@ -1990,14 +2037,14 @@ $\neg (\exists r > 0 : \ ]x_0 - r, x_0 + r[ \ \subseteq E) \wedge \neg (\exists 
 se e solo se
 
 $\forall r > 0,$  
-$]x_0 - r, x_0 + r[ \ \cap E \neq \emptyset$  
-$]x_0 - r, x_0 + r[ \ \cap \mathscr{C} E \neq \emptyset$
+$]x_0 - r, x_0 + r[ \ \cap E \neq \varnothing$  
+$]x_0 - r, x_0 + r[ \ \cap \mathscr{C} E \neq \varnothing$
 
 (cioè in ogni intervallo di $x_0$ ci sono punti di $E$ e di $\mathscr{C} E$)
 
 **Esempio**  
 Sia $E = \mathbb{Q} \cup \ ]1, 2[$  
-$\dot{E} = \emptyset$  
+$\dot{E} = \varnothing$  
 **frontiera** = $\partial E = [1, 2]$
 
 ### Insiemi aperti e insiemi chiusi
@@ -2017,12 +2064,12 @@ Sia $C \subseteq \mathbb{R}$,
 $C$ si dice chiuso se $\mathscr{C} C$ è aperto.
 
 **Teorema**  
-$\emptyset$ e $\mathbb{R}$ sono insiemi aperti.  
+$\varnothing$ e $\mathbb{R}$ sono insiemi aperti.  
 L'unione di insiemi aperti è un insieme aperto.  
 L'intersezione di un numero finito insiemi aperti è un insieme aperto.
 
 **Teorema**  
-$\emptyset$ e $\mathbb{R}$ sono insiemi chiusi.  
+$\varnothing$ e $\mathbb{R}$ sono insiemi chiusi.  
 L'intersezione di insiemi chiusi è un insieme chiuso.  
 L'unione di un numero finito insiemi chiusi è un insieme chiuso.
 
@@ -2032,7 +2079,7 @@ Se $x_0 \in \mathbb{R}$, $\forall r > 0, \ ]x_0 - r, x_0 + r[ \ \subseteq \mathb
 
 ---
 
-$\emptyset$ è aperto?  
+$\varnothing$ è aperto?  
 Sì, perché i suoi elementi (non ce ne sono) hanno tutte le proprietà che si vogliono.
 
 ---
@@ -2076,7 +2123,7 @@ $I_n = \ ] 1 - \frac{1}{n}, 2 + \frac{1}{n}[ \ = [1, 2]$
 Sia $E \subseteq \mathbb{R}$, sia $x_0 \in \mathbb{R}$,  
 
 $x_0$ si dice **punto di aderenza** o **punto di chiusura** per $E$ se  
-$\forall r > 0, \ ]x_0 - r, x_0 + r[ \ \cap E \neq \emptyset$
+$\forall r > 0, \ ]x_0 - r, x_0 + r[ \ \cap E \neq \varnothing$
 
 (in ogni intorno di $x_0$ ci sono punti di $E$)
 
@@ -2092,14 +2139,14 @@ $E \subseteq \overline{E}$
 **Esempio**  
 $E = \{\frac{1}{n}, n \in \mathbb{N}^*\}$  
 $\overline{E} = E \cup \{0\}$  
-$\dot{E} = \emptyset$  
+$\dot{E} = \varnothing$  
 $\partial{E} = E \cup \{0\}$
 
 **Esempio**  
 $\mathbb{Q}$  
 $\overline{\mathbb{Q}} = \mathbb{Q} \cup \mathbb{R} = \mathbb{R}$  
 $\partial{\mathbb{Q}} = \mathbb{R}$  
-$\dot{\mathbb{Q}} = \emptyset$
+$\dot{\mathbb{Q}} = \varnothing$
 
 **Teorema**  
 Sia $E \subseteq \mathbb{R}$, allora
@@ -2114,7 +2161,7 @@ Sia $E \subseteq \mathbb{R}$, allora
 Sia $E \subseteq \mathbb{R}$, sia $x_0 \in \mathbb{R}$,
 
 $x_0$ si dice **punto di accumulazione** per $E$ se  
-$\forall r > 0,  (]x_0 - r, x_0 + r[ \ \cap E) \setminus \{x_0\} \neq \emptyset$
+$\forall r > 0,  (]x_0 - r, x_0 + r[ \ \cap E) \smallsetminus \{x_0\} \neq \varnothing$
 
 (cioè $x_0$ è un punto di accumulazione per $E$ se in ogni intorno di $x_0$ ci sono punti di $E$ diversi da $x_0$)
 
@@ -2126,11 +2173,11 @@ $\mathscr{D}E = [1, 2]$
 
 **Esempio**  
 $E = \{\frac{1}{n}, n \in \mathbb{N}^*\}$  
-$\mathscr{D}E = \emptyset$
+$\mathscr{D}E = \varnothing$
 
 **Esempio**  
 $E = \mathbb{N}$  
-$\mathscr{D}E = \emptyset$
+$\mathscr{D}E = \varnothing$
 
 **Osservazione**  
 $E \subseteq \mathbb{R}$, $x_0 \in \mathbb{R}$,  
@@ -2148,7 +2195,7 @@ provo che $x_0$ non è punto di accumulazione per $E$
 considero $r_0 = min\{|x_0 - x_j|,\ j=1,2,3, \dots, k,\ x_j \neq x_0\}$
 
 siccome sono in numero finito, $r_0 > 0$ e in  
-$(]x_0 - r_0, x_0 + r_0[ \ \cap E) \setminus \{x_0\} = \emptyset$
+$(]x_0 - r_0, x_0 + r_0[ \ \cap E) \smallsetminus \{x_0\} = \varnothing$
 
 **Conseguenza**  
 Gli insiemi finiti non hanno (mai) punto di accumulazione.
@@ -2157,7 +2204,7 @@ Gli insiemi finiti non hanno (mai) punto di accumulazione.
 
 Sia $E \subseteq \mathbb{R}$, $E$ infinito e limitato  
 allora $\exists \xi \in \mathbb{R} : \xi$ è punto di accumulazione per $E$,  
-cioè $\mathscr{D}E \neq \emptyset$
+cioè $\mathscr{D}E \neq \varnothing$
 
 **Dimostrazione**  
 $E$ è limitato, cioè  
@@ -2254,10 +2301,10 @@ siano $x_0, L \in \tilde{\mathbb{R}}$, sia $x_0$ punto di accumulazione per $E$
 
 diciamo che $\lim\limits_{x \to x_0} f(x) = L$ se  
 
-$\forall V$ intorno di L,  
+$\forall V$ intorno di $L$,  
 $\exists U$ intorno di $x_0$ :  
 $\forall x \in E$,  
-$x \in U \setminus \{x_0\}$  
+$x \in U \smallsetminus \{x_0\}$  
 $\Downarrow$  
 $f(x) \in V$  
 
@@ -2324,11 +2371,11 @@ sia $L \in \tilde{\mathbb{R}}$
 
 $\lim\limits_{x \to x_0^+} f(x) = L$ tende da destra
 
-$\forall V\ di\ L, \exists U\ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \cap \ ]x_0, + \infty[ \ \Rightarrow \ f(x) \in V$
+$\forall V\ di\ L, \exists U\ di\ x_0 : \forall x \in E, x \in U \smallsetminus \{x_0\} \cap \ ]x_0, + \infty[ \ \Rightarrow \ f(x) \in V$
 
 $\lim\limits_{x \to x_0^-} f(x) = L$ tende da sinistra
 
-$\forall V\ di\ L, \exists U\ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \cap \ [ - \infty, x_0[ \ \Rightarrow \ f(x) \in V$
+$\forall V\ di\ L, \exists U\ di\ x_0 : \forall x \in E, x \in U \smallsetminus \{x_0\} \cap \ [ - \infty, x_0[ \ \Rightarrow \ f(x) \in V$
 
 **Osservazione**  
 È immediato che se $\lim\limits_{x \to x_0} f(x) = L$ allora $\lim\limits_{x \to x_0^+} f(x) = \lim\limits_{x \to x_0^-} f(x) = L$ e viceversa.
@@ -2350,12 +2397,11 @@ allora $L_1 = L_2$.
 **Dimostrazione**  
 Per assurdo supponiamo che $L_1 \neq L_2$
 
-¿ esiste $V_1$ di $L_1$ e $V_2$ di $L_2$ tali che $V_1 \cap V_2 = \emptyset$? Sì!
+¿ esiste $V_1$ di $L_1$ e $V_2$ di $L_2$ tali che $V_1 \cap V_2 = \varnothing$? Sì!
 
-$|L_1 - L_2| > 0$ perché $L_1 \neq L_2$  
-$\searrow$ lo chiamo $3r$
+$\underbrace{|L_1 - L_2|}_{\text{lo chiamo } 3r} > 0$ perché $L_1 \neq L_2$  
 
-scelgo due intorni come sopra $V_1 \cap V_2 = \emptyset$.
+scelgo due intorni come sopra $V_1 \cap V_2 = \varnothing$.
 
 Applico la definizione di limite con $L_1$ e $V_1$
 
@@ -2363,7 +2409,7 @@ $\lim\limits_{x \to x_0} f(x) = L_1$
 
 scelgo $V_1$
 
-$\exists U_1\ di\ x_0 : \forall x \in E, x \in U_1 \setminus \{x_0\} \Rightarrow \ f(x) \in V_1$
+$\exists U_1\ di\ x_0 : \forall x \in E, x \in U_1 \smallsetminus \{x_0\} \Rightarrow \ f(x) \in V_1$
 
 ora con $L_2$ e $V_2$
 
@@ -2371,13 +2417,13 @@ $\lim\limits_{x \to x_0} f(x) = L_2$
 
 scelgo $V_2$
 
-$\exists U_2\ di\ x_0 : \forall x \in E, x \in U_2 \setminus \{x_0\} \Rightarrow \ f(x) \in V_2$
+$\exists U_2\ di\ x_0 : \forall x \in E, x \in U_2 \smallsetminus \{x_0\} \Rightarrow \ f(x) \in V_2$
 
-quindi scelgo $x \in U_1 \cap U_2 \setminus \{x_0\}$ con $x \in E$
+quindi scelgo $x \in U_1 \cap U_2 \smallsetminus \{x_0\}$ con $x \in E$
 
-allora $f(x) \in V_1 \cap V_2$ 
+allora $f(x) \in V_1 \cap V_2$
 
-siamo giunti a un assurdo, perche $V_1 \cap V_2 = \emptyset$
+siamo giunti a un assurdo, perche $V_1 \cap V_2 = \varnothing$
 
 $\square$
 
@@ -2388,12 +2434,12 @@ sia $x_0, L \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$
 
 supponiamo che $L > 0$ ($L \in \ ]0, + \infty[$ oppure $L = + \infty$)
 
-Allora $\exists \overline{U}\ di\ x_0 : \forall x \in (\overline{U} \cap E) \setminus \{x_0\} \Rightarrow f(x) > 0$
+Allora $\exists \overline{U}\ di\ x_0 : \forall x \in (\overline{U} \cap E) \smallsetminus \{x_0\} \Rightarrow f(x) > 0$
 
 (a parole: se $f$ ha limite maggiore di zero, allora anche la funzione è maggiore di zero per $x$ in un opportuno intorno di $x_0$)
 
 **Dimostrazione**  
-$\lim\limits_{x \to x_0} f(x) = L \Leftrightarrow \forall V \ di\ L, \exists U \ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \Rightarrow \ f(x) \in V$
+$\lim\limits_{x \to x_0} f(x) = L \Leftrightarrow \forall V \ di\ L, \exists U \ di\ x_0 : \forall x \in E, x \in U \smallsetminus \{x_0\} \Rightarrow \ f(x) \in V$
 
 ora se $L > 0$ (cioè se $L \in \ ]0, + \infty[$ oppure $L = + \infty$)
 
@@ -2406,7 +2452,7 @@ Applico la definizione di limite e ho concluso.
 $\square$
 
 **Osservazione**  
-Se $\lim\limits_{x \to x_0} f(x) > 0$ allora $\exists U\ di\ x_0 : \forall x \in U \setminus \{x_0\},\ f(x) > 0$
+Se $\lim\limits_{x \to x_0} f(x) > 0$ allora $\exists U\ di\ x_0 : \forall x \in U \smallsetminus \{x_0\},\ f(x) > 0$
 
 se $f(x) \leq 0$ ed esiste il limite, allora il limite è $\leq 0$
 
@@ -2417,7 +2463,7 @@ sia $x_0 \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$
 
 supponiamo che $\lim\limits_{x \to x_0} f(x) = + \infty$
 
-e che $\forall x \in E \setminus \{x_0\}$, $g(x) \geq f(x)$
+e che $\forall x \in E \smallsetminus \{x_0\}$, $g(x) \geq f(x)$
 
 Allora $\lim\limits_{x \to x_0} g(x) = + \infty$
 
@@ -2442,7 +2488,7 @@ sia $x_0 \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$, $L \in \
 
 supponiamo che $\lim\limits_{x \to x_0} f(x) = \lim\limits_{x \to x_0} h(x) = L$
 
-e $\forall x \in E \setminus \{x_0\}, f(x) \leq g(x) \leq h(x)$
+e $\forall x \in E \smallsetminus \{x_0\}, f(x) \leq g(x) \leq h(x)$
 
 Allora $\lim\limits_{x \to x_0} g(x) = L$
 
@@ -2453,7 +2499,7 @@ $\lim\limits_{x \to x_0} f(x) = L$
 
 Sapendo che
 
-$\forall V \ di\ L, \exists U \ di\ x_0 : \forall x \in E, x \in U \setminus \{x_0\} \Rightarrow \ f(x) \in V$
+$\forall V \ di\ L, \exists U \ di\ x_0 : \forall x \in E, x \in U \smallsetminus \{x_0\} \Rightarrow \ f(x) \in V$
 
 $\forall \varepsilon > 0, \exists \delta > 0: \forall x \in E, 0 < |x - x_0| < \delta \Rightarrow |f(x) - L| < \varepsilon$  
 $\Updownarrow$  
@@ -2486,25 +2532,25 @@ Siano $f, g : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$,
 sia $x_0 \in \tilde{\mathbb{R}}$, $x_0$ punto di accumulazione per $E$
 
 supponiamo  
-$\lim\limits_{x \to x_0} f(x) = l$  
+$\lim\limits_{x \to x_0} f(x) = \ell$  
 con $l \in \mathbb{R}$  
 $\lim\limits_{x \to x_0} g(x) = m$  
 con $m \in \mathbb{R}$
 
 Allora  
 
-$\lim\limits_{x \to x_0} f(x) \plusmn g(x) = l \plusmn m$  
-$\lim\limits_{x \to x_0} f(x) \cdot g(x) = l \cdot m$
+$\lim\limits_{x \to x_0} f(x) \pm g(x) = \ell \pm m$  
+$\lim\limits_{x \to x_0} f(x) \cdot g(x) = \ell \cdot m$
 
 se $m \neq 0$,  
-$\lim\limits_{x \to x_0} f(x) \div g(x) = l \div m$  
+$\lim\limits_{x \to x_0} f(x) \div g(x) = \ell \div m$  
 
 **Dimostrazione**  
-$\lim \limits_{x \to x_0} f(x) = l$  
+$\lim \limits_{x \to x_0} f(x) = \ell$  
 $\Updownarrow$  
 $\forall \varepsilon > 0, \exists \delta_1 > 0: \forall x \in E, 0 < |x - x_0| < \delta_1$  
 $\Downarrow$  
-$l - \frac{\varepsilon}{2} < f(x) < l + \frac{\varepsilon}{2}$  
+$\ell - \frac{\varepsilon}{2} < f(x) < \ell + \frac{\varepsilon}{2}$  
 
 $\lim \limits_{x \to x_0} g(x) = m$  
 $\Updownarrow$  
@@ -2516,20 +2562,20 @@ se scelgo $\delta = min\{\delta_1, \delta_2\}$, allora valgono contemporaneament
 
 sommo termine a termine e ottengo
 
-$l - \frac{\varepsilon}{2} + m - \frac{\varepsilon}{2} < f(x) + g(x) < l + \frac{\varepsilon}{2} + m + \frac{\varepsilon}{2}$
+$\ell - \frac{\varepsilon}{2} + m - \frac{\varepsilon}{2} < f(x) + g(x) < \ell + \frac{\varepsilon}{2} + m + \frac{\varepsilon}{2}$
 
 quando $0 < |x - x_0| < \delta$  
-$(l + m) - \varepsilon < f(x) + g(x) < (l + m) + \varepsilon$
+$(\ell + m) - \varepsilon < f(x) + g(x) < (\ell + m) + \varepsilon$
 
-ho $\lim \limits_{x \to x_0} f(x) + g(x) = l + m$
+ho $\lim \limits_{x \to x_0} f(x) + g(x) = \ell + m$
 
 $\square$
 
 **Idea nel caso del prodotto**  
-$|f(x)g(x) - lm| \leq |f(x)g(x) - f(x)m + f(x)m - lm|$  
-$\leq |f(x)g(x) - f(x)m| + |f(x)m - lm|$  
-$\leq |f(x)||g(x) - m| + |m||f(x) - l|$  
-con $f(x)$ che vicino a $x_0$ è come una costante, perché è limitata a $l \in \mathbb{R}$
+$|f(x)g(x) - \ell m| \leq |f(x)g(x) - f(x)m + f(x)m - \ell m|$  
+$\leq |f(x)g(x) - f(x)m| + |f(x)m - \ell m|$  
+$\leq |f(x)||g(x) - m| + |m||f(x) - \ell|$  
+con $f(x)$ che vicino a $x_0$ è come una costante, perché è limitata a $\ell \in \mathbb{R}$
 
 $6)$ **Teorema (limiti a $0$ e limiti a $+\infty$)**  
 Se $\lim\limits_{x \to x_0} f(x) = + \infty$, allora $\lim\limits_{x \to x_0} \frac{1}{f(x)}{}= 0$
@@ -2557,12 +2603,12 @@ $\square$
 
 $7)$ **Teorema (forme indeterminate)**  
 Sia $\lim\limits_{x \to x_0} f(x) = + \infty$ e  
-$\exists M > 0: \forall x \in E \setminus \{x_0\}$, $g(x) > -M$  
+$\exists M > 0: \forall x \in E \smallsetminus \{x_0\}$, $g(x) > -M$  
 allora $\lim\limits_{x \to x_0} f(x) + g(x) = + \infty$  
 (resta escluso il caso $+ \infty - \infty$) *FORMA INDETERMINATA*  
 
 Sia $\lim\limits_{x \to x_0} f(x) = + \infty$ e  
-$\exists \rho > 0: \forall x \in E \setminus \{x_0\}$, $g(x) > \rho$  
+$\exists \rho > 0: \forall x \in E \smallsetminus \{x_0\}$, $g(x) > \rho$  
 allora $\lim\limits_{x \to x_0} f(x) \cdot g(x) = + \infty$  
 (resta escluso il caso $+ \infty \cdot 0$) *FORMA INDETERMINATA*
 
@@ -2575,7 +2621,7 @@ $f(x) > K$
 
 se scelgo $K = M + M_0$
 
-sappiamo che $\forall x \in E \setminus \{x_0\}$, $g(x) > - M_0$
+sappiamo che $\forall x \in E \smallsetminus \{x_0\}$, $g(x) > - M_0$
 
 ho che $\forall M > 0, \exists \delta > 0: \forall x \in E,$  
 $0 < |x - x_0| < \delta \Rightarrow f(x) + g(x) > M$
@@ -2662,7 +2708,7 @@ $L \in \mathbb{\tilde{R}}$, $y_0$ punto di accumulazione per $F$
 supponiamo $f(E) \subseteq F$,  
 $y$ sia punto di accumulazione per $f(E)$,  
 
-![limite della funzione composta](/img/limite_della_funzione_composta.png)
+![limite della funzione composta](../img/limite_della_funzione_composta.png)
 
 ¿ cosa succede di $\lim\limits_{x \to x_0} g(f(x))$?
 
@@ -2673,25 +2719,26 @@ Dobbiamo aggiungere delle ipotesi, infatti
 $\lim\limits_{y \to y_0} g(y) = L$
 
 $\forall W$ di $L$, $\exists V$ di $y: \forall y \in F$  
-$y \in V \setminus y_0 \Rightarrow g(y) \in W$
+$y \in V \smallsetminus y_0 \Rightarrow g(y) \in W$
 
 $\lim\limits_{x \to x_0} f(x) = y_0$
 
 $\forall V$ di $y_0$, $\exists U$ di $x: \forall x \in E$  
-$x \in U \setminus x_0 \Rightarrow f(x) \in V$
+$x \in U \smallsetminus x_0 \Rightarrow f(x) \in V$
 
 se cerco di concatenare
 
 $\forall W, \exists U$ ma $\forall V \exists U$  
 quindi $\forall W, \exists U: \forall x \in E,$  
-$x \in U \setminus x_0 \Rightarrow f(x) \in V$
+$x \in U \smallsetminus x_0 \Rightarrow f(x) \in V$
 
-ma soltanto se $f(x) \in V \setminus y_0$ ho $g(f(x)) \in W$
+ma soltanto se $f(x) \in V \smallsetminus y_0$ ho $g(f(x)) \in W$
 
 ---
 
 #### Teorema
 
+\
 Sia $\lim\limits_{x \to x_0} f(x) = y_0$  
 $\lim\limits_{y \to y_0} g(y) = L$
 
@@ -2760,14 +2807,1018 @@ $\exists \lim\limits_{x \to c^+} f(x)$
 
 e si ha $\lim\limits_{x \to c^-} f(x) \leq f(c) \leq \lim\limits_{x \to c^+} f(x)$
 
-### Limiti di successioni
+## Successioni
 
-## Altro
+**Definizione (successione)**  
+$f : \mathbb{N} \to A$ si dice successione a valori in $A$;  
+invece di indicarla con  
+$f : \mathbb{N} \to A$  
+$n \mapsto f(n)$  
+la indicheremo (tradizionalmente) con  
+$(a_n)_n$ dove $f(n) = a_n$
+
+**Idea**  
+$a_0, a_1, a_2, a_3, \dots$
+
+### Sottosuccessioni
+
+**Definizione (sottosuccessione)**  
+Data una funzione  
+$j : \mathbb{N} \to \mathbb{N}$ strettamente crescente  
+$k \mapsto j(k)$  
+$\Updownarrow$  
+$k \mapsto n_k$
+
+sia $(a_n)_n$ una successione a valori in $A$,  
+consideriamo la composizione  
+$\mathbb{N} \to \mathbb{N} \to A$  
+$k \mapsto n_k \mapsto a_{n_k}$  
+la chiamo **sottosuccessione** di $(a_n)_n$,  
+cioè $(a_{nk})_k$
+
+**Idea**  
+$a_0, a_1, a_2, a_3, a_4, a_5, a_6, \dots$  
+prendo $a_1, a_3, a_6, \dots$  
+creando la sottosuccessione  
+$a_{n_0}, a_{n_1}, a_{n_2}, a_{n_3}, \dots$  
+INDICI STRETTAMENTE CRESCENTI
+
+**Osservazione**  
+Tiro fuori infiniti termini della successione ma ne considero l'ordine.
+
+### Successione reale
+
+**Definizione**  
+Se $A$ è $\mathbb{R}$ (cioè $f: \mathbb{N} \to \mathbb{R}$) si dice che $(a_n)_n$ è una successione a valori in $\mathbb{R}$ (ovvero una successione reale).
+
+## Limiti di successioni
+
+**Problema**  
+Voglio introdurre il concetto di limite per una successione.  
+L'unico punto di accumulazione per $\mathbb{N}$ è $+\infty$.  
+Quindi l'unico punto in cui ha senso calcolare i limite di una successione è $+\infty$.
+
+$\lim\limits_{n \to +\infty} a_n = \lim\limits_n a_n$
+
+Quindi scrivendo $n$ è sottinteso che tenda sempre a $+\infty$.
+
+---
+
+Cosa significa $\lim\limits_n a_n = L$ con $L \in \mathbb{\tilde{R}}$?
+
+$\forall V$ di $L, \exists U$ di $+\infty : \forall n,$  
+$n \in U \Rightarrow a_n \in V$
+
+equivale a dire
+
+$\forall V$ di $L, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow a_n \in V$
+
+Ci sono tre casi:
+
+$1)$ Supponiamo $L \in \mathbb{R}$
+
+$\lim\limits_n a_n = L$  
+$\Updownarrow$  
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow |a_n - L| < \varepsilon$
+
+$2)$ Supponiamo $L = +\infty$
+
+$\lim\limits_n a_n = +\infty$  
+$\Updownarrow$  
+$\forall M > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow a_n > M$
+
+$3)$ Supponiamo $L = -\infty$
+
+$\lim\limits_n a_n = -\infty$  
+$\Updownarrow$  
+$\forall M > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow a_n < -M$
+
+### Successioni convergenti e divergenti
+
+**Definizione**  
+Se $\lim\limits_n a_n$ esiste ed è un numero (finito), diciamo che $(a_n)_n$ è **convergente** a $L$.
+
+**Definizione**  
+Se $\lim\limits_n a_n$ esiste ed è un numero infinito (ovvero $+\infty$ o $-\infty$), diciamo che $(a_n)_n$ è **divergente** (a $+\infty$ oppure a $-\infty$).
+
+### Proprietà
+
+**Osservazione**  
+Per il limite delle successioni, valgono tutte le proprietà dei limiti.
+
+### Due altri risultati
+
+Se $\lim\limits_n a_n = \ell$ allora $\lim\limits_n {a_n}_k = \ell$
+
+Supponiamo $\ell \in \mathbb{R}$ allora  
+
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow |a_n - \ell| < \varepsilon$  
+$\Updownarrow$  
+$\ell - \varepsilon < a_n < \ell + \varepsilon$
+
+$\forall \varepsilon > 0, \boxed{\exists \overline{k}}: \forall k, k > \overline{k} \stackrel{?}{\Rightarrow} |a_{n_k} - \ell| < \varepsilon$  
+basta prendere $\overline{k} \geq \overline{n}$, perche` $k \to n_k$ è strettamente crescente  
+$n_k \geq k > \overline{n}$
+
+**Idea**  
+Se una successione converge, allora tutte le sottosuccessioni convergono e viceversa.
+
+**Teorema**  
+Se $(a_n)_n$ è una successione monotona, questa ha sempre limite.
+
+**Corollario**  
+Se $(a_n)_n$ è una successione monotona e limitata, allora $(a_n)_n$ è convergente.
+
+**Definizione**  
+$(a_n)_n$ limitata significa che  
+$\exists M > 0: \forall n, |a_n| < M$
+
+**Osservazione**  
+Se $(a_n)_n$ è la restrizione a $\mathbb{N}$ di una funzione in $\mathbb{R}$, cioè $a_n = f(m)$, dove $f : [0, +\infty[ \to \mathbb{R}$,  
+allora se so calcolare $\lim\limits_{x \to +\infty} f(x)$ e vale $\ell$, allora $\lim\limits_n a_n = \ell$.
+
+**Attenzione**  
+$\lim\limits_n a_n$ può esistere quando $\lim\limits_{x \to +\infty} f(x)$ non esiste. Per esempio se $a_n = sin(n \pi)$.
+
+### Limiti notevoli delle successioni
+
+Sia $a > 1$, consideriamo $\lim\limits_n a^n \stackrel{?}{=} +\infty$
+
+Per Bernulli, se $a > 1$, prendo $a = 1 + \rho$ con $\rho > 0$, allora
+
+$a^n = (1 + \rho)^n \geq 1 + \rho \cdot n$
+
+quindi $\lim\limits_n (1 + \rho \cdot n) = \lim\limits_{x \to +\infty} 1 + \rho \cdot x = +\infty$
+
+perciò anche la potenza tende a infinito.
+
+$\square$
+
+---
+
+$\lim\limits_n \frac{a^n}{n}$, con $a > 1$
+
+Uso Bernulli migliorata, cioè  
+
+$(1 + \rho)^n \geq 1 + \rho \cdot n + \rho^2 \frac{n(n-1)}{2}$
+
+Da questa formula, dividendo tutto per $n$, ottengo che
+
+$\frac{(1 + \rho)^n}{n} \geq \underbrace{\frac{1}{n}}_0 + \underbrace{\rho}_{\rho} + \underbrace{\frac{n - 1}{2} \rho^2}_{+\infty}$  
+$\Rightarrow \frac{a^n}{n} \to +\infty$
+
+$\square$
+
+---
+
+$\lim\limits_n \sqrt[n]{a} \stackrel{?}{=} 1$, con $a > 1$
+
+Supponiamo $\varepsilon > 0$  
+consideriamo $(1 + \varepsilon)^n$ e $\lim\limits_n (1 + \varepsilon)^n = +\infty$  
+allora se $a > 1$, avrò che  
+$\exists \overline{n}: \forall n, n > \overline{n} \Rightarrow (1 + \varepsilon)^n > a$
+
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow 1 + \varepsilon > \sqrt[n]{a} > 1$  
+$\Downarrow$  
+$1 - \varepsilon < \sqrt[n]{a} < 1 + \varepsilon$  
+$\Downarrow$  
+$|\sqrt[n]{a} - 1| < \varepsilon$
+
+$\square$
+
+---
+
+$\lim\limits_n \sqrt[n]{n} = 1$
+
+So che $\lim\limits_n \frac{a^n}{n} = +\infty$ con $a > 1$
+
+Supponiamo $\varepsilon > 0$  
+considero $\frac{(1 + \varepsilon)^n}{n}$ e $\lim\limits_n \frac{(1 + \varepsilon)^n}{n} = +\infty$  
+allora se $a > 1, n > 1$, avrò che  
+$\exists \overline{n}: \forall n, n > \overline{n} \Rightarrow \frac{(1 + \varepsilon)^n}{n} > a$
+
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow (1 + \varepsilon)^n > an > n > 1$  
+$\Downarrow$  
+$1 + \varepsilon > \sqrt[n]{n} > 1 - \varepsilon$  
+$\Downarrow$  
+$|\sqrt[n]{n} - 1| < \varepsilon$
+
+$\square$
+
+---
+
+$\lim\limits_n (1 + \frac{1}{n})^n = e$
+
+Provo che il limite esiste e vale un reale tra $2$ e $3$.  
+Per provarlo basta vedere che $(1 + \frac{1}{n})^n$ è una successione crescente e limitata.
+
+Proviamo che sia limitata (cioè $\forall n, 2 \leq (1 + \frac{1}{n})^n \leq 3$)
+
+$(1 + \frac{1}{n})^n \stackrel{Newton}{=} \displaystyle\sum_{j = 0}^n \binom{n}{j} 1^{n - j} (\frac{1}{n})^j =$  
+
+$= \binom{n}{0} \cdot 1 \cdot (\frac{1}{n})^0 + \binom{n}{1} \cdot 1 \cdot (\frac{1}{n})^1 + \binom{n}{2} \cdot 1 \cdot (\frac{1}{n})^2 + \cdots + \binom{n}{n} \cdot 1 \cdot (\frac{1}{n})^n =$  
+
+$= 1 \cdot 1 \cdot 1 + n \cdot 1 \cdot \frac{1}{n} + \frac{n(n - 1)}{2!} \cdot 1 \cdot \frac{1}{n^2} + \frac{n(n - 1)(n - 2)}{3!} \cdot 1 \cdot \frac{1}{n^3} + \cdots + \frac{n(n - 1)(n - 2)\cdots(n - (n - 1))}{n!} \cdot 1 \cdot \frac{1}{n^n} =$
+
+$= 1 + 1 + \dfrac{1}{2!} \underbrace{\frac{(n - 1)}{n}}_{\leq 1} + \dfrac{1}{3!} \underbrace{\frac{(n - 1)}{n}}_{\leq 1} \underbrace{\frac{(n - 2)}{n}}_{\leq 1} + \cdots + \dfrac{1}{n!} \underbrace{\frac{(n-1)}{n}}_{\leq 1} \underbrace{\frac{(n - 2)}{n}}_{\leq 1} \cdots \underbrace{\frac{1}{n}}_{\leq 1}$
+
+$\leq 1 + 1 + 1 + \dfrac{1}{2!} + \dfrac{1}{3!} + \cdots + \dfrac{1}{n!}$
+
+per induzione so che $n! > 2^{n - 1}$, quindi
+
+$\leq 1 + 1 + \dfrac{1}{2^2} + \dfrac{1}{2^3} + \cdots + \dfrac{1}{2^{n - 1}}$
+
+poiché $1 + a + a^2 + \cdots + a^n = \frac{1 - a^2}{1 - a}$, allora
+
+$1 + \dfrac{1}{2^2} + \dfrac{1}{2^3} + \cdots + \dfrac{1}{2^{n - 1}} = \frac{1 - \frac{1}{4}}{1 - \frac{1}{2}} = \frac{3}{2} \leq 2$
+
+$1 + 1 + \dfrac{1}{2^2} + \dfrac{1}{2^3} + \cdots + \dfrac{1}{2^{n - 1}} = 1 + \frac{1 - \frac{1}{4}}{1 - \frac{1}{2}} = 1 + \frac{3}{2} \leq 3$
+
+conclusione
+
+$2 \leq (1 + \frac{1}{n})^n \leq 3$
+
+Per la crescenza verifico che
+
+$(1 + \frac{1}{n})^n \leq (1 + \frac{1}{n + 1})^{n + 1}$
+
+$(1 + \frac{1}{n})^n = 1 + 1 + \frac{1}{2!}(1 - \frac{1}{n}) + \frac{1}{3!}(1 - \frac{1}{n})(1 - \frac{2}{n}) + \cdots + \frac{1}{n!}(1 - \frac{1}{n})(1 - \frac{2}{n})\cdots(1 - \frac{n - 1}{n})$
+
+$(1 + \frac{1}{n + 1})^{n + 1} = 1 + 1 + \frac{1}{2!}(1 - \frac{1}{n + 1}) + \frac{1}{3!}(1 - \frac{1}{n + 1})(1 - \frac{2}{n + 1}) + \cdots + \frac{1}{n!}(1 - \frac{1}{n + 1})(1 - \frac{2}{n + 1})\cdots(1 - \frac{n - 1}{n + 1}) + \frac{1}{(n + 1)!}(1 - \frac{1}{n + 1})(1 - \frac{2}{n + 1})\cdots(1 - \frac{n}{n + 1})$
+
+Tutti i termini della seconda formula sono maggiori o uguali a quelli della prima formula, uno a uno; l'ultimo membro della seconda è in più, inoltre è maggiore a zero.
+
+In conclusione, l'espressione iniziale per verificare la crescenza è vera.
+
+$\square$
+
+## Altri limiti notevoli dimostrati
+
+$a > 1, k \in \mathbb{R}$
+
+$\lim\limits_{x \to +\infty} \frac{a^x}{x^k} = \lim\limits_{x \to +\infty} \left[ \frac{\left( a^{\frac{1}{k}} \right)^x}{x} \right]^{k} = +\infty$
+
+poiché $\lim\limits_{x \to +\infty} \frac{\left( a^{\frac{1}{k}} \right)^x}{x} = +\infty$
+
+$\square$
+
+---
+
+$a > 1, k \in \mathbb{R}$
+
+$\lim\limits_{x \to -\infty} x^k a^x$
+
+$y = -x$
+
+$\lim\limits_{x \to +\infty} (-y)^k a^{-y} = \lim\limits_{x \to +\infty} \dfrac{\overbrace{(-1)^k}^{limitato} y^k}{a^y} = 0$
+
+$\square$
+
+---
+
+$a > 1$
+
+$\lim\limits_{x \to +\infty} x \log_a x$
+
+$y = \log_a x$  
+$x = a^y$
+
+$\lim\limits_{x \to -\infty} a^y \cdot t = 0$  
+come dimostrato prima, prendendo $K = 1$
+
+$\square$
+
+---
+
+$\lim\limits_{x \to 0^+} \sqrt{x} \log_a x$
+
+$y = \log_a x$  
+$x = a^y$
+
+$\lim\limits_{x \to -\infty} (a^{\frac{1}{2}})^y \cdot y = 0$  
+
+$\square$
+
+---
+
+$\lim\limits_{x \to +\infty} \frac{\log_a x}{x}$
+
+$y = \log_a x$  
+$x = a^y$
+
+$\lim\limits_{y \to +\infty} \frac{y}{a^y}$
+
+$z = -y$
+
+$\lim\limits_{z \to +\infty} -z a^z = 0$
+
+$\square$
+
+---
+
+$\lim\limits_n (1 + \frac{1}{n})^n = e$
+
+$\lim\limits_{x \to +\infty} (1 + \frac{1}{x})^x \stackrel{?}{=} e$
+
+$n = [x]$  
+
+$[x] \leq x < [x] + 1$  
+$\frac{1}{[x] + 1} < \frac{1}{x} \leq \frac{1}{[x]}$  
+$1 + \frac{1}{[x] + 1} < 1 + \frac{1}{x} \leq 1 + \frac{1}{[x]}$  
+$\left( 1 + \frac{1}{[x] + 1} \right)^{[x]} < \left( 1 + \frac{1}{x} \right)^{x} < \left( 1 + \frac{1}{[x]} \right)^{[x] + 1}$  
+$\left( 1 + \frac{1}{n + 1} \right)^{n} < \left( 1 + \frac{1}{x} \right)^{x} < \left( 1 + \frac{1}{n} \right)^{n + 1}$  
+
+$\dfrac{\left( 1 + \frac{1}{n + 1} \right)^{n}}{1 + \frac{1}{n + 1}} < \left( 1 + \frac{1}{x} \right)^{x} < \left( 1 + \frac{1}{n} \right) \left( 1 + \frac{1}{n} \right)^{n}$
+
+$\dfrac{\overbrace{\left( 1 + \frac{1}{n + 1} \right)^{n}}^e}{\underbrace{1 + \frac{1}{n + 1}}_1} < \left( 1 + \frac{1}{x} \right)^{x} < \underbrace{\left( 1 + \frac{1}{n} \right)}_1 \underbrace{\left( 1 + \frac{1}{n} \right)^{n}}_e$  
+
+$\square$
+
+---
+
+$\lim\limits_{x \to -\infty} \left( 1 + \frac{1}{x} \right)^x$
+
+$y = -x$
+
+$\lim\limits_{y \to +\infty} \left( 1 + \frac{1}{-y} \right)^{-y} = \lim\limits_{y \to +\infty} \frac{1}{\left( 1 + \frac{1}{-y} \right)^{y}} = \lim\limits_{y \to +\infty} \left( \frac{1}{1 + \frac{1}{-y}} \right)^{y} = \lim\limits_{y \to +\infty} \left( \frac{1}{\frac{-y + 1}{-y}} \right)^{y} = \lim\limits_{y \to +\infty} \left( \frac{y}{y - 1} \right)^{y} = \lim\limits_{y \to +\infty} \left( \frac{y + 1 - 1}{y - 1} \right)^{y} = \lim\limits_{y \to +\infty} \left( 1 + \frac{1}{y - 1} \right)^{y} = \lim\limits_{y \to +\infty} \left( 1 + \frac{1}{y - 1} \right)^{y - 1} \left( 1 + \frac{1}{y} \right) = e \cdot 1 = e$
+
+$\square$
+
+---
+
+$\lim\limits_{x \to 0} \frac{\log(1 + x)}{x} = \lim\limits_{x \to 0} \log((1 + x)^{\frac{1}{x}}) = \log e = 1$
+
+$\square$
+
+---
+
+$\lim\limits_{x \to 0} \frac{e^x - 1}{x}$
+
+$y = e^x - 1$  
+$x = \log(1 + y)$
+
+$\lim\limits_{y \to 0} \frac{y}{\log(1 + y)} = 1$
+
+$\square$
+
+---
+
+$\lim\limits_{x \to 0} \frac{a^x - 1}{x} = \lim\limits_{x \to 0} \frac{e^{x \log a} - 1}{x} \cdot \frac{\log a}{\log a} = 1 \cdot \log a = \log a$
+
+$\square$
+
+---
+
+$\lim\limits_{x \to 0^+} x^x = \lim\limits_{x \to 0^+} e^{x \log x} = e^0 = 1$
+
+$\square$
+
+## Successioni e topologia di R
+
+### Secondo teorema di Bolzano-Weierstrass
+
+**Tesi**  
+Sia $(a_n)_n$ una successione in $\mathbb{R}$, limitata.  
+Allora esiste una sottosuccessione convergente.
+
+**Dimostrazione**  
+Chiamo $E = \{a_n, n \in \mathbb{N}\}$ (sono le immagini di $(a_n)_n$).  
+
+Ci sono due possibilità:
+
+**$E$ è finito**  
+Allora in $E$ c'è un elemento che è immagine di infiniti indici $n$,  
+quindi posso scegliere come sottosuccessione una sottosuccessione costante (e quindi convergente).  
+(esempio: $a_n = (-1)^n$, sottosuccessione $(a_{2n})_n = 1$)
+
+**$E$ è infinito**  
+Ma la successione per ipotesi è limitata, allora $E$ è un insieme limitato ed infinito.  
+Allora $E$ ha un punto $\xi$ di accumulazione in $\mathbb{R}$,  
+in ogni intorno di $\xi$ ci sono infiniti punti di $E$.  
+Costruiamo una sottosuccessione che converge a $\xi$.  
+
+Considero $]\xi - 1, \xi + 1[$  
+qui dentro ci sono infiniti $a_n$  
+scelgo $a_{n_0} \in ]\xi - 1, \xi + 1[$  
+
+Considero $]\xi - \frac{1}{2}, \xi + \frac{1}{2}[$  
+qui dentro ci sono infiniti $a_n$  
+scelgo $a_{n_1} \in ]\xi - \frac{1}{2}, \xi + \frac{1}{2}[$
+
+ma anche $n_1 > n_0$  
+lo posso fare perché sono infiniti
+
+vado avanti così
+
+ho $a_{n_k} \in ]\xi - \frac{1}{2^k}, \xi + \frac{1}{2^k}[$
+
+allora $0 < |a_{n_k} - \xi| < \underbrace{\frac{1}{2^k}}_0$
+
+allora $\lim\limits_k a_{n_k} = \xi$
+
+$\square$
+
+### Insiemi compatti in R
+
+**Definizione**  
+Sia $E \in \mathbb{R}$,  
+$E$ si dice **compatto per successioni** (d'ora in poi diremo compatto e basta)  
+se da ogni successione a valori in $E$,  
+posso estrarre una sottosuccessione convergente a un punto di $E$.
+
+**Osservazione**  
+È interessante trovare una caratterizzazione alternativa.
+
+### Teorema (caratterizzazione dei compatti in R)
+
+Sia $E \in \mathbb{R}$, $E$ è compatto se e solo se $E$ è chiuso e limitato.
+
+La dimostrazione inizia dopo il lemma.
+
+#### Lemma (caratterizzazione di chiusi tramite le successioni)
+
+\
+Sia $E \in \mathbb{R}$, $E$ è chiuso se e solo se vale la seguente proprietà:
+
+$(*)$ se una successione a valori in $E$ è convergente, allora il limite appartiene all'insieme.
+
+**Dimostrazione**  
+"$\Rightarrow$"  
+Sia $E$ chiuso  
+supponiamo che $(*)$ non sia vera  
+quindi c'è una successione in $E$ ($\forall n, a_n \in E$)  
+che converge a un punto di $\overline{a} \notin E$ ($\lim\limits_n a_n = \overline{a}\notin E$)  
+$E$ è chiuso $\Rightarrow \mathscr{C} E$ è aperto  
+allora $\exists \varepsilon > 0: ]\overline{a} - \varepsilon, \overline{a} + \varepsilon[$  
+non è possibile perché $a_n \in E, \forall n, ]\overline{a} - \varepsilon, \overline{a} + \varepsilon[ \subseteq \mathscr{C} E$
+
+"$\Leftarrow$"  
+Sia valida $(*)$,  
+provo che $\mathscr{C} E$ è aperto ($\forall x \in \mathscr{C} E, \exists \varepsilon > 0 : ]x - \varepsilon, x + \varepsilon[ \subseteq \mathscr{C} E$)
+
+per assurdo $\mathscr{C} E$ non è aperto,  
+$\exists \overline{x} \in \mathscr{C} E : \forall \varepsilon > 0, ]\overline{x} - \varepsilon, \overline{x} + \varepsilon[ \cap E \neq \varnothing$
+
+quindi  
+$\exists \overline{x} \in \mathscr{C} E : \forall n, ]\overline{x} - \frac{1}{n}, \overline{x} + \frac{1}{n}[ \cap E \neq \varnothing$
+
+quindi  
+$\forall n, \exists x_n \in E: |x_n - \overline{x}| < \frac{1}{n}$
+
+quindi ho trovato una successione in $E$ che converge a un punto fuori da $E$, *impossibile*.
+
+$\square$
+
+---
+
+**Dimostrazione**  
+"$\Rightarrow$"  
+Provo che se $E$ è compatto, allora $E$ è chiuso e limitato.
+
+Per assurdo supponiamo che $E$ non sia limitato,
+
+se $E$ non è limitato, per esempio, non è superiormente limitato,  
+è possibile trovare dentro a $E$ una successione $(a_n)_n$ tale che $\lim\limits_n a_n = +\infty$,  
+ho l'assurdo perché questa successione non ha sottosuccessioni convergenti a un punto di $E$.
+
+Per assurdo supponiamo che $E$ non sia chiuso,
+
+per il lemma, non vale la proprietà (*),  
+allora $\exists (a_n)_n$ in $E$ tale che $\lim\limits_n a_n = \overline{a} \notin E$,  
+allora tutte le sottosuccessioni vanno ad $\overline{a} \notin E$,  
+invece essendo $E$ compatto, $(a_n)_n$ dovrebbe avere almeno una sottosuccessione che converge a un punto di $E$.  
+ASSURDO
+
+"$\Leftarrow$"  
+$E$ sia chiuso e limitato, proviamo che è compatto.
+
+Prendo $(a_n)_n$ successione in $E$ (limitato),  
+per il secondo teorema di Bolzano-Weierstrass,  
+$(a_n)_n$ ha una sottosuccessione convergente,  
+ma allora $(a_{n_k})_k$ è una successione a valori in $E$ che converge,  
+ma $E$ è chiuso $\Rightarrow$ il $\lim\limits_k a_{n_k} = \overline{a} \in E$, per la proprietà $(*)$,  
+quindi per ogni $(a_n)_n$ a valori in $E$,  
+posso estrarre una $(a_{n_k})_k$ che converge a un punto di $E$ $\Rightarrow$ $E$ è compatto.
+
+$\square$
+
+### Successioni di Cauchy
+
+**Definizione**  
+Sia $(a_n)_n$ una successione in $\mathbb{R}$,  
+$(a_n)_n$ si dice successione di Cauchy se  
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, m,$  
+$n, m > \overline{n} \Rightarrow |a_n - a_m| < \varepsilon$.
+
+**Osservazione**  
+"La definizione significa che i punti della successione si stanno avvicinando".
+
+**Tesi**  
+Se una successione in $\mathbb{R}$ è convergente, allora è una successione di Chauchy.
+
+**Dimostrazione**  
+$(a_n)_n$ convergente, cioè $\lim\limits_n a_n = \overline{a}$ con $\overline{a} \in \mathbb{R}$,  
+cioè $\forall \varepsilon > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow |a_n - \overline{a}| < \frac{\varepsilon}{2}$.
+
+Allora se $n, m > \overline{n}$, allora valgono  
+$|a_n - \overline{a}| < \frac{\varepsilon}{2}$  
+$|a_m - \overline{a}| < \frac{\varepsilon}{2}$  
+
+quindi $|a_n - a_m| \leq |a_n - \overline{a} + \overline{a} - a_m| \leq |a_n - \overline{a}| + |a_m - \overline{a}| < \varepsilon$
+
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, m,$  
+$n, m > \overline{n} \Rightarrow |a_n - a_m| < \varepsilon$
+
+$\square$
+
+**Osservazione**  
+Questo teorema vale in tutti gli spazi in cui sia definita una distanza.
+
+### Teorema (di compattezza di R)
+
+In $\mathbb{R}$, le successioni di Cauchy sono convergenti.
+
+**Dimostrazione**  
+In tre passe:
+
+$1)$ Una successione di Cauchy è limitata
+
+$(a_n)_n$ di Cauchy, significa  
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, m,$  
+$n, m > \overline{n} \Rightarrow |a_n - a_m| < \varepsilon$
+
+fissiamo per esempio $\varepsilon = 1$.
+
+Allora $\exists \overline{n}: \forall n, m,$  
+$n, m > \overline{n} \Rightarrow |a_n - a_m| < 1$
+
+quindi $\forall m > \overline{n}, |a_{\overline{n} + 1} - a_m| < 1$
+
+quindi da $n + 1$ in poi  
+$|a_n - a_{\overline{n} + 1}| < 1$
+
+e anche  
+$a_n \in ]a_{\overline{n} + 1} - 1, a_{\overline{n} + 1} + 1[$  
+(l'intervallo è fissato, è di lunghezza 2)
+
+allora $(a_n)_n$ ha $\overline{n}$ termini che fanno quello che voglio e da $n + 1$ in poi sono dentro a un intervallo fissato, quindi è limitato.
+
+$2)$ Applico il teorema di Bolzano-Weierstrass
+
+$(a_n)_n$ di Cauchy  
+$\Downarrow$  
+$(a_n)_n$ è limitata  
+$\Downarrow$  
+$(a_n)_n$ ha una sottosuccessione convergente
+
+$3)$ "se una successione di Cauchy ha una sottosuccessione convergente, allora tutta la successione è convergente"
+
+$(a_n)_n$ di Cauchy  
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n, m,$  
+$n, m > \overline{n} \Rightarrow \boxed{|a_n - a_m| < \frac{\varepsilon}{2}}$ $(*)$
+
+$(a_{n_k})_k$ è una sottosuccessione convergente a $\overline{a}$  
+$\forall \varepsilon > 0, \exists \overline{k}: \forall k,$  
+$k > \overline{k} \Rightarrow \boxed{|a_{n_k} - \overline{a}| < \frac{\varepsilon}{2}}$ $(**)$
+
+adesso prendo $n > \overline{n}$ e $k > max\{\overline{n}, \overline{k}\}$  
+
+$|a_n - \overline{a}| \leq |a_n - a_{n_k}| + |a_{n_k} - \overline{a}|$
+
+dato che $n > \overline{n}$, $n_k \geq k > \overline{n}$  
+$\Downarrow$  
+$|a_n - \overline{a}| < \frac{\varepsilon}{2}$  
+$\Uparrow$  
+$(*)$
+
+e dato che $k > \overline{k}$  
+$\Downarrow$  
+$|a_{n_k} - \overline{a}| < \frac{\varepsilon}{2}$  
+$\Uparrow$  
+$(**)$
+
+Allora $\forall \varepsilon, \exists \overline{n}$ tale che se $n > \overline{n}$ allora $|a_n - \overline{a}| < \varepsilon$  
+$\Downarrow$  
+$\lim\limits_n a_n = \overline{a}$
+
+$\square$
+
+## Funzioni continue
+
+**Osservazione**  
+Sia $E \subseteq \mathbb{R}$, sia $x_0 \in E$, ci sono due possibilità:
+
+$1)$ $x_0$ è punto di accumulazione per $E$  
+(in ogni intorno di $x_0$ ci sono infiniti punti di $E$ diversi da $x_0$)
+
+$2)$ $x_0$ non è di accumulazione  
+(esiste un intorno di $x_0$ in cui l'unico punto di $E$ è $x_0$)  
+$x_0$ è punto isolato di $E$
+
+**Definizione**  
+Sia $E \subseteq \mathbb{R}$, sia $x_0 \in E$, sia $f: E \to \mathbb{R}$,  
+($f$ è una funzione che ha per dominio $E$)  
+$f$ si dice **continua nel punto $x_0$** se
+
+- $x_0$ è isolato
+
+oppure se
+
+- $x_0$ è di accumulazione e $\lim\limits_{x \to x_0} f(x) = f(x_0)$
+
+**Una funzione è continua in $x_0$ se esiste il limite per $x$ che tende a $x_0$ e il limite è il valore della funzione.**
+
+Usando la nozione di limite con $\varepsilon$ e $\delta$ sarebbe  
+$f$ continua in $x_0$ se e solo se  
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x \in E, \boxed{0 <} |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \varepsilon$  
+Posso omettere $0 <$ perché se $x = x_0$ allora $f(x) = f(x_0)$  
+e quindi $|f(x) - f(x_0)| = 0 < \varepsilon$
+
+In conclusione $f$ è continua in $x_0$ se:
+
+- $x_0$ è isolato o di accumulazione e $\lim\limits_{x \to x_0} f(x) = f(x_0)$
+- $\forall \varepsilon > 0, \exists \delta > 0: \forall x \in E, |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \varepsilon$
+
+**Definizione**  
+Se $f : E \to \mathbb{R}$ e $f$ è continua in tutti i punti di $E$ allora $f$ si dice **continua**.
+
+### Prime proprietà delle funzioni continue
+
+1. **Teorema (permanenza del segno)**  
+   Sia $f : E \to \mathbb{R}$ sia $x_0$ e $f$ sia continua in $x_0$,  
+   se $f(x_0) > 0$ $(< 0)$ allora esiste un intorno di $x_0$ in cui la funzione ha segno $> 0$ $(< 0)$
+
+2. **Teorema (operazioni)**  
+   Siano $f, g$ funzioni continue in $x_0$  
+   allora $f \pm g, f \cdot g$ e $\frac{f}{g}$ (se $g \neq 0$) sono continue in $x_0$
+
+3. **Teorema (composta di funzioni continue)**  
+   Sia $f : E \to \mathbb{R}, x_0 \in E$  
+   Sia $g : F \to \mathbb{R}, f(x_0) \in F$, (e $f(E) \subseteq F$)  
+   Supponiamo che $f$ sia continua in $x_0$  
+   e che $g$ sia continua in $f(x_0)$  
+   allora $f \circ g$ è continua in $x_0$.  
+   Ossia la composta di una funzione continua è ancora continua.
+
+**Dimostrazione del 3.**  
+![composta di continue](../img/composta_di_continue.png)
+
+Continuità di $g$ in $f(x_0)$:  
+$\lim\limits_{y \to f(x_0)} g(y) = g(f(x_0))$
+
+$\forall \varepsilon > 0, \exists \delta > 0: \forall y \in F, |y - f(x_0)| < \delta \Rightarrow |g(y) - g(f(x_0))| < \varepsilon$
+
+Continuità di $f$ in $x_0$:  
+$\lim\limits_{x\to x_0} f(x) = f(x_0)$
+
+$\forall \delta > 0, \exists \rho > 0: \forall x \in E, |x - x_0| < \rho \Rightarrow |f(x) - f(x_0)| < \delta$
+
+$\boxed{\forall \varepsilon, \exists \delta \text{ e } \forall \delta, \exists \rho}$ metto assieme
+
+$\forall \varepsilon > 0, \exists \rho > 0: \forall x \in E,$  
+$|x - x_0| < \rho \Big( \Rightarrow |f(x) - f(x_0)| < \delta \Big) \Rightarrow |g(f(x)) - g(f(x_0))| < \varepsilon$  
+$\Updownarrow$  
+$\lim\limits_{x \to x_0} g(f(x)) = g(f(x_0))$
+
+$\square$
+
+### Teorema (caratterizzazione della continuità tramite le successioni)
+
+Sia $f : E \to \mathbb{R}$, $E \subseteq \mathbb{R}$,  
+sia $\overline{x} \in E$  
+$f$ è continua in $\overline{x}$ se e solo se
+
+$(*)$ per ogni successione $(x_n)_n$ a valori in $E$ tale che $\lim\limits_n x_n = \overline{x}$  
+si ha $\lim\limits_n f(x_n) = f(\overline{x})$
+
+**Dimostrazione**  
+"$\Downarrow$"  
+Sia $f$ continua in $\overline{x}$, cioè  
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x \in E, |f(x) - f(\overline{x})| < \varepsilon$  
+sia $(x_n)_n$ una successione in $E$ tale che $\lim\limits_n x_n = \overline{x}$, cioè  
+$\forall \delta > 0, \exists \overline{n}: \forall n,$  
+$n > \overline{n} \Rightarrow |x_n - \overline{x}| < \delta$  
+
+$\varepsilon \stackrel{\text{continuità}}{\to} \delta \stackrel{\text{convergenza di} (x_n)_n}{\to} \overline{n}$
+
+quindi  
+$\forall \varepsilon > 0, \exists \overline{n}: \forall n,$  
+$n > \overline{n} \Big( \Rightarrow |x_n - \overline{x}| < \delta \Big) \Rightarrow |f(x_n) - f(\overline{x})| < \varepsilon$
+
+quindi $\boxed{\lim\limits_n f(x_n) = f(\overline{x})}$
+
+"$\Uparrow$"  
+So che $(\neg(p \Rightarrow q) = p \wedge \neg q)$  
+
+Per assurdo suppongo $\neg (f \text{ è continua in } \overline{x})$, cioè  
+$\neg (\lim\limits_{x \to \overline{x}} f(x) = f(\overline{x}))$
+
+$\exists \varepsilon_0: \forall \delta, \exists x_{\delta} \in E:$  
+$|x_{\delta} - \overline{x}| < \delta \wedge |f(x_{\delta}) - f(\overline{x})| > \varepsilon_0$
+
+prendo $\delta = \frac{1}{n}$ allora $\exists x_n : |x_n - \overline{x}| \geq \frac{1}{n} \wedge |f(x_n) - f(\overline{x})| \geq \varepsilon_0$
+
+$0 \leq |x_n - \overline{x}| \leq \underbrace{\frac{1}{n}}_0$ quindi anche $|x_n - \overline{x}|$ tende a zero
+
+ora $\lim\limits_n x_n = \overline{x}$ e $(f(x_n))_n$ è tale che $|f(x_n) - f(\overline{x})| \geq \varepsilon_0 > 0$
+
+perciò $(f(x_n))_n$ non converge a $f(\overline{x})$  
+ASSURDO
+
+$\square$
+
+## Proprietà fondamentali delle funzioni continue
+
+### 1) Teorema degli zeri  
+
+Sia $f : [a, b] \to \mathbb{R}$, $f$ sia continua  
+supponiamo che  
+$f(a) < 0$ e $f(b) > 0$  
+oppure  
+$f(a) > 0$ e $f(b) < 0$  
+(cioè $f(a) f(b) < 0$)
+
+Allora $\exists \xi \in ]a, b[$ tale che $f(\xi) = 0$
+
+**Dimostrazione**  
+Supponiamo $f(a) < 0$, $f(b) = 0$
+
+chiamo $a = a_0$ e $b = b_0$  
+considero $c_0 = \frac{a_0 + b_0}{2}$  
+considero $f(c_0)$  
+ho 3 possibilità:
+
+- $f(c_0) < 0$  
+- $f(c_0) = 0$  
+- $f(c_0) > 0$
+
+se $f(c_0) = 0$ allora ho finito
+
+se $f(c_0) > 0$ allora guardo la funzione in $[a_0, c_0]$  
+$f(a_0) < 0, f(c_0) > 0$  
+chiamo $a_1 = a_0$ e $b_1 = c_0$  
+
+se $f(c_0) < 0$ allora guardo la funzione in $[c_0, b_0]$  
+$f(c_0) < 0, f(b_0) > 0$  
+chiamo $a_1 = c_0$ e $b_1 = b_0$  
+
+considero $c_1 = \frac{a_1 + b_1}{2}$  
+considero $f(c_1)$  
+ho 3 possibilità:
+
+- $f(c_1) < 0$  
+- $f(c_1) = 0$  
+- $f(c_1) > 0$
+
+se $f(c_1) = 0$ allora ho finito
+
+se $f(c_1) > 0 \Rightarrow a_2 = a_1, b_2 = c_1$
+
+se $f(c_1) < 0 \Rightarrow a_2 = c_1, b_2 = b_1$
+
+considero $[a_2, b_2]$ e così via
+
+Questa procedura si ferma dopo $k$ passi perché $f(c_k) = 0$, oppure  
+
+costruisco una successione di intervalli chiusi, limitati, inscatolati e dimezzati $([a_n, b_n])_n$  
+in cui $f(a_n) < 0, f(b_n) > 0$  
+
+uso Cantor forte  
+$\exists \xi \in [a, b]: \bigcap\limits_n [a_n, b_n] = \{ \xi \}$
+
+Per concludere basta provare che $f(\xi) = 0$  
+osservo che  
+$|\xi - a_n| \leq |b_n - a_n| = \frac{b_0 - a_0}{2^n}$ tende a zero
+
+quindi $\lim\limits_n a_n = \xi$  
+analogamente $\lim\limits_n b_n = \xi$
+
+$f$ è continua, allora  
+$\lim\limits_n f(a_n) = f(\xi)$  
+$\lim\limits_n f(b_n) = f(\xi)$
+
+però $f(a_n) < 0, \forall n \Rightarrow \lim\limits_n f(a_n) \leq 0 \Rightarrow f(\xi) \leq 0$  
+e $f(b_n) > 0, \forall n \Rightarrow \lim\limits_n f(b_n) \geq 0 \Rightarrow f(\xi) \geq 0$
+
+$f(\xi) \geq 0 \wedge f(\xi) \leq 0 \Rightarrow f(\xi) = 0$
+
+$\square$
+
+**Osservazione**  
+Il teorema è "costruttivo"  
+supponiamo che si voglia trovare uno zero di $f(x) = x^3 - 2$ su $[0, 3]$  
+
+$f(0) = -2$  
+$f(3) = 25$
+
+$f(\frac{3}{2}) = \frac{11}{8} > 0$
+
+$f(0) = -2$  
+$f(\frac{3}{2}) = \frac{11}{8}$
+
+$f(\frac{3}{4}) = -\frac{99}{64} < 0$
+
+$f(\frac{3}{4}) = -\frac{99}{64}$  
+$f(\frac{3}{2}) = \frac{11}{8}$
+
+etc.
+
+### Corollario (teorema dei valori intermedi)
+
+Sia $g: [a, b] \to \mathbb{R}$ una funzione continua,  
+supponiamo che $g(a) = \alpha$ e $g(b) = \beta$, con (per esempio) $\alpha < \beta$,  
+sia $\gamma \in ]\alpha, \beta[$,  
+allora $\exists \xi \in ]a, b[$ tale che $g(\xi) = \gamma$
+
+(una funzione continua su un intervallo, se assume due valori, allora assume tutti i valori intermedi)
+
+**Dimostrazione**  
+Considero $f(x) = g(x) - \gamma$  
+$f: [a, b] \to \mathbb{R}$  
+$f$ è continua (somma di funzioni continue)  
+
+$f(a) = g(a) - \gamma = \alpha - \gamma < 0$  
+$f(b) = g(b) - \gamma = \beta - \gamma > 0$
+
+per il teorema degli zeri  
+$\exists \xi \in ]a, b[: f(\xi) = 0$  
+$f(\xi) = g(\xi) - \gamma = 0$  
+$\Downarrow$  
+$g(\xi) = \gamma$
+
+$\square$
+
+**Osservazione**  
+È importante il dominio sia un **intervallo**.
+
+**Conclusione**  
+Le funzioni continue mandano intervalli in intervalli.
+
+### 2) Teorema (compattezza)
+
+Sia $K \subset \mathbb{R}$, $K$ compatto  
+sia $f: K \to \mathbb{R}$ una funzione continua,  
+allora $f(K)$ è compatto.
+
+**Dimostrazione**  
+Devo provare che $f(K)$ è compatto,  
+
+prendo $(y_n)_n$ successione in $f(K)$,  
+devo provare che esiste $(y_{n_k})_k$ sottosuccessione tale che  
+$\lim\limits_k y_{n_k} = \overline{y} \in f(K)$
+
+$(y_n)_n$ è una successione in $f(K)$  
+quindi $\forall y_n \in f(K), \exists x_n \in K: f(x_n) = y_n$
+
+quindi $(y_n)_n$ in $f(K)$ è immagine di $(x_n)_n$ in $K$
+
+$K$ è compatto,  
+allora $\exists (x_{n_k})_k$ sottosuccessione tale che  
+$\lim\limits_k x_{n_k} = \overline{x} \in K$
+
+ma $f$ è continua,  
+allora $\lim\limits_k f(x_{n_k}) = f(\overline{x}) \in f(K)$
+
+Chi è $f(x_{n_k})$?
+
+$f(x_{n_k}) = y_{n_k}$  
+e quindi  
+$\lim\limits_k y_{n_k} = f(\overline{x}) \in f(K)$
+
+$\square$
+
+**Corollario**  
+Una funzione continua manda chiusi e limitati in chiusi e limitati.
+
+**Osservazione**  
+Un chiuso e limitato ha massimo? Ha minimo? Sì.
+
+#### Corollario (teorema di Weierstrass)
+
+\
+Una funzione continua su un insieme chiuso e limitato ha massimo e minimo assoluti.
+
+**Dimostrazione**  
+Sia $K$ chiuso e limitato  
+allora $K$ compatto  
+allora $f(K)$ compatto  
+allora $f(K)$ chiuso e limitato  
+$f(K)$ limitato, allora  
+$\exists inf(f(K))$ e $\exists sup(f(K))$ in $\mathbb{R}$  
+ma $f(K)$ è chiuso, allora  
+$sup(f(K)) = max(f(K))$ e $inf(f(K)) = min(f(K))$
+
+$\square$
+
+## Massimo e minimo assoluti
+
+**Definizione**  
+Sia $f: E \to \mathbb{R}$,  
+sia $x_0 \in E$,  
+$x_0$ si dice **massimo assoluto** di $f$ se $\forall x \in E, f(x) \leq f(x_0)$  
+$x_0$ si dice **minimo assoluto** di $f$ se $\forall x \in E, f(x) \geq f(x_0)$
+
+se $x_0£ è punto di massimo assoluto, il valore $f(x_0)$ si dice (valore) massimo (assoluto) di $f$  
+se $x_0£ è punto di minimo assoluto, il valore $f(x_0)$ si dice (valore) minimo (assoluto) di $f$
+
+## Teorema (Weierstrass)
+
+Sia $K \neq \varnothing$ insieme compatto (cioè chiuso e limitato)  
+sia $f: K \to \mathbb{R}$ una funzione continua,  
+allora $f$ ha massimo e minimo assoluti.
+
+**Dimostrazione**  
+Provo che ha massimo (analogamente proverò che ha minimo)  
+considero $f(K) \subseteq \mathbb{R}$  
+
+allora ho due possibilità:
+
+- f(K) è superiormente illimitato
+- $sup (K) < +\infty$
+
+in entrambi i casi esiste dentro $f(K)$ una successione $(y_n)_n$  
+(quindi $y_n = f(x_n),$ esiste $(x_n)_n$)
+
+tale che $\lim\limits_n y_n = \begin{cases} +\infty &\text{se } f(K) \text{ superiormente illimitato} \\ sup(f(K)) &\text{se } f(K) \text{ superiormente limitato} \end{cases}$
+
+considero la successione $(x_n)_n$ in $K$
+
+posso estrarre $(x_{n_k})_k$ sottosuccessione  
+tale che $\lim\limits_k x_{n_k} = \overline{x} \in K$
+
+$f$ è continua  
+allora $\lim\limits_k f(x_{n_k}) = f(\overline{x})$
+
+ma $f(x_{n_k}) = y_{n_k}$  
+
+$\lim\limits_n y_n = \begin{cases} +\infty \\ sup(f(K)) \end{cases} \Rightarrow \lim\limits_k y_{n_k} = \begin{cases} +\infty \\ sup(f(K)) \end{cases}$
+
+È possibile che $\lim\limits_n y_n = +\infty$?
+
+No, perché $f(\overline{x}) \in \mathbb{R}$,  
+
+quindi $sup(f(K)) = f(\overline{x}) \Rightarrow \overline{x}$ è punto di massimo e $f(\overline{x})$ è il massimo.
+
+$\square$
+
+## Continuità uniforme
+
+**Osservazione**  
+$f: E \to \mathbb{R}$m $x_0 \in E$,  
+$f$ è continua in $x_0$ significa  
+$\boxed{\forall \varepsilon > 0}, \exists \delta > 0: \forall x \in E,$  
+$|x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \varepsilon$
+
+fisso $\varepsilon$ e trovo $\delta$ tale che $\dots$
+
+se ora cambio il punto $x_0$  
+e considero $x_1$ e $f$ è continua in $x_1$  
+$\boxed{\forall \varepsilon > 0}, \exists \delta > 0 \dots$
+
+in generale $\forall \varepsilon, \exists \delta$ però se cambio punto  
+e tengo fisso $\varepsilon$, $\delta$ potrebbe essere diverso
+
+se fissato $\varepsilon > 0$ c'è un $\delta$ che va bene per tutti i punti  
+la funzione è continua in tutti i punti, ma ha una proprietà in più.
+
+**Definizione**  
+Sia $f: E \to \mathbb{R}$,  
+$f$ si dice **uniformemente continua** se  
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x_1, x_2 \in E,$  
+$|x_1 - x_2| < \delta \Rightarrow |f(x_1) - f(x_2)| < \varepsilon$
+
+quindi $f$ uniformemente continua  
+$\Downarrow$  
+$f$ continua (in tutti i punti)
+
+## Teorema (Heine)
+
+Sia $f: [a, b] \to \mathbb{R}$ una funzione continua,  
+allora $f$ è uniformemente continua.  
+In generale le funzioni continue sugli insiemi compatti sono uniformemente continue.
+
+## Ultime osservazioni sulle funzioni continue
+
+**Teorema**  
+Sia $f: I \to J$, $I$ e $J$ intersezioni,  
+sia $f$ strettamente monotona e suriettiva,  
+allora $f$ è continua.
+
+**Corollario**  
+$f: I \to J$ e $f$ è strettamente crescente e suriettiva,  
+allora $f$ e $f^{-1}$ sono continue.
+
+**Teorema**  
+Sia $f: I \to J$, una funzione continua e iniettiva,  
+allora $f$ è strettamente crescente.
+
+## Formulario
 
 ### Formule goniometriche
 
 #### Addizione e sottrazione
 
+\
 $sin(\alpha + \beta) = sin(\alpha)cos(\beta) + cos(\alpha)sin(\beta)$  
 $sin(\alpha - \beta) = sin(\alpha)cos(\beta) - sin(\beta)cos(\alpha)$  
 $cos(\alpha + \beta) = cos(\alpha)cos(\beta) - sin(\alpha)sin(\beta)$  
@@ -2783,8 +3834,9 @@ $cot(\alpha - \beta) = \frac{cot(\alpha)cot(\beta) + 1}{cot(\alpha) - cot(\beta)
 
 #### Duplicazione
 
+\
 $sin(2\alpha) = 2sin(\alpha)cos(\alpha)$  
-$cos(2\alpha) = cos^2(\alpha) - sin^2(\alpha)$ 
+$cos(2\alpha) = cos^2(\alpha) - sin^2(\alpha)$
 
 $tan(2\alpha) = \frac{2tan(\alpha)}{1 - tan^2(\alpha)}$  
 
@@ -2792,16 +3844,18 @@ $cot(2\alpha) = \frac{cot^2(\alpha) - 1}{2cot^2(\alpha)}$
 
 #### Bisezione
 
-$sin(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 - \cos(\alpha)}{2}}$  
+\
+$sin(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 - \cos(\alpha)}{2}}$  
 
-$cos(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 + \cos(\alpha)}{2}}$  
+$cos(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 + \cos(\alpha)}{2}}$  
 
-$tan(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}}$
+$tan(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}}$
 
-$cot(\frac{\alpha}{2}) = \plusmn \sqrt{\frac{1 + \cos(\alpha)}{1 - \cos(\alpha)}}$
+$cot(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 + \cos(\alpha)}{1 - \cos(\alpha)}}$
 
 #### Prostaferesi
 
+\
 $sin(p) + sin(q) = 2sin(\frac{p + q}{2})cos(\frac{p - q}{2})$  
 
 $cos(p) + cos(q) = 2cos(\frac{p + q}{2})cos(\frac{p - q}{2})$  
@@ -2812,6 +3866,7 @@ $cos(p) - cos(q) = -2sin(\frac{p + q}{2})sin(\frac{p - q}{2})$
 
 #### Werner
 
+\
 $sin(\alpha)sin(\beta) = \frac{cos(\alpha - \beta) - cos(\alpha + \beta)}{2}$  
 
 $cos(\alpha)cos(\beta) = \frac{cos(\alpha - \beta) + cos(\alpha + \beta)}{2}$
@@ -2828,7 +3883,7 @@ $\lim\limits_{x \to 0} \frac{e^x - 1}{x} = 1$
 
 $\lim\limits_{x \to 0} \frac{a^x - 1}{x} = ln(a)$
 
-$\lim\limits_{x \to \plusmn \infty} (1 + \frac{1}{x})^x = e$
+$\lim\limits_{x \to \pm \infty} (1 + \frac{1}{x})^x = e$
 
 $\lim\limits_{x \to 0} \frac{(1 + x)^c - 1}{x} = c$
 
@@ -2842,12 +3897,124 @@ $\lim\limits_{x \to 0} \frac{arcsin(x)}{x} = 1$
 
 $\lim\limits_{x \to 0} \frac{arctg(x)}{x} = 1$
 
-$\lim\limits_{x \to \plusmn \infty} (1 + \frac{a}{x})^x = e^a$
+$\lim\limits_{x \to \pm \infty} (1 + \frac{a}{x})^x = e^a$
 
 $\lim\limits_{x \to 0} (1 + x)^{\frac{1}{x}} = e$
 
 $\lim\limits_{x \to 0} \frac{e^x - 1}{tg(x)} = 1$
-
+F
 $\lim\limits_{x \to 0} \frac{ln(cos(x))}{x^2} = -\frac{1}{2}$
 
 $\lim\limits_{x \to 0} \frac{1 - cos(x)}{x} = 0$
+
+### Derivate notevoli
+
+$(c \cdot f(x))' = c \cdot f'(x)$  
+$(f(x) \pm g(x))' = f'(x) \pm g'(x)$  
+$(f(x) \cdot g(x))' = f'(x) \cdot g(x) + f(x) \cdot g'(x)$  
+$(f(x) \cdot g(x) \cdot h(x))' = f'(x) \cdot g(x) \cdot h(x) + f(x) \cdot g'(x) \cdot h(x) + f(x) \cdot g(x) \cdot h'(x)$  
+$(\frac{1}{f(x)})' = - \frac{f'(x)}{f(x)^2}$  
+$(\frac{f(x)}{g(x)})' = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}$  
+$(f(x)^n)' = n \cdot f(x)^{n-1} \cdot f'(x)$  
+$(f[g(x)])' = g'(x) \cdot f'[g(x)]$  
+$(f(x)^{g(x)})' = f(x)^{g(x)} \cdot [g'(x) \cdot ln[f(x)] + g(x) \cdot \frac{f'(x)}{f(x)}]$  
+$(f^{-1}(y))' = [\frac{1}{f'(x)}], x = f^{-1}(y)$  
+
+$(c)' = 0$  
+$(x)' = 1$  
+$(x^n)' = n \cdot x^{n-1}$  
+$(\frac{1}{x})' = -\frac{1}{x^2}$  
+$(\frac{1}{x^n})' = \frac{-n}{x^{n+1}}$  
+$(\sqrt{x})' = \frac{1}{2 \sqrt{x}}$  
+$(\sqrt[n]{x})' = \frac{1}{n \cdot \sqrt[n]{x^{n-1}}}$  
+$(e^x)' = e^x$  
+$(a^x)' = a^x \cdot \ln(a)$  
+$(\ln(|x|))' = \frac{1}{x}$  
+$(log_{a}(x))' = \frac{1}{x \cdot ln(a)}$
+
+$(sin(x))' = cos(x)$  
+$(cos(x))' = -sin(x)$  
+$(tg(x))' = sec^2(x) = \frac{1}{cos^2(x)} = 1 + tg^2(x)$  
+$(cot(x))' = -csc^2(x) = - \frac{1}{sin^2(x)} = - 1 - cot^2(x)$  
+$(arcsin(x))' = \frac{1}{\sqrt{1 - x^2}}$  
+$(arccos(x))' = - \frac{1}{\sqrt{1 - x^2}}$  
+$(arctg(x))' = \frac{1}{1 + x^2}$  
+$(arccotg(x))' = - \frac{1}{1 + x^2}$
+
+$(csc(x))' = cot(x)$  
+$(sec(x))' = tg(x)$
+
+### Seno e coseno iperbolico
+
+$\sinh(x) = \frac{e^x - e^{-x}}{2}$  
+$\cosh(x) = \frac{e^x + e^{-x}}{2}$
+
+#### Derivate
+
+\
+$(\sinh(x))' = \cosh(x)$  
+$(\cosh(x))' = \sinh(x)$
+
+#### Integrali
+
+\
+$\displaystyle \int \sinh(x) \ dx = \cosh(x) + c$  
+$\displaystyle \int \cosh(x) \ dx = \sinh(x) + c$
+
+### Integrali notevoli
+
+$\displaystyle \int f(x)dx = F(x) + c \Leftrightarrow F'(x) = f(x)$  
+
+$\displaystyle \int_a^b f(x)dx = F(b) - F(a)$  
+
+$\displaystyle \int k \cdot f(x)dx = k \cdot \displaystyle \int f(x)dx$
+
+$\displaystyle \int [f(x) \pm g(x)]dx = \displaystyle \int f(x)dx \pm \displaystyle \int g(x)dx$
+
+$\displaystyle \int f'(x)dx = f(x) + c$
+
+$\displaystyle \int n \ dx = nx + c$
+
+$\displaystyle \int \frac{1}{x} \ dx = \ln(|x|) + c$
+
+$\displaystyle \int x^n \ dx = \frac{x^{n+1}}{n+1} + c$
+
+$\displaystyle \int e^x \ dx = e^x + c$
+
+$\displaystyle \int e^{kx} \ dx = \frac{e^{kx}}{k} + c$
+
+$\displaystyle \int a^x \ dx = \frac{a^x}{ln(a)} + c$
+
+$\displaystyle \int sin(x) \ dx = -cos(x) + c$
+
+$\displaystyle \int cos(x) \ dx = sin(x) + c$
+
+$\displaystyle \int (1 + tg^2(x)) \ dx = \displaystyle \int \frac{1}{cos^2(x)} \ dx = tg(x) + c$
+
+$\displaystyle \int (1 + \cot^2(x)) \ dx = \displaystyle \int \frac{1}{sin^2(x)} \ dx = - \cot(x) + c$
+
+$\displaystyle \int \frac{1}{sin(x)} \ dx = ln(|\frac{tg(x)}{2}|) + c$
+
+$\displaystyle \int \frac{1}{cos(x)} \ dx = ln(|\frac{tg(x)}{2} + \frac{\pi}{4}|) + c$
+
+$\displaystyle \int sin^2(x) \ dx = \frac{1}{2} (x - sin(x)cos(x)) + c$
+
+$\displaystyle \int cos^2(x) \ dx = \frac{1}{2} (x + sin(x)cos(x)) + c$
+
+### Cambio base logaritmi
+
+$\log_a(b) = \frac{\log_c(b)}{\log_c(a)}$
+
+### Prodotti notevoli
+
+$(a + b)^2 = a^2 + 2ab + b^2$  
+$(a - b)^2 = a^2 - 2ab + b^2$  
+$(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$  
+$(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$  
+$a^2 - b^2 = (a + b)(a - b)$  
+$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$  
+$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$  
+$(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ac$  
+$(a - b + c)^2 = a^2 + b^2 + c^2 - 2ab + 2bc - 2ac$  
+$(a + b)^n = \displaystyle\sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k$  
+ 

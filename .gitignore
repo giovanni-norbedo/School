@@ -243,3 +243,6 @@ pyrightconfig.json
 
 # EPUB
 epub/
+
+# pandoc
+pandoc/
