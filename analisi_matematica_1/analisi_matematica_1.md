@@ -3812,6 +3812,825 @@ allora $f$ e $f^{-1}$ sono continue.
 Sia $f: I \to J$, una funzione continua e iniettiva,  
 allora $f$ è strettamente crescente.
 
+## Calcolo differenziale
+
+**Osservazione**  
+Sia $t \to x(t)$ legge oraria  
+(funzione che associa al tempo $t$ la posizione $x(t)$ di un punto mobile su un asse)
+
+dati 2 istanti di tempo $t_1, t_2$,  
+velocità media $v_m (t_1, t_2) = \frac{x(t_2) - x(t_1)}{t_2 - t_1}$  
+chiamo velocità istantanea in $t_1$ il $\lim_{t_2 \to t_1} v_m(t_2, t_1)$
+
+**Definizione**  
+Sia $f : I \to \mathbb{R}$, $I$ intervallo di $\mathbb{R}$,  
+sia $x_0 \in I$,  
+chiamo rapporto incrementale, $R_{x_0}^f = \frac{f(x) - f(x_0)}{x - x_0}$  
+della funzione $f$, relativamente al punto $x_0$
+
+$R_{x_0}^f : I \smallsetminus \{x_0\} \to \mathbb{R}$  
+$x \mapsto R_{x_0}^f(x) = \frac{f(x) - f(x_0)}{x - x_0}$
+
+La chiamo anche **pendenza** (o **coefficiente angolare**)  
+della retta secante i punti $(x_0, f(x_0))$ e $(x, f(x))$  
+
+**Definizione**  
+Sia $f : I \to \mathbb{R}$, $x_0 \in I$,  
+chiamo **derivata** di $f$ in $x_0$,  
+il $\lim\limits_{x \to x_0} R_{x_0}^f(x)$  
+
+cioè $f'(x_0) = \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$  
+$f'(x_0)$ è la derivata di $f$ in $x_0$
+
+(naturalmente, se esiste il limite, lo chiamo derivata)
+
+**Definizione**  
+Sia $f : I \to \mathbb{R}$, $x_0 \in I$,  
+se esiste **finito** il $\lim\limits_{x \to x_0} R_{x_0}^f(x) = \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} = f'(x_0) \in \mathbb{R}$  
+dico che **$f$ è derivabile in $x_0$**.
+
+**Definizione**  
+$f : I \to \mathbb{R}$ si dice **derivabile**  
+se è derivabile in ogni punto dell'intervallo.
+
+**Definizione**  
+Sia $f : I \to \mathbb{R}$, derivabile,  
+chiamo (funzione) derivata la funzione  
+$f' : I \to \mathbb{R}$  
+$x \mapsto f'(x)$
+
+**Esempi dimostrati**
+
+- costante
+- identità
+- potenza n-esima
+- esponenziale
+- logaritmo
+- seno
+- coseno
+
+### Proprietà fondamentale
+
+**Teorema**  
+Sia $f: I \to \mathbb{R}$, $I$ intervallo, $x_0 \in I$,  
+sia $f$ derivabile in $x_0$,  
+allora $f$ continua in $x_0$
+
+(se $f$ è derivabile in $x_0$, allora $f$ è continua in $x_0$)
+
+**Dimostrazione**  
+Intanto $I$ intervallo e quindi tutti i suoi punti sono punti di accumulazione per $I$,  
+in particolare $x_0$  
+
+$f$ continua in $x_0$ $\Leftrightarrow$ $\lim\limits_{x \to x_0} f(x) = f(x_0)$ $\Leftrightarrow$ $\lim\limits_{x \to x_0} f(x) - f(x_0) = 0$
+
+per provare il teorema basta dimostrare che  
+$\lim\limits_{x \to x_0} f(x) - f(x_0) = 0$
+
+quindi  
+$\lim\limits_{x \to x_0} f(x) - f(x_0) = \lim\limits_{x \to x_0} \underbrace{\frac{f(x) - f(x_0)}{x - x_0}}_{f'(x_0) \in \mathbb{R}} \cdot \underbrace{(x - x_0)}_0 = 0$
+
+$\square$
+
+Vale il viceversa? NO
+
+Basta trovare un esempio di funzione continua che non è derivabile,  
+per esempio $|x|$ in $0$ è continua, ma  
+$R_{0}^{|x|} (x) = \frac{|x| - |0|}{x - 0} = \frac{|x|}{x} = \begin{cases} 1 & \text{se } x > 0 \\ -1 & \text{se } x < 0 \end{cases}$
+
+quindi $\lim\limits_{x \to 0^-} R_{0}^{|x|} (x) = -1 \neq \lim\limits_{x \to 0^+} R_{0}^{|x|} (x) = 1$
+
+**Osservazione**  
+$x \mapsto |x|$ non è derivabile in $0$  
+e se $x_0 \neq 0$ è derivabile? SI
+
+$(|x|)' = \begin{cases} 1 & \text{se } x > 0 \\ -1 & \text{se } x < 0 \end{cases}$
+
+in $0$ non c'è (la funzione non è derivabile)
+
+Ci sono funzioni che siano continue dappertutto e derivabili da nessuna parte? SI
+
+[Funzione di Weierstrass](https://it.wikipedia.org/wiki/Funzione_di_Weierstrass)
+
+[Curva di Koch](https://it.wikipedia.org/wiki/Curva_di_Koch)
+
+### Altre proprietà delle funzioni derivabili
+
+**Teorema**  
+Siano $f, g : I \to \mathbb{R}$, $x_0 \in I$,  
+siano $f, g$ derivabili in $x_0$,  
+allora $f + g, f - g, f \cdot g$ e, se $g(x_0) \neq 0$, $\frac{f}{g}$ sono derivabili  
+e  
+$(f \pm g)' = f' \pm g'$  
+$(f \cdot g)' = f' \cdot g + f \cdot g'$ (regola di Leibniz)  
+$(\frac{f}{g})' = \frac{f' \cdot g - f \cdot g'}{g^2}$
+
+**Dimostrazione**  
+$R_{x_0}^{f + g} (x) = \frac{(f(x) + g(x)) - (f(x_0) + g(x_0))}{x - x_0} = \frac{f(x) - f(x_0)}{x - x_0} + \frac{g(x) - g(x_0)}{x - x_0} = R_{x_0}^{f} (x) + R_{x_0}^{g} (x)$
+
+quindi se esiste finito $\lim\limits_{x \to x_0} R_{x_0}^{f} (x)$ e $\lim\limits_{x \to x_0} R_{x_0}^{g} (x)$,  
+allora esiste finito $\lim\limits_{x \to x_0} R_{x_0}^{f + g} (x)$ e vale $f'(x_0) + g'(x_0)$
+
+Per la moltiplicazione:
+
+$R_{x_0}^{f \cdot g} (x) = \frac{(f(x) \cdot g(x)) - (f(x_0) \cdot g(x_0))}{x - x_0} =$  
+$= \frac{f(x) \cdot g(x) - f(x) \cdot g(x_0) + f(x_0) \cdot g(x) - f(x_0) \cdot g(x_0)}{x - x_0} =$  
+$= f(x) \cdot \left( \frac{g(x) - g(x_0)}{x - x_0} \right) + g(x_0) \cdot \left( \frac{f(x) - f(x_0)}{x - x_0} \right) =$  
+$= f(x_0) \cdot g'(x_0) + g(x_0) \cdot f'(x_0)$  
+
+$f(x)$ diventa $f(x_0)$ perché $f$ derivabile $\Rightarrow$ $f$ continua
+
+quindi $\lim\limits_{x \to x_0} R_{x_0}^{f \cdot g} (x) = f(x_0) \cdot g'(x_0) + g(x_0) \cdot f'(x_0)$
+
+Analogamente per la divisione.
+
+$\square$
+
+### Teorema (derivata della funzione inversa)
+
+Sia $f : I \to J$ iniettiva, $x_0 \in I$,  
+$f$ sia derivabile in $x_0$ con $f'(x_0) \neq 0$
+
+Allora $f^{-1}$ è derivabile in $f(x_0)$ e si ha
+
+$(f^{-1})'(f(x_0)) = \frac{1}{f'(x_0)}$  
+
+**Dimostrazione**  
+Considero $R_{f(x_0)}^{f^{-1}} (y) = \frac{f^{-1}(y) - f^{-1}(f(x_0))}{y - f(x_0)} = \frac{f^{-1}(y) - x_0}{y - f(x_0)}$
+
+devo calcolare $\lim\limits_{y \to f(x_0)} \frac{f^{-1}(y) - x_0}{y - f(x_0)}$
+
+cambio la variabile nel limite
+
+$x = f^{-1}(y)$  
+$y = f(x)$  
+se $y \to f(x_0)$  
+allora $x \to x_0$
+
+$\lim\limits_{x \to x_0} \frac{f^{-1}(f(x)) - x_0}{f(x) - f(x_0)} = \lim\limits_{x \to x_0} \frac{x - x_0}{f(x) - f(x_0)} = \lim\limits_{x \to x_0} \frac{1}{\frac{f(x) - f(x_0)}{x - x_0}} = \frac{1}{f'(x_0)}$
+
+$\square$
+
+### Teorema (derivata composta)
+
+Sia $f : I \to \mathbb{R}$, sia $g : J \to \mathbb{R}$,  
+siano $f, g$ derivabili,  
+allora $(f \circ g)' = f'(g(x)) \cdot g'(x)$
+
+**Dimostrazione**  
+Definisco $h(x) = (f \circ g)(x) = f(g(x))$,  
+inizio dalla definizione di derivata  
+$h'(x) = R_{x_0}^h (x) = \lim\limits_{x \to x_0} \frac{h(x) - h(x_0)}{x - x_0} =$  
+$= \lim\limits_{x \to x_0} \frac{f(g(x)) - f(g(x_0))}{x - x_0} = \lim\limits_{x \to x_0} \frac{f(g(x)) - f(g(x_0))}{x - x_0} \cdot \frac{g(x) - g(x_0)}{g(x) - g(x_0)} =$  
+$= \lim\limits_{x \to x_0} \frac{f(g(x)) - f(g(x_0))}{g(x) - g(x_0)} \cdot \frac{g(x) - g(x_0)}{x - x_0} = R_{g(x_0)}^f (g(x)) \cdot R_{x_0}^g (x) = f'(g(x)) \cdot g'(x)$
+
+$\square$
+
+**Esempi**  
+
+- arctg
+- arcsin
+- arccos
+
+### Massimi e minimi di funzioni (derivabili)
+
+**Definizione**  
+Sia $f: E \to \mathbb{R}$, $x_0 \in E$, con $E \subset \mathbb{R}$,  
+$x_0$ si dice **punto di massimo (o di minimo) assoluto** (per $f$ su $E$)  
+se $\forall x \in E$, $f(x) \leq f(x_0)$  
+(oppure $f(x) \geq f(x_0)$)
+
+**Osservazione**  
+Il valore $f(x_0)$ per $x_0$ punto di massimo, si dice (valore) massimo di $f$  
+(si intenda massimo di $f(E)), analogo per il minimo.
+
+**Definizione**  
+Sia $f: E \to \mathbb{R}$, $x_0 \in E$, con $E \subset \mathbb{R}$,  
+$x_0$ si dice **punto di massimo (o di minimo) relativo**  
+se $\exists r > 0: \forall x \in \ ]x_0 - r, x_0 + r[ \ \cap E, f(x) \leq f(x_0)$  
+(oppure $f(x) \geq f(x_0)$)
+
+### Teorema di Fermat
+
+Sia $f: I \to \mathbb{R}$, $I$ intervallo, $x_0 \in I$,  
+
+se  
+i) $x_0$ sia un punto di massimo relativo  
+ii) $x_0$ un punto **interno** al dominio $I$  
+iii) in $x_0$, $f$ sia derivabile
+
+allora $f'(x_0) = 0$
+
+**Dimostrazione**  
+Supponiamo $x_0$ punto di massimo relativo interno  
+allora $\exists r > 0: \ ]x_0 - r, x_0 + r[ \ \subseteq I$,  
+e $\forall x \in \ ]x_0 - r, x_0 + r[, f(x) \leq f(x_0)$  
+
+sia $x \in \ ]x_0 - r, x_0[$  
+$R_{x_0}^f (x) = \frac{f(x) - f(x_0)}{x - x_0} \geq 0$,  
+(perché il nominatore è minore o uguale a zero, mentre il denominatore è minore di zero)  
+$\implies \lim\limits_{x \to x_0^-} R_{x_0}^f (x) \geq 0$  
+(per la permanenza del segno, esiste perché è derivabile)
+
+sia $x \in \ ]x_0, x_0 + r[$  
+$R_{x_0}^f (x) = \frac{f(x) - f(x_0)}{x - x_0} \leq 0$,  
+(perché il nominatore è minore o uguale a zero, mentre il denominatore è maggiore di zero)  
+$\implies \lim\limits_{x \to x_0^+} R_{x_0}^f (x) \leq 0$  
+
+ma il limite da destra e da sinistra devono essere uguali  
+$\implies f'(x_0) = 0$
+
+$\square$
+
+"Se $f$ è derivabile, in un punto di massimo o minimo relativo interno al dominio, la derivata è nulla."
+
+#### Applicazioni
+
+\
+Supponiamo di avere $f: [a, b] \to \mathbb{R}$,  
+che sia continua in $[a, b]$  
+che sia derivabile (almeno) su $]a, b[$
+
+Ha massimo (o minimo) assoluto? Sì, per Weierstrass
+
+Dove sono i punti di massimo (o minimo) assoluti?  
+Si devono cercare tra gli estremi $a, b$ e i punti interni in cui si annulla la derivata (per Fermat). I punti interni in cui la derivata è nulla si dicono **punti stazionari**.
+
+### Teorema di Rolle
+
+Sia $f: [a, b] \to \mathbb{R}$,  
+
+- $f$ continua su $[a, b]$
+- $f$ derivabile su $]a, b[$
+- $f(a) = f(b)$
+
+Allora $\exists \xi \in \ ]a, b[ \ : f'(\xi) = 0$
+
+**Dimostrazione**  
+Osservo che $f: [a, b] \to \mathbb{R}$ è continua  
+quindi posso applicare il teorema di Weierstrass  
+la funzione ha massimo e minimo assoluti
+
+distinguo due casi:
+
+$1)$ gli estremi $a$ e $b$ sono punti di massimo e di minimo.  
+Cioè $a$ punto di massimo, $b$ punto di minimo  
+oppure $a$ punto di minimo, $b$ punto di massimo  
+siccome $f(a) = f(b)$, questo avviene solo se $f$ è costante.
+
+In questo caso, $f'(x) = 0$ per ogni $x \in ]a, b[$  
+
+$2)$ $f$ non è costante, allora almeno uno tra i punti di massimo o punti di minimo è punto interno,  
+posso applicare il teorema di Fermat  
+un punto di massimo o di minimo interno in cui la $f$ sia derivabile,  
+la derivata è uguale a zero.
+
+$\square$
+
+### Teorema di Cauchy
+
+Supponiamo $g, f : [a, b] \to \mathbb{R}$,  
+$f, g$ continue su $[a, b]$,  
+$f, g$ derivabili su $]a, b[$
+
+supponiamo che $\forall x \in \ ]a, b[ \ : g'(x) \neq 0$
+
+allora $g(b) \neq g(a)$ e $\exists \xi \in \ ]a, b[ \ :$  
+
+$\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$
+
+**Dimostrazione**  
+Provo che $g(b) \neq g(a)$  
+infatti se fosse $g(b) = g(a)$, potrei applicare Rolle alla funzione $g$  
+e ci sarebbe $\xi \in \ ]a, b[ \ : g'(\xi) = 0$,  
+ma per ipotesi $g'(x) \neq 0, \forall x$.
+
+Ora considero la funzione
+
+${\Large \Phi} (x) = f(x) \Big(g(b) - g(a) \Big) - g(x) \Big(f(b) - f(a) \Big)$
+
+${\Large \Phi} : [a, b] \to \mathbb{R}$,  
+${\Large \Phi}$ è continua su $[a, b]$,  
+${\Large \Phi}$ è derivabile su $]a, b[$
+
+${\Large \Phi} (a) = f(a) \Big(g(b) - g(a) \Big) - g(a) \Big(f(b) - f(a) \Big) =$  
+$= f(a) g(b) - f(a) g(a) - g(a) f(b) + g(a) f(a) = f(a) g(b) - g(a) f(b)$
+
+${\Large \Phi} (b) = f(b) \Big(g(b) - g(a) \Big) - g(b) \Big(f(b) - f(a) \Big) =$  
+$= f(b) g(b) - f(b) g(a) - g(b) f(b) + g(b) f(a) = g(b) f(a) - f(b) g(a)$
+
+$\Rightarrow {\Large \Phi} (a) = {\Large \Phi} (b)$
+
+Applico Rolle a ${\Large \Phi}$ e ottengo  
+$\exists \xi \in \ ]a, b[ \ : {\Large \Phi}' (\xi) = 0$
+
+${\Large \Phi}' (x) = f'(x) \Big(g(b) - g(a) \Big) - g'(x) \Big(f(b) - f(a) \Big)$  
+quindi $f'(\xi) \Big(g(b) - g(a) \Big) - g'(\xi) \Big(f(b) - f(a) \Big) = 0$
+
+quindi
+
+$\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$
+
+$\square$
+
+**Osservazione**  
+Se nel teorema di Cauchy non ho l'ipotesi  
+$g'(x) \neq 0, \forall x$  
+arrivo comunque a dire che $\exists \xi \in \ ]a, b[ \ :$  
+$f'(\xi) \Big(g(b) - g(a) \Big) = g'(\xi) \Big(f(b) - f(a) \Big)$
+
+### Teorema di Lagrange
+
+Sia $f : [a, b] \to \mathbb{R}$,  
+$f$ continua su $[a, b]$,  
+$f$ derivabile su $]a, b[$
+
+allora $\exists \xi \in \ ]a, b[ \ :$  
+
+$f'(\xi) = \dfrac{f(b) - f(a)}{b - a}$
+
+**Dimostrazione**  
+Basta usare Cauchy con $g(x) = x$
+
+$\exists \xi : \dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)} = \dfrac{f(b) - f(a)}{b - a}$
+
+$\square$
+
+### Conseguenze del teorema di Lagrange
+
+$1)$ Derivate nulle e funzioni costanti
+
+**Teorema**  
+Supponiamo che $f: I \to \mathbb{R}$ derivabile,  
+se $\forall x \in I, f'(x) = 0$, allora $f$ è costante.
+
+**Dimostrazione**  
+Per assurdo, $f$ non sia costante  
+$\exists x_1, x_2 \in I : f(x_1) \neq f(x_2)$
+
+Applico Lagrange a $f_{| [x_1, x_2]}$  
+lo posso fare perché $[x_1, x_2] \subseteq I$  
+e $f$ è derivabile (e quindi continua) su $I$.
+
+Allora dovrebbe essere $\exists \xi \in \ ]x_1, x_2[ \ : f'(\xi) = 0$  
+
+però $f'(\xi) = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}$  
+
+e $f(x_1) - f(x_2) \neq 0$ e $x_2 - x_1 \neq 0$
+
+quindi $\exists \xi \in \ ]x_1, x_2[ \ : f'(\xi) \neq 0$
+
+Impossibile.
+
+$\square$
+
+**Osservazione**  
+Per essere vero deve essere definita su un intervallo.
+
+$2)$ Crescenza e derivate
+
+**Teorema**  
+Sia $f : I \to \mathbb{R}$ derivabile, $I$ intervallo,  
+
+$f$ è crescente su $I$ $\Leftrightarrow$ $\forall x \in I, f'(x) \geq 0$
+
+**Dimostrazione**  
+"$\Rightarrow$"  
+$f$ sia crescente, fisso $x_0 \in I$
+
+considero $R_{x_0}^f (x) = \frac{f(x) - f(x_0)}{x - x_0}$
+
+se $x > x_0$,  
+$R_{x_0}^f (x) = \dfrac{\overbrace{f(x) - f(x_0)}^{\geq 0}}{\underbrace{x - x_0}_{> 0}} \geq 0$
+
+se $x < x_0$,  
+$R_{x_0}^f (x) = \dfrac{\overbrace{f(x_0) - f(x)}^{\leq 0}}{\underbrace{x - x_0}_{< 0}} \geq 0$
+
+$f$ crescente $\Rightarrow$ $R_{x_0}^f (x) \geq 0$, $\forall x \neq x_0$
+
+ora $f'(x_0) = \lim\limits_{x \to x_0} R_{x_0}^f (x) \geq 0$  
+per la permanenza del segno
+
+"$\Leftarrow$"  
+Supponiamo $\forall x \in I, f'(x) \geq 0$
+
+per assurdo suppongo $f$ non sia crescente,  
+applico Lagrange a $f_{| [x_1, x_2]}$  
+e trovo $\xi$ tale che  
+
+$f'(\xi) = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} < 0$
+
+Impossibile.
+
+$\square$
+
+### Asintoti
+
+**Definizione**  
+Se $\lim\limits_{x \to -\infty} f(x) = c$ oppure $\lim\limits_{x \to +\infty} f(x) = c$  
+diciamo che $y = c$ è **asintoto orizzontale** a $-\infty$ o a $+\infty$.
+
+Se $\lim\limits_{x \to x_0} f(x) = \pm \infty$  
+allora diciamo che $x = x_0$ è un **asintoto verticale**.
+
+Se esistono $m, q \in \mathbb{R}$ tali che  
+$\lim\limits_{x \to +\infty} f(x) - (mx + q) = 0$ oppure  
+$\lim\limits_{x \to -\infty} f(x) - (mx + q) = 0$  
+allora $y = mx + q$ è **asintoto obliquo** a $+\infty$ o a $-\infty$.
+
+**Test per gli asintoti**  
+Se $\lim\limits_{x \to +\infty} f(x) = +\infty$  
+
+si vede se $\lim\limits_{x \to +\infty} \frac{f(x)}{x}$ esiste finito  
+se sì, chiamo $m$ tale limite  
+
+si vede se $\lim\limits_{x \to +\infty} f(x) - m x = 0$ esiste finito  
+se sì, chiamo $q$ tale limite  
+
+allora $y = mx + q$ è **asintoto obliquo** a $+\infty$.
+
+### Derivate successive
+
+**Definizione**  
+Sia $f : I \to \mathbb{R}$, $I$ intervallo, $f$ sia derivabile,  
+ha senso considerare la funzione derivata  
+$f' : I \to \mathbb{R}$  
+$x \mapsto f'(x)$
+
+se anche $f'$ è derivabile,  
+$(f')'$ la chiamo **derivata seconda**  
+e la indico con $f''$ o con $f^{(2)}$.
+
+In questo modo definiamo $f^{(k)}$ (derivata di ordine $k$)  
+oppure la derivata di $f^{(k - 1)}$ (derivata di ordine $k - 1$).
+
+Infine se $f$ è derivabile e la derivata è continua  
+dico che $f$ è di classe $\mathscr{C}^1$.
+
+Se $f$ è derivabile fino all'ordine $k$ e  
+$f, f', f'', \dots, f^{(k)}$ sono tutte continue,  
+$f$ si dice di classe $\mathscr{C}^k$.
+
+Se $f$ è derivabile per qualunque ordine,  
+si dice di classe $\mathscr{C}^{\infty}$.
+
+### Regola di de l'Hôpital
+
+**Teorema**  
+Siano $f, g : [a, b[ \ \to \mathbb{R}$, $a, b \in \mathbb{R}$, $a < b$,  
+$f, g$ siano derivabili e  
+supponiamo che  
+$\forall x \in \ ]a, b[ \ , g'(x) \neq 0$  
+supponiamo che  
+$\lim\limits_{x \to b^-} f(x) = \lim\limits_{x \to b^-} g(x)$
+
+se $\lim\limits_{x \to b^-} \frac{f'(x)}{g'(x)}$ esiste e vale $L$, con $L \in \mathbb{\tilde{R}}$
+
+allora $\lim\limits_{x \to b^-} \frac{f(x)}{g(x)}$ esiste e vale $L$.
+
+**Dimostrazione**  
+Per comodità prolungo $f$ e $g$ in $b$,  
+ponendole $f(b) = g(b) = 0$  
+(ora sono continue in $b$ e derivabili in $]a, b[$ ).
+
+Osservo che $g'(x) \neq 0$ per $x \in \ ]a, b[$,  
+allora non ci può essere un $x_0 \in \ ]a, b[$ in cui $g(x_0) = 0$,  
+poiché altrimenti per Rolle $g'(x) = 0$ da qualche parte,  
+mentre $g'(x) \neq 0$ per ogni $x$ per ipotesi.
+
+Quindi ha senso considerare $\frac{f(x)}{g(x)}$ in $]a, b[$,  
+
+so che $\lim\limits_{x \to b^-} \frac{f'(x)}{g'(x)} = L$ (supponiamo $L \in \mathbb{R})  
+quindi $\forall \varepsilon > 0, \exists \delta > 0: \forall x \in \ ]a, b[$,  
+$b - \delta < x < b \Rightarrow |\frac{f'(x)}{g'(x)} - L| < \varepsilon$  
+
+ora considero $x \in \ ]b - \delta, b[$  
+applico il teorema di Cauchy a $f,g$ su $[x, b]$  
+allora $\exists \xi \in ]x, b[ \ :$  
+
+$\frac{f'(\xi)}{g'(\xi)} = \frac{f(b) - f(x)}{g(b) - g(x)} = \frac{-f(x)}{-g(x)} = \frac{f(x)}{g(x)}$
+
+$b - \delta < x < \xi < b$ quindi $b - \delta < \xi < b$
+
+quindi $|\frac{f'(\xi)}{g'(\xi)} - L| < \varepsilon$
+
+metto tutto assieme  
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x \in \ ]a, b[$,  
+$b - \delta < x < b \Rightarrow |\frac{f(x)}{g(x)} - L| < \varepsilon$  
+$\Updownarrow$  
+$\lim\limits_{x \to b^-} \frac{f(x)}{g(x)} = L$
+
+$\square$
+
+**Osservazione**  
+Vale anche se al posto di $b$ c'è $+\infty$  
+$f, g : [a, +\infty[ \ \to \mathbb{R}$ derivabili e $\forall x, g'(x) \neq 0$  
+$\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to +\infty} g(x) = 0$  
+se $\lim\limits_{x \to +\infty} \frac{f'(x)}{g'(x)} = L$  
+allora $\lim\limits_{x \to +\infty} \frac{f(x)}{g(x)} = L$
+
+**Osservazione**  
+Vale anche se $\lim\limits_{x \to b^-} f(x) = \lim\limits_{x \to b^-} g(x) = \pm \infty$  
+se $\lim\limits_{x \to b^-} \frac{f'(x)}{g'(x)} = L$  
+allora $\lim\limits_{x \to b^-} \frac{f(x)}{g(x)} = L$
+
+**Osservazione**  
+Vale anche se $\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to +\infty} g(x) = \pm \infty$  
+se $\lim\limits_{x \to b^-} \frac{f'(x)}{g'(x)} = L$  
+allora $\lim\limits_{x \to b^-} f(x) = \lim\limits_{x \to b^-} g(x) = \pm \infty$
+
+### Funzioni convesse e concave
+
+![funzione convessa](../img/funzione_convessa.png)
+
+**Osservazione**  
+2 punti $(x_1, y_1)$ e $(x_2, y_2)$
+
+Come rappresento i punti del segmento di vertici $(x_1, y_1)$ e $(x_2, y_2)$?
+
+Vettore $(x_2 - x_1, y_2 - y_1)$  
+vettore $\lambda (x_2 - x_1, y_2 - y_1) =$  
+$= \Big(\lambda(x_2 - x_1), \lambda(y_2 - y_1)\Big)$  
+dove $\lambda \in [0, 1]$
+
+Tutti i punti del segmento di vertici $(x_1, y_1)$ e $(x_2, y_2)$  
+li ottengo come $(x_1, y_1) + \Big(\lambda(x_2 - x_1), \lambda(y_2 - y_1)\Big) =$  
+$= \Big(x_1 + \lambda(x_2 - x_1), y_1 + \lambda(y_2 - y_1)\Big) =$  
+$= \Big((1 - \lambda)x_1 + \lambda x_2, (1 - \lambda)y_1 + \lambda y_2\Big)$, con $\lambda \in [0, 1]$
+
+equivalente $\lambda \in [0, 1]$,  
+$\Big(\lambda x_1 + (1 - \lambda) x_2, \lambda y_1 + (1 - \lambda) y_2\Big)$  
+sono tutti i punti del segmento
+
+**Definizione**  
+Sei $f : I \to \mathbb{R}$, $I$ intervallo,  
+$f$ si dice **convessa** (su $I$) se  
+$\forall x_1, x_2 \in I (con $x_1 < x_2$)$, e $\forall x \in [0, 1]$  
+$f(\gamma x_1 + (1 - \gamma)) \leq \gamma f(x_1) + (1 - \gamma) f(x_2)$
+
+quindi $f$ convessa significa, presi due punti sul grafico,  
+il segmento che li congiunge sta tutto sopra il grafico.
+
+Se $-f$ è convessa, diremo che $f$ è concava.
+
+![funzione concava](../img/funzione_concava.png)
+
+**Teorema**  
+Sia $f : I \to \mathbb{R}$, $I$ intervallo,  
+sono equivalenti:
+
+$1)$ $f$ è convessa  
+$2)$ $\forall x_1, x_2, x_3 \in I$ con $x_1 < x_2 < x_3$  
+
+$\frac{f(x_2) - f(x_1)}{x_2 - x_1} \leq \frac{f(x_3) - f(x_1)}{x_3 - x_1} \leq \frac{f(x_3) - f(x_2)}{x_3 - x_2}$
+
+$3)$ $\forall x_1, x_2, x_3 \in I$ con $x_1 < x_2 < x_3$  
+
+$\frac{f(x_2) - f(x_1)}{x_2 - x_1} \leq \frac{f(x_3) - f(x_2)}{x_3 - x_2}$
+
+**Osservazione**  
+$\Big( 1) \Leftrightarrow 2) \Leftrightarrow 3)\Big) \Leftrightarrow \Big( 1) \Rightarrow 2) \Rightarrow 3 \Rightarrow 1) \Big)$
+
+**Dimostrazione (idea)**  
+$1) \Rightarrow 2)$  
+$f$ convessa $\Rightarrow$ la condizione $2)$
+
+prendo $x_1 < x_2 < x_3$
+
+$x_2 = \lambda x_1 + (1 - \lambda) x_3 = \lambda (x_1 - x_3) + x_3$  
+$\lambda (x_1 - x_3) = x_3 - x_2$
+
+$\lambda = \frac{x_3 - x_2}{x_3 - x_1}$  
+
+$1 - \lambda = \frac{x_2 - x_1}{x_3 - x_1}$
+
+quindi applico la condizione di convessità a $x_1$ e $x_3$  
+con $\lambda = \frac{x_3 - x_2}{x_3 - x_1}$  
+
+$f \Big(\lambda x_1 + (1 - \lambda) x_3 \Big) \leq \lambda f(x_1) + (1 - \lambda) f(x_3)$
+
+$f(x_2) \leq \frac{x_3 - x_2}{x_3 - x_1} f(x_1) + \frac{x_2 - x_1}{x_3 - x_1} f(x_3)$
+
+$(x_3 - x_1) f(x_2) \leq (x_3 - x_2) f(x_1) + (x_2 - x_1) f(x_3)$
+
+$(x_3 - x_1) f(x_2) - (x_3 - x_1) f(x_1) \leq (x_3 - x_2) f(x_1) + (x_2 - x_1) f(x_3) - (x_3 - x_1) f(x_1)$
+
+$(x_3 - x_1) \Big( f(x_2) - f(x_1) \Big) \leq (-x_2 + x_1) f(x_1) + (x_2 - x_1) f(x_3)$
+
+$(x_3 - x_1) \Big( f(x_2) - f(x_1) \Big) \leq \Big(f(x_3) - f(x_1) \Big) (x_2 - x_1)$
+
+$\frac{f(x_2) - f(x_1)}{x_2 - x_1} \leq \frac{f(x_3) - f(x_1)}{x_3 - x_1}$  
+primo passo della $2)$  
+in modo analogo ottengo la seconda parte di $2)$
+
+$2) \Rightarrow 3)$  
+Ovvio.
+
+$3) \Rightarrow 1)$  
+
+$\frac{f(x_2) - f(x_1)}{x_2 - x_1} \leq \frac{f(x_3) - f(x_2)}{x_3 - x_2}$
+
+devo provare che $\forall x_1, x_2, \forall \lambda \in [0, 1]$  
+$f \Big(\lambda x_1 + (1 - \lambda) x_2 \Big) \leq \lambda f(x_1) + (1 - \lambda) f(x_2)$
+
+si scrive $x_1 < \lambda x_1 + (1 - \lambda) x_2 < x_2$  
+si applica la $3)$
+
+**Corollario**  
+$f : I \to \mathbb{R}$, $f$ derivabile fino al secondo ordine  
+$f$ convessa $\Leftrightarrow$ $f'$ crescente $\Leftrightarrow$ $\forall x \in I, f''(x) \geq 0$ $\Leftrightarrow$ $\forall x_0 \in I$, la tangente in $x_0$ sta sotto al grafico (è la funzione $x \mapsto f(x_0) + f'(x_0)(x - x_0)$)
+
+**Teorema**  
+$f : I \to \mathbb{R}$, $f$ derivabile  
+$f$ convessa $\Leftrightarrow$ $f'$ è crescente
+
+**Dimostrazione (idea)**  
+"$\Leftarrow$"  
+Supponiamo $f'$ crescente,  
+prendiamo $x_1 < x_2 < x_3$, con $x_1, x_2, x_3 \in I$  
+per Lagrange  
+$\frac{f(x_2) - f(x_1)}{x_2 - x_1} = f'(\xi_1)$, con $x_1 < \xi_1 < x_2$  
+per Lagrange  
+$\frac{f(x_3) - f(x_2)}{x_3 - x_2} = f'(\xi_2)$, con $x_2 < \xi_2 < x_3$  
+ma $\xi_1 < \xi_2 \Rightarrow f'(\xi_1) \leq f'(\xi_2)$  
+quindi $\frac{f(x_2) - f(x_1)}{x_2 - x_1} \leq \frac{f(x_3) - f(x_2)}{x_3 - x_2}$  
+perciò $f$ convessa per $3)$.
+
+"$\Rightarrow$"  
+Guardando i rapporti incrementali si prova che  
+$f'(x_1) \leq f'(x_2)$, quando $x_1 \leq x_2$.
+
+$\square$
+
+### Punti di flesso
+
+**Definizione**  
+Supponiamo che $f : I \to \mathbb{R}$, $I$ intervallo,  
+sia $x_0 \in I$, supponiamo che $f$ sia continua in $x_0$,  
+
+$x_0$ si dice punto di flesso se  
+
+$$
+\begin{rcases}
+   \text{in } I \cap \ ]-\infty, x_0[ & f \text{ è convessa} \\
+   \text{in } I \cap \ ]x_0, +\infty[ & f \text{ è concava}
+\end{rcases} \text{ oppure viceversa}
+$$
+
+**Osservazione**  
+Se $f : I \to \mathbb{R}$, $I$ intervallo, $f derivabile fino al secondo ordine,  
+e prima di $x_0$, $f''(x) \leq 0$ e dopo $x_0$, $f''(x) \geq 0$, o viceversa,  
+$x_0$ è punto di flesso.
+
+## Formula di Taylor
+
+**Osservazione**  
+Funzione derivabile in $x_0$ $\Rightarrow$ esiste la tangente al grafico  
+$y = f'(x_0)(x - x_0) + f(x_0)$
+
+### Lemma di Peano
+
+Sia $f : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
+sia $f$ derivabile fino all'ordine $n$ in $I$,  
+supponiamo $f(x_0) = 0, f'(x_0) = 0, f''(x_0) = 0, \ldots, f^{(n)}(x_0) = 0$  
+
+allora $\lim\limits_{x \to x_0} \dfrac{f(x)}{(x - x_0)^n} = 0$
+
+**Dimostrazione**  
+Voglio calcolare $\lim\limits_{x \to x_0} \frac{f(x)}{(x - x_0)^n}$
+
+$\lim\limits_{x \to x_0} f(x) = 0$  
+$\lim\limits_{x \to x_0} (x - x_0)^n = 0$
+
+posso applicare Hopital,  
+$\stackrel{H}{\Leftarrow} \lim\limits_{x \to x_0} \frac{f'(x)}{n (x - x_0)^{n - 1}}$  
+resta sempre una forma indeterminata $0 \over 0$,  
+continuo ad applicare Hopital  
+$\stackrel{H}{\Rightarrow} \lim\limits_{x \to x_0} \frac{f''(x)}{n (n - 1) (x - x_0)^{n - 2}}$  
+$\stackrel{H}{\Rightarrow} \lim\limits_{x \to x_0} \frac{f^{(n - 1)}(x)}{n (n - 1) (n - 2) \ldots 2 (x - x_0)}$
+
+trovo che
+
+$\lim\limits_{x \to x_0} \dfrac{f(x)}{(x - x_0)^n} = \lim\limits_{x \to x_0} \dfrac{1}{n!} \dfrac{f^{(n - 1)}(x)}{(x - x_0)} = \lim\limits_{x \to x_0} \dfrac{1}{n!} \boxed{\dfrac{f^{(n - 1)}(x) - f^{(n - 1)}(x_0)}{(x - x_0)}}$  
+
+la parte evidenziata è $R_{x_0}^{f^{(n - 1)}} (x)$ che è uguale a zero, perciò  
+
+$\lim\limits_{x \to x_0} \dfrac{f^{(n - 1)}(x) - f^{(n - 1)}(x_0)}{(x - x_0)} = f^{(n)}(x_0) = 0$  
+
+$\square$
+
+### Formula di Taylor con il resto di Peano
+
+**Teorema**  
+Sia $g : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
+sia $g$ derivabile fino all'ordine $n$ in $I$,  
+allora $\forall x \in I \smallsetminus \{x_0\}$,  
+
+$g(x) = g(x_0) + g'(x_0)(x - x_0) + \frac{1}{2!} g''(x_0)(x - x_0)^2 + \frac{1}{3!} g^{(3)}(x_0)(x - x_0)^3 + \ldots + \frac{1}{n!} g^{(n)}(x_0)(x - x_0)^n + \underbrace{r_n (x_0, x)}_{\text{resto di Peano}}$  
+
+(polinomio di Taylor di grado $n$ con resto nella forma di Peano)
+
+$r_n (x_0, x)$ è il resto di Peano,  
+dove $\lim\limits_{x \to x_0} \frac{r_n (x_0, x)}{(x - x_0)^n} = 0$
+
+**Dimostrazione**  
+Chiamo $f(x) = g(x) - \Big( g(x_0) + g'(x_0)(x - x_0) + \ldots + \frac{1}{n!} g^{(n)}(x_0)(x - x_0)^n \Big)$  
+questa è derivabile fino all'ordine $n$  
+$f(x_0) = g(x_0) - \Big( g(x_0) + g'(x_0)(x_0 - x_0) + \ldots + \frac{1}{n!} g^{(n)}(x_0)(x_0 - x_0)^n \Big) =$  
+$= g(x_0) - g(x_0) = 0$  
+
+$f'(x_0) = g'(x_0) - \Big( 0 + g'(x_0) + 0 + \dots \Big)$
+
+$f''(x_0) = g''(x_0) - \Big( 0 + 0 + g''(x_0) + \frac{1}{3}g'''(x_0)(x - x_0) + \dots + * (x - x_0)^{n - 2} \Big) = 0$
+
+$f^{(n)}(x_0) = 0$
+
+Posso applicare il lemma di Peano, ho  
+$\lim\limits_{x \to x_0} \frac{g(x) - \Big( g(x_0) + \dots + \frac{1}{n!} g^{(n)}(x_0)(x - x_0)^n \Big)}{(x - x_0)^n} = 0$
+
+$\square$
+
+### Lemma di Lagrange
+
+Sia $f : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
+$f$ derivabile fino all'ordine $n + 1$,  
+sia $f(x_0) = f'(x_0) = f''(x_0) = \ldots = f^{(n + 1)}(x_0)$,
+
+allora $\forall x \in I \smallsetminus \{x_0\}$,  
+$\exists \xi \in \ ]x_0, x[$ (oppure $\xi \in \ ]x, x_0[$)  
+tale che  
+$\dfrac{f(x)}{(x - x_0)^{n + 1}} = \dfrac{f^{(n + 1)}(\xi)}{(n + 1)!}$
+
+**Dimostrazione**  
+Applicando Cauchy, con $x_0 < \xi < x$  
+$\frac{f(x)}{(x - x_0)^{n + 1}} = \frac{f(x) - f(x_0)}{(x - x_0)^{n + 1} - (x_0 - x_0)^{n + 1}} = \frac{f'(\xi_1)}{(n + 1)(\xi_1 - x_0)^n}$  
+
+applicando nuovamente Cauchy, con $x_0 < \xi_1 < \xi_2 < x$  
+$= \frac{f'(\xi) - f'(x_0)}{(n + 1) \Big( (\xi - x_0)^n - (x_0 - x_0)^n \Big)} = \frac{f''(\xi_2)}{(n + 1) n (\xi_2 - x_0)^{n - 1}}$  
+
+applicando nuovamente Cauchy, con $x_0 < \xi_1 < \xi_2 < x$  
+$= \frac{f''(\xi_2) - f''(x_0)}{(n + 1) n \Big( (\xi_2 - x_0)^{n - 1} - (x_0 - x_0)^{n - 1} \Big)} = \frac{f'''(\xi_3)}{(n + 1) n (n - 1) (\xi_3 - x_0)^{n - 2}}$
+
+sempre applicando Cauchy, vado avanti fino a  
+$\frac{f^{(n)}(\ni_n)}{(n + 1)! (\xi_n - x_0)}$
+
+$\frac{f(x)}{(x - x_0)^{n + 1}} = \frac{f^{(n)}(\xi_n)}{(n + 1)! (\xi_n - x_0)} = \frac{1}{(n + 1)!} \frac{f^{(n)}(\xi_n) - f^{(n)}(x_0)}{(\xi_n - x_0)}$  
+
+applico Lagrange e ottengo
+
+$= \frac{1}{(n + 1)!} f^{(n + 1)}(\xi_{n + 1})$,  
+
+con $x_0 < \xi_{n + 1} < \xi_n < \dots < x$  
+
+$\square$
+
+### Formula di Taylor con il resto di Lagrange
+
+**Teorema**  
+Sia $f : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
+sia $f$ derivabile fino all'ordine $n + 1$,  
+allora $\forall x \in I \smallsetminus \{x_0\}$,  
+$\exists \xi \in \ ]x_0, x[$ (oppure $\xi \in \ ]x, x_0[$)  
+tale che  
+
+$f(x) = f(x_0) + \dfrac{f'(x_0)}{1!} (x - x_0) + \dfrac{f''(x_0)}{2!} (x - x_0)^2 + \ldots + \dfrac{f^{(n)}(x_0)}{n!} (x - x_0)^n + \underbrace{\dfrac{f^{(n + 1)}(x_0)}{(n + 1)!} (x - x_0)^{n + 1}}_{\text{resto di Lagrange}}$  
+
+(polinomio di Taylor con resto nella forma di Lagrange)
+
+**Dimostrazione**  
+$f$ è derivabile fino all'ordine $n + 1$
+
+scrivo $g(x) = f(x) - \Big( f(x_0) + \dfrac{f'(x_0)}{1!} (x - x_0) + \dfrac{f''(x_0)}{2!} (x - x_0)^2 + \ldots + \dfrac{f^{(n)}(x_0)}{n!} (x - x_0)^n \Big)$
+
+ora la $g$ è derivabile fino all'ordine $n + 1$  
+
+$g(x_0) = 0$  
+$g'(x) = f'(x) - \Big( 0 + f'(x_0) + \dfrac{f''(x_0)}{2!} 2 (x - x_0) + \dots \Big)$  
+$g'(x_0) = 0$
+
+facendo i conti  
+$g''(x_0) = 0, g^{(3)}(x_0) = 0, \dots, g^{(n)}(x_0) = 0$
+
+Applico il lemma di Lagrange a $g$  
+
+$g(x) = \dfrac{g^{n + 1} (\xi)}{(n + 1)!} (x - x_0)^{n + 1}$
+
+quindi  
+
+$f(x) = f(x_0) + \dfrac{f'(x_0)}{1!} (x - x_0) + \dfrac{f''(x_0)}{2!} (x - x_0)^2 + \ldots + \dfrac{f^{(n)}(x_0)}{n!} (x - x_0)^n + \boxed{\dfrac{g^{(n + 1)}(\xi)}{(n + 1)!} (x - x_0)^{n + 1}}$
+
+**Osservazione**  
+$g(x) = f(x) - (\text{polinomio di Taylor})$  
+$g^{(n + 1)}(x) = f^{(n + 1)}(x) - (\text{polinomio di grado } n)$  
+$(\text{polinomio di grado } n) = 0$
+$g^{(n + 1)}(x) = f^{(n + 1)}(x)$
+
+$\square$
+
+## Calcolo integrale
+
+...
+
 ## Formulario
 
 ### Formule goniometriche
@@ -4017,4 +4836,30 @@ $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$
 $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ac$  
 $(a - b + c)^2 = a^2 + b^2 + c^2 - 2ab + 2bc - 2ac$  
 $(a + b)^n = \displaystyle\sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k$  
- 
+
+### Taylor
+
+$$
+\begin{array}{ll}
+    \dfrac{1}{1-x} &= \displaystyle\sum_{n = 0}^{\infty} x^n                                = 1+x+x^2+x^3+\ldots                                                  \\
+    e^x            &= \displaystyle\sum_{n = 0}^{\infty} \dfrac{x^n}{n !}                   = 1+\dfrac{x}{1 !}+\dfrac{x^2}{2 !}+\dfrac{x^3}{3 !}+\ldots           \\
+    \sin x         &= \displaystyle\sum_{n = 0}^{\infty}(-1)^n \dfrac{x^{2 n+1}}{(2 n+1) !} = x-\dfrac{x^3}{3 !}+\dfrac{x^5}{5 !}-\dfrac{x^7}{7 !}+\ldots         \\
+    \cos x         &= \displaystyle\sum_{n = 0}^{\infty}(-1)^n \dfrac{x^{2 n}}{(2 n) !}     = 1-\dfrac{x^2}{2 !}+\dfrac{x^4}{4 !}-\dfrac{x^6}{6 !}+\ldots         \\
+    \tan -1 x      &= \displaystyle\sum_{n = 0}^{\infty}(-1)^n \dfrac{x^{2 n+1}}{2 n+1}     = x-\dfrac{x^3}{3}+\dfrac{x^5}{5}-\dfrac{x^7}{7}+\ldots               \\
+    \ln (1+x)      &= \displaystyle\sum_{n = 1}^{\infty}(-1)^{n-1} \dfrac{x^n}{n}           = x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\dfrac{x^4}{4}+\ldots               \\
+    (1+x)^k        &= \displaystyle\sum_{n = 0}^{\infty}(k) x^n                             = 1+k x+\dfrac{k(k-1)}{2 !} x^2+\dfrac{k(k-1)(k-2)}{3 !} x^3+\ldots   \\
+\end{array}
+$$
+
+---
+
+Grazie per l'attenzione e spero che questi appunti siano stati utili.  
+Se trovi errori, ti prego di inviarmi un'email a <a href="mailto:norbedo@proton.me?subject=Errore%20Appunti%20Analisi%201%20(2023-2024)">norbedo@proton.me</a>.  
+Buono studio e buona fortuna!
+
+Giovanni Norbedo
+
+norbedo@proton.me  
+[norbedo.xyz](https://norbedo.xyz)  
+[Github](https://github.com/giovanni-norbedo)  
+[LinkedIn](https://www.linkedin.com/in/norbedo)

@@ -246,3 +246,10 @@ epub/
 
 # pandoc
 pandoc/
+
+# autograding
+autograding/
+pr/
+
+# othet
+notes/
