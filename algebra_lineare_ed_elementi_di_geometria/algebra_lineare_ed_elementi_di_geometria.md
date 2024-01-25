@@ -1648,13 +1648,23 @@ $a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2$
 $\vdots$  
 $a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m$  
 
-dove ogni $a_{ij}$ è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$, $j \in \{1, \dots, n\}$ e ogni $b$; è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$; $x_1, \dots, x_n$ sono dette **incognite**, mentre gli elementi $b_1, \dots, b_m$ sono detti i **termini noti** e gli elementi $a_{ij}$ sono detti i **coefficienti** del sistema;
+dove ogni $a_{ij}$ è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$, $j \in \{1, \dots, n\}$ e ogni $b$; è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$; $x_1, \dots, x_n$ sono dette **incognite**, mentre gli elementi $b_1, \dots, b_m$ sono detti i **termini noti** e gli elementi $a_{ij}$ sono detti i **coefficienti** del sistema; una soluzione del sistema è una $n$-upla ordinata (che rappresentiamo come vettore colonna) $s \in K^n$, ovvero $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$ con $s_i \in K$ tale per cui se per ogni $i \in \{1, \dots, n\}$ sostituiamo $x_i$ con $s_i$, allora tutte le uguaglianze del sistema saranno vere; il sistema si dice **omogeneo** se $b_1 = \dots = b_m = 0$, ovvero tutti i termini noti sono nulli; un sistema si dice **non omogeneo** se non è omogeneo; un sistema di dice **compatibile** se ammette almeno una soluzione; altrimenti si dice **incompatibile**.
 
-!!!
+**Osservazione**  
+La $n$-upla nulla $\begin{pmatrix} 0 \\ \vdots \\ 0 \end{pmatrix}$ è sempre soluzione di un sistema omogeneo; pertanto ogni sistema omogeneo è compatibile.
 
-Un sistema lineare può essere scritto nella forma
+**Definizione**  
+Dato un sistema lineare come nella definizione precedente, denotiamo
 
-$A \cdot X = b$
+$A = (a_{ij}) \in M_{m,n}(K)$  
+
+$X = \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}$
+
+$b = \begin{pmatrix} b_1 \\ \vdots \\ b_m \end{pmatrix} \in M_{m,1}(K)$
+
+allora il sistema precedente può essere scritto nella forma
+
+$\underbrace{A}_{m \times n} \cdot \underbrace{X}_{n \times 1} = \underbrace{b}_{m \times 1}$
 
 **Esempio**  
 Consideriamo il sistema
@@ -2333,10 +2343,10 @@ Questo algoritmo termina in un tempo finito e restituisce un risultato che rispe
 
 Lezione del 31.10 !!!
 
-## Basi di spazi vettoriali e dimensione
+## Basi di spazi vettoriali
 
 **Definizione**  
-Sia $V$ uno spazio vettoriale su $K$; se esiste un sistema di generatori $\{v_1\ \dots, v_n\}$ finito di $V$, allora $V$ si dice **finitamente limitato**.
+Sia $V$ uno spazio vettoriale su $K$; se esiste un sistema di generatori $\{v_1\ \dots, v_n\}$ finito di $V$, allora $V$ si dice **finitamente generato**.
 
 **Teorema**  
 Sia $V$ uno spazio vettoriale su $K$ finitamente generato; un sottoinsieme $B \subseteq V$, $B = \{v_1\ \dots, v_n\}$ è una base di $V$ se e solo se $v \in V$ si può scrivere in modo unico come combinazione lineare di $B$.
@@ -2611,9 +2621,9 @@ Sia $V$ uno spazio vettoriale su $K$ finitamente generato; siano $\{v_1, \dots, 
 (equivalentemente due basi di uno spazio vettoriale su $K$ finitamente generato, hanno lo stesso numero di elementi)
 
 **Dimostrazione**  
-Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di S... (perché altrimenti $\{w_1, \dots, w_m\} non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di S... (perché altrimenti $\{v_1, \dots, v_n\} non sarebbero linearmente indipendenti); quindi $n = m$.
+Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di S... (perché altrimenti $\{w_1, \dots, w_m\}$ non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di S... (perché altrimenti $\{v_1, \dots, v_n\} non sarebbero linearmente indipendenti); quindi $n = m$.
 
-### Dimensione e rango
+## Dimensione e rango
 
 **Definizione**
 Sia $V$ uno spazio vettoriale su $K$ finitamente generato
