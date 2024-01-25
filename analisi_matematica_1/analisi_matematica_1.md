@@ -316,7 +316,7 @@ Per esempio, prendiamo
 $\forall x, \mathcal{P}(x)$  
 "ogni studente è più alto di 1,7m."
 
-dobbiamo negarla, perciò "non è vero che ..."
+dobbiamo negarla, perciò "non è vero che $\dots$"
 
 **ATTENZIONE!**  
 **NON è vero che**  
@@ -509,7 +509,7 @@ in questo caso $A=B=\mathbb{R}$, quindi
 
 $\mathbb{R} \times \mathbb{R} = \mathbb{R}^2$
 
-![grafico piano cartesiano come prodotto cartesiano](../img/grafico_piano_cartesiano_come_prodotto_cartesiano.png)
+![grafico piano cartesiano come prodotto cartesiano](../img/grafico_piano_cartesiano_come_prodotto_cartesiano.png){ width=400px }
 
 Similmente
 
@@ -526,7 +526,7 @@ $B = \{b_1,b_2,b_3,b_4\}$
 
 $A \times B = \{(a_i,b_j) : i = (1,2,3,4,5),\ j = (1,2,3,4)\}$  
 
-![esempio prodotto cartesiano tra A e B](../img/esempio_prodotto_cartesiano_tra_A_e_B.png)
+![esempio prodotto cartesiano tra A e B](../img/esempio_prodotto_cartesiano_tra_A_e_B.png){ width=400px }
 
 **Osservazione**:  
 numeri divisibili per $3 = \{n \in \mathbb{N} : \exists k \in \mathbb{N} : (n = 3k)\} = \{n \in \mathbb{N} : \mathcal{P}(n)\}$  
@@ -544,7 +544,7 @@ $B = \{$ragazze in quest'aula$\}$
 $\mathcal{P}(x) :$ $x$ è amico di $y$  
 *Relazione* di "amicizia" tra due insiemi
 
-![relazione di amicizia](../img/relazione_di_amicizia.png)
+![relazione di amicizia](../img/relazione_di_amicizia.png){ width=400px }
 
 ---
 
@@ -566,7 +566,7 @@ Per esempio, 3 divide 12, ma 3 non divide 5, poiché $\nexists k \in \mathbb{Z} 
 #### Grafico della relazione
 
 \
-![grafico relazione divide](../img/grafico_relazione_divide.png)
+![grafico relazione divide](../img/grafico_relazione_divide.png){ width=400px }
 
 **Esempi**  
 $A = \mathbb{Z} = \{\dots,-3,-2,-1,0,1,2,3,\dots\}$  
@@ -579,7 +579,7 @@ cioè 2 numeri sono in relazione se la loro differenza è un multiplo di 3.
 
 Si chiama **congruenza modulo 3**, indicata con $m \equiv_3 n$.
 
-![grafico relazione congruenza modulo 3](../img/grafico_relazione_congruenza_modulo_3.png)
+![grafico relazione congruenza modulo 3](../img/grafico_relazione_congruenza_modulo_3.png){ width=481px }
 
 ---
 
@@ -759,17 +759,12 @@ $B =$ {comuni italiani}
 
 $x \mapsto$ comune di residenza
 
-!!! IMMAGINE comuni di residenza
-
 **Osservazione**  
 Tutto l'anno studieremo funzioni
 
 $f = A \rightarrow B$ con $A, B \subseteq \mathbb{R}$
 
 che tradizionalmente si dicono "*funzioni reali di variabile reale*".
-
-**Osservazione**  
-!!! IMMAGINE non è una funzione
 
 ---
 
@@ -794,8 +789,6 @@ indicato da $f(A)$.
 Sia $f : A \rightarrow B$ una funzione,  
 sia $A' \subseteq A$,  
 $f(A') = \{ f(x) : x \in A' \}$
-
-!!! IMMAGINE insiemi A e A'
 
 > Esempio con l'immagine della funzione $x^2 + 3$
 
@@ -838,8 +831,6 @@ $g : B \rightarrow A$ tale che:
 $g$ si dice **funzione inversa** di $f$.
 
 $g = f^{-1}$
-
-!!! IMMAGINE funzione inversa con A e B
 
 > Identità:  
 > $A \rightarrow A$  
@@ -1287,6 +1278,7 @@ Dagli assiomi posso derivare le *normali* proprietà:
 #### Le regole dei segni
 
 \
+
 - $a > 0, b > 0 \Rightarrow ab > 0$  
 - $a < 0, b < 0 \Leftrightarrow ab > 0$  
 - $a > 0, b < 0 \Leftrightarrow ab < 0$  
@@ -1457,7 +1449,7 @@ in particolare $\forall a \in A, a \geq \eta \Rightarrow \eta$ è minorante
 
 quindi $\forall b \in A_*, \eta \geq b$ e $\eta \in A_* \Rightarrow \eta$ è il massimo dei minoranti.
 
-$\square$ ???
+$\square$
 
 ### Teorema le proprietà dell'estremo superiore
 
@@ -1488,7 +1480,7 @@ Se un insieme ha minimo (o massimo), il minimo è l'estremo inferiore (o il mass
 
 ### Conseguenze dell'esistenza dell'estremo superiore
 
-$1)$ $\mathbb{N}$ **è superiormente limitato**
+$1)$ $\mathbb{N}$ **è superiormente illimitato**
 
 **Dimostrazione**  
 Per assurdo supponiamo che  
@@ -1662,7 +1654,7 @@ $\square$
 "Male che vada" $\alpha = \beta$.
 
 **Per esercizio**  
-Provare che $\bigcap\limits_n I_n = [\alpha, \beta]$ !!!
+Provare che $\bigcap\limits_n I_n = [\alpha, \beta]$
 
 ---
 
@@ -2188,7 +2180,7 @@ Se in ogni intorno di $x_0$ ci sono infiniti punti di $E$, è vero che in ogni i
 
 Mostriamo il viceversa: se $x_0$ è punto di accumulazione per $E$, allora in ogni suo intorno ci sono infiniti punti di $E$, supponiamo che  $x_0$ abbia un intorno in cui ci sono un numero finito di punti di $E$
 
-$]x_0 - r, x_0 + r[ \ \cap E = \{x_1, x_2, ..., x_k\}$
+$]x_0 - r, x_0 + r[ \ \cap E = \{x_1, x_2, \dots x_k\}$
 
 provo che $x_0$ non è punto di accumulazione per $E$
 
@@ -2703,12 +2695,12 @@ $x_0, y_0 \in \mathbb{\tilde{R}}$, con $x_0$ punto di accumulazione per $E$
 supponiamo $\lim\limits_{x \to x_0} f(x) = y_0$
 
 supponiamo $g : F \to \mathbb{R}$, $F \subseteq E$  
-$L \in \mathbb{\tilde{R}}$, $y_0$ punto di accumulazione per $F$
+$L \in \tilde{\mathbb{R}}$, $y_0$ punto di accumulazione per $F$
 
 supponiamo $f(E) \subseteq F$,  
 $y$ sia punto di accumulazione per $f(E)$,  
 
-![limite della funzione composta](../img/limite_della_funzione_composta.png)
+![limite della funzione composta](../img/limite_della_funzione_composta.png){ width=634px }
 
 ¿ cosa succede di $\lim\limits_{x \to x_0} g(f(x))$?
 
@@ -2864,7 +2856,7 @@ Quindi scrivendo $n$ è sottinteso che tenda sempre a $+\infty$.
 
 ---
 
-Cosa significa $\lim\limits_n a_n = L$ con $L \in \mathbb{\tilde{R}}$?
+Cosa significa $\lim\limits_n a_n = L$ con $L \in \tilde{\mathbb{R}}$?
 
 $\forall V$ di $L, \exists U$ di $+\infty : \forall n,$  
 $n \in U \Rightarrow a_n \in V$
@@ -3461,7 +3453,7 @@ Se $f : E \to \mathbb{R}$ e $f$ è continua in tutti i punti di $E$ allora $f$ s
    Ossia la composta di una funzione continua è ancora continua.
 
 **Dimostrazione del 3.**  
-![composta di continue](../img/composta_di_continue.png)
+![composta di continue](../img/composta_di_continue.png){ width=598px }
 
 Continuità di $g$ in $f(x_0)$:  
 $\lim\limits_{y \to f(x_0)} g(y) = g(f(x_0))$
@@ -3718,8 +3710,8 @@ sia $x_0 \in E$,
 $x_0$ si dice **massimo assoluto** di $f$ se $\forall x \in E, f(x) \leq f(x_0)$  
 $x_0$ si dice **minimo assoluto** di $f$ se $\forall x \in E, f(x) \geq f(x_0)$
 
-se $x_0£ è punto di massimo assoluto, il valore $f(x_0)$ si dice (valore) massimo (assoluto) di $f$  
-se $x_0£ è punto di minimo assoluto, il valore $f(x_0)$ si dice (valore) minimo (assoluto) di $f$
+se $x_0$ è punto di massimo assoluto, il valore $f(x_0)$ si dice (valore) massimo (assoluto) di $f$  
+se $x_0$ è punto di minimo assoluto, il valore $f(x_0)$ si dice (valore) minimo (assoluto) di $f$
 
 ## Teorema (Weierstrass)
 
@@ -3764,7 +3756,7 @@ $\square$
 ## Continuità uniforme
 
 **Osservazione**  
-$f: E \to \mathbb{R}$m $x_0 \in E$,  
+$f: E \to \mathbb{R}$, $x_0 \in E$,  
 $f$ è continua in $x_0$ significa  
 $\boxed{\forall \varepsilon > 0}, \exists \delta > 0: \forall x \in E,$  
 $|x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \varepsilon$
@@ -3800,7 +3792,7 @@ In generale le funzioni continue sugli insiemi compatti sono uniformemente conti
 ## Ultime osservazioni sulle funzioni continue
 
 **Teorema**  
-Sia $f: I \to J$, $I$ e $J$ intersezioni,  
+Sia $f: I \to J$, $I$ e $J$ intervalli,  
 sia $f$ strettamente monotona e suriettiva,  
 allora $f$ è continua.
 
@@ -4002,7 +3994,7 @@ se $\forall x \in E$, $f(x) \leq f(x_0)$
 
 **Osservazione**  
 Il valore $f(x_0)$ per $x_0$ punto di massimo, si dice (valore) massimo di $f$  
-(si intenda massimo di $f(E)), analogo per il minimo.
+(si intenda massimo di $f(E)$), analogo per il minimo.
 
 **Definizione**  
 Sia $f: E \to \mathbb{R}$, $x_0 \in E$, con $E \subset \mathbb{R}$,  
@@ -4300,7 +4292,7 @@ mentre $g'(x) \neq 0$ per ogni $x$ per ipotesi.
 
 Quindi ha senso considerare $\frac{f(x)}{g(x)}$ in $]a, b[$,  
 
-so che $\lim\limits_{x \to b^-} \frac{f'(x)}{g'(x)} = L$ (supponiamo $L \in \mathbb{R})  
+so che $\lim\limits_{x \to b^-} \frac{f'(x)}{g'(x)} = L$ (supponiamo $L \in \mathbb{R}$)  
 quindi $\forall \varepsilon > 0, \exists \delta > 0: \forall x \in \ ]a, b[$,  
 $b - \delta < x < b \Rightarrow |\frac{f'(x)}{g'(x)} - L| < \varepsilon$  
 
@@ -4341,7 +4333,7 @@ allora $\lim\limits_{x \to b^-} f(x) = \lim\limits_{x \to b^-} g(x) = \pm \infty
 
 ### Funzioni convesse e concave
 
-![funzione convessa](../img/funzione_convessa.png)
+![funzione convessa](../img/funzione_convessa.png){ width=446px }
 
 **Osservazione**  
 2 punti $(x_1, y_1)$ e $(x_2, y_2)$
@@ -4365,7 +4357,7 @@ sono tutti i punti del segmento
 **Definizione**  
 Sei $f : I \to \mathbb{R}$, $I$ intervallo,  
 $f$ si dice **convessa** (su $I$) se  
-$\forall x_1, x_2 \in I (con $x_1 < x_2$)$, e $\forall x \in [0, 1]$  
+$\forall x_1, x_2 \in I$ (con $x_1 < x_2$), e $\forall \gamma \in [0, 1]$  
 $f(\gamma x_1 + (1 - \gamma)) \leq \gamma f(x_1) + (1 - \gamma) f(x_2)$
 
 quindi $f$ convessa significa, presi due punti sul grafico,  
@@ -4373,7 +4365,7 @@ il segmento che li congiunge sta tutto sopra il grafico.
 
 Se $-f$ è convessa, diremo che $f$ è concava.
 
-![funzione concava](../img/funzione_concava.png)
+![funzione concava](../img/funzione_concava.png){ width=444px }
 
 **Teorema**  
 Sia $f : I \to \mathbb{R}$, $I$ intervallo,  
@@ -4471,14 +4463,16 @@ sia $x_0 \in I$, supponiamo che $f$ sia continua in $x_0$,
 $x_0$ si dice punto di flesso se  
 
 $$
-\begin{rcases}
-   \text{in } I \cap \ ]-\infty, x_0[ & f \text{ è convessa} \\
-   \text{in } I \cap \ ]x_0, +\infty[ & f \text{ è concava}
-\end{rcases} \text{ oppure viceversa}
+\left.
+  \begin{array}{l}
+    \text{in } I \cap \ ]-\infty, x_0[ \cr f \text{ è convessa} \\
+   \text{in } I \cap \ ]x_0, +\infty[ \cr f \text{ è concava}
+  \end{array}
+\right\} \text{ oppure viceversa}
 $$
 
 **Osservazione**  
-Se $f : I \to \mathbb{R}$, $I$ intervallo, $f derivabile fino al secondo ordine,  
+Se $f : I \to \mathbb{R}$, $I$ intervallo, $f$ derivabile fino al secondo ordine,  
 e prima di $x_0$, $f''(x) \leq 0$ e dopo $x_0$, $f''(x) \geq 0$, o viceversa,  
 $x_0$ è punto di flesso.
 
@@ -4504,7 +4498,7 @@ $\lim\limits_{x \to x_0} (x - x_0)^n = 0$
 
 posso applicare Hopital,  
 $\stackrel{H}{\Leftarrow} \lim\limits_{x \to x_0} \frac{f'(x)}{n (x - x_0)^{n - 1}}$  
-resta sempre una forma indeterminata $0 \over 0$,  
+resta sempre una forma indeterminata $\frac{0}{0}$,  
 continuo ad applicare Hopital  
 $\stackrel{H}{\Rightarrow} \lim\limits_{x \to x_0} \frac{f''(x)}{n (n - 1) (x - x_0)^{n - 2}}$  
 $\stackrel{H}{\Rightarrow} \lim\limits_{x \to x_0} \frac{f^{(n - 1)}(x)}{n (n - 1) (n - 2) \ldots 2 (x - x_0)}$
@@ -4593,7 +4587,7 @@ allora $\forall x \in I \smallsetminus \{x_0\}$,
 $\exists \xi \in \ ]x_0, x[$ (oppure $\xi \in \ ]x, x_0[$)  
 tale che  
 
-$f(x) = f(x_0) + \dfrac{f'(x_0)}{1!} (x - x_0) + \dfrac{f''(x_0)}{2!} (x - x_0)^2 + \ldots + \dfrac{f^{(n)}(x_0)}{n!} (x - x_0)^n + \underbrace{\dfrac{f^{(n + 1)}(x_0)}{(n + 1)!} (x - x_0)^{n + 1}}_{\text{resto di Lagrange}}$  
+$f(x) = f(x_0) + \dfrac{f'(x_0)}{1!} (x - x_0) + \dfrac{f''(x_0)}{2!} (x - x_0)^2 + \ldots + \dfrac{f^{(n)}(x_0)}{n!} (x - x_0)^n + \underbrace{\dfrac{f^{(n + 1)}(\xi)}{(n + 1)!} (x - x_0)^{n + 1}}_{\text{resto di Lagrange}}$  
 
 (polinomio di Taylor con resto nella forma di Lagrange)
 
@@ -4629,7 +4623,448 @@ $\square$
 
 ## Calcolo integrale
 
-...
+### Integrale di Riemann
+
+**Definizione**  
+Sia $[a,b]$ intervallo chiuso e limitato in $\mathbb{R}$,  
+chiamo **suddivisione** di $[a,b]$  
+un insieme finito di punti dentro $[a,b]$,  
+che contiene sia $a$ che $b$.  
+$\Delta = \{x_0 = a < x_1 < x_2 < \dots < x_n = b\}$  
+
+Indico con $\mathscr{D}$ l'unione di tutte le suddivisioni di $[a,b]$.  
+
+Dico che $\Delta_1$ è più fine di $\Delta_2$ se $\Delta_1 \supseteq \Delta_2$.
+
+**Definizione**  
+Sia $f : [a,b] \to \mathbb{R}$, limitata,  
+sia $\Delta$ suddivisione di $[a,b]$,  
+chiamo **somma inferiore** per $f$ relativamente a $\Delta$
+
+$s(f, \Delta) = \displaystyle\sum_{i = 1}^n (x_i - x_{i - 1}) \cdot inf_{x \in [x_{i - 1}, x_i]} f(x)$  
+
+chiamo **somma superiore** per $f$ relativamente a $\Delta$
+
+$S(f, \Delta) = \displaystyle\sum_{i = 1}^n (x_i - x_{i - 1}) \cdot sup_{x \in [x_{i - 1}, x_i]} f(x)$
+
+**Osservazione**  
+Ogni volta che prendo $\Delta \in \mathscr{D}$  
+posso calcolare $s(f, \Delta)$ e $S(f, \Delta)$.
+
+**Alcune osservazioni**  
+$1)$ $s(f, \Delta) \leq S(f, \Delta)$  
+(perché $inf_{x \in [x_{i - 1}, x_i]} f(x) \leq sup_{x \in [x_{i - 1}, x_i]} f(x)$)
+
+$2)$ se $\Delta_1$ è più fine di $\Delta_2$  
+(cioè $\Delta_1 \supseteq \Delta_2$)  
+allora $s(f, \Delta_1) \geq s(f, \Delta_2)$  
+analogamente $S(f, \Delta_1) \leq S(f, \Delta_2)$
+
+$3)$ se prendo due suddivisioni $\Delta_1$ e $\Delta_2$ qualunque  
+allora $s(f, \Delta_1) \leq S(f, \Delta_2)$  
+
+infatti $s(f, \Delta_1) \leq s(f, \Delta_1 \cup \Delta_2) \leq S(f, \Delta_1 \cup \Delta_2) \leq S(f, \Delta_2)$
+
+quindi $sup_{\Delta \in \mathscr{D}} s(f, \Delta) \leq sup_{\Gamma \in \mathscr{D}} S(f, \Gamma)$
+
+**Definizione**  
+Sia $f : [a,b] \to \mathbb{R}$, limitata,  
+se $sup_{\Delta \in \mathscr{D}} s(f, \Delta) = sup_{\Gamma \in \mathscr{D}} S(f, \Gamma)$,  
+$f$ si dice integrabile secondo Riemann  
+e il valore $sup_{\Delta \in \mathscr{D}} s(f, \Delta) = sup_{\Gamma \in \mathscr{D}} S(f, \Gamma) = \int_{[a, b]} f = \displaystyle\int_a^b f(x)dx$  
+lo chiamo integrale (di Riemann) di $f$ sull'intervallo $[a,b]$.
+
+L'insieme delle funzioni integrali lo indico con $\mathscr{R}([a,b])$.
+
+### Teorema (condizione necessaria e sufficiente per l'integralibilità secondo Riemann)
+
+Sia $f : [a,b] \to \mathbb{R}$, limitata,  
+sono equivalenti:  
+
+$1)$ $f$ è integrabile secondo Riemann $(f \in \mathscr{R}([a,b]))$
+
+$2)$ $\forall \varepsilon > 0, \exists \Delta \in \mathscr{D}:$  
+$S(f, \Delta) - s(f, \Delta) < \varepsilon$
+
+**Dimostrazione**  
+Supponiamo che $f$ sia integrabile secondo Riemann,  allora  
+$sup(s(f, \Delta)) = inf(S(f, \Delta)) = \int_{[a, b]} f \in \mathbb{R}$
+
+Applico la seconda proprietà dell'estremo superiore e dell'estremo inferiore  
+
+$\forall \varepsilon > 0, \exists \Delta \in \mathscr{D}:$  
+$s(f, \Delta) > \int_{[a, b]} f - \frac{\varepsilon}{2}$  
+
+$\forall \varepsilon > 0, \exists \Gamma \in \mathscr{D}:$  
+$S(f, \Gamma) < \int_{[a, b]} f + \frac{\varepsilon}{2}$
+
+prendo $\Delta \cup \Gamma$  
+
+$s(f, \Delta \cup \Gamma) > s(f, \Delta) > \int_{[a, b]} f - \frac{\varepsilon}{2}$  
+$S(f, \Delta \cup \Gamma) < S(f, \Gamma) < \int_{[a, b]} f + \frac{\varepsilon}{2}$
+
+la prima diventa  
+$-s(f, \Delta \cup \Gamma) < -\int_{[a, b]} f + \frac{\varepsilon}{2}$  
+mentre la seconda  
+$S(f, \Delta \cup \Gamma) < \int_{[a, b]} f + \frac{\varepsilon}{2}$  
+e le sommo, ottenendo  
+$S(f, \Delta \cup \Gamma) - s(f, \Delta \cup \Gamma) < \varepsilon$  
+
+Il viceversa si fa per assurdo.  
+
+**Idea**  
+Se $sup(s(f, \Delta)) < inf(S(f, \Delta))$,  
+basta fissare $\varepsilon = \frac{1}{4} (inf - sup)$  
+e non ci saranno $\Delta \in \mathscr{D}$ che renderanno vera la $2)$.
+
+$\square$
+
+### Teorema (integrabilità delle funzioni monotone)
+
+Sia $f : [a,b] \to \mathbb{R}$, $f$ monotona,  
+allora $f$ è integrabile secondo Riemann.
+
+**Dimostrazione**  
+Sia $f : [a,b] \to \mathbb{R}$, crescente,  
+è limitata,  
+considero $\Delta = \{a, a + \frac{b - a}{n}, a + 2 \frac{b - a}{n}, \dots, a + (n - 1) \frac{b - a}{n}, b\}$  
+è la suddivisione in $n$ intervalli tutti uguali  
+
+$S(f, \Delta) - s(f, \Delta) = \displaystyle\sum_{i = 1}^n \frac{b - a}{n} \Big(f(a + i(b - a)) - f(a + (i - 1)(b - a))\Big) =$  
+
+$= \frac{b - a}{n} \Big((f(x_1) - f(x_0)) + (f(x_2) - f(x_1)) + \dots + (f(x_n) - f(x_{n - 1}))\Big) =$  
+
+$= \frac{b - a}{n} \Big(f(x_n) - f(x_0) \Big)$
+
+la faccio diventare piccola scegliendo $n$ grande.
+
+$\square$
+
+### Teorema (integrabilità delle funzioni continue)
+
+Sia $f : [a,b] \to \mathbb{R}$, $f$ continue,  
+allora $f$ è integrabile secondo Riemann ($f \in \mathscr{R}([a,b])$).
+
+**Dimostrazione**  
+$f : [a,b] \to \mathbb{R}$ continua $\stackrel{Heine}{\Longrightarrow}$ $f : [a,b] \to \mathbb{R}$ uniformemente continua  
+
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x_1, x_2 \in [a, b],$  
+$|x_1 - x_2| < \delta \Rightarrow |f(x_1) - f(x_2)| < \varepsilon$  
+
+fissiamo $\varepsilon > 0$ e grazie all'uniforme continuità otteniamo $\delta$ tale che  
+$\forall x_1, x_2 \in [a, b], |x_1 - x_2| < \delta \Rightarrow |f(x_1) - f(x_2)| < \frac{\varepsilon}{b - a}$  
+
+considero $\Delta \in \mathscr{D}$ tale che $\forall i, x_i - x_{i - 1} < \delta$  
+
+calcolo $S(f, \Delta) - s(f, \Delta) =$  
+$= \displaystyle\sum_{i = 1}^n (x_i - x_{i - 1}) \Big( sup_{x \in [x_{i - 1}, x_i]} f(x) - inf_{x \in [x_{i - 1}, x_i]} f(x) \Big)$  
+
+ora considero il fatto che $f$ è continua  
+
+$sup_{x \in [x_{i - 1}, x_i]} f(x) \stackrel{Weierstrass}{=} max_{x \in [x_{i - 1}, x_i]} f(x) = f(x_{max, i})$, con $x_{max} \in [x_{i - 1}, x_i]$
+
+$inf_{x \in [x_{i - 1}, x_i]} f(x) = min_{x \in [x_{i - 1}, x_i]} f(x) = f(x_{min, i})$, con $x_{min} \in [x_{i - 1}, x_i]$
+
+$sup \ f(x) - inf \ f(x) = f(x_{max, i}) - f(x_{min, i})$  
+$|x_{max, i} - x_{min, i}| < \delta$  
+$\Rightarrow |f(x_{max}) - f(x_{min})| < \frac{\varepsilon}{b - a}$  
+$\Rightarrow S(f, \Delta) - s(f, \Delta) = \displaystyle\sum_{i = 1}^n (x_i - x_{i - 1}) \Big(sup_{x \in [x_{i - 1}, x_i]} f(x) - inf_{x \in [x_{i - 1}, x_i]} f(x) \Big)$  
+$\leq \displaystyle\sum_{i = 1}^n (x_i - x_{i - 1}) \frac{\varepsilon}{b - a}$  
+$\leq \frac{\varepsilon}{b - a} \displaystyle\sum_{i = 1}^n (x_i - x_{i - 1}) = \frac{\varepsilon}{b - a} (b - a) = \varepsilon$
+
+$\square$
+
+### Proprietà dell'insieme delle funzioni integrali
+
+$1)$ se $f,g \in \mathscr{R}([a,b])$,  
+allora $f + g \in \mathscr{R}([a,b])$ e  
+$\int_{[a,b]} f + g = \int_{[a,b]} f + \int_{[a,b]} g$
+
+Fisso $\varepsilon > 0$  
+so che $f \in \mathscr{R}([a,b])$  
+$\Rightarrow \exists \Delta \in \mathscr{D}: S(f, \Delta) - s(f, \Delta) < \frac{\varepsilon}{2}$  
+se che $g \in \mathscr{R}([a,b])$  
+$\Rightarrow \exists \Gamma \in \mathscr{D}: S(g, \Gamma) - s(g, \Gamma) < \frac{\varepsilon}{2}$
+
+Considero $\Delta \cup \Gamma$  
+$S(f, \Delta \cup \Gamma) - s(f, \Delta \cup \Gamma) < \frac{\varepsilon}{2}$  
+$S(g, \Delta \cup \Gamma) - s(g, \Delta \cup \Gamma) < \frac{\varepsilon}{2}$  
+sommandoli ottengo  
+$S(f, \Delta \cup \Gamma) + S(g, \Delta \cup \Gamma) - s(f, \Delta \cup \Gamma) - s(g, \Delta \cup \Gamma) < \varepsilon$  
+quindi  
+$S(f + g, \Delta \cup \Gamma) \leq S(f, \Delta \cup \Gamma) + S(g, \Delta \cup \Gamma)$  
+$sup_{x \in [x_{i - 1}, x_i]} f(x) + g(x) \leq sup_{x \in [x_{i - 1}, x_i]} f(x) + sup_{x \in [x_{i - 1}, x_i]} g(x)$  
+$s(f + g, \Delta \cup \Gamma) \geq s(f, \Delta \cup \Gamma) + s(g, \Delta \cup \Gamma)$  
+$\Rightarrow S(f + g, \Delta \cup \Gamma) - s(f + g, \Delta \cup \Gamma) < \varepsilon$  
+si (vede con un ragionamento un po' noioso) che  
+$\int_{[a,b]} f + g = \int_{[a,b]} f + \int_{[a,b]} g$
+
+$2)$ $f \in \mathscr{R}([a,b])$ e $\lambda \in \mathbb{R}$,  
+allora $\lambda f \in \mathscr{R}([a,b])$ e  
+$\int_{[a,b]} \lambda f = \lambda \int_{[a,b]} f$
+
+**Osservazione**  
+$\mathscr{R}([a,b])$ è spazio vettoriale su $\mathbb{R}$ e  
+$\int_{[a,b]} : \mathscr{R}([a,b]) \to \mathbb{R}$  
+$f \mapsto \int_{[a,b]} f$  
+è una funzione lineare.
+
+$3)$ se $f, g \in \mathscr{R}([a,b])$ e  
+$\forall x \in [a,b], f(x) \geq g(x)$,  
+allora $\displaystyle\int_a^b f(x) dx \geq \displaystyle\int_a^b g(x) dx$
+
+$4)$ se $f \in \mathscr{R}([a,b])$,  
+allora $|f| \in \mathscr{R}([a,b])$ e  
+$|\int_{[a,b]} f| \leq \int_{[a,b]} |f|$
+
+$5)$ sia $f \in \mathscr{R}([a,b])$ e sia $c \in \ ]a, b[$,  
+allora $f_{[a, c]}$ e $f_{[c, b]}$  
+sono integrabili secondo Riemann rispettivamente  
+su $[a, c]$ e su $[c, b]$  
+e $\int_{[a, b]} f = \int_{[a, c]} f + \int_{[c, b]} f$
+
+**Convenzione**  
+$a, b, c \in \mathbb{R}$ disposti come si vuole  
+($a < b < c$ o $a < c < b$ o $\dots$)  
+
+poniamo $\displaystyle\int_a^b f(t) dt = - \displaystyle\int_b^a f(t) dt$  
+
+da cui $\displaystyle\int_a^b f(t) dt = \displaystyle\int_a^c f(t) dt + \displaystyle\int_c^b f(t) dt$
+
+### Primitiva di una funzione
+
+**Definizione**  
+Sia $f : [a,b] \to \mathbb{R}$,  
+sia $F : [a,b] \to \mathbb{R}$ derivabile,  
+se $\forall x \in [a, b], F'(x) = f(x)$,  
+allora $F$ si dice **primitiva** di $f$.  
+
+Se per $f$ esiste una primitiva $F$,  
+$f$ si dice primitivabile.
+
+**Teorema**  
+Sia $f : [a,b] \to \mathbb{R}$,  
+sia $F$ una primitiva di $f$,  
+allora tutte e sole le funzioni $F + c$ sono primitive.
+
+**Dimostrazione**  
+Poiché $(F + c)' = F' + f$, allora  
+se $F$ è primitiva, allora $F + c$ è primitiva.  
+
+Viceversa, sia $G$ una primitiva,  
+(devo provare che $G = F + c$),  
+considero $G - F$,  
+$(G - F)' = G' - F' = f - f = 0$  
+uso il corollario del teorema di Lagrange,  
+se $(G - F)' = 0$ e siamo su un intervallo,  
+allora $G - F$ è costante.  
+
+$\square$
+
+**Osservazione**  
+Tradizionalmente l'insieme delle primitive  
+si chiama "integrale indefinito".
+
+### Teorema fondamentale del calcolo integrale
+
+**Definizione**  
+Sia $f : [a,b] \to \mathbb{R}$ integrabile secondo Riemann,  
+chiamo **funzione integrale** di $f$  
+la funzione $F : [a,b] \to \mathbb{R}$  
+$F(x) = \displaystyle\int_a^x f(t) dt$
+
+**Teorema (precedente)**  
+Sia $f$ integrabile secondo Riemann su $[a,b]$,  
+sia $F : [a,b] \to \mathbb{R},  F(x) = \displaystyle\int_a^x f(t) dt$  
+la sua funzione integrale,  
+allora $\exists M > 0: \forall x_1, x_2 \in [a,b]$,  
+$|F(x_1) - F(x_2)| \leq M |x_1 - x_2|$  
+
+In particolare $F$ è continua.
+
+**Osservazione**  
+Se per una funzione $g : [a,b] \to \mathbb{R}$,  
+vale che  
+$\exists M > 0: \forall x_1, x_2 \in [a,b]$,  
+$|g(x_1) - g(x_2)| \leq M |x_1 - x_2|$  
+$g$ si dice **Lipschitziana**
+
+**Dimostrazione**  
+Sia $f$ integrabile secondo Riemann,  
+quindi $f$ è limitata,  
+cioè $\exists M > 0: \forall x \in [a,b], \quad |f(x)| < M$  
+
+ora $F(x_1) - F(x_2) = \displaystyle\int_a^{x_1} f(t) dt - \displaystyle\int_a^{x_2} f(t) dt =$  
+
+$= \displaystyle\int_a^{x_1} f(t) dt + \displaystyle\int_{x_2}^a f(t) dt =$  
+
+$= \displaystyle\int_{x_2}^a f(t) dt + \displaystyle\int_a^{x_1} f(t) dt =$
+
+$= \displaystyle\int_{x_2}^{x_1} f(t) dt$  
+
+riassunto  
+
+$F(x_1) - F(x_2) = \displaystyle\int_{x_2}^{x_1} f(t) dt$
+
+quindi  
+
+$|F(x_1) - F(x_2)| = |\displaystyle\int_{x_2}^{x_1} f(t) dt| \leq |\displaystyle\int_{x_2}^{x_1} |f(t)| dt|$  
+
+$|f(t)| < m$  
+
+$|F(x_1) - F(x_2)| \leq |\displaystyle\int_{x_2}^{x_1} M dt| = M |x_1 - x_2|$
+
+conclusione  
+$|F(x_1) - F(x_2)| \leq M |x_2 - x_1|$
+
+**Teorema (fondamentale del calcolo integrale)**  
+Sia $f : [a,b] \to \mathbb{R}$ integrabile secondo Riemann,  
+sia $\overline{x} \in [a,b]$, sia $f$ continua in $\overline{x}$,  
+sia $F(x) = \displaystyle\int_a^x f(t) dt$ la funzione integrale di $f$,  
+allora $F$ è derivabile in $\overline{x}$ e $F'(\overline{x}) = f(\overline{x})$
+
+**Dimostrazione**  
+Devo provare che $F$ è derivabile in $\overline{x}$ e che $F'(\overline{x}) = f(\overline{x})$  
+
+devo provare che $\lim\limits_{x \to \overline{x}} R_{\overline{x}}^F (x) = f(\overline{x})$  
+cioè che $\lim\limits_{x \to \overline{x}} R_{\overline{x}}^F (x) - f(\overline{x}) = 0$  
+scrivo $R_{\overline{x}}^F (x) - f(\overline{x}) =$  
+
+$= \dfrac{F(x) - F(\overline{x})}{x - \overline{x}} - f(\overline{x}) =$  
+
+$= \dfrac{\displaystyle\int_a^x f(t) dt - \displaystyle\int_a^{\overline{x}} f(t) dt}{x - \overline{x}} - f(\overline{x}) =$
+
+$= \dfrac{\displaystyle\int_{\overline{x}}^x f(t) dt}{x - \overline{x}} - f(\overline{x})$  
+
+$f(\overline{x}) = \frac{\displaystyle\int_{\overline{x}}^x f(t) dt}{x - \overline{x}}$
+
+$R_{\overline{x}}^F (x) = \frac{1}{x - \overline{x}} \displaystyle\int_{\overline{x}}^x (f(t) - f(\overline{x})) dt$
+
+so che $\lim\limits_{x \to \overline{x}} f(x) = f(\overline{x})$  
+(perché $f$ è continua in $\overline{x}$)
+
+cioè $\lim\limits_{x \to \overline{x}} f(x) - f(\overline{x}) = 0$
+
+cioè $\forall \varepsilon > 0, \exists \delta > 0: \forall x,$  
+$|x - \overline{x}| < \delta \Rightarrow |f(x) - f(\overline{x})| < \varepsilon$  
+
+considero $t \in [\overline{x}, x] \Rightarrow |t - \overline{x}| < \delta$ se $|x - \overline{x}| < \delta$  
+
+allora $\boxed{|f(t) - f(\overline{x})| < \varepsilon}$  
+
+$\frac{1}{|x - \overline{x}|} | \displaystyle\int_{\overline{x}}^x (f(t) - f(\overline{x})) dt| \leq \frac{1}{|x - \overline{x}|} | \displaystyle\int_{\overline{x}}^x \boxed{|f(t) - f(\overline{x})|} dt|$  
+
+$\frac{1}{|x - \overline{x}|} | \displaystyle\int_{\overline{x}}^x (f(t) - f(\overline{x})) dt| \leq \frac{1}{|x - \overline{x}|} | \displaystyle\int_{\overline{x}}^x \varepsilon dt| = \varepsilon$
+
+conclusione  
+$\forall \varepsilon > 0, \exists \delta > 0: \forall x,$  
+$|x - \overline{x}| < \delta \Rightarrow |R_{\overline{x}}^F (x) - f(\overline{x})| < \varepsilon$  
+
+cioè $\lim\limits_{x \to \overline{x}} R_{\overline{x}}^F (x) = f(\overline{x})$
+
+$\square$
+
+### Corollario (teorema di Torricelli o Torricelli-Barrow)
+
+Sia $f : [a,b] \to \mathbb{R}$ continua,  
+(allora $f$ è integrabile)  
+sia $F(x) = \displaystyle\int_a^x f(t) dt$ la sua funzione integrale,  
+allora $F$ è derivabile e  
+$\forall x \in [a,b], \quad F'(x) = f(x)$
+
+**Osservazione**  
+Se $G$ è una primitiva di $f$ si ha  
+
+$\displaystyle\int_a^b f(t) dt = G(b) - G(a)$
+
+**Dimostrazione (idea)**  
+(Senza passare per la dimostrazione del teorema fondamentale)  
+
+$f : [a,b] \to \mathbb{R}$ continua $\Rightarrow$ $f$ è integrabile secondo Riemann  
+e $\forall \Delta \in \mathscr{D},$  
+$s(f, \Delta) \leq \displaystyle\int_a^b f(t) dt \leq S(f, \Delta)$
+
+in particolare $\Delta = \{a, b\}$ (la suddivisione meno fine)  
+
+$inf_{x \in [a, b]} f (b - a) \leq \displaystyle\int_a^b f(t) dt \leq sup_{x \in [a, b]} f (b - a)$
+
+$min \ f (b - a) \leq \displaystyle\int_a^b f(t) dt \leq max \ f (b - a)$  
+
+$min \ f \leq \frac{1}{b - a} \displaystyle\int_a^b f(t) dt \leq max \ f$
+
+$f(x_{min}) \leq \frac{1}{b - a} \displaystyle\int_a^b f(t) dt \leq f(x_{max})$
+
+applico il teorema dei valori intermedi,  
+se $f$ continua su $[a,b]$,  
+$\exists \xi \in [a,b]: \quad f(\xi) = \frac{1}{b - a} \displaystyle\int_a^b f(t) dt$  
+(**teorema della media integrale**)
+
+$R_{\overline{x}}^F (x) = \dfrac{F(x) - F(\overline{x})}{x - \overline{x}} =$  
+
+$= \dfrac{\displaystyle\int_a^x f(t) dt - \displaystyle\int_a^{\overline{x}} f(t) dt}{x - \overline{x}} = \dfrac{1}{x - \overline{x}} \displaystyle\int_{\overline{x}}^x f(t) dt$
+
+per il teorema della media integrale  
+$= f(\xi)$ con $\overline{x} < \xi < x$
+
+allora $\lim\limits_{x \to \overline{x}} R_{\overline{x}}^F (x) = \lim\limits_{x \to \overline{x}} \frac{1}{x - \overline{x}} \displaystyle\int_{\overline{x}}^x f(t) dt = \lim\limits_{x \to \overline{x}} f(\xi)=$ con $\overline{x} < \xi < x$  
+
+$= \lim\limits_{\xi \to \overline{x}} f(\xi) = f(\overline{x})$
+
+$\square$
+
+**Corollario**  
+Sia $f : [a,b] \to \mathbb{R}$ continua,  
+sia $G$ una sua primitiva,  
+allora $\displaystyle\int_a^b f(t) dt = G(b) - G(a)$
+
+**Dimostrazione**  
+Da Torricelli so che $F(x) = \displaystyle\int_a^x f(t) dt$ funzione integrale,  
+è una primitiva di $f$  
+so che allora $F - G = c$  
+poi $F(a) = \displaystyle\int_a^a f(t) dt = 0$  
+quindi $F(a) - G(a) = c$  
+si ha $0 - G(a) = c$,  
+quindi la costante è $-G(a)$
+
+infine $\displaystyle\int_a^b f(t) dt = F(b) = G(b) + c = G(b) - G(a)$
+
+$\square$
+
+### Integrazione per parti
+
+**Teorema**  
+Siamo $f,g$ due funzioni di classe $\mathscr{C}^1$,  
+(significa derivabili con derivata continua)  
+allora  
+$\displaystyle\int f(x) g'(x) dx = f(x) g(x) - \displaystyle\int f'(x) g(x) dx$  
+da cui  
+$\displaystyle\int_a^b f(x) g'(x) dx = f(b) g(b) - f(a) g(a) - \displaystyle\int_a^b f'(x) g(x) dx$
+
+**Dimostrazione**  
+So che $(fg)' = fg' + f'g$ e $f'g$ e $g'f$ sono funzioni continue  
+allora la funzione integrale di $fg' + f'g$ è  
+$\displaystyle\int_a^x f(t) g'(t) dt + \displaystyle\int_a^x f'(t) g(t) dt = f(x) g(x) - f(a) g(a)$  
+
+da cui $\displaystyle\int_a^b f(t) g'(t) dt = f(b) g(b) - f(a) g(a) - \displaystyle\int_a^b f'(x) g(x) dx$
+
+$\square$
+
+### Integrazione per sostituzione
+
+**Teorema**  
+Sia $g$ una funzione di classe $\mathscr{C}^1$,  
+$g : [\alpha, \beta] \to [a, b]$,  
+sia $f : [a, b] \to \mathbb{R}$ continua,  
+sia $F(x) = \displaystyle\int_a^x f(t) dt$ la funzione integrale di $f$,  
+allora $\Big( F(g(x)) \Big)' = F'(g(x)) g'(x) = f(g(x)) g'(x)$  
+
+di conseguenza  
+$\displaystyle\int_{\alpha}^{\beta} f(g(t)) g'(t) dt = \displaystyle\int_{g(\alpha)}^{g(\beta)} f(x) dx = F(g(\beta)) - F(g(\alpha))$
+
+se $g$ è invertibile e $g(\alpha) = a$ e $g(\beta) = b$,  
+$\displaystyle\int_{g^{-1} (a)}^{g^{-1} (b)} f(g(t)) g'(t) dt$
+
+$\square$
 
 ## Formulario
 
@@ -4721,7 +5156,7 @@ $\lim\limits_{x \to \pm \infty} (1 + \frac{a}{x})^x = e^a$
 $\lim\limits_{x \to 0} (1 + x)^{\frac{1}{x}} = e$
 
 $\lim\limits_{x \to 0} \frac{e^x - 1}{tg(x)} = 1$
-F
+
 $\lim\limits_{x \to 0} \frac{ln(cos(x))}{x^2} = -\frac{1}{2}$
 
 $\lim\limits_{x \to 0} \frac{1 - cos(x)}{x} = 0$
@@ -4780,7 +5215,7 @@ $(\cosh(x))' = \sinh(x)$
 $\displaystyle \int \sinh(x) \ dx = \cosh(x) + c$  
 $\displaystyle \int \cosh(x) \ dx = \sinh(x) + c$
 
-### Integrali notevoli
+### Integrali immediati
 
 $\displaystyle \int f(x)dx = F(x) + c \Leftrightarrow F'(x) = f(x)$  
 
@@ -4845,7 +5280,7 @@ $$
     e^x            &= \displaystyle\sum_{n = 0}^{\infty} \dfrac{x^n}{n !}                   = 1+\dfrac{x}{1 !}+\dfrac{x^2}{2 !}+\dfrac{x^3}{3 !}+\ldots           \\
     \sin x         &= \displaystyle\sum_{n = 0}^{\infty}(-1)^n \dfrac{x^{2 n+1}}{(2 n+1) !} = x-\dfrac{x^3}{3 !}+\dfrac{x^5}{5 !}-\dfrac{x^7}{7 !}+\ldots         \\
     \cos x         &= \displaystyle\sum_{n = 0}^{\infty}(-1)^n \dfrac{x^{2 n}}{(2 n) !}     = 1-\dfrac{x^2}{2 !}+\dfrac{x^4}{4 !}-\dfrac{x^6}{6 !}+\ldots         \\
-    \tan -1 x      &= \displaystyle\sum_{n = 0}^{\infty}(-1)^n \dfrac{x^{2 n+1}}{2 n+1}     = x-\dfrac{x^3}{3}+\dfrac{x^5}{5}-\dfrac{x^7}{7}+\ldots               \\
+    arctan x      &= \displaystyle\sum_{n = 0}^{\infty}(-1)^n \dfrac{x^{2 n+1}}{2 n+1}     = x-\dfrac{x^3}{3}+\dfrac{x^5}{5}-\dfrac{x^7}{7}+\ldots               \\
     \ln (1+x)      &= \displaystyle\sum_{n = 1}^{\infty}(-1)^{n-1} \dfrac{x^n}{n}           = x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\dfrac{x^4}{4}+\ldots               \\
     (1+x)^k        &= \displaystyle\sum_{n = 0}^{\infty}(k) x^n                             = 1+k x+\dfrac{k(k-1)}{2 !} x^2+\dfrac{k(k-1)(k-2)}{3 !} x^3+\ldots   \\
 \end{array}
@@ -4861,5 +5296,5 @@ Giovanni Norbedo
 
 norbedo@proton.me  
 [norbedo.xyz](https://norbedo.xyz)  
-[Github](https://github.com/giovanni-norbedo)  
-[LinkedIn](https://www.linkedin.com/in/norbedo)
+[github.com/giovanni-norbedo](https://github.com/giovanni-norbedo)  
+[www.linkedin.com/in/norbedo](https://www.linkedin.com/in/norbedo)

@@ -1,4 +1,15 @@
-# Algebra Lineare ed Elementi di Geometria
+---
+title: "Algebra Lineare ed Elementi di Geometria"
+author: Giovanni Norbedo
+date: 2023-2024
+header-includes:
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \rhead{Giovanni Norbedo}
+    - \cfoot{\thepage}
+geometry: margin=3cm
+output: pdf_document
+---
 
 ## Introduzione
 
@@ -81,7 +92,7 @@ per la proprietà associativa
 $= 2 \cdot (3 \cdot 1) + 2(1 \cdot 1) - 2 \cdot (2 \cdot 2)$  
 per la proprietà commutativa  
 
-$= 2 \cdot (3 \cdot 1 + 1 \cdot 1 -2 \cdot 2)$  
+$= 2 \cdot (3 \cdot 1 + 1 \cdot 1 -2 \cdot 2)$  Analisi Matematica 1
 per la proprietà distributiva  
 
 $= 2 \cdot 0 = 0$
@@ -181,7 +192,7 @@ Manipolo la seconda equazione per "eliminare la x", sottraendo tre volte la prim
 
 $(3x +y -2z) -3 \cdot (x + y -z) = 0 -3 \cdot 0$  
 
-$\cancel{3x} +y -2z \cancel{-3x} -3y +3x = 0$  
+$3x +y -2z -3x -3y +3x = +y -2z - 3y + 3z = 0$  
 
 $-2y + z = 0$
 
@@ -189,7 +200,7 @@ Facciamo la stessa cosa con la terza equazione
 
 $(2x - z) -2 \cdot (x+y-z) = 0 - 2 \cdot 0$  
 
-$\cancel{2x} -z \ \cancel{-2x} -2y +2z = 0$  
+$2x -z -2x -2y +2z = 0$  
 
 $-2y + z = 0$  
 
@@ -344,7 +355,7 @@ Dato un vettore applicato $\overrightarrow{AB}$ e un numero reale $a \in \mathbb
 Per ottenere una teoria "più comprensiva" introduciamo un nuovo oggetto, i vettori liberi.
 
 **Definizione**  
-Due vettori applicati $\overrightarrow{AB}$ e $\overrightarrow{CD}$ si dicono **equipollenti** se e solo se $\overrightarrow{AB}$ e $\overrightarrow{CD}$ hanno la medesima direzione, il medesimo verso e il medesimo modulo (cambia il PDA).
+Due vettori applicati $\overrightarrow{AB}$ e $\overrightarrow{CD}$ si dicono **equipollenti** se e solo se $\overrightarrow{AB}$ e $\overrightarrow{CD}$ hanno la medesima direzione, il medesimo verso e il medesimo modulo (cambia il punto di applicazione).
 
 Si verifica che quella di equipollenza è una relazione di equivalenza, ovvero essa è riflessiva, simmetrica e transitiva.
 
@@ -594,8 +605,6 @@ $\square$
 
 **Dimostrazione**  
 Per esercizio. Il vettore opposto è unico.
-
-> Dimostrato $\checkmark$
 
 Consideriamo ora $\mathbb{R}^2$ con $+$ e $\cdot$ introdotti in precedenza ("*le operazioni componente per componente*"). Abbiamo visto che $\mathbb{R}^2$ è un $\mathbb{R}$-spazio vettoriale. Ora consideriamo il seguente sottoinsieme $W \subseteq \mathbb{R}^2$
 

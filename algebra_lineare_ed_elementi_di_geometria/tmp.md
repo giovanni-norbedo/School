@@ -30,7 +30,6 @@ Sia $f : \mathbb{R}^2 \rightarrow \mathbb{R}$ definita da $f(\begin{pmatrix} 1 \
 
 vale che $f(\begin{pmatrix} x_1 \\ y_1 \end{pmatrix} \cdot \begin{pmatrix} x_2 \\ y_2 \end{pmatrix}) = x_1x_2 + 2y_1y_2$ ...
 
-
 **Definizione**  
 Sia $A \in M_{m, n}(\mathbb{R})$; allora $A$ definisce una funzione
 
@@ -60,7 +59,6 @@ l'applicazione lineare $L_{R_{\alpha}} : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ 
 ...
 
 ---
-
 
 lezione del 28/11 !!!
 
