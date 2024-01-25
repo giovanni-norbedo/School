@@ -2621,7 +2621,7 @@ Sia $V$ uno spazio vettoriale su $K$ finitamente generato; siano $\{v_1, \dots, 
 (equivalentemente due basi di uno spazio vettoriale su $K$ finitamente generato, hanno lo stesso numero di elementi)
 
 **Dimostrazione**  
-Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di S... (perché altrimenti $\{w_1, \dots, w_m\}$ non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di S... (perché altrimenti $\{v_1, \dots, v_n\} non sarebbero linearmente indipendenti); quindi $n = m$.
+Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di Steinitz (perché altrimenti $\{w_1, \dots, w_m\}$ non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di Steinitz (perché altrimenti $\{v_1, \dots, v_n\} non sarebbero linearmente indipendenti); quindi $n = m$.
 
 ## Dimensione e rango
 
@@ -3111,7 +3111,7 @@ $A^{-1} = \frac{1}{det(A)} \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} = \beg
 **Osservazione**  
 Se $A \in M_2 (\mathbb{R})$ e consideriamo i suoi due vettori colonna e supponiamo che valga $a_{ij} > 0,\ \forall i, j \in \{1, 2\}$, allora possiamo rappresentare i due vettori colonna nel piano:
 
-!!! immagine vettori
+![determinante come area](../img/determinante_come_area.png)
 
 si può verificare che se $\mathcal{P}$ è il parallelogramma determinato dai due vettori di $A$, allora
 
@@ -3138,17 +3138,52 @@ $det(A) = \sum\limits_{i = 1}^n (-1)^{i + 1} \cdot a_{i1} \cdot det(A_{i1})$
 **Esempio**  
 notiamo che con la definizione precedente ritroviamo il determinante di una matrice $2 \times 2$:
 
-$$
-det \begin{pmatrix}
+$$\begin{align*}
+\text{det} \begin{pmatrix}
   a_{11} & a_{12} \\
   a_{21} & a_{22}
-\end{pmatrix} =
-(-1)
+\end{pmatrix}
+& = (-1)^{1 + 1} \cdot a_{11} \cdot \text{det}(A_{11}) + (-1)^{2 + 1} \cdot a_{21} \cdot \text{det}(A_{21}) = \\
+& = 1 \cdot A_{11} \cdot \text{det}(a_{22}) - 1 \cdot A_{21} \cdot \text{det}(a_{12}) = \\
+& = a_{11} \cdot a_{22} - a_{12} \cdot a_{21}
+\end{align*}$$
+
+**Esempio**  
+$$A = \begin{pmatrix} 
+  1 & 0 & 2 \\
+  0 & 1 & 1 \\
+  2 & 3 & 1 \\
+\end{pmatrix}$$
+
+$$\begin{align*}
+det(A) &=
+1 \cdot det \begin{pmatrix} 1 & 1 \\ 3 & 1 \end{pmatrix} -
+0 \cdot det \begin{pmatrix} 0 & 2 \\ 3 & 1 \end{pmatrix} +
+2 \cdot det \begin{pmatrix} 0 & 2 \\ 1 & 1 \end{pmatrix} =\\
+&=
+1 \cdot (1 \cdot 1 - 1 \cdot 3) -
+0 \cdot (0 \cdot 1 - 2 \cdot 3) +
+2 \cdot (0 \cdot 1 - 2 \cdot 1) =\\
+&= - 2 - 0 - 4 = -6
+\end{align*}
 $$
 
-...
+**Teorema**  
+Sia $A \in M_n (K)$; allora  
 
-### Determinante !!! ???
+$A$ è invertibile $\Leftrightarrow$ $det(A) \neq 0$
+
+**Formula di Sarrus**  
+Solo per le matrici $3 \times 3$ vale la formula di Sarrus:
+
+$A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{pmatrix}$
+
+$det(A) = a_{11} \cdot a_{22} \cdot a_{33} + a_{12} \cdot a_{23} \cdot a_{31} + a_{13} \cdot a_{21} \cdot a_{32} - \\ -
+a_{13} \cdot a_{22} \cdot a_{31} - a_{11} \cdot a_{23} \cdot a_{32} - a_{12} \cdot a_{21} \cdot a_{33}$
+
+![graficamente con Sarrus](../img/sarrus.png)
+
+### Determinante
 
 **Proposizione**  
 Il determinante gode della seguenti 3 proprietà:
@@ -3157,21 +3192,70 @@ $D1$: (multilinearità)
 
 Sia $A \in M_n (K)$e supponiamo che $A_{(i)} = R_1 + R_2$ (la i-esima riga è la somma di due vettori riga), allora
 
-$$
-det ...
-$$
+$$det \begin{pmatrix}
+  A_{(1)} \\
+  \vdots \\
+  R_1 + R_2 \\
+  \vdots \\
+  A_{(n)}
+\end{pmatrix} =
+det \begin{pmatrix}
+  A_{(1)} \\
+  \vdots \\
+  R_1 \\
+  \vdots \\
+  A_{(n)}
+\end{pmatrix} +
+det \begin{pmatrix}
+  A_{(1)} \\
+  \vdots \\
+  R_2 \\
+  \vdots \\
+  A_{(n)}
+\end{pmatrix}$$
 
-inoltre se invece $A_{(i)}$...
+inoltre se invece $A_{(i)} = c \cdot R$ per qualche $c \in K$ e qualche vettore riga $R$, allora
 
-$$
-det ...
-$$
+$$det \begin{pmatrix}
+  A_{(1)} \\
+  \vdots \\
+  c \cdot R \\
+  \vdots \\
+  A_{(n)}
+\end{pmatrix} =
+c \cdot det \begin{pmatrix}
+  A_{(1)} \\
+  \vdots \\
+  R \\
+  \vdots \\
+  A_{(n)}
+\end{pmatrix}$$
 
 analoghe proprietà valgono se al posto delle righe consideriamo le colonne.
 
 $D2$: (alternanza o antisimmetria)
 
-...
+se scambiamo due righe o due colonne di posto, il determinante cambia di segno, ovvero
+
+$$det \begin{pmatrix}
+  A_{(1)} \\
+  \vdots \\
+  A_{(i)} \\
+  \vdots \\
+  A_{(j)} \\
+  \vdots \\
+  A_{(n)}
+\end{pmatrix} = -det \begin{pmatrix}
+  A_{(1)} \\
+  \vdots \\
+  A_{(j)} \\
+  \vdots \\
+  A_{(i)} \\
+  \vdots \\
+  A_{(n)}
+\end{pmatrix}$$
+
+se ci sono $k$ scambi, il segno va dunque moltiplicato per $(-1)^k$.
 
 $D3$: (normalizzazione)
 
@@ -3180,17 +3264,202 @@ $det\ 1_n = 1$
 **Teorema (di caratterizzazione del determinante)**  
 Il determinante è l'unica funzione $M_n (K) \rightarrow K$ che soddisfa le proprietà $D1$, $D2$ e $D3$.
 
-**Esempio**  
-...
-
 **Corollario**  
 i) se $A$ ha due righe uguali, allora $det(A) = -det(A)$ (per $D2$) e dunque $det(A) = 0$; analogamente per le colonne.
 
 ii) se $A$ ha una riga nulla, allora $det(A) = 0$ (per $D1$).
 
 **Corollario**  
-...
+$i)$ se $A$ ha due righe uguali, allora $det(A) = -det(A)$ (per $D2$)  
+e dunque $det(A) = 0$; analogamente per le colonne.
 
-!!! ...
+$ii)$ se $A$ ha una riga nulla, allora $det(A) = 0$ (per $D1$)  
 
----
+**Corollario**  
+$i)$ se $\tilde{A}$ è ottenuta da $A$ con una operazione elementare $OE1$,  
+allora $det(\tilde{A}) = -det(A)$
+
+$ii)$ se $\tilde{A}$ è ottenuta da $A$ con una operazione elementare $OE2$,  
+allora $det(\tilde{A}) = c \cdot det(A)$
+
+$iii)$ se $\tilde{A}$ è ottenuta da $A$ con una operazione elementare $OE3$,  
+allora $det(\tilde{A}) = det(A)$; infatti se
+
+$$A = \begin{pmatrix}
+    A_{(1)} \\
+    \vdots \\
+    A_{(n)}
+\end{pmatrix}$$
+
+allora
+
+$$\tilde{A} = \begin{pmatrix}
+    A_{(1)} \\
+    \vdots \\
+    A_{(i)} + c \cdot A_{(j)} \\
+    \vdots \\
+    A_{(n)}
+\end{pmatrix}$$
+
+$$det \tilde{A} =
+det \begin{pmatrix}
+    A_{(1)} \\
+    \vdots \\
+    A_{(i)} + c \cdot A_{(j)} \\
+    \vdots \\
+    A_{(n)}
+\end{pmatrix} \stackrel{D1}{=}
+det \begin{pmatrix}
+    A_{(1)} \\
+    \vdots \\
+    A_{(i)} \\
+    \vdots \\
+    A_{(n)}
+\end{pmatrix} +
+det \begin{pmatrix}
+    A_{(1)} \\
+    \vdots \\
+    c \cdot A_{(j)} \\
+    \vdots \\
+    A_{(n)}
+\end{pmatrix} \stackrel{D1}{=}
+det(A) +
+c \cdot \underbrace{det \begin{pmatrix}
+    A_{(1)} \\
+    \vdots \\
+    A_{(j)} \\
+    \vdots \\
+    A_{(n)}
+\end{pmatrix}}_{\text{ha due rughe uguali, quindi } det = 0} = det A$$
+
+**Corollario**  
+Se $A \in M_n(K)$ e $\tilde{A}$ è la matrice a scala ottenuta applicando l'algoritmo di gradinizzazione di Gauss a $A$, allora  
+$det(\tilde{A}) = \lambda \cdot det(A)$ per un certo $\lambda \in K \smallsetminus \{0\}$  
+in particolare  
+$det(A) = 0 \Leftarrow det(\tilde{A}) = 0$  
+
+inoltre se nell'algoritmo di gradinizzazione di Gauss non effettuiamo noi la normalizzazione dei pivot a $1$, allora $det(\tilde{A}) = (-1)^k \cdot det(A)$, dove $k$ è il numero di scambi di righe che abbiamo effettuato.
+
+**Proposizione**  
+Se $A \in M_n(K)$ è una matrice triangolare superiore, ovvero $a_{ij} = 0$ per $i > j$,  
+allora $det(A) = a_{11} \cdot a_{22} \cdot \ldots \cdot a_{nn}$
+
+**Dimostrazione**  
+Dimostriamo questo risultato per induzione su $n$:
+
+$\boxed{n = 1}$ in questo caso $A = a_{11}$ e $det(A) = a_{11}$ per definizione.  
+Quindi vale la tesi.
+
+$\boxed{\text{passo induttivo}}$ possiamo supporre $n > 1$, allora per definizione  
+$det(A) = a_{11} \cdot det(A_{11}) - 0 \cdot det(A_{21}) + 0 \cdot det(A_{31}) + \dots + (-1)^{n + 1} \cdot det(A_{n-1}) = a_{11} \cdot det(A_{11})$
+
+$$A_{11} = \begin{pmatrix}
+    a_{22} & \dots & \dots & a_{2n} \\
+    0 & \ddots & \ddots & \vdots \\
+    \vdots & \ddots & \ddots & \vdots \\
+    0 & \dots & 0 & a_{nn}
+\end{pmatrix}$$
+
+dunque $A_{11} \in M_{n-1}(K)$, ed è triangolare superiore,  
+allora posso usare l'ipotesi induttiva su $A_{11}$ e ottengo  
+$det(A) = a_{11} \cdot det(A_{11}) = a_{11} \cdot a_{22} \cdot \ldots \cdot a_{nn}$
+
+pertanto $det(A) = a_{11} \cdot det(A_{11}) = a_{11} \cdot a_{22} \cdot \ldots \cdot a_{nn}$
+
+$\square$
+
+Con questi strumenti possiamo dimostrare il risultato secondo cui il determinante caratterizza l'invertibilità o meno di una matrice.
+
+**Teorema**  
+Sia $A \in M_n(K)$; vale che  
+$rg(A) < n \Leftrightarrow det(A) = 0$  
+
+equivalentemente  
+
+$rg(A) = n \Leftrightarrow det(A) \neq 0$
+
+**Dimostrazione**  
+"$\Rightarrow$" supponiamo che $rg(A) < n$; sia $\tilde{A}$ la matrice ottenuta da $A$ applicando l'algoritmo di gradinizzazione di Gauss; allora $\tilde{A}$ ha una riga nulla, pertanto $det(\tilde{A}) = 0$ e ciò è equivalente a $det(A) = 0$.
+
+$\Leftarrow$" supponiamo che $det(A) = 0$; sia $\tilde{A}$ la matrice ottenuta da $A$ applicando l'algoritmo di gradinizzazione di Gauss; allora $det(\tilde{A}) = 0$; $\tilde{A}$ è a scala e dunque è triangolare superiore, quindi il suo determinante è il prodotto dei suoi elementi della diagonale; pertanto almeno un elemento della diagonale è nullo, e quindi almeno un gradino di $\tilde{A}$ è lungo almeno $2$, il che implica che $rg(\tilde{A}) < n$, ovvero $rg(A) < n$.
+
+**Corollario**  
+Sia $A \in M_n(K)$; allora  
+$A$ è invertibile $\Leftrightarrow$ $det(A) \neq 0$
+
+**Dimostrazione**  
+Vediamo ora che il determinante si può calcolare sviluppando rispetto a una qualsiasi colonna o a una qualsiasi riga. Questo risultati sono detti **sviluppo di Laplace** del determinante.
+
+**Teorema**  
+Sia $A \in M_n(K)$ e sia $k \in \{1, \dots, n\}$; allora  
+$det(A) = \displaystyle\sum_{i = 1}^n (-1)^{1 + k} \cdot a_{il} \cdot det(A_{ik})$  
+(sviluppo secondo la colonna $k$-esima)
+
+**Teorema**  
+Sia $A \in M_n(K)$ e sia $l \in \{1, \dots, n\}$; allora  
+$det(A) = \displaystyle\sum_{j = 1}^n (-1)^{j + j} \cdot a_{lj} \cdot det(A_{lj})$  
+(sviluppo secondo la riga $l$-esima)
+
+**Corollario**  
+Sia $A \in M_n(K)$; allora $det(A) = det({}^t A)$
+
+**Dimostrazione**  
+${}^t A =$ sviluppo lungo la prima colonna di ${}^t A =$  
+$=$ sviluppo lungo la prima riga di $A = det(A)$
+
+**Osservazione**  
+Come capire come prendere i segni nello sviluppo di Laplace?  
+Basta osservare che il segno di $(-1)^{i + j}$ è  
+
+![segni nello sviluppo di Laplace](../img/segni_laplace.png)
+
+**Teorema**  
+Siano $A, B \in M_n(K)$; allora  
+$det(A \cdot B) = det(A) \cdot det(B)$  
+(teorema di Binet)
+
+**Corollario**  
+Sia $A \in M_n(K)$ invertibile, allora  
+$det(A^{-1}) = \dfrac{1}{det(A)} = det(A)^{-1}$
+
+**Dimostrazione**  
+Vale che $A \cdot A^{-1} = 1_n$; allora per il teorema di Binet e per la proprietà $D3$ di normalizzazione vale che  
+$det(A \cdot A^{-1}) = det(1_n) = 1$  
+$det(A \cdot A^{-1}) = det(A) \cdot det(A)^{-1}$  
+$det(A^{-1}) = \dfrac{1}{det(A)}$
+
+Andiamo ora a determinare una formula esplicita per le entrate della matrice inversa di una matrice data.
+
+**Definizione**  
+Sia $A \in M_n(K)$ e siamo $i, j \in \{1, \dots, n\}$; il **cofattore $i,j$-esimo** di $A$ è lo scalare $(-1)^{i + j} \cdot A_{ij}$
+
+dove ricordiamo che $A_{ij}$ è il minore $i, j$-esimo della matrice $A$.  
+Definiamo la **matrice dei cofattori** di $A$ come quella matrice  
+$cofA \in M_n(K)$ il cui elemento di posto $(i, j)$ è il cofattore $i,j$-esimo di $A$. Dunque $(cofA)_{ij} = (-1)^{i + j} \cdot A_{ij}$
+
+**Proposizione**  
+Sia $A \in M_n(K)$; allora
+
+$A \cdot {}^t cof A = (det A) \cdot 1_n$
+
+in particolare se $A$ è invertibile, allora
+
+$A^{-1} = \dfrac{1}{det A} \cdot ({}^t cof A)$
+
+**Dimostrazione**  
+Calcoliamo l'entrata di posto $(i, j)$ della matrice $A \cdot {}^t cof A$:
+
+$A_{(i)} \cdot ({}^t cof A)^{(j)} =$
+
+$= \displaystyle\sum_{k = 1}^n a_{ik} \cdot ({}^t cof A)_{kj} =$
+
+$= \displaystyle\sum_{k = 1}^n a_{ik} \cdot (cof A)_{kj} =$
+
+$= \displaystyle\sum_{k = 1}^n a_{ik} \cdot (-1)^{j + k} \cdot det A_{jk}$
+
+si verifica che  
+
+- se $i = j$ allora quello precedente è l'espressione di $detA$
+- se $i \neq j$ allora quello precedente è l'espressione del determinante di una matrice con due righe uguali, e quindi vale zero.
+
+$\square$
