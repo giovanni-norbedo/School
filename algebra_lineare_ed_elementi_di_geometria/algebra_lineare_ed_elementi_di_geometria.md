@@ -7,13 +7,15 @@ header-includes:
     - \pagestyle{fancy}
     - \rhead{Giovanni Norbedo}
     - \cfoot{\thepage}
+    - \renewcommand{\contentsname}{Indice}
+    - \renewcommand{\figurename}{Figura}
 geometry: margin=3cm
 output: pdf_document
 ---
 
-## Introduzione
+# Introduzione
 
-### Equazioni e Soluzioni
+## Equazioni e Soluzioni
 
 Che cos'è un'equazione? Un'*equazione* è una *domanda*.
 
@@ -40,7 +42,7 @@ $3x + y -2z = 0$
 Risolvere questa equazione significa determinare una (o tutte) le terne di numeri $(x,y,z)$ tali che, se sostituiamo tali numeri alle variabili nel membro sinistro, otteniamo zero.
 
 **Osservazione**  
-Nella prima equazione ci veniva chiesto di determinare *un numero* , nella seconda ogni sostituzione è costituita da *tre numeri* ; diciamo quindi che la prima equazione è in  *una variabile* , la seconda in *tre variabili*.
+Nella prima equazione ci veniva chiesto di determinare *un numero*, nella seconda ogni sostituzione è costituita da *tre numeri*; diciamo quindi che la prima equazione è in  *una variabile*, la seconda in *tre variabili*.
 
 Una prima soluzione è data dalla scelta:  
 
@@ -92,7 +94,7 @@ per la proprietà associativa
 $= 2 \cdot (3 \cdot 1) + 2(1 \cdot 1) - 2 \cdot (2 \cdot 2)$  
 per la proprietà commutativa  
 
-$= 2 \cdot (3 \cdot 1 + 1 \cdot 1 -2 \cdot 2)$  Analisi Matematica 1
+$= 2 \cdot (3 \cdot 1 + 1 \cdot 1 -2 \cdot 2)$  
 per la proprietà distributiva  
 
 $= 2 \cdot 0 = 0$
@@ -145,15 +147,13 @@ Considerando quanto abbiamo imparato, troviamo che
 
 Consideriamo ora il sistema
 
-$$
-\begin{cases}
-    \begin{align*}
-        3x + 1y - 2z &= 0 \\
-      - 2x - 2y + 2z &= 0 \\  
-        2x + 0y - 1z &= 0
-    \end{align*}
-\end{cases}
-$$
+$$\begin{cases}
+    \begin{aligned}
+        3x + 1y - 2z & = 0 \\
+      - 2x - 2y + 2z & = 0 \\  
+        2x + 0y - 1z & = 0
+    \end{aligned}
+\end{cases}$$
 
 Le proprietà A, B e C valgono anche in questo caso.
 
@@ -162,7 +162,7 @@ Ora vorrei calcolare le soluzioni di questo sistema. Per farlo usiamo un teorema
 **Definizione**  
 Due sistemi si dicono **equivalenti** se hanno le stesse soluzioni.
 
-Andremo a manipolare il sistema al fine di trovarne uno equivalente (ovvero con le stesse soluzioni) più semplicemente da risolvere, ovvero nella forma :
+Andremo a manipolare il sistema al fine di trovarne uno equivalente (ovvero con le stesse soluzioni) più semplicemente da risolvere, ovvero nella forma:
 
 - un'equazione di cui compaiono tre variabili
 - un'equazione di cui compaiono due variabili
@@ -180,11 +180,11 @@ Il sistema diviene
 
 $$
 \begin{cases}
-    \begin{align*}
+    \begin{aligned}
         1x + 1y - 1z &= 0 \\
         3x - 1y + 2z &= 0 \\  
         2x + 0y - 1z &= 0
-    \end{align*}
+    \end{aligned}
 \end{cases}
 $$
 
@@ -208,10 +208,10 @@ In definitiva il sistema è equivalente a
 
 $$
 \begin{cases}
-    \begin{align*}
+    \begin{aligned}
         x + y - z &= 0 \\
         -2y + z &= 0
-    \end{align*}
+    \end{aligned}
 \end{cases}
 $$
 
@@ -226,70 +226,70 @@ Se ora, a partite dal sistema iniziale, estraessimo i coefficienti e li ponessim
 
 $$
 \begin{cases}
-    \begin{align*}
+    \begin{aligned}
         3x + 1y - 2z &= 0 \\
     - 2x - 2y + 2z &= 0 \\  
         2x + 0y - 1z &= 0
-    \end{align*}
+    \end{aligned}
 \end{cases}
 $$
 
 $$
-\begin{pmatrix*}[r]
+\begin{pmatrix}
     3  &  1 & -2 \\
     -2 & -2 &  2 \\
     2  &  0 & -1
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 Moltiplico per $- \frac{1}{2}$ la seconda equazione
 
 $$
-\begin{pmatrix*}[r]
+\begin{pmatrix}
     3  &  1 & -2 \\
     1  &  1 & -1 \\
     2  &  0 & -1
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 Inverto la prima equazione con la seconda
 
 $$
-\begin{pmatrix*}[r]
+\begin{pmatrix}
     1  &  1 & -1 \\
     3  &  1 & -2 \\
     2  &  0 & -1
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 Sottraggo dall'attuale seconda equazione la prima equazione moltiplicata per $3$
 
 $$
-\begin{pmatrix*}[r]
+\begin{pmatrix}
     1  &  1 & -1 \\
     0  & -2 &  1 \\
     2  &  0 & -1
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 Sottraggo dalla terza equazione la prima moltiplicata per $2$
 
 $$
-\begin{pmatrix*}[r]
+\begin{pmatrix}
     1  &  1 & -1 \\
     0  & -2 &  1 \\
     0  & -2 &  1
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 Sottraggo dalla terza equazione la seconda
 
 $$
-\begin{pmatrix*}[r]
+\begin{pmatrix}
     1  &  1 & -1 \\
     0  & -2 &  1 \\
     0  &  0 &  0
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 Sono riuscito a risolvere il sistema.  
@@ -297,7 +297,7 @@ Ho utilizzato una procedura algoritmica (un algoritmo può essere eseguito da un
 
 ---
 
-## Vettori applicati e vettori liberi
+# Vettori applicati e vettori liberi
 
 Ci mettiamo nel contesto della geometria euclidea.  
 Un **vettore applicato** è un segmento orientato, caratterizzato dunque da:
@@ -315,7 +315,7 @@ Il vettori applicati si possono sommare tra di loro, purché il punto finale del
 
 Definiamo $\overrightarrow{AB} + \overrightarrow{BC} := \overrightarrow{AC}$
 
-![somma di due vettori](../img/somma_vettori.png)
+![somma di due vettori](../img/somma_vettori.png){ width=401px }
 
 **Attenzione**: se $B \not ={C}$, allora non sappiamo come sommare $\overrightarrow{AB}$ e $\overrightarrow{CD}$
 
@@ -341,7 +341,7 @@ Ora, vale che
 $(\overrightarrow{AB} + \overrightarrow{BC}) + \overrightarrow{CD} = \overrightarrow{AC} + \overrightarrow{CD} = \overrightarrow{AD}$  
 $\overrightarrow{AB} + (\overrightarrow{BC} + \overrightarrow{CD}) = \overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}$
 
-![proprietà associativa dei vettori](../img/proprietà_associativa_dei_vettori.png)
+![proprietà associativa dei vettori](../img/proprietà_associativa_dei_vettori.png){ width=401px }
 
 $\square$
 
@@ -439,15 +439,18 @@ Se $\vec{v} = [\overrightarrow{AB}]$ allora $- \vec{v} = [\overrightarrow{BA}]$
 
 **Proprietà** della moltiplicazione per uno scalare:
 
-- per ogni $\vec{V}$
-  - $1 \cdot \vec{V} = \vec{V}$
-- per ogni $\vec{V}$
-  - $(-1) \cdot \vec{V} = - \vec{V}$
-- per ogni $\lambda, \mu \in \mathbb{R}$, per ogni $\vec{V}$
-  - $(\lambda \mu) \cdot \vec{V} = \lambda (\mu \cdot \vec{V})$
-- per ogni $\lambda, \mu \in \mathbb{R}$, per ogni $\vec{V}, \vec{U}$
-  - $(\lambda + \mu) \cdot \vec{V} = \lambda \cdot \vec{V} + \mu \cdot \vec{V}$
-  - $\lambda \cdot (\vec{V} + \vec{U}) = \lambda \cdot \vec{U} + \lambda \cdot \vec{V}$
+per ogni $\vec{V}$  
+$1 \cdot \vec{V} = \vec{V}$
+
+per ogni $\vec{V}$  
+$(-1) \cdot \vec{V} = - \vec{V}$
+
+per ogni $\lambda, \mu \in \mathbb{R}$, per ogni $\vec{V}$  
+$(\lambda \mu) \cdot \vec{V} = \lambda (\mu \cdot \vec{V})$
+
+per ogni $\lambda, \mu \in \mathbb{R}$, per ogni $\vec{V}, \vec{U}$  
+$(\lambda + \mu) \cdot \vec{V} = \lambda \cdot \vec{V} + \mu \cdot \vec{V}$  
+$\lambda \cdot (\vec{V} + \vec{U}) = \lambda \cdot \vec{U} + \lambda \cdot \vec{V}$
 
 **Definizione**:  
 Uno spazio vettoriale è un insieme $V$  
@@ -569,7 +572,7 @@ $v + (-1) \cdot v = (-1) \cdot v + v = 0$
 
 la prima uguaglianza segue dalla commutatività della somma; dimostriamo la seconda uguaglianza
 
-$v + (-1) \cdot v \xlongequal{V8} (-1) \cdot v + v \xlongequal{V6} (-1 +1) \cdot v = 0 \cdot v = 0$
+$v + (-1) \cdot v \stackrel{V8}{=} (-1) \cdot v + v \stackrel{V6}{=} (-1 +1) \cdot v = 0 \cdot v = 0$
 
 Se sapessimo che $0 \cdot v = 0$ (vettore nullo), allora avremmo concluso la dimostrazione,  
 però questo non ci è dato a sapere, stanti semplicemente le 8 proprietà definitasi degli spazi vettoriali; dimostriamo qui di seguito che questa ulteriore proprietà segue dalle 8 proprietà.
@@ -584,7 +587,7 @@ $0 \cdot v = 0$
 **Dimostrazione**  
 Sia $v \in V$; abbiamo che
 
-$0 \cdot v = (0 + 0) \cdot v \xlongequal{V6} 0 \cdot v + 0 \cdot v$
+$0 \cdot v = (0 + 0) \cdot v \stackrel{V6}{=} 0 \cdot v + 0 \cdot v$
 
 quindi
 
@@ -658,19 +661,18 @@ Non è un sottospazio vettoriale di $\mathbb{R}^2$, perché $(0,0) \notin W$
 
 ---
 
-## Matrici
+# Matrici
 
 **Definizione**  
 Siano $m,n \in \mathbb{N}$; una matrice $m \times n$ a coefficienti reali è una tabella rettangolare di $m \cdot n$ numeri del tipo
 
 $$
-A_{m\times n} =
-\left[ {\begin{array}{cccc}
+A = \begin{pmatrix}
   a_{11} & a_{12} & \cdots & a_{1n}\\
   a_{21} & a_{22} & \cdots & a_{2n}\\
   \vdots & \vdots & \ddots & \vdots\\
   a_{m1} & a_{m2} & \cdots & a_{mn}\\
-\end{array} } \right]
+\end{pmatrix}
 $$
 
 dove $a_{ij}$ è un numero reale, ovvero
@@ -681,12 +683,11 @@ $a_{ij} \in \mathbb{R}$, $\forall i \in \{1, 2, \dots, m\}$ e $\forall j \in \{1
 Sia $A$ una matrice $3 \times 4$ a coefficienti reali
 
 $$
-A =
-\left[ {\begin{array}{cccc}
+A = \begin{pmatrix}
   1 & 2 & 3 & 4\\
   5 & 6 & 7 & 8\\
   9 & 10 & 11 & 12\\
-\end{array} } \right]
+\end{pmatrix}
 $$
 
 $a_{1,1} = 1$  
@@ -707,12 +708,12 @@ Sia $A = (a_{ij})$ una matrice a coefficienti reali
 
 per ogni $i \in \{1, 2, \dots, m\}$ la $i$-esima riga è la matrice
 
-$A_j = (a_{i1}, a_{i2}, \dots, a_{in})$
+$A_{(i)} = (a_{i1}, a_{i2}, \dots, a_{in})$
 
 per ogni $j \in \{1, 2, \dots, n\}$ la $j$-esima colonna la matrice
 
 $$
-A_i =
+A^{(j)} =
 \begin{pmatrix}
   \alpha_{1j} \\
   \alpha_{2j} \\
@@ -731,11 +732,15 @@ A =
 $$
 
 $$
-A_{(1)} = (1\ 3)  
+A_{(1)} = \begin{pmatrix}
+  1 & 3\\
+\end{pmatrix}
 $$
 
 $$
-A_{(2)} = (-2\ 5)  
+A_{(2)} = \begin{pmatrix}
+  -2 & 5\\
+\end{pmatrix}
 $$
 
 $$
@@ -762,13 +767,11 @@ La matrice $m \times n$ nulla è la matrice $m \times n$ le cui entrate sono tut
 
 **Esempio**  
 $$
-\begin{equation*}
  \begin{pmatrix}
    0 & 0 & 0\\
    0 & 0 & 0\\
   0 & 0 & 0
  \end{pmatrix}
-\end{equation*}
 $$
 
 Introduciamo delle operazioni tra matrici al fine di rendere $M_{m,n}(\mathbb{R})$ un $\mathbb{R}$-spazio vettoriale.
@@ -825,88 +828,72 @@ Sia $\lambda = 3$, e sia
 
 $$
 A =
-\begin{equation*}
  \begin{pmatrix}
   1 & 2 & 3\\
   -3 & -2 & -1\\
  \end{pmatrix}
-\end{equation*}
 $$
 
 $$
 3 \cdot A =
-\begin{equation*}
  \begin{pmatrix}
   3 & 6 & 9\\
   -9 & -6 & -3\\
  \end{pmatrix}
-\end{equation*}
 $$
 
 Consideriamo una matrice $2 \times 2$:
 
 $$
 A=
-\begin{equation*}
  \begin{pmatrix}
    3 & 1 \\
    -2 & 4
  \end{pmatrix}
-\end{equation*}
 $$
 
 Ora consideriamo quattro matrici particolari:
 
 $$
 E :=
-\begin{equation*}
  \begin{pmatrix}
    1 & 0 \\
    0 & 0
  \end{pmatrix}
-\end{equation*}
 $$
 
 $$
 F :=
-\begin{equation*}
  \begin{pmatrix}
    0 & 1 \\
    0 & 0
  \end{pmatrix}
-\end{equation*}
 $$
 
 $$
 G :=
-\begin{equation*}
  \begin{pmatrix}
    0 & 0 \\
    1 & 0
  \end{pmatrix}
-\end{equation*}
 $$
 
 $$
 H :=
-\begin{equation*}
  \begin{pmatrix}
    0 & 0 \\
    0 & 1
  \end{pmatrix}
-\end{equation*}
 $$
 
 Considero ora la seguente **combinazione lineare** di queste quattro matrici:
 
 $$
-\begin{equation*}
 3F + F - 2G + 4H =
 \begin{pmatrix}
    3 & 1 \\
    -2 & 4
 \end{pmatrix}
-\end{equation*}
 = A
 $$
 
@@ -1042,10 +1029,10 @@ Ritorniamo alla situazione delle matrici $2 \times 2$ e consideriamo il seguente
 
 $$
 T_{2,2} (\mathbb{R}) := \{A \in M_{2,2} \in (\mathbb{R}) : a_{21} = 0\} = \left\lbrace
-  \begin{pmatrix*}[r]
+  \begin{pmatrix}
     a_{11} & a_{12} \\
     0 & a_{22}
-  \end{pmatrix*}
+  \end{pmatrix}
   \in M_{2,2}(\mathbb{R})
   : a_{11}, a_{12}, a_{22} \in \mathbb{R}
 \right\rbrace
@@ -1147,10 +1134,10 @@ $\forall j \in \{1, \dots, m\}$
 
 **Esempio**  
 $$A =
-\begin{pmatrix*}[r]
+\begin{pmatrix}
    1 & 2 & 3 \\
    -3 & -2 & -1
-\end{pmatrix*}
+\end{pmatrix}
 $$
 
 $${}^tA =
@@ -1170,11 +1157,11 @@ Siano $A,B \in M_{m,n} (\mathbb{R})$, allora
 **Dimostrazione 1.**  
 Notiamo che
 
-$^t(A + B) \in M_{m,n} (\mathbb{R})$
+$^t(A + B) \in M_{n,m} (\mathbb{R})$
 
-$^tA \in M_{m,n} (\mathbb{R})$
+$^tA \in M_{n,m} (\mathbb{R})$
 
-$^tB \in M_{m,n} (\mathbb{R})$
+$^tB \in M_{n,m} (\mathbb{R})$
 
 Abbiamo dunque che sia a sinistra che a destra dell'uguale abbiamo matrici dello stesso tipo, dunque ha senso chiedersi se esse sono uguali.
 
@@ -1416,7 +1403,7 @@ $(A \cdot B)_{ij} = A_{(i)} \cdot B^{(j)} = a_{i1} \cdot b_{1j} + \dots + a_{ip}
 **Osservazione**  
 Il prodotto tra due matrici $A$ e $B$ è definito solo se il numero di colonne di $A$ coincide con il numero di righe di $B$.
 
-> Esempio moltiplicazione due matrici ($2 \times 3$ per $3 \times 2$ e $3 \times 3$ per $3 \times 2$). Fare esercizi.
+> Esempio moltiplicazione due matrici ($2 \times 3$ per $3 \times 2$ e $3 \times 3$ per $3 \times 2$).
 
 **Definizione**  
 Sia $n \in \mathbb{N}, n>0$, allora la matrice unità è quella matrice quadrata $n \times n$ le cui entrate sono tutte nulle, fuorché quella della diagonale principale, che sono tutte uguali a $1$; denotiamo questa matrice con $1_n$ oppure $I_n$ oppure $Id_n$.
@@ -1444,22 +1431,20 @@ $(A \cdot B) \cdot C = A \cdot (B \cdot C)$ (**proprietà associativa del prodot
 Sia $A \in M_{m,p}(\mathbb{R})$ e $B \in M_{p,n}(\mathbb{R})$,  
 allora
 
-${}^t (A \cdot B) \neq {}^tA \cdot {}^tB$  
-$m \times n$ , $p \times m$ , $n \times p$
+$\underbrace{{}^t(A \cdot B)}_{n \times m} \neq \underbrace{{}^t A}_{p \times m} \cdot \underbrace{{}^tB}_{n \times p}$
 
 Le matrici ${}^tA \cdot {}^tB$ **non** si possono moltiplicare tra loro in generale (ne $m \neq n$).
 
 Vale invece che
 
-${}^t (A \cdot B) = {}^tB \cdot {}^tA$  
-$m \times n$ , $n \times p$ , $p \times m$
+$\underbrace{{}^t(A \cdot B)}_{n \times m} = \underbrace{{}^tB}_{n \times p} \cdot \underbrace{{}^tA}_{p \times m}$
 
 **Dimostrazione**  
 Per mostrare che ${}^t (A \cdot B)$ è uguale a ${}^tB \cdot {}^tA$, mostriamo che tutte le loro entrate sono uguali: sta dunque $i \in \{1, \dots, n\}$ e sia $j \in \{1, \dots, m\}$; allora
 
 $({}^t(A \cdot B))_{ij} = (A \cdot B)_{ji} = A_{(j)} \cdot B^{(i)}$
 
-$({}^tA \cdot {}^tB)_{ij} = ({}^tB)_{(i)} \cdot ({}^tA)^{(j)} = B^{(j)} \cdot A_{(j)}$
+$({}^t B \cdot {}^tA)_{ij} = ({}^t B)_{(i)} \cdot ({}^t A)^{(j)} = A_{(j)} \cdot B^{(i)}$
 
 questo mostra che le due matrici sono uguali.
 
@@ -1476,7 +1461,7 @@ per ogni $A \in M_{n}(\mathbb{R})$ vale che
 $1_n \cdot A = A$ e $A \cdot 1_n = A$
 
 **Osservazione**  
-Nei numeri reali, dato $a \in \mathbb{R}$, diciamo che $b$ è inverso di $a$ se vale che $a \cdot b = b \cdot a = 1$; ogni numero reale non nullo ammette un unico inverso; l'inverso di $a \in \mathbb{R} \setminus 0$ si denota $a^{-1}$.
+Nei numeri reali, dato $a \in \mathbb{R}$, diciamo che $b$ è inverso di $a$ se vale che $a \cdot b = b \cdot a = 1$; ogni numero reale non nullo ammette un unico inverso; l'inverso di $a \in \mathbb{R} \smallsetminus 0$ si denota $a^{-1}$.
 
 **Definizione**  
 Sia $A \in M_{m,n}(\mathbb{R})$; A si dice invertibile se esiste $B \in M_{m,n}(\mathbb{R})$ tale che valga:
@@ -1522,7 +1507,7 @@ A=
 \end{pmatrix}
 $$
 
-mostriamo che $A$$ non è invertibile; supponiamo che esiste un'inversa $B$
+mostriamo che $A$ non è invertibile; supponiamo che esiste un'inversa $B$
 
 $$
 B =
@@ -1563,7 +1548,7 @@ $$(1 , 1) \cdot
 = 0
 $$
 
-ovvero $b_{12} + b_{21} = 0$
+ovvero $b_{11} + b_{21} = 0$
 
 e questo è impossibile perché implicherebbe $1 = 0$.
 
@@ -1594,7 +1579,7 @@ e inoltre $0 \neq 1$
 K4: esistenza di opposto e inverso:  
 $\forall a \in K, \exists b \in K$, tale che a + b = b + a = 0$  
 (denotiamo $b$ con $-a$)  
-$\forall a \in K \setminus \{0\}, \exists c \in K$, tale che $a \cdot c = c \cdot a = 1$  
+$\forall a \in K \smallsetminus \{0\}, \exists c \in K$, tale che $a \cdot c = c \cdot a = 1$  
 (denotiamo $c$ con $a^{-1}$ o con $1/a$)
 
 K5: distributività: $\forall a, b, c \in K, a \cdot (b + c) = (a \cdot b) + (a \cdot c)$
@@ -1638,7 +1623,7 @@ $(a,b) \mapsto a \cdot b$
 
 Pertanto la precedente nozione di $\mathbb{R}$-spazio vettoriale sarà d'ora in poi sostituita da quella di $K$-spazio vettoriale, con $K$ un campo.
 
-## Sistemi lineari
+# Sistemi lineari
 
 **Definizione**  
 Sia $K$ un campo; un sistema di $m$ equazioni in $n$ incognite a coefficienti in $K$ è un sistema di equazioni della forma seguente
@@ -1672,8 +1657,8 @@ Consideriamo il sistema
 $$
 \left\lbrace
   \begin{array}{l}
-    x_1 +2x_2 = 3 & \\
-    x_1 +2x_2 = 5 & \\
+    x_1 +2x_2 = 3 \\
+    x_1 +2x_2 = 5 \\
   \end{array}
 \right.
 $$
@@ -1713,8 +1698,8 @@ fosse una soluzione, allora verrebbe che:
 $$
 \left\lbrace
   \begin{array}{l}
-    s_1 + 2s_2 = 3 & \\
-    s_1 + 2s_2 = 5 & \\
+    s_1 + 2s_2 = 3 \\
+    s_1 + 2s_2 = 5 \\
   \end{array}
 \right.
 \Rightarrow
@@ -1729,8 +1714,8 @@ Consideriamo il sistema
 $$
 \left\lbrace
   \begin{array}{l}
-    x_1 +2x_2 = 3 & \\
-    x_1 -x_2 = 1 & \\
+    x_1 +2x_2 = 3\\
+    x_1 -x_2 = 1 \\
   \end{array}
 \right.
 $$
@@ -1742,8 +1727,8 @@ Per sostituzione ottengo
 $$
 \left\lbrace
   \begin{array}{l}
-    x_1 = \frac{5}{3} & \\
-    x_2 = \frac{2}{3} & \\
+    x_1 = \frac{5}{3} \\
+    x_2 = \frac{2}{3} \\
   \end{array}
 \right.
 $$
@@ -1771,8 +1756,8 @@ Consideriamo il sistema:
 $$
 \left\lbrace
   \begin{array}{l}
-    x_1 +2x_2 = 3 & \\
-    2x_1 + 4x_2 = 6 & \\
+    x_1 +2x_2 = 3 \\
+    2x_1 + 4x_2 = 6 \\
   \end{array}
 \right.
 $$
@@ -1839,7 +1824,7 @@ $$
 
 graficamente queste soluzioni corrispondono ai punti di una retta che passa per il punto $(3, 0)$.
 
-### Teorema di Cramer
+## Teorema di Cramer
 
 Consideriamo un sistema lineare con $n$ equazioni ad $n$ incognite
 
@@ -1858,9 +1843,9 @@ Per dimostrare il teorema, dimostriamo due cose:
 
 1- $A^{-1} \cdot b$ è soluzione del sistema se e solo se, se sostituiamo $X$ con $A^{-1} \cdot b$, otteniamo una uguaglianza vera nel sistema (notiamo che la sostituzione ha senso dato che $X$ è una matrice $n \times 1$ e $A^{-1} \cdot b$ è una matrice $n \times 1$).
 
-$A \cdot (A^{-1} \cdot b) \xlongequal{?} b$  
-$(A \cdot A^{-1}) \cdot b \xlongequal{?} b$  
-$1_n \cdot b \xlongequal{?} b$  
+$A \cdot (A^{-1} \cdot b) \stackrel{?}{=} b$  
+$(A \cdot A^{-1}) \cdot b \stackrel{?}{=} b$  
+$1_n \cdot b \stackrel{?}{=} b$  
 $b = b$  
 vero!
 
@@ -1909,7 +1894,7 @@ $$
 
 in questo senso, diremo ad esempio che un elemento $s \in K^n$ è soluzione di un sistema lineare $AX = b$.
 
-### Teorema di struttura per sistemi lineari omogenei
+## Teorema di struttura per sistemi lineari omogenei
 
 Consideriamo un sistema lineare omogeneo di $m$ equazioni ad $n$ incognite
 
@@ -1971,7 +1956,7 @@ $AX = 0$
 allora per il teorema di Cramer, $A^{-1} \cdot 0$ è l'unica soluzione del sistema  
 e dato che $A^{-1} \cdot 0 = 0$ abbiamo che $0$ è l'unica soluzione di un tale sistema lineare omogeneo.
 
-### Teorema di struttura per sistemi lineari qualsiasi
+## Teorema di struttura per sistemi lineari qualsiasi
 
 Consideriamo un sistema lineare  
 $AX = b$ con $A \in M_{m,n}(K)$ e $b \in K^n$,  
@@ -2273,7 +2258,7 @@ Se applichiamo a un sistema lineare $AX = b$ una delle tre operazioni elementari
 
 Se mostriamo che possiamo trasformare un sistema lineare in uno equivalente a scala tramite queste tre operazioni, saremo quindi in grado si calcolare soluzioni di un qualsiasi sistema lineare.
 
-### Algoritmo di Gauss (di gradinizzazione)
+## Algoritmo di Gauss (di gradinizzazione)
 
 *Input*: matrice completa $(A|b)$ di un sistema lineare.
 *Output*: matrice completa $(\tilde{A}|\tilde{b})$ tale che $\tilde{A}$ è a scala e $\tilde{A}X = \tilde{b}$ è equivalente a $AX = b$.
@@ -2339,11 +2324,97 @@ Questo algoritmo termina in un tempo finito e restituisce un risultato che rispe
 
 > Esempio
 
-## Sistemi di generatori e indipendenza lineare
+# Sistemi di generatori e indipendenza lineare
 
-Lezione del 31.10 !!!
+**Lemma**  
+Sia $V$ uno spazio vettoriale su $K$; siano $U, W \in V$$ sottospazi vettoriali; allora $U \cap W$ è uno sottospazio vettoriale di $V$.
 
-## Basi di spazi vettoriali
+**Dimostrazione**  
+Verifichiamo che $U \cap W$ soddisfa le tre proprietà di sottospazio vettoriale:
+
+1. mostriamo che $0 \in U \cap W$; dato che $U$ e $W$ sono sottospazi vettoriali, allora $0 \in U$ e $0 \in W$; quindi $0 \in U \cap W$.  
+2. mostriamo che se $v_1, v_2 \in U \cap W$, allora $v_1 + v_2 \in U \cap W$; supponiamo che $v_1, v_2 \in U \cap W$; allora $v_1, v_2 \in U$ e $v_1, v_2 \in W$; dato che $U$ e $W$ sono sottospazi vettoriali, allora $v_1 + v_2 \in U$ e $v_1 + v_2 \in W$; quindi $v_1 + v_2 \in U \cap W$.
+3. mostriamo che se $v \in U \cap W$ e $\lambda \in K$, allora $\lambda \cdot v \in U \cap W$; consideriamo quindi $\lambda \in K$ e $v \in U \cap W$; allora $v \in U$ e $v \in W$; dato che $U$ e $W$ sono sottospazi vettoriali, allora $\lambda \cdot v \in U$ e $\lambda \cdot v \in W$; quindi $\lambda \cdot v \in U \cap W$.
+
+**Osservazione**  
+Non è vero che se $V$ è spazio vettoriale su $K$ e $U, W \in V$ sono sottospazi vettoriali, allora $U \cup W$ è uno sottospazio vettoriale di $V$ (non soddisfa la somma).
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$; siano $U, W \in V$ sottospazi vettoriali; definiamo:
+
+$U + W = \{u + w : u \in U, w \in W\}$
+
+e chiamiamo questo insieme il sottospazio vettoriale somma di $U$ e $W$.
+
+**Lemma**  
+$U + W$ è uno sottospazio vettoriale di $V$.
+
+**Dimostrazione**  
+Per esercizio.
+
+**Lemma**  
+Con la notazione precedente, vale che $U \subseteq U + W$ e $W \subseteq U + W$.
+
+**Dimostrazione**  
+Mostrare che $U \subseteq U + W$ significa mostrare che $\forall u \in U$, vale che $u \in U + W$ (e analogamente per gli elementi di $W$); per farlo, dato $u \in U$, dobbiamo mostrare che $u$ si può scrivere come somma di un elemento di $U$ e di un elemento di $W$; ora $u = u + 0$ quindi $u \in U + W$.
+
+**Corollario**  
+$U \cup W \in U + W$; inoltre si può dimostrare che $U + W$ è il più piccolo sottospazio di $V$ che contiene $U \cup W$.
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$; siano $v_1, \dots, v_n \in V$; allora una **combinazione lineare** di $v_1, \dots, v_n$ è un qualsiasi vettore della forma $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$, dove $\lambda_1, \dots, \lambda_n \in K$.
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; definiamo  
+$span(v_1, \dots, v_n) := \{\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n : \lambda_1, \dots, \lambda_n \in K\}$ = {combinazioni lineari di $v_1, \dots, v_n$}
+
+**Lemma**  
+$span(v_1, \dots, v_n)$ è uno sottospazio vettoriale di $V$.
+
+**Dimostrazione**  
+$1)$ $0 = 0 \cdot v_1 + \dots + 0 \cdot v_n$, dunque $0 \in span(v_1, \dots, v_n)$
+
+$2)$ siano $u, w \in span(v_1, \dots, v_n)$, dobbiamo mostrare che $u + w \in span(v_1, \dots, v_n)$; per ipotesi $u = \displaystyle\sum_{i = 1}^n \lambda_i v_i$, con $\lambda_i \in K$ e $W = \displaystyle\sum_{i = 1}^n \mu_i w_i$, con $\mu_i \in K$; allora $u + w = \displaystyle\sum_{i = 1}^n (\lambda_i + \mu_i) v_i$, dunque $u + w \in span(v_1, \dots, v_n)$
+
+$3)$ siano $u \in span(v_1, \dots, v_n)$ e $\lambda \in K$, devo mostrare che $\lambda \cdot u \in span(v_1, \dots, v_n)$; per ipotesi $u = \lambda \cdot v_1 + \dots + \lambda \cdot v_n$, con $\lambda \in K$; allora $\lambda \cdot u = (\lambda \cdot \lambda_1) \cdot v_1 + \dots + (\lambda \cdot \lambda_n) \cdot v_n$, dunque $\lambda \cdot u \in span(v_1, \dots, v_n)$
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$ e sia $U \in V$ uno sottospazio vettoriale; un insieme di elementi $\{u_1, \dots, u_n\} \subseteq U$ si dicono un **sistema di generatori** di/per $U$ se ogni vettore $u \in U$ è combinazione lineare di $u_1, \dots, u_n$; equivalentemente $\{u_1, \dots, u_n\}$ è un sistema di generatori di $U$ se e solo se $span(u_1, \dots, u_n) = U$.
+
+**Osservazione**  
+Se $\{u_1, \dots, u_n\}$ è un sistema di generatori di uno sottospazio vettoriale $U$, allora per ogni $u \in U$ vale che $\{u_1, \dots, u_n, u\}$ è anch'esso un sistema di generatori di $U$.
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale e siano $v_1, \dots, v_n \in V$; gli elementi $v_1, \dots, v_n$ si dicono **linearimente indipendenti** se possiamo scrivere $0 \in V$ come uan combinazione lineare di $v_1, \dots, v_n$ in cui non tutti i coefficienti in $K$ sono nulli, ovvero se vale che $0 = \lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$, con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli.
+
+**Proposizione**  
+Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; allora $v_1, \dots, v_n$ si sono **linearimente dipendenti** se e solo se uno di essi può essere scritto come combinazione lineare degli altri [equivalentemente, se e solo se esiste $j \in \{1, \dots, n\}$ tale che $v_j \in span(v_1, \dots, v_ {j - 1}, v_{j + 1}, \dots, v_n)$, indicato anche come $span(v_1, \dots, \hat{v}_j, \dots, v_n)$\].
+
+**Dimostrazione**  
+"$\Rightarrow$"  
+Supponiamo che $v_1, \dots, v_n$ siano linearimente dipendenti; allora $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n = 0$ con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli; allora esiste $j \in \{1, \dots, n\}$ tale che $\lambda_j \neq 0$, allora vale che  
+$-\lambda_j \cdot v_j = \lambda_1 \cdot v_1 + \dots + \lambda_{j - 1} \cdot v_{j - 1} + \lambda_{j + 1} \cdot v_{j + 1} + \dots + \lambda_n \cdot v_n$  
+e quindi  
+$v_j = \Big(-\dfrac{\lambda_1}{\lambda_j}\Big) \cdot v_1 + \dots + \Big(-\dfrac{\lambda_{j - 1}}{\lambda_j}\Big) \cdot v_{j - 1} + \dots + \Big(-\dfrac{\lambda_{j + 1}}{\lambda_j}\Big) \cdot v_{j + 1} + \dots + \Big(-\dfrac{\lambda_n}{\lambda_j}\Big) \cdot v_n$  
+ovvero $v_j \in span(v_1, \dots, \hat{v}_j, \dots, v_n)$
+
+"$\Leftarrow$"  
+Supponiamo che esista un $j \in \{1, \dots, n\}$ tale che $v_j \in span(v_1, \dots, \hat{v}_j, \dots, v_n)$; allora  
+$v_j = \mu_1 \cdot v_1 + \dots + \mu_{j - 1} \cdot v_{j - 1} + \mu_{j + 1} \cdot v_{j + 1} + \dots + \mu_n \cdot v_n$  
+allora  
+$\mu_1 \cdot v_1 + \dots + \mu_{j - 1} \cdot v_{j - 1} + v_j + \mu_{j + 1} \cdot v_{j + 1} + \dots + \mu_n \cdot v_n = 0$  
+e il coefficiente di $v_j$ è $1$, dunque è diverso da zero, pertanto $v_1, \dots, v_n$ sono linearimente dipendenti.
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; diciamo che $v_1, \dots, v_n$ sono **linearimente indipendenti** se non sono linearimente dipendenti; equivalentemente $v_1, \dots, v_n$ sono linearimente indipendenti se e solo se l'unico modo di scrivere $0$ come combinazione lineare di $v_1, \dots, v_n$ è quello di usare tutti i coefficienti nulli; equivalentemente, $v_1, \dots, v_n$ sono linearimente indipendenti se, dal supporre che valga $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n = 0$, discende che $\lambda_1 = 0, \dots, \lambda_n = 0$.
+
+**Definizione**  
+Sia $V$ uno spazio vettoriale su $K$ e sia $U \subseteq V$ un sottospazio vettoriale; una **base** di $U$ è un insieme di vettori $u_1, \dots, u_n \in U$ tali che:  
+
+1. $\{u_1, \dots, u_n\}$ sono un sistema di generatori di $U$
+2. $\{u_1, \dots, u_n\}$ sono linearimente indipendenti
+
+# Basi di spazi vettoriali
 
 **Definizione**  
 Sia $V$ uno spazio vettoriale su $K$; se esiste un sistema di generatori $\{v_1\ \dots, v_n\}$ finito di $V$, allora $V$ si dice **finitamente generato**.
@@ -2623,7 +2694,7 @@ Sia $V$ uno spazio vettoriale su $K$ finitamente generato; siano $\{v_1, \dots, 
 **Dimostrazione**  
 Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di Steinitz (perché altrimenti $\{w_1, \dots, w_m\}$ non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di Steinitz (perché altrimenti $\{v_1, \dots, v_n\} non sarebbero linearmente indipendenti); quindi $n = m$.
 
-## Dimensione e rango
+# Dimensione e rango
 
 **Definizione**
 Sia $V$ uno spazio vettoriale su $K$ finitamente generato
@@ -2889,7 +2960,7 @@ $$
 
 verificare che questi due vettori formano una base delle soluzioni di $AX = 0$.
 
-## Rango e determinante
+# Rango e determinante
 
 **Corollario**  
 Sia $A \in M_{n}(K)$, allora $rg(A) = n$ (ovvero il rango di $A$ è il massimo possibile) se e solo se per ogni $b \in K^n$, il sistema lineare $A \cdot X = b$ è compatibile.
@@ -2914,9 +2985,9 @@ Sia $A$ invertibile, allora per il teorema di Cramer, $\forall b \in K^n$ il sis
 "$\Rightarrow$"  
 Supponiamo che $rg(A) = n$, vogliamo mostrare che una certa $B \in M_{n}(K)$ tale che $AB = BA = 1_n$; è sufficiente costruire $B$ tale che $AB = 1_n$; ora, vale che
 
-$AB = 1_n$ se e solo se $A \cdot B^{(i)} = \begin{pmatrix} 0 & \\ \vdots & \\ 1 & (i)\\ \vdots & \\ 0 & \end{pmatrix}$
+$AB = 1_n$ se e solo se $A \cdot B^{(i)} = \begin{pmatrix} 0 \\ \vdots \\ 1 & (i)\\ \vdots \\ 0 & \end{pmatrix}$
 
-chiamiamo $e_i$ il vettore $\begin{pmatrix} 0 & \\ \vdots & \\ 1 & (i)\\ \vdots & \\ 0 & \end{pmatrix}$
+chiamiamo $e_i$ il vettore $\begin{pmatrix} 0 \\ \vdots \\ 1 & (i)\\ \vdots \\ 0 & \end{pmatrix}$
 
 se e solo se tutti i sistemi lineari $A \cdot B^{(i)} = e_i$, con $i \in \{1, \dots, n\}$, hanno soluzione; dato che $rg(A) = n$, sappiamo che tutti questi sistemi lineari sono compatibili e dunque le loro soluzioni determinano le colonne di $B$.
 
@@ -3111,7 +3182,7 @@ $A^{-1} = \frac{1}{det(A)} \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} = \beg
 **Osservazione**  
 Se $A \in M_2 (\mathbb{R})$ e consideriamo i suoi due vettori colonna e supponiamo che valga $a_{ij} > 0,\ \forall i, j \in \{1, 2\}$, allora possiamo rappresentare i due vettori colonna nel piano:
 
-![determinante come area](../img/determinante_come_area.png)
+![determinante come area](../img/determinante_come_area.png){ width=301px }
 
 si può verificare che se $\mathcal{P}$ è il parallelogramma determinato dai due vettori di $A$, allora
 
@@ -3138,7 +3209,7 @@ $det(A) = \sum\limits_{i = 1}^n (-1)^{i + 1} \cdot a_{i1} \cdot det(A_{i1})$
 **Esempio**  
 notiamo che con la definizione precedente ritroviamo il determinante di una matrice $2 \times 2$:
 
-$$\begin{align*}
+$$\begin{aligned}
 \text{det} \begin{pmatrix}
   a_{11} & a_{12} \\
   a_{21} & a_{22}
@@ -3146,16 +3217,16 @@ $$\begin{align*}
 & = (-1)^{1 + 1} \cdot a_{11} \cdot \text{det}(A_{11}) + (-1)^{2 + 1} \cdot a_{21} \cdot \text{det}(A_{21}) = \\
 & = 1 \cdot A_{11} \cdot \text{det}(a_{22}) - 1 \cdot A_{21} \cdot \text{det}(a_{12}) = \\
 & = a_{11} \cdot a_{22} - a_{12} \cdot a_{21}
-\end{align*}$$
+\end{aligned}$$
 
 **Esempio**  
-$$A = \begin{pmatrix} 
+$$A = \begin{pmatrix}
   1 & 0 & 2 \\
   0 & 1 & 1 \\
   2 & 3 & 1 \\
 \end{pmatrix}$$
 
-$$\begin{align*}
+$$\begin{aligned}
 det(A) &=
 1 \cdot det \begin{pmatrix} 1 & 1 \\ 3 & 1 \end{pmatrix} -
 0 \cdot det \begin{pmatrix} 0 & 2 \\ 3 & 1 \end{pmatrix} +
@@ -3165,7 +3236,7 @@ det(A) &=
 0 \cdot (0 \cdot 1 - 2 \cdot 3) +
 2 \cdot (0 \cdot 1 - 2 \cdot 1) =\\
 &= - 2 - 0 - 4 = -6
-\end{align*}
+\end{aligned}
 $$
 
 **Teorema**  
@@ -3181,9 +3252,7 @@ $A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{
 $det(A) = a_{11} \cdot a_{22} \cdot a_{33} + a_{12} \cdot a_{23} \cdot a_{31} + a_{13} \cdot a_{21} \cdot a_{32} - \\ -
 a_{13} \cdot a_{22} \cdot a_{31} - a_{11} \cdot a_{23} \cdot a_{32} - a_{12} \cdot a_{21} \cdot a_{33}$
 
-![graficamente con Sarrus](../img/sarrus.png)
-
-### Determinante
+![graficamente con Sarrus](../img/sarrus.png){ width=344px }
 
 **Proposizione**  
 Il determinante gode della seguenti 3 proprietà:
@@ -3411,7 +3480,7 @@ $=$ sviluppo lungo la prima riga di $A = det(A)$
 Come capire come prendere i segni nello sviluppo di Laplace?  
 Basta osservare che il segno di $(-1)^{i + j}$ è  
 
-![segni nello sviluppo di Laplace](../img/segni_laplace.png)
+![segni nello sviluppo di Laplace](../img/segni_laplace.png){ width=352px }
 
 **Teorema**  
 Siano $A, B \in M_n(K)$; allora  
@@ -3463,3 +3532,20 @@ si verifica che
 - se $i \neq j$ allora quello precedente è l'espressione del determinante di una matrice con due righe uguali, e quindi vale zero.
 
 $\square$
+
+# Applicazioni Lineari
+
+# Geometria Affine
+
+---
+
+Grazie per l'attenzione e spero che questi appunti siano stati utili.  
+Se trovi errori, ti prego di inviarmi un'email a <a href="mailto:norbedo@proton.me?subject=Errore%20Appunti%20Analisi%201%20(2023-2024)">norbedo@proton.me</a>.  
+Buono studio e buona fortuna!
+
+Giovanni Norbedo
+
+norbedo@proton.me  
+[norbedo.xyz](https://norbedo.xyz)  
+[github.com/giovanni-norbedo](https://github.com/giovanni-norbedo)  
+[www.linkedin.com/in/norbedo](https://www.linkedin.com/in/norbedo)

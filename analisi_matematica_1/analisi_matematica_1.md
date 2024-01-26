@@ -7,13 +7,15 @@ header-includes:
     - \pagestyle{fancy}
     - \rhead{Giovanni Norbedo}
     - \cfoot{\thepage}
+    - \renewcommand{\contentsname}{Indice}
+    - \renewcommand{\figurename}{Figura}
 geometry: margin=3cm
 output: pdf_document
 ---
 
-## Logica
+# Logica
 
-### Proposizioni
+## Proposizioni
 
 $p,\ q,\ r,\ \dots$
 
@@ -25,7 +27,7 @@ $q:$ Roma è la capitale della Francia. $\rightarrow F$
 
 ---
 
-### Connettivi logici
+## Connettivi logici
 
 I connettivi logici servono a costruire nuove proposizioni dalle proposizioni di partenza.
 
@@ -37,7 +39,7 @@ I connettivi logici servono a costruire nuove proposizioni dalle proposizioni di
   - Implicazione
   - Doppia implicazione
 
-### Negazione - NOT
+## Negazione - NOT
 
 $\neg p$  
 "non p"
@@ -47,7 +49,7 @@ $\neg p$
 | V   |    F     |
 | F   |    V     |
 
-### Congiunzione - AND
+## Congiunzione - AND
 
 $p \wedge q$  
 "p e q"  
@@ -59,7 +61,7 @@ $p \wedge q$
 | F   | V   |      F       |
 | F   | F   |      F       |
 
-### Disgiunzione - OR
+## Disgiunzione - OR
 
 $p \vee q$  
 "p oppure q"  
@@ -83,7 +85,7 @@ La disgiunzione non esclusiva $(XOR)$ si indica con $\veebar$ e la sua **tabella
 $vel \rightarrow$ disgiunzione inclusiva  
 $aut \rightarrow$ disgiunzione esclusiva  
 
-### Implicazione (materiale)
+## Implicazione (materiale)
 
 $p \Rightarrow q$  
 **"p implica q"** oppure **"se p allora q"**
@@ -126,7 +128,7 @@ trovando infine che
 
 $\neg (\neg p \vee q) = p \wedge \neg q$
 
-### Doppia implicazione
+## Doppia implicazione
 
 $p \Leftrightarrow q$  
 **"p è equivalente a q"** oppure **"p se e solo se q"**
@@ -156,13 +158,12 @@ $p \Leftrightarrow q$
 
 ---
 
-### Tautologia
+## Tautologia
 
 Una tautologia è una proposizione (composta) che è sempre vera.
 
-#### tertium non datur  
+### tertium non datur  
 
-\
 $p \vee \neg p$  
 
 | $p$ | $\neg p$ | $p \vee \neg p$ |
@@ -172,9 +173,8 @@ $p \vee \neg p$
 | F   |    V     |        V        |
 | F   |    V     |        V        |
 
-#### non contradditio  
+### non contradditio  
 
-\
 $\neg(p \wedge \neg p)$  
 
 | $p$ | $\neg p$ | $p \wedge \neg p$ | $\neg(p \wedge \neg p)$ |
@@ -184,9 +184,8 @@ $\neg(p \wedge \neg p)$
 | F   |    V     |         F         |            V            |
 | F   |    V     |         F         |            V            |
 
-#### modus ponens  
+### modus ponens  
 
-\
 $(p \wedge (p \Rightarrow q)) \Rightarrow p$  
 
 | $p$ | $q$ | $p \Rightarrow q$ | $p \wedge (p \Rightarrow q)$ | $(p \wedge (p \Rightarrow q)) \Rightarrow p$ |
@@ -196,9 +195,8 @@ $(p \wedge (p \Rightarrow q)) \Rightarrow p$
 | F   | V   |         V         |              F               |                      V                       |
 | F   | F   |         V         |              F               |                      V                       |
 
-#### modus tollens  
+### modus tollens  
 
-\
 $(\neg q \wedge (p \Rightarrow q)) \Rightarrow \neg p$  
 
 | $p$ | $q$ | $\neg p$ | $\neg q$ | $p \Rightarrow q$ | $\neg q \wedge (p \Rightarrow q)$ | $(\neg q \wedge (p \Rightarrow q)) \Rightarrow \neg p$ |
@@ -208,9 +206,8 @@ $(\neg q \wedge (p \Rightarrow q)) \Rightarrow \neg p$
 | F   | V   |    V     |    F     |         V         |                 F                 |                           V                            |
 | F   | F   |    V     |    V     |         V         |                 V                 |                           V                            |
 
-#### reductio ad absurdum
+### reductio ad absurdum
 
-\
 $\Big((p \wedge \neg q) \Rightarrow (r \wedge \neg r)\Big) \Leftrightarrow (p \Rightarrow q)$  
 
 | $p$ | $q$ | $r$ | $\neg q$ | $\neg r$ | $p \wedge \neg q$ | $r \wedge \neg r$ | $\Big((p \wedge \neg q) \Rightarrow (r \wedge \neg r)\Big)$ | $p \Rightarrow q$ |
@@ -224,7 +221,7 @@ $\Big((p \wedge \neg q) \Rightarrow (r \wedge \neg r)\Big) \Leftrightarrow (p \R
 | F   | F   | V   |    V     |    F     |         F         |         F         |                            **V**                            |       **V**       |
 | F   | F   | F   |    V     |    V     |         F         |         F         |                            **V**                            |       **V**       |
 
-### Legge di De Morgan
+## Legge di De Morgan
 
 $\neg (p \wedge q) = \neg p \vee \neg q$  
 $\neg (p \vee q) = \neg p \wedge \neg q$  
@@ -238,7 +235,7 @@ $\neg (p \vee q) = \neg p \wedge \neg q$
 
 ---
 
-### Predicati
+## Predicati
 
 "parte del nostro discorso che contende una o più variabili"
 
@@ -266,7 +263,7 @@ $\mathcal{S}(x,y,z) :$ nell'ospedale x, il medico y, ha sbagliato la diagnosi z.
 
 ---
 
-### Quantificatori
+## Quantificatori
 
 $\forall$  
 "per ogni"  
@@ -300,9 +297,8 @@ Quindi scrivo
 
 $\forall x, \exists y : \forall z, \mathcal{S}(x,y,z)$
 
-#### Negazione di proposizioni con i quantificatori
+### Negazione di proposizioni con i quantificatori
 
-\
 **Osservazione**: come posso fare la negazione di una frase con i quantificatori.
 
 **Importante**  
@@ -371,9 +367,9 @@ $0 < |x-x_0| < \delta \wedge |f(x) - \ell| \geq \varepsilon$
 
 ---
 
-## Insiemistica
+# Insiemistica
 
-### Cos'è un insieme
+## Cos'è un insieme
 
 **Insieme** (nozione primitiva) : aggregazione, famiglia, groppo (di solito con qualche caratteristica comune) di **elementi**.
 
@@ -401,11 +397,10 @@ $A =\{n \in \mathbb{N} : n\ pari \} = \{0,2,4,6 \dots\}$
 
 ---
 
-### Operazioni con gli insiemi
+## Operazioni con gli insiemi
 
-#### Insieme complementare (o insieme complemento)
+### Insieme complementare (o insieme complemento)
 
-\
 $U$ è l'insieme universo  
 $A$ è l'insieme  
 
@@ -413,19 +408,16 @@ $\mathscr{C}_U A = \{x \in U : x \notin A\} = \{x \in U : \neg (x \in A)\}$
 
 > L'insieme complemento si può scrivere anche $\overline{A}$.
 
-#### Intersezione
+### Intersezione
 
-\
 $A \cap B = \{x \in U : x \in A \wedge x \in B\}$
 
-#### Unione
+### Unione
 
-\
 $A \cup B = \{x \in U : x \in A \vee x \in B\}$  
 
-#### Qualche proprietà
+### Qualche proprietà
 
-\
 $A \cap B = B \cap A$  
 $A \cup B = B \cup A$  
 
@@ -437,13 +429,13 @@ $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
 
 ---
 
-### Insieme vuoto
+## Insieme vuoto
 
 Esiste un insieme (speciale) che è senza elementi, chiamato *insieme vuoto*, indicato con $\varnothing$ (**unico** e $\forall A, \varnothing \subseteq A$).
 
 ---
 
-### Insieme delle parti
+## Insieme delle parti
 
 $\mathcal{P}(A)$ è l'insieme dei sottoinsiemi di $A$.
 
@@ -458,9 +450,8 @@ $\mathcal{P}(A) = \{\varnothing, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\},
 
 Tutti i sottoinsiemi si dicono **propri**, tranne l'insieme $\{a,b,c\}$, detto **improprio**.
 
-#### Il numero di elementi di $\mathcal{P}(A)$ è $2^n$
+### Il numero di elementi di $\mathcal{P}(A)$ è $2^n$
 
-\
 $|\mathcal{P}(A)| = 2^n$
 
 con
@@ -483,7 +474,7 @@ In questo modo, vediamo che tutte le possibilità sono rappresentabili da un num
 
 ---
 
-### Coppie ordinate e prodotto cartesiano
+## Coppie ordinate e prodotto cartesiano
 
 Una *coppia ordinata* è un aggregato con due elementi in cui si distingue il primo elemento e il secondo elemento.  
 
@@ -548,9 +539,9 @@ $\mathcal{P}(x) :$ $x$ è amico di $y$
 
 ---
 
-## Relazioni
+# Relazioni
 
-### Relazione tra due insiemi
+## Relazione tra due insiemi
 
 **Definizione**:  
 *Relazione* tra $A$ e $B =$ predicato $\mathcal{P}(x)$ a valori in $A \times B$.  
@@ -563,9 +554,8 @@ Decidiamo che $n | m$ significa "n divide m", introducendo la relazione "$|$ div
 
 Per esempio, 3 divide 12, ma 3 non divide 5, poiché $\nexists k \in \mathbb{Z} : 3k=5$.
 
-#### Grafico della relazione
+### Grafico della relazione
 
-\
 ![grafico relazione divide](../img/grafico_relazione_divide.png){ width=400px }
 
 **Esempi**  
@@ -583,7 +573,7 @@ Si chiama **congruenza modulo 3**, indicata con $m \equiv_3 n$.
 
 ---
 
-### Proprietà delle relazioni
+## Proprietà delle relazioni
 
 **Definizione**:  
 Sia $A$ un insieme, sia $\rho$ una relazione su $A$,  
@@ -670,7 +660,7 @@ $\square$
 
 ---
 
-### Relazione d'ordine
+## Relazione d'ordine
 
 **Definizione**:  
 $A$ insieme, $\rho$ relazione  
@@ -682,7 +672,7 @@ Per esempio $\mathbb{R}$ con la relazione $\geq$.
 
 ---
 
-### Relazione di equivalenza
+## Relazione di equivalenza
 
 **Definizione**:  
 $A$ insieme, $\rho$ relazione  
@@ -691,7 +681,7 @@ $\rho$ si dice *relazione di equivalenza*.
 
 ---
 
-### Classe di equivalenza
+## Classe di equivalenza
 
 $A$ insieme, $\rho$ relazione di equivalenza  
 chiamo $[a]_\rho = \{b \in A : a \rho b\}$  
@@ -731,9 +721,9 @@ $[2]_{\equiv 3}$ }
 
 ---
 
-## Funzioni
+# Funzioni
 
-### Funzione
+## Funzione
 
 **Definizione**:  
 Siano $A, B$ insiemi  
@@ -746,7 +736,7 @@ La terna $(A,B,f)$ la chiamo **funzione**.
 
 ---
 
-### Dominio e codominio
+## Dominio e codominio
 
 **Definizione**:  
 $A$ si dice **dominio** della funzione.  
@@ -768,7 +758,7 @@ che tradizionalmente si dicono "*funzioni reali di variabile reale*".
 
 ---
 
-### Insieme immagine
+## Insieme immagine
 
 **Definizione**  
 Sia $f : A \rightarrow B$ una funzione,  
@@ -794,7 +784,7 @@ $f(A') = \{ f(x) : x \in A' \}$
 
 ---
 
-### Funzione suriettiva
+## Funzione suriettiva
 
 **Definizione**  
 Se $f(A) = B$  
@@ -802,7 +792,7 @@ $f$ si dice **suriettiva** (o surgettiva).
 
 ---
 
-### Funzione composta
+## Funzione composta
 
 **Definizione**  
 Sono  
@@ -818,7 +808,7 @@ quindi $x \mapsto g\Big(f(x)\Big)$.
 
 ---
 
-### Funzione inversa
+## Funzione inversa
 
 **Definizione**  
 Sia $f : A \rightarrow B$,  
@@ -843,7 +833,7 @@ $f$ è *iniettiva* e *suriettiva*, quindi **biettiva**.
 
 ---
 
-## I numeri naturali
+# I numeri naturali
 
 $\mathbb{N} = \{ 0, 1, 2, 3, \cdots \}$
 
@@ -918,7 +908,7 @@ esso è un insieme con una "**struttura algebrica**".
 Possiamo determinare degli **assiomi** ("prime proprietà che non vengono dimostrate ma assunte a priori") su $\mathbb{N}$,  
 in modo che tutte le altre proprietà siano deducibili da questi?
 
-### Assiomi di Giuseppe Peano
+## Assiomi di Giuseppe Peano
 
 Esiste un insieme che chiamo $\mathbb{N}$
 
@@ -949,25 +939,23 @@ verificando $P(n_0)$ e poi $\forall n \geq n_0, P(n) \Rightarrow P(n+1)$.
 >
 > Esempio con le rette nel piano
 
-#### Diseguaglianza di Bernulli
+### Diseguaglianza di Bernulli
 
-\
 Sia $a>-1, a \in \mathbb{R}$
 
 Allora $\forall n \in \mathbb{N}$ vale
 
 $(1+a)^n \geq 1 + na$
 
-#### Diseguaglianza di Bernulli migliorata
+### Diseguaglianza di Bernulli migliorata
 
-\
 Sia $a>0, a \in \mathbb{R}$
 
 Allora $\forall n \in \mathbb{N}, n \geq 1$ vale
 
 $(1+a)^n \geq 1 + na + \frac{n(n-1)}{2}a^2$
 
-### Successioni
+## Successioni
 
 **Definizione**  
 Sia $A$ un insieme,  
@@ -985,7 +973,7 @@ questa $f$ si chiama (tradizionalmente)
 
 la rappresento con $(a_n)_n$
 
-### Sommatoria
+## Sommatoria
 
 **Osservazione**  
 Ora usiamo l'induzione per introdurre in modo rigoroso il simbolo di **sommatoria**.
@@ -997,7 +985,7 @@ Si ha che
 $s_0 = a_0$  
 $\forall n, s_{n+1} = s_n + a_{n+1}$  
 
-### Produttoria
+## Produttoria
 
 Analogamente
 
@@ -1008,7 +996,7 @@ Si ha che
 $p_0 = a_0$  
 $\forall n, p_{n+1} = p_n + a_{n+1}$  
 
-## Calcolo combinatorio
+# Calcolo combinatorio
 
 Per contare il numero di elementi di insiemi a partire da altri insiemi.
 
@@ -1070,7 +1058,7 @@ sono **combinazioni di n oggetti a k a k**
 $D = C_k^n \cdot k!$  
 sono le combinazioni di n oggetti a k a k ordinate, ognuna genera $k!$ disposizioni.
 
-### Il coefficiente binomiale
+## Il coefficiente binomiale
 
 $\binom{0}{0}=1$
 
@@ -1087,7 +1075,7 @@ $\binom{n-1}{k-1} + \binom{n-1}{k} = \binom{n}{k}$
 
 > Dimostrabile con gli insiemi o con la formula
 
-### Triangolo di Tartaglia
+## Triangolo di Tartaglia
 
 $$
 \begin{array}{cccccccccccccccc}
@@ -1111,7 +1099,7 @@ $$
 \end{array}
 $$
 
-### Teorema del binomio di Newton
+## Teorema del binomio di Newton
 
 Siano $a,b \in \mathbb{R}$ (o $\in \mathbb{C}$),  
 sia $n \in \mathbb{N},\ n \geq 1$  
@@ -1132,7 +1120,7 @@ che sono tutti i sottoinsiemi possibili
 
 > Dimostrabile con $(1 - 1)^n$
 
-## I numeri reali
+# I numeri reali
 
 **Osservazione**  
 A partire dai numeri naturali $\mathbb{N}$, è possibile costruire i numeri interi
@@ -1181,7 +1169,7 @@ allora hanno un fattore in comune, quindi non sono primi fra loro, che è un **a
 
 > Quindi in $\mathbb{Q}$ non si può risolvere l'equazione $x^2 = 2$
 
-### Introduzione assiomatica di R
+## Introduzione assiomatica di R
 
 Esiste un insieme $\mathbb{R}$ tale che
 
@@ -1253,7 +1241,7 @@ $O_2)$ $\forall x, y, z \in \mathbb{R}$ vale che $x \geq y \wedge z \geq 0 \Righ
 
 ---
 
-### Assioma di Dedekind
+## Assioma di Dedekind
 
 $S)$ Siano $A$ e $B$ sottoinsiemi di $\mathbb{R}$ con $A \neq \varnothing$ e $B \neq \varnothing$.
 
@@ -1275,16 +1263,15 @@ Dagli assiomi posso derivare le *normali* proprietà:
 
 - $1 > 0$ e $\forall a \in \mathbb{R}, a^2 \geq 0$
 
-#### Le regole dei segni
+### Le regole dei segni
 
-\
 
 - $a > 0, b > 0 \Rightarrow ab > 0$  
 - $a < 0, b < 0 \Leftrightarrow ab > 0$  
 - $a > 0, b < 0 \Leftrightarrow ab < 0$  
 - $a < 0, b > 0 \Leftrightarrow ab < 0$  
 
-## Intervalli
+# Intervalli
 
 Siano $a, b \in \mathbb{R}$ con $a < b$,
 
@@ -1317,7 +1304,7 @@ $-\infty$ e $+\infty$ non sono numeri reali, ma soltanto simboli.
 
 > Scriviamo $\tilde{\mathbb{R}} = \mathbb{R} \cup \{-\infty, +\infty\}$, chiamata "**retta estesa**".
 
-### Insiemi limitati
+## Insiemi limitati
 
 Sia $a \in \mathbb{R}$,  
 $A$ si dice (insieme) limitato superiormente se
@@ -1341,7 +1328,7 @@ $\neg (\exists M \in \mathbb{R} : \forall a \in A, a \leq M)$
 
 $\forall M \in \mathbb{R} : \exists a \in A : a > M$
 
-### Maggioranti, minoranti, massimi e minimi
+## Maggioranti, minoranti, massimi e minimi
 
 **Definizione**  
 Sia $A \subseteq \mathbb{R}$, sia $M \in \mathbb{R}$,  
@@ -1383,7 +1370,7 @@ $$
 \right.
 $$
 
-### Estremo superiore ed estremo inferiore
+## Estremo superiore ed estremo inferiore
 
 **Definizione**  
 Sia $A$ superiormente limitato,  
@@ -1411,7 +1398,7 @@ $\Rightarrow \mu_1 \leq \mu_2$
 
 perciò $\mu_1 = \mu_2$, quindi il massimo è unico.
 
-### Teorema dell'esistenza dell'estremo superiore
+## Teorema dell'esistenza dell'estremo superiore
 
 Sia $A \subseteq \mathbb{R}, A \neq \varnothing$ e $A$ superiormente limitato,  
 allora $\exists \xi \in \mathbb{R} : \xi$ **estremo superiore** di $A$.
@@ -1451,7 +1438,7 @@ quindi $\forall b \in A_*, \eta \geq b$ e $\eta \in A_* \Rightarrow \eta$ è il 
 
 $\square$
 
-### Teorema le proprietà dell'estremo superiore
+## Teorema le proprietà dell'estremo superiore
 
 Sia $A \subseteq \mathbb{R}, A \neq \varnothing$  
 sia $\alpha \in \mathbb{R}$  
@@ -1478,7 +1465,7 @@ $\square$
 **Osservazione**  
 Se un insieme ha minimo (o massimo), il minimo è l'estremo inferiore (o il massimo è l'estremo superiore).
 
-### Conseguenze dell'esistenza dell'estremo superiore
+## Conseguenze dell'esistenza dell'estremo superiore
 
 $1)$ $\mathbb{N}$ **è superiormente illimitato**
 
@@ -1684,11 +1671,11 @@ Quindi $\alpha = \beta$
 
 $\square$
 
-## Disuguaglianza triangolare
+# Disuguaglianza triangolare
 
 $|x + y| \leq |x| + |y|$
 
-## Funzioni Potenza e Radice
+# Funzioni Potenza, Radice, Valore Assoluto e Trigonometriche
 
 La notazione $f(x) = x^n$ rappresenta una funzione potenza, dove $x$ è la base e $n$ è l'esponente.  
 Alcune proprietà importanti:
@@ -1707,13 +1694,13 @@ Alcune proprietà importanti:
 - $\sqrt[n]{x} \cdot \sqrt[n]{y} = \sqrt[n]{x \cdot y}$
 - $\sqrt[n]{x} \div \sqrt[n]{y} = \sqrt[n]{x \div y}$
 
-## Funzione Valore Assoluto
+---
 
 La funzione valore assoluto di un numero reale $x$, indicata come $|x|$, restituisce la distanza di $x$ dall'origine sulla retta reale. Formalmente, è definita come:
 
 $|x| = \begin{cases} x & \text{se } x \geq 0 \\ -x & \text{se } x < 0 \end{cases}$
 
-## Funzioni Trigonometriche
+---
 
 **Seno ($sin$) e Coseno ($cos$):**  
 $\sin(\theta) = \frac{opposto}{ipotenusa}, \quad \cos(\theta) = \frac{adiacente}{ipotenusa}$
@@ -1722,7 +1709,7 @@ $\sin(\theta) = \frac{opposto}{ipotenusa}, \quad \cos(\theta) = \frac{adiacente}
 $\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}, \quad \cot(\theta) = \frac{1}{\tan(\theta)},$  
 $\sec(\theta) = \frac{1}{\cos(\theta)}, \quad \csc(\theta) = \frac{1}{\sin(\theta)}$
 
-## I numeri complessi
+# I numeri complessi
 
 Considero $\mathbb{R}^2 = \mathbb{R} \times \mathbb{R}$ (piano cartesiano o vettori)
 
@@ -1767,7 +1754,7 @@ $(a, 0) \cdot (c, d) = (a \cdot c, a \cdot d)$
 
 Come i reali, $a$ è scalare.
 
-### Rappresentazione di complessi
+## Rappresentazione di complessi
 
 Chiamo  
 $\textbf{1} = (1, 0)$  
@@ -1784,7 +1771,7 @@ $(a, b) = (a, 1) \cdot (1, 0) + (b, 0) \cdot (1, 0) = a(1, 0) + b(0, 1) = a + ib
 $a$ si dice parte reale  
 $b$ si dice parte complessa (o immaginaria)  
 
-### Piano di Gauss
+## Piano di Gauss
 
 Il piano di Gauss è un piano cartesiano $\mathbb{R} \times \mathbb{R}$, dove rappresento sulle ascisse le parti reali e sulle ordinate le parti immaginarie.
 
@@ -1796,7 +1783,7 @@ $b = Im(z)$
 $z = Re(z) + i \cdot Im(z)$  
 $Re(z), Im(z) \in \mathbb{R}$
 
-### Complesso coniugato
+## Complesso coniugato
 
 **Definizione**  
 Sia $z = a + ib$, chiamo **complesso coniugato** di $z$,  
@@ -1811,7 +1798,7 @@ $z_1, z_2 \in \mathbb{C}$
 $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$  
 $\overline{z_1 \cdot z_2} = \overline{z_1} \cdot \overline{z_2}$
 
-### Modulo di z
+## Modulo di z
 
 **Definizione**  
 Sia $z = a + ib$, chiamo **modulo** di $z$,  
@@ -1829,7 +1816,7 @@ $|z| = \sqrt{z^2}$
 
 Il modulo di $z$ è uguale al valore assoluto di $z$ come numero reale.
 
-### Proprietà
+## Proprietà
 
 $|z| \geq 0$  
 $|z| = 0 \Leftrightarrow z = 0$  
@@ -1842,7 +1829,7 @@ $z^{-1} = \frac{\overline{z}}{|z|^2}$
 **Diseguaglianza triangolare**  
 $|z_1 + z_2| \leq |z_1| + |z_2|$  
 
-### Forma trigonometrica
+## Forma trigonometrica
 
 $|z|$ modulo  
 $\alpha$ argomento  
@@ -1857,7 +1844,7 @@ $[\alpha] = \{\alpha + 2k \pi, k \in \mathbb{Z}\}$
 $1 \sim [1, 0]$  
 $i \sim [1, \frac{\pi}{2}]$  
 
-### Moltiplicazione
+## Moltiplicazione
 
 $z_1 \sim [\rho_1, \alpha_1]$  
 $z_1 = \rho_1 (\cos \alpha_1 + i \sin \alpha_1)$
@@ -1867,7 +1854,7 @@ $z \longmapsto (\rho, [\alpha])$
 
 $z_1 \cdot z_2 = \rho_1 \cdot \rho_2 (\cos (\alpha_1 + \alpha_2) + i \sin (\alpha_1 + \alpha_2))$
 
-### Formula di De Moivre
+## Formula di De Moivre
 
 Sia $z = a + ib \sim (\rho, [\alpha])$  
 
@@ -1875,7 +1862,7 @@ quindi $z = \rho (\cos \alpha + i \sin \alpha)$
 
 allora $z^n = \rho^n (\cos (n \alpha) + i \sin (n \alpha))$
 
-### Radici
+## Radici
 
 Trovare i numeri $z \in \mathbb{C}$ che soddisfano $z^n = 1$
 
@@ -1936,7 +1923,7 @@ $z_3 = 1 (\cos (\frac{4 \pi}{5}) + i \sin (\frac{4 \pi}{5}))$
 $z_4 = 1 (\cos (\frac{6 \pi}{5}) + i \sin (\frac{6 \pi}{5}))$  
 $z_5 = 1 (\cos (\frac{8 \pi}{5}) + i \sin (\frac{8 \pi}{5}))$
 
-### Teorema fondamentale dell'algebra
+## Teorema fondamentale dell'algebra
 
 $a_1, a_2, \dots, a_n \in \mathbb{C}, a_n \neq 0$
 
@@ -1949,9 +1936,9 @@ con $z_1, z_2, \dots, z_n \in \mathbb{C}$
 
 (**algebricamente chiuso**)  
 
-## Topologia di R
+# Topologia di R
 
-### Distanza, palla, intorno di x0, retta estesa
+## Distanza, palla, intorno di x0, retta estesa
 
 **Definizione**  
 Siano $x, y \in \mathbb{R}$, chiamo **distanza** (euclidea) di $x$ e $y$ li valore $d(x,y) = |x-y|$.
@@ -1994,7 +1981,7 @@ Chiamo $\tilde{\mathbb{R}} = \mathbb{R} \cup \{ -\infty, +\infty \}$, **retta es
 Chiamo intorno di $+ \infty$ un qualunque sottoinsieme di $\mathbb{R}$ che contiene una semiretta $]a, +\infty[$.  
 Analogamente per $- \infty$.
 
-### Punti interni, esterni e di frontiera
+## Punti interni, esterni e di frontiera
 
 **Definizione**  
 Sia $E \subseteq \mathbb{R}$, sia $x_0 \in \mathbb{R}$,  
@@ -2039,7 +2026,7 @@ Sia $E = \mathbb{Q} \cup \ ]1, 2[$
 $\dot{E} = \varnothing$  
 **frontiera** = $\partial E = [1, 2]$
 
-### Insiemi aperti e insiemi chiusi
+## Insiemi aperti e insiemi chiusi
 
 **Definizione**  
 Sia $A \subseteq \mathbb{R}$,  
@@ -2109,7 +2096,7 @@ Se considero l'intersezione di infiniti insiemi aperti, non è detto che sia un 
 
 $I_n = \ ] 1 - \frac{1}{n}, 2 + \frac{1}{n}[ \ = [1, 2]$
 
-### Punti di aderenza o di chiusura
+## Punti di aderenza o di chiusura
 
 **Definizione**  
 Sia $E \subseteq \mathbb{R}$, sia $x_0 \in \mathbb{R}$,  
@@ -2147,7 +2134,7 @@ Sia $E \subseteq \mathbb{R}$, allora
 - $\overline{E}$ è il più piccolo chiuso che contiene $E$
 - $E$ è chiuso se e solo se $E = \overline{E}$
 
-### Punti di accumulazione
+## Punti di accumulazione
 
 **Definizione**  
 Sia $E \subseteq \mathbb{R}$, sia $x_0 \in \mathbb{R}$,
@@ -2192,7 +2179,7 @@ $(]x_0 - r_0, x_0 + r_0[ \ \cap E) \smallsetminus \{x_0\} = \varnothing$
 **Conseguenza**  
 Gli insiemi finiti non hanno (mai) punto di accumulazione.
 
-### Teorema 1 di Bolzano-Weierstrass
+## Teorema 1 di Bolzano-Weierstrass
 
 Sia $E \subseteq \mathbb{R}$, $E$ infinito e limitato  
 allora $\exists \xi \in \mathbb{R} : \xi$ è punto di accumulazione per $E$,  
@@ -2268,7 +2255,7 @@ $\frac{b_0 - a_0}{2^n} \leq \frac{b_0 - a_0}{n} < r$
 
 $\square$
 
-## Limiti di funzioni
+# Limiti di funzioni
 
 - chi sono gli intorni di un punto $x_0 \in \mathbb{R}$
 - chi sono gli intorni di $+ \infty$ e di $- \infty$
@@ -2354,7 +2341,7 @@ $x > M$
 $\Downarrow$  
 $f(x) > N$
 
-### Limiti destri e sinistri
+## Limiti destri e sinistri
 
 **Definizione**  
 Sia $f : E \to \mathbb{R}$, con $E \subseteq \mathbb{R}$  
@@ -2372,7 +2359,7 @@ $\forall V\ di\ L, \exists U\ di\ x_0 : \forall x \in E, x \in U \smallsetminus 
 **Osservazione**  
 È immediato che se $\lim\limits_{x \to x_0} f(x) = L$ allora $\lim\limits_{x \to x_0^+} f(x) = \lim\limits_{x \to x_0^-} f(x) = L$ e viceversa.
 
-### Prime proprietà dei limiti
+## Prime proprietà dei limiti
 
 $1)$ **Unicità**
 
@@ -2622,7 +2609,7 @@ l'altro caso si dimostra analogamente.
 
 $\square$
 
-### Limiti fondamentali
+## Limiti fondamentali
 
 $\lim\limits_{x \to 0} \frac{sin(x)}{x} = 1$  
 
@@ -2662,7 +2649,7 @@ $\lim\limits_{x \to 0} \frac{tg(x) - sin(x)}{x^3} = \frac{1}{2}$
 
 $\lim\limits_{x \to 0} \frac{tg(x) - sin(x)}{x^3} = \lim\limits_{x \to 0} \frac{\frac{sin(x)}{cos(x)} - sin(x)}{x^3} = \lim\limits_{x \to 0} \frac{sin(x) \cdot \frac{1 - cos(x)}{cos(x)}}{x^3} = \lim\limits_{x \to 0} \frac{sin(x)}{x} \cdot \frac{1 - cos(x)}{x^2} \cdot \frac{1}{cos(x)} = 1 \cdot \frac{1}{2} \cdot \frac{1}{1} = \frac{1}{2}$
 
-### Dimostrazioni limiti tramite definizione
+## Dimostrazioni limiti tramite definizione
 
 $\lim\limits_{x \to 0} \sqrt{x} = 0$
 
@@ -2686,7 +2673,7 @@ $| \sqrt{x} - \sqrt{x_0} | = | (\sqrt{x} - \sqrt{x_0}) \cdot \frac{\sqrt{x} + \s
 quindi $|x - x_0| \leq \varepsilon \sqrt{x_0}$  
 $\delta = \varepsilon \sqrt{x_0}$
 
-### Limite della funzione composta
+## Limite della funzione composta
 
 **Idea**  
 Suppongo $f: E \to \mathbb{R}$, $E \subseteq \mathbb{R}$  
@@ -2728,9 +2715,8 @@ ma soltanto se $f(x) \in V \smallsetminus y_0$ ho $g(f(x)) \in W$
 
 ---
 
-#### Teorema
+### Teorema
 
-\
 Sia $\lim\limits_{x \to x_0} f(x) = y_0$  
 $\lim\limits_{y \to y_0} g(y) = L$
 
@@ -2745,7 +2731,7 @@ Allora $\lim\limits_{x \to x_0} g(f(x)) = y_0$
 **Osservazione**  
 Negli esercizi le ipotesi aggiuntive valgono (quasi) sempre.
 
-### Limite delle funzioni monotone
+## Limite delle funzioni monotone
 
 **Osservazione**  
 Fino ad ora, tutti i nostri teoremi sui limiti avevano l'esistenza di qualche limite nelle ipotesi. Il teorema che vediamo ora ha l'esistenza di un limite nella tesi, senza che ci sia nelle ipotesi.
@@ -2799,7 +2785,7 @@ $\exists \lim\limits_{x \to c^+} f(x)$
 
 e si ha $\lim\limits_{x \to c^-} f(x) \leq f(c) \leq \lim\limits_{x \to c^+} f(x)$
 
-## Successioni
+# Successioni
 
 **Definizione (successione)**  
 $f : \mathbb{N} \to A$ si dice successione a valori in $A$;  
@@ -2812,7 +2798,7 @@ $(a_n)_n$ dove $f(n) = a_n$
 **Idea**  
 $a_0, a_1, a_2, a_3, \dots$
 
-### Sottosuccessioni
+## Sottosuccessioni
 
 **Definizione (sottosuccessione)**  
 Data una funzione  
@@ -2838,12 +2824,12 @@ INDICI STRETTAMENTE CRESCENTI
 **Osservazione**  
 Tiro fuori infiniti termini della successione ma ne considero l'ordine.
 
-### Successione reale
+## Successione reale
 
 **Definizione**  
 Se $A$ è $\mathbb{R}$ (cioè $f: \mathbb{N} \to \mathbb{R}$) si dice che $(a_n)_n$ è una successione a valori in $\mathbb{R}$ (ovvero una successione reale).
 
-## Limiti di successioni
+# Limiti di successioni
 
 **Problema**  
 Voglio introdurre il concetto di limite per una successione.  
@@ -2885,7 +2871,7 @@ $\lim\limits_n a_n = -\infty$
 $\Updownarrow$  
 $\forall M > 0, \exists \overline{n}: \forall n, n > \overline{n} \Rightarrow a_n < -M$
 
-### Successioni convergenti e divergenti
+## Successioni convergenti e divergenti
 
 **Definizione**  
 Se $\lim\limits_n a_n$ esiste ed è un numero (finito), diciamo che $(a_n)_n$ è **convergente** a $L$.
@@ -2893,12 +2879,12 @@ Se $\lim\limits_n a_n$ esiste ed è un numero (finito), diciamo che $(a_n)_n$ è
 **Definizione**  
 Se $\lim\limits_n a_n$ esiste ed è un numero infinito (ovvero $+\infty$ o $-\infty$), diciamo che $(a_n)_n$ è **divergente** (a $+\infty$ oppure a $-\infty$).
 
-### Proprietà
+## Proprietà
 
 **Osservazione**  
 Per il limite delle successioni, valgono tutte le proprietà dei limiti.
 
-### Due altri risultati
+## Due altri risultati
 
 Se $\lim\limits_n a_n = \ell$ allora $\lim\limits_n {a_n}_k = \ell$
 
@@ -2932,7 +2918,7 @@ allora se so calcolare $\lim\limits_{x \to +\infty} f(x)$ e vale $\ell$, allora 
 **Attenzione**  
 $\lim\limits_n a_n$ può esistere quando $\lim\limits_{x \to +\infty} f(x)$ non esiste. Per esempio se $a_n = sin(n \pi)$.
 
-### Limiti notevoli delle successioni
+## Limiti notevoli delle successioni
 
 Sia $a > 1$, consideriamo $\lim\limits_n a^n \stackrel{?}{=} +\infty$
 
@@ -3044,7 +3030,7 @@ In conclusione, l'espressione iniziale per verificare la crescenza è vera.
 
 $\square$
 
-## Altri limiti notevoli dimostrati
+# Altri limiti notevoli dimostrati
 
 $a > 1, k \in \mathbb{R}$
 
@@ -3165,9 +3151,9 @@ $\lim\limits_{x \to 0^+} x^x = \lim\limits_{x \to 0^+} e^{x \log x} = e^0 = 1$
 
 $\square$
 
-## Successioni e topologia di R
+# Successioni e topologia di R
 
-### Secondo teorema di Bolzano-Weierstrass
+## Secondo teorema di Bolzano-Weierstrass
 
 **Tesi**  
 Sia $(a_n)_n$ una successione in $\mathbb{R}$, limitata.  
@@ -3210,7 +3196,7 @@ allora $\lim\limits_k a_{n_k} = \xi$
 
 $\square$
 
-### Insiemi compatti in R
+## Insiemi compatti in R
 
 **Definizione**  
 Sia $E \in \mathbb{R}$,  
@@ -3221,15 +3207,14 @@ posso estrarre una sottosuccessione convergente a un punto di $E$.
 **Osservazione**  
 È interessante trovare una caratterizzazione alternativa.
 
-### Teorema (caratterizzazione dei compatti in R)
+## Teorema (caratterizzazione dei compatti in R)
 
 Sia $E \in \mathbb{R}$, $E$ è compatto se e solo se $E$ è chiuso e limitato.
 
 La dimostrazione inizia dopo il lemma.
 
-#### Lemma (caratterizzazione di chiusi tramite le successioni)
+### Lemma (caratterizzazione di chiusi tramite le successioni)
 
-\
 Sia $E \in \mathbb{R}$, $E$ è chiuso se e solo se vale la seguente proprietà:
 
 $(*)$ se una successione a valori in $E$ è convergente, allora il limite appartiene all'insieme.
@@ -3294,7 +3279,7 @@ posso estrarre una $(a_{n_k})_k$ che converge a un punto di $E$ $\Rightarrow$ $E
 
 $\square$
 
-### Successioni di Cauchy
+## Successioni di Cauchy
 
 **Definizione**  
 Sia $(a_n)_n$ una successione in $\mathbb{R}$,  
@@ -3326,7 +3311,7 @@ $\square$
 **Osservazione**  
 Questo teorema vale in tutti gli spazi in cui sia definita una distanza.
 
-### Teorema (di compattezza di R)
+## Teorema (di compattezza di R)
 
 In $\mathbb{R}$, le successioni di Cauchy sono convergenti.
 
@@ -3395,7 +3380,7 @@ $\lim\limits_n a_n = \overline{a}$
 
 $\square$
 
-## Funzioni continue
+# Funzioni continue
 
 **Osservazione**  
 Sia $E \subseteq \mathbb{R}$, sia $x_0 \in E$, ci sono due possibilità:
@@ -3434,7 +3419,7 @@ In conclusione $f$ è continua in $x_0$ se:
 **Definizione**  
 Se $f : E \to \mathbb{R}$ e $f$ è continua in tutti i punti di $E$ allora $f$ si dice **continua**.
 
-### Prime proprietà delle funzioni continue
+## Prime proprietà delle funzioni continue
 
 1. **Teorema (permanenza del segno)**  
    Sia $f : E \to \mathbb{R}$ sia $x_0$ e $f$ sia continua in $x_0$,  
@@ -3474,7 +3459,7 @@ $\lim\limits_{x \to x_0} g(f(x)) = g(f(x_0))$
 
 $\square$
 
-### Teorema (caratterizzazione della continuità tramite le successioni)
+## Teorema (caratterizzazione della continuità tramite le successioni)
 
 Sia $f : E \to \mathbb{R}$, $E \subseteq \mathbb{R}$,  
 sia $\overline{x} \in E$  
@@ -3519,9 +3504,9 @@ ASSURDO
 
 $\square$
 
-## Proprietà fondamentali delle funzioni continue
+# Proprietà fondamentali delle funzioni continue
 
-### 1) Teorema degli zeri  
+## 1) Teorema degli zeri  
 
 Sia $f : [a, b] \to \mathbb{R}$, $f$ sia continua  
 supponiamo che  
@@ -3615,7 +3600,7 @@ $f(\frac{3}{2}) = \frac{11}{8}$
 
 etc.
 
-### Corollario (teorema dei valori intermedi)
+## Corollario (teorema dei valori intermedi)
 
 Sia $g: [a, b] \to \mathbb{R}$ una funzione continua,  
 supponiamo che $g(a) = \alpha$ e $g(b) = \beta$, con (per esempio) $\alpha < \beta$,  
@@ -3646,7 +3631,7 @@ $\square$
 **Conclusione**  
 Le funzioni continue mandano intervalli in intervalli.
 
-### 2) Teorema (compattezza)
+## 2) Teorema (compattezza)
 
 Sia $K \subset \mathbb{R}$, $K$ compatto  
 sia $f: K \to \mathbb{R}$ una funzione continua,  
@@ -3685,9 +3670,8 @@ Una funzione continua manda chiusi e limitati in chiusi e limitati.
 **Osservazione**  
 Un chiuso e limitato ha massimo? Ha minimo? Sì.
 
-#### Corollario (teorema di Weierstrass)
+### Corollario (teorema di Weierstrass)
 
-\
 Una funzione continua su un insieme chiuso e limitato ha massimo e minimo assoluti.
 
 **Dimostrazione**  
@@ -3702,7 +3686,7 @@ $sup(f(K)) = max(f(K))$ e $inf(f(K)) = min(f(K))$
 
 $\square$
 
-## Massimo e minimo assoluti
+# Massimo e minimo assoluti
 
 **Definizione**  
 Sia $f: E \to \mathbb{R}$,  
@@ -3713,7 +3697,7 @@ $x_0$ si dice **minimo assoluto** di $f$ se $\forall x \in E, f(x) \geq f(x_0)$
 se $x_0$ è punto di massimo assoluto, il valore $f(x_0)$ si dice (valore) massimo (assoluto) di $f$  
 se $x_0$ è punto di minimo assoluto, il valore $f(x_0)$ si dice (valore) minimo (assoluto) di $f$
 
-## Teorema (Weierstrass)
+# Teorema (Weierstrass)
 
 Sia $K \neq \varnothing$ insieme compatto (cioè chiuso e limitato)  
 sia $f: K \to \mathbb{R}$ una funzione continua,  
@@ -3753,7 +3737,7 @@ quindi $sup(f(K)) = f(\overline{x}) \Rightarrow \overline{x}$ è punto di massim
 
 $\square$
 
-## Continuità uniforme
+# Continuità uniforme
 
 **Osservazione**  
 $f: E \to \mathbb{R}$, $x_0 \in E$,  
@@ -3783,13 +3767,13 @@ quindi $f$ uniformemente continua
 $\Downarrow$  
 $f$ continua (in tutti i punti)
 
-## Teorema (Heine)
+# Teorema (Heine)
 
 Sia $f: [a, b] \to \mathbb{R}$ una funzione continua,  
 allora $f$ è uniformemente continua.  
 In generale le funzioni continue sugli insiemi compatti sono uniformemente continue.
 
-## Ultime osservazioni sulle funzioni continue
+# Ultime osservazioni sulle funzioni continue
 
 **Teorema**  
 Sia $f: I \to J$, $I$ e $J$ intervalli,  
@@ -3804,7 +3788,7 @@ allora $f$ e $f^{-1}$ sono continue.
 Sia $f: I \to J$, una funzione continua e iniettiva,  
 allora $f$ è strettamente crescente.
 
-## Calcolo differenziale
+# Calcolo differenziale
 
 **Osservazione**  
 Sia $t \to x(t)$ legge oraria  
@@ -3861,7 +3845,7 @@ $x \mapsto f'(x)$
 - seno
 - coseno
 
-### Proprietà fondamentale
+## Proprietà fondamentale
 
 **Teorema**  
 Sia $f: I \to \mathbb{R}$, $I$ intervallo, $x_0 \in I$,  
@@ -3906,7 +3890,7 @@ Ci sono funzioni che siano continue dappertutto e derivabili da nessuna parte? S
 
 [Curva di Koch](https://it.wikipedia.org/wiki/Curva_di_Koch)
 
-### Altre proprietà delle funzioni derivabili
+## Altre proprietà delle funzioni derivabili
 
 **Teorema**  
 Siano $f, g : I \to \mathbb{R}$, $x_0 \in I$,  
@@ -3938,7 +3922,7 @@ Analogamente per la divisione.
 
 $\square$
 
-### Teorema (derivata della funzione inversa)
+## Teorema (derivata della funzione inversa)
 
 Sia $f : I \to J$ iniettiva, $x_0 \in I$,  
 $f$ sia derivabile in $x_0$ con $f'(x_0) \neq 0$
@@ -3963,7 +3947,7 @@ $\lim\limits_{x \to x_0} \frac{f^{-1}(f(x)) - x_0}{f(x) - f(x_0)} = \lim\limits_
 
 $\square$
 
-### Teorema (derivata composta)
+## Teorema (derivata composta)
 
 Sia $f : I \to \mathbb{R}$, sia $g : J \to \mathbb{R}$,  
 siano $f, g$ derivabili,  
@@ -3984,7 +3968,7 @@ $\square$
 - arcsin
 - arccos
 
-### Massimi e minimi di funzioni (derivabili)
+## Massimi e minimi di funzioni (derivabili)
 
 **Definizione**  
 Sia $f: E \to \mathbb{R}$, $x_0 \in E$, con $E \subset \mathbb{R}$,  
@@ -4002,7 +3986,7 @@ $x_0$ si dice **punto di massimo (o di minimo) relativo**
 se $\exists r > 0: \forall x \in \ ]x_0 - r, x_0 + r[ \ \cap E, f(x) \leq f(x_0)$  
 (oppure $f(x) \geq f(x_0)$)
 
-### Teorema di Fermat
+## Teorema di Fermat
 
 Sia $f: I \to \mathbb{R}$, $I$ intervallo, $x_0 \in I$,  
 
@@ -4036,9 +4020,8 @@ $\square$
 
 "Se $f$ è derivabile, in un punto di massimo o minimo relativo interno al dominio, la derivata è nulla."
 
-#### Applicazioni
+### Applicazioni
 
-\
 Supponiamo di avere $f: [a, b] \to \mathbb{R}$,  
 che sia continua in $[a, b]$  
 che sia derivabile (almeno) su $]a, b[$
@@ -4048,7 +4031,7 @@ Ha massimo (o minimo) assoluto? Sì, per Weierstrass
 Dove sono i punti di massimo (o minimo) assoluti?  
 Si devono cercare tra gli estremi $a, b$ e i punti interni in cui si annulla la derivata (per Fermat). I punti interni in cui la derivata è nulla si dicono **punti stazionari**.
 
-### Teorema di Rolle
+## Teorema di Rolle
 
 Sia $f: [a, b] \to \mathbb{R}$,  
 
@@ -4079,7 +4062,7 @@ la derivata è uguale a zero.
 
 $\square$
 
-### Teorema di Cauchy
+## Teorema di Cauchy
 
 Supponiamo $g, f : [a, b] \to \mathbb{R}$,  
 $f, g$ continue su $[a, b]$,  
@@ -4131,7 +4114,7 @@ $g'(x) \neq 0, \forall x$
 arrivo comunque a dire che $\exists \xi \in \ ]a, b[ \ :$  
 $f'(\xi) \Big(g(b) - g(a) \Big) = g'(\xi) \Big(f(b) - f(a) \Big)$
 
-### Teorema di Lagrange
+## Teorema di Lagrange
 
 Sia $f : [a, b] \to \mathbb{R}$,  
 $f$ continua su $[a, b]$,  
@@ -4148,7 +4131,7 @@ $\exists \xi : \dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)} = \df
 
 $\square$
 
-### Conseguenze del teorema di Lagrange
+## Conseguenze del teorema di Lagrange
 
 $1)$ Derivate nulle e funzioni costanti
 
@@ -4216,7 +4199,7 @@ Impossibile.
 
 $\square$
 
-### Asintoti
+## Asintoti
 
 **Definizione**  
 Se $\lim\limits_{x \to -\infty} f(x) = c$ oppure $\lim\limits_{x \to +\infty} f(x) = c$  
@@ -4241,7 +4224,7 @@ se sì, chiamo $q$ tale limite
 
 allora $y = mx + q$ è **asintoto obliquo** a $+\infty$.
 
-### Derivate successive
+## Derivate successive
 
 **Definizione**  
 Sia $f : I \to \mathbb{R}$, $I$ intervallo, $f$ sia derivabile,  
@@ -4266,7 +4249,7 @@ $f$ si dice di classe $\mathscr{C}^k$.
 Se $f$ è derivabile per qualunque ordine,  
 si dice di classe $\mathscr{C}^{\infty}$.
 
-### Regola di de l'Hôpital
+## Regola di de l'Hôpital
 
 **Teorema**  
 Siano $f, g : [a, b[ \ \to \mathbb{R}$, $a, b \in \mathbb{R}$, $a < b$,  
@@ -4331,7 +4314,7 @@ Vale anche se $\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to +\infty} g(
 se $\lim\limits_{x \to b^-} \frac{f'(x)}{g'(x)} = L$  
 allora $\lim\limits_{x \to b^-} f(x) = \lim\limits_{x \to b^-} g(x) = \pm \infty$
 
-### Funzioni convesse e concave
+## Funzioni convesse e concave
 
 ![funzione convessa](../img/funzione_convessa.png){ width=446px }
 
@@ -4454,7 +4437,7 @@ $f'(x_1) \leq f'(x_2)$, quando $x_1 \leq x_2$.
 
 $\square$
 
-### Punti di flesso
+## Punti di flesso
 
 **Definizione**  
 Supponiamo che $f : I \to \mathbb{R}$, $I$ intervallo,  
@@ -4476,13 +4459,13 @@ Se $f : I \to \mathbb{R}$, $I$ intervallo, $f$ derivabile fino al secondo ordine
 e prima di $x_0$, $f''(x) \leq 0$ e dopo $x_0$, $f''(x) \geq 0$, o viceversa,  
 $x_0$ è punto di flesso.
 
-## Formula di Taylor
+# Formula di Taylor
 
 **Osservazione**  
 Funzione derivabile in $x_0$ $\Rightarrow$ esiste la tangente al grafico  
 $y = f'(x_0)(x - x_0) + f(x_0)$
 
-### Lemma di Peano
+## Lemma di Peano
 
 Sia $f : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
 sia $f$ derivabile fino all'ordine $n$ in $I$,  
@@ -4513,7 +4496,7 @@ $\lim\limits_{x \to x_0} \dfrac{f^{(n - 1)}(x) - f^{(n - 1)}(x_0)}{(x - x_0)} = 
 
 $\square$
 
-### Formula di Taylor con il resto di Peano
+## Formula di Taylor con il resto di Peano
 
 **Teorema**  
 Sia $g : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
@@ -4544,7 +4527,7 @@ $\lim\limits_{x \to x_0} \frac{g(x) - \Big( g(x_0) + \dots + \frac{1}{n!} g^{(n)
 
 $\square$
 
-### Lemma di Lagrange
+## Lemma di Lagrange
 
 Sia $f : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
 $f$ derivabile fino all'ordine $n + 1$,  
@@ -4578,7 +4561,7 @@ con $x_0 < \xi_{n + 1} < \xi_n < \dots < x$
 
 $\square$
 
-### Formula di Taylor con il resto di Lagrange
+## Formula di Taylor con il resto di Lagrange
 
 **Teorema**  
 Sia $f : I \to \mathbb{R}$, $I$ intervallo, $x_0$ in $I$,  
@@ -4621,9 +4604,9 @@ $g^{(n + 1)}(x) = f^{(n + 1)}(x)$
 
 $\square$
 
-## Calcolo integrale
+# Calcolo integrale
 
-### Integrale di Riemann
+## Integrale di Riemann
 
 **Definizione**  
 Sia $[a,b]$ intervallo chiuso e limitato in $\mathbb{R}$,  
@@ -4676,7 +4659,7 @@ lo chiamo integrale (di Riemann) di $f$ sull'intervallo $[a,b]$.
 
 L'insieme delle funzioni integrali lo indico con $\mathscr{R}([a,b])$.
 
-### Teorema (condizione necessaria e sufficiente per l'integralibilità secondo Riemann)
+## Teorema (condizione necessaria e sufficiente per l'integralibilità secondo Riemann)
 
 Sia $f : [a,b] \to \mathbb{R}$, limitata,  
 sono equivalenti:  
@@ -4719,7 +4702,7 @@ e non ci saranno $\Delta \in \mathscr{D}$ che renderanno vera la $2)$.
 
 $\square$
 
-### Teorema (integrabilità delle funzioni monotone)
+## Teorema (integrabilità delle funzioni monotone)
 
 Sia $f : [a,b] \to \mathbb{R}$, $f$ monotona,  
 allora $f$ è integrabile secondo Riemann.
@@ -4740,7 +4723,7 @@ la faccio diventare piccola scegliendo $n$ grande.
 
 $\square$
 
-### Teorema (integrabilità delle funzioni continue)
+## Teorema (integrabilità delle funzioni continue)
 
 Sia $f : [a,b] \to \mathbb{R}$, $f$ continue,  
 allora $f$ è integrabile secondo Riemann ($f \in \mathscr{R}([a,b])$).
@@ -4774,7 +4757,7 @@ $\leq \frac{\varepsilon}{b - a} \displaystyle\sum_{i = 1}^n (x_i - x_{i - 1}) = 
 
 $\square$
 
-### Proprietà dell'insieme delle funzioni integrali
+## Proprietà dell'insieme delle funzioni integrali
 
 $1)$ se $f,g \in \mathscr{R}([a,b])$,  
 allora $f + g \in \mathscr{R}([a,b])$ e  
@@ -4831,7 +4814,7 @@ poniamo $\displaystyle\int_a^b f(t) dt = - \displaystyle\int_b^a f(t) dt$
 
 da cui $\displaystyle\int_a^b f(t) dt = \displaystyle\int_a^c f(t) dt + \displaystyle\int_c^b f(t) dt$
 
-### Primitiva di una funzione
+## Primitiva di una funzione
 
 **Definizione**  
 Sia $f : [a,b] \to \mathbb{R}$,  
@@ -4865,7 +4848,7 @@ $\square$
 Tradizionalmente l'insieme delle primitive  
 si chiama "integrale indefinito".
 
-### Teorema fondamentale del calcolo integrale
+## Teorema fondamentale del calcolo integrale
 
 **Definizione**  
 Sia $f : [a,b] \to \mathbb{R}$ integrabile secondo Riemann,  
@@ -4964,7 +4947,7 @@ cioè $\lim\limits_{x \to \overline{x}} R_{\overline{x}}^F (x) = f(\overline{x})
 
 $\square$
 
-### Corollario (teorema di Torricelli o Torricelli-Barrow)
+## Corollario (teorema di Torricelli o Torricelli-Barrow)
 
 Sia $f : [a,b] \to \mathbb{R}$ continua,  
 (allora $f$ è integrabile)  
@@ -5030,7 +5013,7 @@ infine $\displaystyle\int_a^b f(t) dt = F(b) = G(b) + c = G(b) - G(a)$
 
 $\square$
 
-### Integrazione per parti
+## Integrazione per parti
 
 **Teorema**  
 Siamo $f,g$ due funzioni di classe $\mathscr{C}^1$,  
@@ -5049,7 +5032,7 @@ da cui $\displaystyle\int_a^b f(t) g'(t) dt = f(b) g(b) - f(a) g(a) - \displayst
 
 $\square$
 
-### Integrazione per sostituzione
+## Integrazione per sostituzione
 
 **Teorema**  
 Sia $g$ una funzione di classe $\mathscr{C}^1$,  
@@ -5066,13 +5049,12 @@ $\displaystyle\int_{g^{-1} (a)}^{g^{-1} (b)} f(g(t)) g'(t) dt$
 
 $\square$
 
-## Formulario
+# Formulario
 
-### Formule goniometriche
+## Formule goniometriche
 
-#### Addizione e sottrazione
+### Addizione e sottrazione
 
-\
 $sin(\alpha + \beta) = sin(\alpha)cos(\beta) + cos(\alpha)sin(\beta)$  
 $sin(\alpha - \beta) = sin(\alpha)cos(\beta) - sin(\beta)cos(\alpha)$  
 $cos(\alpha + \beta) = cos(\alpha)cos(\beta) - sin(\alpha)sin(\beta)$  
@@ -5086,9 +5068,8 @@ $cot(\alpha + \beta) = \frac{cot(\alpha)cot(\beta) - 1}{cot(\alpha) + cot(\beta)
 
 $cot(\alpha - \beta) = \frac{cot(\alpha)cot(\beta) + 1}{cot(\alpha) - cot(\beta)}$
 
-#### Duplicazione
+### Duplicazione
 
-\
 $sin(2\alpha) = 2sin(\alpha)cos(\alpha)$  
 $cos(2\alpha) = cos^2(\alpha) - sin^2(\alpha)$
 
@@ -5096,9 +5077,8 @@ $tan(2\alpha) = \frac{2tan(\alpha)}{1 - tan^2(\alpha)}$
 
 $cot(2\alpha) = \frac{cot^2(\alpha) - 1}{2cot^2(\alpha)}$
 
-#### Bisezione
+### Bisezione
 
-\
 $sin(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 - \cos(\alpha)}{2}}$  
 
 $cos(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 + \cos(\alpha)}{2}}$  
@@ -5107,9 +5087,8 @@ $tan(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}}$
 
 $cot(\frac{\alpha}{2}) = \pm \sqrt{\frac{1 + \cos(\alpha)}{1 - \cos(\alpha)}}$
 
-#### Prostaferesi
+### Prostaferesi
 
-\
 $sin(p) + sin(q) = 2sin(\frac{p + q}{2})cos(\frac{p - q}{2})$  
 
 $cos(p) + cos(q) = 2cos(\frac{p + q}{2})cos(\frac{p - q}{2})$  
@@ -5118,16 +5097,15 @@ $sin(p) - sin(q) = 2sin(\frac{p - q}{2})cos(\frac{p + q}{2})$
 
 $cos(p) - cos(q) = -2sin(\frac{p + q}{2})sin(\frac{p - q}{2})$
 
-#### Werner
+### Werner
 
-\
 $sin(\alpha)sin(\beta) = \frac{cos(\alpha - \beta) - cos(\alpha + \beta)}{2}$  
 
 $cos(\alpha)cos(\beta) = \frac{cos(\alpha - \beta) + cos(\alpha + \beta)}{2}$
 
 $sin(\alpha)cos(\beta) = \frac{sin(\alpha - \beta) + sin(\alpha + \beta)}{2}$
 
-### Limiti notevoli
+## Limiti notevoli
 
 $\lim\limits_{x \to 0} \frac{ln(1 + x)}{x} = 1$
 
@@ -5161,7 +5139,7 @@ $\lim\limits_{x \to 0} \frac{ln(cos(x))}{x^2} = -\frac{1}{2}$
 
 $\lim\limits_{x \to 0} \frac{1 - cos(x)}{x} = 0$
 
-### Derivate notevoli
+## Derivate notevoli
 
 $(c \cdot f(x))' = c \cdot f'(x)$  
 $(f(x) \pm g(x))' = f'(x) \pm g'(x)$  
@@ -5198,24 +5176,22 @@ $(arccotg(x))' = - \frac{1}{1 + x^2}$
 $(csc(x))' = cot(x)$  
 $(sec(x))' = tg(x)$
 
-### Seno e coseno iperbolico
+## Seno e coseno iperbolico
 
 $\sinh(x) = \frac{e^x - e^{-x}}{2}$  
 $\cosh(x) = \frac{e^x + e^{-x}}{2}$
 
-#### Derivate
+### Derivate
 
-\
 $(\sinh(x))' = \cosh(x)$  
 $(\cosh(x))' = \sinh(x)$
 
-#### Integrali
+### Integrali
 
-\
 $\displaystyle \int \sinh(x) \ dx = \cosh(x) + c$  
 $\displaystyle \int \cosh(x) \ dx = \sinh(x) + c$
 
-### Integrali immediati
+## Integrali immediati
 
 $\displaystyle \int f(x)dx = F(x) + c \Leftrightarrow F'(x) = f(x)$  
 
@@ -5255,11 +5231,11 @@ $\displaystyle \int sin^2(x) \ dx = \frac{1}{2} (x - sin(x)cos(x)) + c$
 
 $\displaystyle \int cos^2(x) \ dx = \frac{1}{2} (x + sin(x)cos(x)) + c$
 
-### Cambio base logaritmi
+## Cambio base logaritmi
 
 $\log_a(b) = \frac{\log_c(b)}{\log_c(a)}$
 
-### Prodotti notevoli
+## Prodotti notevoli
 
 $(a + b)^2 = a^2 + 2ab + b^2$  
 $(a - b)^2 = a^2 - 2ab + b^2$  
@@ -5272,7 +5248,7 @@ $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ac$
 $(a - b + c)^2 = a^2 + b^2 + c^2 - 2ab + 2bc - 2ac$  
 $(a + b)^n = \displaystyle\sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k$  
 
-### Taylor
+## Taylor
 
 $$
 \begin{array}{ll}
@@ -5285,6 +5261,51 @@ $$
     (1+x)^k        &= \displaystyle\sum_{n = 0}^{\infty}(k) x^n                             = 1+k x+\dfrac{k(k-1)}{2 !} x^2+\dfrac{k(k-1)(k-2)}{3 !} x^3+\ldots   \\
 \end{array}
 $$
+
+## Formule varie utili
+
+$\displaystyle\int_{-a}^{+a} f(x) dx$, $f(x)$ è dispari, allora l'integrale vale zero.
+
+$\Bigg( \displaystyle\int_{f(x)}^{g(x)} h(t) dt \Bigg)' = g'(x)F'(g(x)) - f'(x)F'(f(x)) = g'(x)h(g(x)) - f'(x)h(f(x))$
+
+Insieme aperto $\Leftrightarrow$ $E = \dot{E}$
+
+Insieme chiuso $\Leftrightarrow$ $E = \overline{E}$ $\Leftarrow$ $\partial E \subseteq E$ $\Leftrightarrow$ $\mathscr{D} E = E$
+
+$\dot{E} \subseteq E \subseteq \overline{E}$
+
+Proprietà dei logaritmi:
+
+$\log(xy) = \log(x) + \log(y)$
+
+$\log(\frac{x}{y}) = \log(x) - \log(y)$
+
+$\log(x^n) = n \log(x)$
+
+$\log(\sqrt{x}) = \frac{1}{2} \log(x)$
+
+$\log(\sqrt[n]{x}) = \frac{1}{n} \log(x)$
+
+Radice quadrata di una incognita alla seconda:
+
+$\sqrt{x^2} = |x|$
+
+Costruire funzioni ausilarie può tornare utili, come:
+
+$g(x) = f(x) - x$
+
+$f(x) = f(0) + \displaystyle\int_0^x f'(t) \ dt$
+
+$f'(\xi) = \dfrac{f(n + 1) - f(n)}{(n + 1) - n} = f(n + 1) - f(n)$
+
+se $f(x_1) = x_1$ e $f(x_2) = x_2$ allora $\exists \xi \in \ ]x_1, x_2[ \ : f'(\xi) = 1$
+
+Dimostrazioni:
+
+- Dirette
+- Per assurdo
+- Per induzione
+- Controesempi
 
 ---
 
