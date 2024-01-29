@@ -2101,11 +2101,11 @@ Il nostro obbiettivo ora diventa essere in grado si risolvere un qualsiasi siste
 Sia $A \in M_{n,m}(K)$ e sia $r \in \left\{0, 1, \dots, m\right\}$ il numero di righe non nulle di $A$; diciamo che $A$ è una **matrice a scala** se:
 
 - $r = 0$ (ovvero $A$ è una matrice nulla)
-- $r > 0$ e vale che $A_{(j)} \neq (0, 0, \dots, 0), \forall j \in \left\lbrace 0, 1, \dots, r\right\rbrace$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $A_{i} \in \left\lbrace 0, 1, \dots, m\right\rbrace$
+- $r > 0$ e vale che $A_{(i)} \neq (0, 0, \dots, 0), \forall i \in \left\lbrace 1, \dots, r\right\rbrace$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $\forall i \in \left\lbrace 1, \dots, r\right\rbrace$
 
 $j_i = min \left\lbrace j : a_{ij}  \neq 0 \right\rbrace$
 
-allora deve valere che $j_1 < j_2 < \dots < j_n$
+allora deve valere che $j_1 < j_2 < \dots < j_r$
 
 (tutti questi valori sono maggiori o uguali di $\overline{j}$);  
 gli elementi $a_{ij}$ sono detti elementi di **pivot**.
@@ -2151,19 +2151,6 @@ $$
   \end{array}
 \right.
 $$
-
-"$\Leftarrow$"  
-Supponiamo che $\forall i > r$ vale che $b_{i} = 0$ (ovvero $b_{r+1} = \dots = b_m = 0$), per costruire una soluzione, procediamo a ritroso partendo "dal basso", ovvero dalle ultime equazioni; per ipotesi, tutte le equazioni dalla $r+1$-esima alla $m$-esima sono del tipo 0=0 (la matrice $A$ è a scala)
-
-la prima equazione non identicamente nulla è la $b$ $r$-esima, che è della forma
-
-$a_{r,j_r} \cdot x_{j_r} + a_{r,j_{r}+1} \cdot x_{j_{r}+1} + \dots + a_{r,n} \cdot x_{n} = b_{r}$
-
-dove $a_{r,j_r} \neq 0$; posso dunque esplicitare $x_{j_r}$
-
-$x_{j_r} = \dfrac{(a_{r,j_{r}+1} \cdot x_{j_{r}+1} - \dots - a_{r,n} \cdot x_n)}{a_{r,j_r}}$
-
-ora possiamo assegnare valori a piacimento a $x_{j_{r}+1}, \dots, x_n$ e determinare il corrispondente valore per $x_{j_r}$.
 
 "$\Leftarrow$"  
 Supponiamo che $b_{r+1} = \dots = b_m = 0$, costruiamo una soluzione $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$ di $AX = b$; dato che $A$ è a scala, le ultime righe di $A$ sono nulle e quindi le ultime equazioni del sistema sono del tipo $0 = 0$; l'ultima equazione non identicamente nulla è quella data dalla riga $r$-esima di $A$:
