@@ -2175,7 +2175,7 @@ $j_r = min \{j : a_{r,j} \neq 0\}$
 
 ![l'ultimo elemento di pivot](../img/ultimo_pivot.png){ width=300px }
 
-a questo punto pcegliamo valori $s_{j_{r + 1}}, \dots, s_n \in K$ a piacimento e definiamo
+a questo punto scegliamo valori $s_{j_{r + 1}}, \dots, s_n \in K$ a piacimento e definiamo
 
 $s_{j_r} := \dfrac{b_{r} - (a_{r,j_{r}+1} \cdot s_{j_{r}+1} + \dots + a_{r,n} \cdot s_n)}{a_{r,j_r}}$
 
@@ -2245,7 +2245,7 @@ $s_4 = 1 - 2s_5 - s_6 = -1$
 Passiamo alla penultima equazione  
 $x_2 = -1 + 3x_3 + 2x_4 + x_5 - x_6$
 
-Scegliamo a piacere $s_3 = -1$, ottenuamo  
+Scegliamo a piacere $s_3 = -1$, otteniamo  
 $s_2 = -1 + 3s_3 + 2s_4 + s_5 - s_6 = -1 + 3(-1) + 2(-1) + 1 - 0 = -1 -3 -2 +1 = -5$
 
 Ci resta la prima equazione  
@@ -2471,14 +2471,14 @@ Sia $V$ uno spazio vettoriale su $K$ e sia $U \in V$ uno sottospazio vettoriale;
 Se $\{u_1, \dots, u_n\}$ è un sistema di generatori di uno sottospazio vettoriale $U$, allora per ogni $u \in U$ vale che $\{u_1, \dots, u_n, u\}$ è anch'esso un sistema di generatori di $U$.
 
 **Definizione**  
-Sia $V$ uno spazio vettoriale e siano $v_1, \dots, v_n \in V$; gli elementi $v_1, \dots, v_n$ si dicono **linearimente dipendenti** se possiamo scrivere $0 \in V$ come una combinazione lineare di $v_1, \dots, v_n$ in cui non tutti i coefficienti in $K$ sono nulli, ovvero se vale che $0 = \lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$, con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli.
+Sia $V$ uno spazio vettoriale e siano $v_1, \dots, v_n \in V$; gli elementi $v_1, \dots, v_n$ si dicono **linearmente dipendenti** se possiamo scrivere $0 \in V$ come una combinazione lineare di $v_1, \dots, v_n$ in cui non tutti i coefficienti in $K$ sono nulli, ovvero se vale che $0 = \lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$, con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli.
 
 **Proposizione**  
-Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; allora $v_1, \dots, v_n$ si sono **linearimente dipendenti** se e solo se uno di essi può essere scritto come combinazione lineare degli altri [equivalentemente, se e solo se esiste $j \in \{1, \dots, n\}$ tale che $v_j \in span(v_1, \dots, v_ {j - 1}, v_{j + 1}, \dots, v_n)$, indicato anche come $span(v_1, \dots, \hat{v}_j, \dots, v_n)$\].
+Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; allora $v_1, \dots, v_n$ si sono **linearmente dipendenti** se e solo se uno di essi può essere scritto come combinazione lineare degli altri [equivalentemente, se e solo se esiste $j \in \{1, \dots, n\}$ tale che $v_j \in span(v_1, \dots, v_ {j - 1}, v_{j + 1}, \dots, v_n)$, indicato anche come $span(v_1, \dots, \hat{v}_j, \dots, v_n)$\].
 
 **Dimostrazione**  
 "$\Rightarrow$"  
-Supponiamo che $v_1, \dots, v_n$ siano linearimente dipendenti; allora $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n = 0$ con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli; allora esiste $j \in \{1, \dots, n\}$ tale che $\lambda_j \neq 0$, allora vale che  
+Supponiamo che $v_1, \dots, v_n$ siano linearmente dipendenti; allora $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n = 0$ con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli; allora esiste $j \in \{1, \dots, n\}$ tale che $\lambda_j \neq 0$, allora vale che  
 $-\lambda_j \cdot v_j = \lambda_1 \cdot v_1 + \dots + \lambda_{j - 1} \cdot v_{j - 1} + \lambda_{j + 1} \cdot v_{j + 1} + \dots + \lambda_n \cdot v_n$  
 e quindi  
 $v_j = \Big(-\dfrac{\lambda_1}{\lambda_j}\Big) \cdot v_1 + \dots + \Big(-\dfrac{\lambda_{j - 1}}{\lambda_j}\Big) \cdot v_{j - 1} + \dots + \Big(-\dfrac{\lambda_{j + 1}}{\lambda_j}\Big) \cdot v_{j + 1} + \dots + \Big(-\dfrac{\lambda_n}{\lambda_j}\Big) \cdot v_n$  
@@ -2489,16 +2489,16 @@ Supponiamo che esista un $j \in \{1, \dots, n\}$ tale che $v_j \in span(v_1, \do
 $v_j = \mu_1 \cdot v_1 + \dots + \mu_{j - 1} \cdot v_{j - 1} + \mu_{j + 1} \cdot v_{j + 1} + \dots + \mu_n \cdot v_n$  
 allora  
 $\mu_1 \cdot v_1 + \dots + \mu_{j - 1} \cdot v_{j - 1} + v_j + \mu_{j + 1} \cdot v_{j + 1} + \dots + \mu_n \cdot v_n = 0$  
-e il coefficiente di $v_j$ è $1$, dunque è diverso da zero, pertanto $v_1, \dots, v_n$ sono linearimente dipendenti.
+e il coefficiente di $v_j$ è $1$, dunque è diverso da zero, pertanto $v_1, \dots, v_n$ sono linearmente dipendenti.
 
 **Definizione**  
-Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; diciamo che $v_1, \dots, v_n$ sono **linearimente indipendenti** se non sono linearimente dipendenti; equivalentemente $v_1, \dots, v_n$ sono linearimente indipendenti se e solo se l'unico modo di scrivere $0$ come combinazione lineare di $v_1, \dots, v_n$ è quello di usare tutti i coefficienti nulli; equivalentemente, $v_1, \dots, v_n$ sono linearimente indipendenti se, dal supporre che valga $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n = 0$, discende che $\lambda_1 = 0, \dots, \lambda_n = 0$.
+Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; diciamo che $v_1, \dots, v_n$ sono **linearmente indipendenti** se non sono linearmente dipendenti; equivalentemente $v_1, \dots, v_n$ sono linearmente indipendenti se e solo se l'unico modo di scrivere $0$ come combinazione lineare di $v_1, \dots, v_n$ è quello di usare tutti i coefficienti nulli; equivalentemente, $v_1, \dots, v_n$ sono linearmente indipendenti se, dal supporre che valga $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n = 0$, discende che $\lambda_1 = 0, \dots, \lambda_n = 0$.
 
 **Definizione**  
 Sia $V$ uno spazio vettoriale su $K$ e sia $U \subseteq V$ un sottospazio vettoriale; una **base** di $U$ è un insieme di vettori $u_1, \dots, u_n \in U$ tali che:  
 
 1. $\{u_1, \dots, u_n\}$ sono un sistema di generatori di $U$
-2. $\{u_1, \dots, u_n\}$ sono linearimente indipendenti
+2. $\{u_1, \dots, u_n\}$ sono linearmente indipendenti
 
 # Basi di spazi vettoriali
 
@@ -4055,7 +4055,7 @@ Notiamo pertanto che cambiare base può essere efficace nell'ottenere una matric
 Sia $f : V \rightarrow V$ un'applicazione lineare con $dim V$ finita; uno scalare $\lambda \in K$ si dice **autovalore** (eigenvalue in inglese) per $f$ se esiste $v \in V, v \neq 0$, tale che $f(v) = \lambda v$
 
 **Osservazione**  
-Considerando $\rho_{\ell}$ come nell'esemplo precedente, abbiamo che $1$ e $-1$ sono autovalori di $\rho_{\ell}$ (infatti $\rho_{\ell} (v_1) = 1 \cdot v_1$ e $\rho_{\ell} (v_2) = (-1) \cdot v_2$ ed entrambi $v_1$ e $v_2$ sono non nulli).
+Considerando $\rho_{\ell}$ come nell'esempio precedente, abbiamo che $1$ e $-1$ sono autovalori di $\rho_{\ell}$ (infatti $\rho_{\ell} (v_1) = 1 \cdot v_1$ e $\rho_{\ell} (v_2) = (-1) \cdot v_2$ ed entrambi $v_1$ e $v_2$ sono non nulli).
 
 **Definizione**  
 Data $f$ come sopra, l'insieme degli autovalori di $f$ si dice **spettro** di $f$ e si indica $Sp (f)$.
