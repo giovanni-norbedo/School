@@ -1265,7 +1265,6 @@ Dagli assiomi posso derivare le *normali* proprietà:
 
 ### Le regole dei segni
 
-
 - $a > 0, b > 0 \Rightarrow ab > 0$  
 - $a < 0, b < 0 \Leftrightarrow ab > 0$  
 - $a > 0, b < 0 \Leftrightarrow ab < 0$  
@@ -3291,7 +3290,7 @@ $n, m > \overline{n} \Rightarrow |a_n - a_m| < \varepsilon$.
 "La definizione significa che i punti della successione si stanno avvicinando".
 
 **Tesi**  
-Se una successione in $\mathbb{R}$ è convergente, allora è una successione di Chauchy.
+Se una successione in $\mathbb{R}$ è convergente, allora è una successione di Cauchy.
 
 **Dimostrazione**  
 $(a_n)_n$ convergente, cioè $\lim\limits_n a_n = \overline{a}$ con $\overline{a} \in \mathbb{R}$,  
@@ -5290,7 +5289,7 @@ Radice quadrata di una incognita alla seconda:
 
 $\sqrt{x^2} = |x|$
 
-Costruire funzioni ausilarie può tornare utili, come:
+Costruire funzioni ausiliarie può tornare utili, come:
 
 $g(x) = f(x) - x$
 
@@ -5310,12 +5309,12 @@ Dimostrazioni:
 ---
 
 Grazie per l'attenzione e spero che questi appunti siano stati utili.  
-Se trovi errori, ti prego di inviarmi un'email a <a href="mailto:norbedo@proton.me?subject=Errore%20Appunti%20Analisi%201%20(2023-2024)">norbedo@proton.me</a>.  
+Se trovi errori, ti prego di inviarmi un'email a [norbedo@proton.me](mailto:norbedo@proton.me?subject=Errore%20Appunti%20Analisi%201%20(2023-2024)).  
 Buono studio e buona fortuna!
 
 Giovanni Norbedo
 
-norbedo@proton.me  
+[norbedo@proton.me](mailto:norbedo@proton.me)  
 [norbedo.xyz](https://norbedo.xyz)  
 [github.com/giovanni-norbedo](https://github.com/giovanni-norbedo)  
 [www.linkedin.com/in/norbedo](https://www.linkedin.com/in/norbedo)

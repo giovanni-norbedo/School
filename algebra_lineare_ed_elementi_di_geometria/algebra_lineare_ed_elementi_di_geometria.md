@@ -1577,7 +1577,7 @@ $\exists 1 \in K$, tale che $\forall a \in K, a \cdot 1 = 1 \cdot a = a$
 e inoltre $0 \neq 1$
 
 K4: esistenza di opposto e inverso:  
-$\forall a \in K, \exists b \in K$, tale che a + b = b + a = 0$  
+$\forall a \in K, \exists b \in K$, tale che $a + b = b + a = 0$  
 (denotiamo $b$ con $-a$)  
 $\forall a \in K \smallsetminus \{0\}, \exists c \in K$, tale che $a \cdot c = c \cdot a = 1$  
 (denotiamo $c$ con $a^{-1}$ o con $1/a$)
@@ -1633,7 +1633,7 @@ $a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2$
 $\vdots$  
 $a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m$  
 
-dove ogni $a_{ij}$ è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$, $j \in \{1, \dots, n\}$ e ogni $b$; è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$; $x_1, \dots, x_n$ sono dette **incognite**, mentre gli elementi $b_1, \dots, b_m$ sono detti i **termini noti** e gli elementi $a_{ij}$ sono detti i **coefficienti** del sistema; una soluzione del sistema è una $n$-upla ordinata (che rappresentiamo come vettore colonna) $s \in K^n$, ovvero $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$ con $s_i \in K$ tale per cui se per ogni $i \in \{1, \dots, n\}$ sostituiamo $x_i$ con $s_i$, allora tutte le uguaglianze del sistema saranno vere; il sistema si dice **omogeneo** se $b_1 = \dots = b_m = 0$, ovvero tutti i termini noti sono nulli; un sistema si dice **non omogeneo** se non è omogeneo; un sistema di dice **compatibile** se ammette almeno una soluzione; altrimenti si dice **incompatibile**.
+dove ogni $a_{ij}$ è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$, $j \in \{1, \dots, n\}$ e ogni $b$ è un elemento di $K$ per ogni $i \in \{1, \dots, m\}$; $x_1, \dots, x_n$ sono dette **incognite**, mentre gli elementi $b_1, \dots, b_m$ sono detti i **termini noti** e gli elementi $a_{ij}$ sono detti i **coefficienti** del sistema; una soluzione del sistema è una $n$-upla ordinata (che rappresentiamo come vettore colonna) $s \in K^n$, ovvero $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$ con $s_i \in K$ tale per cui se per ogni $i \in \{1, \dots, n\}$ sostituiamo $x_i$ con $s_i$, allora tutte le uguaglianze del sistema saranno vere; il sistema si dice **omogeneo** se $b_1 = \dots = b_m = 0$, ovvero tutti i termini noti sono nulli; un sistema si dice **non omogeneo** se non è omogeneo; un sistema di dice **compatibile** se ammette almeno una soluzione; altrimenti si dice **incompatibile**.
 
 **Osservazione**  
 La $n$-upla nulla $\begin{pmatrix} 0 \\ \vdots \\ 0 \end{pmatrix}$ è sempre soluzione di un sistema omogeneo; pertanto ogni sistema omogeneo è compatibile.
@@ -1948,7 +1948,7 @@ Quindi $\lambda \cdot s$ è soluzione.
 $\square$
 
 **Osservazione**  
-Sia $A \in M_{n,m}(K)$ e $A$ invertibile;  
+Sia $A \in M_n (K)$ e $A$ invertibile;  
 consideriamo il sistema lineare omogeneo
 
 $AX = 0$
@@ -1956,10 +1956,10 @@ $AX = 0$
 allora per il teorema di Cramer, $A^{-1} \cdot 0$ è l'unica soluzione del sistema  
 e dato che $A^{-1} \cdot 0 = 0$ abbiamo che $0$ è l'unica soluzione di un tale sistema lineare omogeneo.
 
-## Teorema di struttura per sistemi lineari qualsiasi
+## Teorema di struttura per sistemi lineari qualsiasi/arbitrari
 
 Consideriamo un sistema lineare  
-$AX = b$ con $A \in M_{m,n}(K)$ e $b \in K^n$,  
+$AX = b$ con $A \in M_{m,n}(K)$ e $b \in K^m$,  
 e sia $\tilde{s}$ una sua soluzione;
 
 allora un elemento $s \in K^n$ è soluzione di $AX = b$  
@@ -1973,7 +1973,7 @@ $\left\lbrace s \in K^n : s = \tilde{s} + s_0\right\rbrace$ per $s_0$ soluzione 
 (il sistema $AX = 0$ si dice il sistema lineare omogeneo associato al sistema $AX = b$).
 
 **Dimostrazione**  
-$s \in K^n$ è soluzione di $AX = b$ $\iff$ $\exists s \in K^n$ soluzione di $AX = 0$ tale che $s = \tilde{s} + s_0$
+$s \in K^n$ è soluzione di $AX = b$ $\iff$ $\exists s_0 \in K^n$ soluzione di $AX = 0$ tale che $s = \tilde{s} + s_0$
 
 "$\Rightarrow$"  
 supponiamo che $s$ sia soluzione di $AX = 0$
@@ -2101,7 +2101,7 @@ Il nostro obbiettivo ora diventa essere in grado si risolvere un qualsiasi siste
 Sia $A \in M_{n,m}(K)$ e sia $r \in \left\{0, 1, \dots, m\right\}$ il numero di righe non nulle di $A$; diciamo che $A$ è una **matrice a scala** se:
 
 - $r = 0$ (ovvero $A$ è una matrice nulla)
-- $0 > r$ e vale che $A_{(j)} \neq (0, 0, \dots, 0), \forall j \in \left\lbrace 0, 1, \dots, r\right\rbrace$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $A_{i} \in \left\lbrace 0, 1, \dots, m\right\rbrace$
+- $r > 0$ e vale che $A_{(j)} \neq (0, 0, \dots, 0), \forall j \in \left\lbrace 0, 1, \dots, r\right\rbrace$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $A_{i} \in \left\lbrace 0, 1, \dots, m\right\rbrace$
 
 $j_i = min \left\lbrace j : a_{ij}  \neq 0 \right\rbrace$
 
@@ -2166,7 +2166,7 @@ $x_{j_r} = \dfrac{(a_{r,j_{r}+1} \cdot x_{j_{r}+1} - \dots - a_{r,n} \cdot x_n)}
 ora possiamo assegnare valori a piacimento a $x_{j_{r}+1}, \dots, x_n$ e determinare il corrispondente valore per $x_{j_r}$.
 
 "$\Leftarrow$"  
-Supponiamo che $b_{r+1} = \dots = b_m = 0$, costruiamo una soluzione $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$ di $AX = b$; dato che $A$ è a scala, le ultime righe di $A$ sono nulle e quindi le ultime equazioni del sistema sono del tipo $0 = 0$; l'ultima qeuazione non identicamente nulla è quella data dalla riga $r$-esima di $A$:
+Supponiamo che $b_{r+1} = \dots = b_m = 0$, costruiamo una soluzione $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$ di $AX = b$; dato che $A$ è a scala, le ultime righe di $A$ sono nulle e quindi le ultime equazioni del sistema sono del tipo $0 = 0$; l'ultima equazione non identicamente nulla è quella data dalla riga $r$-esima di $A$:
 
 $0 \neq a_{r,j_{r}} \cdot x_{j_{r}} + a_{r,j_{r}+1} \cdot x_{j_{r}+1} + \dots + a_{r,n} \cdot x_{n} = b_{r}$
 
@@ -2901,7 +2901,7 @@ $A \cdot s = b \iff s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$
 (questa osservazione si ottiene scrivendo esplicitamente il prodotto righe per colonne di $A$ per $s$); dimostriamo la prima parte
 
 "$\Rightarrow$"  
-Supponiamo che $A \cdot X = b$ sia compatibile; allora esiste $s \in K^n$ soluzione del sistema, dunque $A \cdot s = b$; per quanto osservato, questo equivale a dire che $s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$, il che significa che $b$ è combinazione lineare di $A^{(1)}, \dots, A^{(n)}$, ovvero delle colonne di $A$, pertanto $b \in span(A^{(1)}, \dots, A^{(n)})$, questo implica che 
+Supponiamo che $A \cdot X = b$ sia compatibile; allora esiste $s \in K^n$ soluzione del sistema, dunque $A \cdot s = b$; per quanto osservato, questo equivale a dire che $s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$, il che significa che $b$ è combinazione lineare di $A^{(1)}, \dots, A^{(n)}$, ovvero delle colonne di $A$, pertanto $b \in span(A^{(1)}, \dots, A^{(n)})$, questo implica che
 
 $span(A^{(1)}, \dots, A^{(n)}) = span(A^{(1)}, \dots, A^{(n)}, b)$
 
@@ -3931,7 +3931,7 @@ $M_C^B (f) = \begin{pmatrix}
   \vdots & & & & \vdots \\
   \vdots & & & & \vdots \\
   \text{coordinate di } f(v_1) \text{ rispetto a } C & \dots & \dots & \dots & \text{coordinate di } f(v_n) \text{ rispetto a } C \\
-  \vdots & & & & \vdots \\ 
+  \vdots & & & & \vdots \\
   \vdots & & & & \vdots
 \end{pmatrix}$
 
@@ -4174,8 +4174,8 @@ $$
   \begin{pmatrix}
     1 & 1 \\
     2 & 2
-  \end{pmatrix}
-  - \lambda \begin{pmatrix}
+  \end{pmatrix} -
+  \lambda \begin{pmatrix}
     1 & 0 \\
     0 & 1
   \end{pmatrix}
