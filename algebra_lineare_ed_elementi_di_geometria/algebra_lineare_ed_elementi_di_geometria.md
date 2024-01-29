@@ -644,14 +644,14 @@ Sia $V$ un $\mathbb{R}$-spazio vettoriale, un sottoinsieme $W \subseteq V$ si di
 3. $\forall \lambda \in \mathbb{R}$, $\forall v \in W$, vale che $\lambda \cdot v \in W$ (**chiusura rispetto alla moltiplicazione per uno scalare**)
 
 **Esempio**  
-$\mathbb{R}^2 \leftrightarrow$ {punti del piano}
+$\mathbb{R}^2 \iff$ {punti del piano}
 
 $W = \{(x,y) \in \mathbb{R}^2 : x - 3y = 0\}$
 
 (è una retta nel piano cartesiano)
 
 **Esempio**  
-$\mathbb{R}^2 \leftrightarrow$ {punti del piano}
+$\mathbb{R}^2 \iff$ {punti del piano}
 
 $C = \{(x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1\}$
 
@@ -1464,12 +1464,12 @@ $1_n \cdot A = A$ e $A \cdot 1_n = A$
 Nei numeri reali, dato $a \in \mathbb{R}$, diciamo che $b$ è inverso di $a$ se vale che $a \cdot b = b \cdot a = 1$; ogni numero reale non nullo ammette un unico inverso; l'inverso di $a \in \mathbb{R} \smallsetminus 0$ si denota $a^{-1}$.
 
 **Definizione**  
-Sia $A \in M_{m,n}(\mathbb{R})$; A si dice invertibile se esiste $B \in M_{m,n}(\mathbb{R})$ tale che valga:
+Sia $A \in M_n(\mathbb{R})$; A si dice invertibile se esiste $B \in M_n(\mathbb{R})$ tale che valga:
 
 $A \cdot B = B \cdot A = 1_n$
 
 **Proposizione**  
-Sia $A, B \in M_{m,n}(\mathbb{R})$, allora
+Sia $A, B \in M_n (\mathbb{R})$, allora
 
 1. se $A$ è invertibile, allora l'inversa di $A$ è unica
 2. se $A$ e $B$ sono invertibili, allora anche $A \cdot B$ è invertibile e la sua inversa è $B^{-1} \cdot A^{-1}$
@@ -1720,7 +1720,7 @@ $$
 \right.
 $$
 
-Non è chiamo a priori se il sistema sia compatibile o meno.
+Non è chiaro a priori se il sistema sia compatibile o meno.
 
 Per sostituzione ottengo
 
@@ -1973,7 +1973,7 @@ $\left\lbrace s \in K^n : s = \tilde{s} + s_0\right\rbrace$ per $s_0$ soluzione 
 (il sistema $AX = 0$ si dice il sistema lineare omogeneo associato al sistema $AX = b$).
 
 **Dimostrazione**  
-$s \in K^n$ è soluzione di $AX = b$ $\Leftrightarrow$ $\exists s \in K^n$ soluzione di $AX = 0$ tale che $s = \tilde{s} + s_0$
+$s \in K^n$ è soluzione di $AX = b$ $\iff$ $\exists s \in K^n$ soluzione di $AX = 0$ tale che $s = \tilde{s} + s_0$
 
 "$\Rightarrow$"  
 supponiamo che $s$ sia soluzione di $AX = 0$
@@ -2014,7 +2014,9 @@ Consideriamo il sistema
 $x + 2y -3z = -1$ con coefficienti in $\mathbb{Q}$
 
 $$
-A = (1 2 -3)
+A = \begin{pmatrix}
+  1 & 2 & -3 \\
+\end{pmatrix}
 ,\
 X =
 \begin{pmatrix}
@@ -2101,14 +2103,14 @@ Sia $A \in M_{n,m}(K)$ e sia $r \in \left\{0, 1, \dots, m\right\}$ il numero di 
 - $r = 0$ (ovvero $A$ è una matrice nulla)
 - $0 > r$ e vale che $A_{(j)} \neq (0, 0, \dots, 0), \forall j \in \left\lbrace 0, 1, \dots, r\right\rbrace$ (ovvero le eventuali righe di $A$ sono "in basso") ed inoltre sia $\overline{j}$ l'indice della prima colonna non nulla e sia $A_{i} \in \left\lbrace 0, 1, \dots, m\right\rbrace$
 
-$j_i = min \left\lbrace j : a_{ij \neq 0}\right\rbrace$
+$j_i = min \left\lbrace j : a_{ij}  \neq 0 \right\rbrace$
 
 allora deve valere che $j_1 < j_2 < \dots < j_n$
 
 (tutti questi valori sono maggiori o uguali di $\overline{j}$);  
 gli elementi $a_{ij}$ sono detti elementi di **pivot**.
 
-> Vari esempi
+![esempi di matrici a scala](../img/esempi_matrice_a_scala.png){ width=350px }
 
 **Proposizione**  
 Sia $AX = b$ un sistema lineare dove $A \in M_{n,m}(K)$ e supponiamo che $A$ sia a scala, con $r$ righe non nulle; allora
@@ -2155,24 +2157,43 @@ Supponiamo che $\forall i > r$ vale che $b_{i} = 0$ (ovvero $b_{r+1} = \dots = b
 
 la prima equazione non identicamente nulla è la $b$ $r$-esima, che è della forma
 
-$a_{r,j_r} \cdot x_{jr} + a_{r,j_{r+1}} \cdot x_{j_{r+1}} + \dots + a_{r,n} \cdot x_{m} = b_{r}$
+$a_{r,j_r} \cdot x_{j_r} + a_{r,j_{r}+1} \cdot x_{j_{r}+1} + \dots + a_{r,n} \cdot x_{n} = b_{r}$
 
-dove $a_{r,j_r} \neq 0$; posso dunque esplicitare $x_{jr}$
+dove $a_{r,j_r} \neq 0$; posso dunque esplicitare $x_{j_r}$
 
-$x_{jr} = \frac{b_r - (a_{r,j_{r+1}} \cdot s_{j+1} + \dots + a_{r,n} \cdot s_n)}{a_{r,j_r}}$
+$x_{j_r} = \dfrac{(a_{r,j_{r}+1} \cdot x_{j_{r}+1} - \dots - a_{r,n} \cdot x_n)}{a_{r,j_r}}$
 
-scegliendo i valori $s_{j_r}, \dots, s_n$ in questa, la soluzione che stiamo costruendo soddisferà l'ultima equazione.  
-Costruiamo ora la penultima equazione non nulla
+ora possiamo assegnare valori a piacimento a $x_{j_{r}+1}, \dots, x_n$ e determinare il corrispondente valore per $x_{j_r}$.
 
-$a_{r-1,j_{r-1}} \cdot x_{j_{r-1}} + a_{r-1,j_{r-1+1}} \cdot x_{j_{r-1+1}} + \dots + a_{r-1,n} \cdot x_{n} = b_{r-1}$
+"$\Leftarrow$"  
+Supponiamo che $b_{r+1} = \dots = b_m = 0$, costruiamo una soluzione $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$ di $AX = b$; dato che $A$ è a scala, le ultime righe di $A$ sono nulle e quindi le ultime equazioni del sistema sono del tipo $0 = 0$; l'ultima qeuazione non identicamente nulla è quella data dalla riga $r$-esima di $A$:
+
+$0 \neq a_{r,j_{r}} \cdot x_{j_{r}} + a_{r,j_{r}+1} \cdot x_{j_{r}+1} + \dots + a_{r,n} \cdot x_{n} = b_{r}$
+
+dove $a_{r,j_{r}} \neq 0$ perché abbiamo scelto $j_r$ e tale che  
+$j_r = min \{j : a_{r,j} \neq 0\}$
+
+![l'ultimo elemento di pivot](../img/ultimo_pivot.png){ width=300px }
+
+a questo punto pcegliamo valori $s_{j_{r + 1}}, \dots, s_n \in K$ a piacimento e definiamo
+
+$s_{j_r} := \dfrac{b_{r} - (a_{r,j_{r}+1} \cdot s_{j_{r}+1} + \dots + a_{r,n} \cdot s_n)}{a_{r,j_r}}$
+
+scegliendo i valori $s_{j_r}, \dots, s_n$ in questa, la soluzione che stiamo costruendo soddisferà l'ultima equazione:
+
+consideriamo ora la penultima equazione non nulla:
+
+$a_{r-1,j_{r-1}} \cdot x_{j_{r-1}} + a_{r-1,j_{r-1}+1} \cdot x_{j_{r-1}+1} + \dots + a_{r-1,n} \cdot x_{n} = b_{r-1}$
 
 dato che $A$ è a scala. abbiamo che $j_{r-1} < j_{r}$
 
-Ora possiamo scegliere a nostro piacimento i valori
+![il pivot della riga r-1 è minore di quello della riga r](../img/pivot_minore.png){ width=300px }
 
-$s_{j_{r-1}+1}, \dots, s_{j_{r-1}-1} \in K$
+ora possiamo scegliere a nostro piacimento dei valori
 
-$s_{j_{r-1}} = \frac{b_{r-1} - (a_{r-1,j_{r-1+1}} \cdot s_{j_{r-1}+1} + \dots + a_{r-1,n} \cdot s_n)}{a_{r-1,j_{r-1}}}$
+$s_{j_{r-1}+1}, \dots, s_{j_{r}-1} \in K$
+
+$s_{j_{r-1}} = \dfrac{b_{r-1} - (a_{r-1,j_{r-1}+1} \cdot s_{j_{r-1}+1} + \dots + a_{r-1,n} \cdot s_n)}{a_{r-1,j_{r-1}}}$
 
 e in questa maniera abbiamo determinato valori $s_{j_{r-1}}, \dots, s_n$ in modo che la soluzione che otterremo soddisfi le ultime due equazioni non nulle.
 
@@ -2180,20 +2201,83 @@ A questo punto, ripetiamo lo stesso processo per tutte le altre righe.
 
 $\square$
 
-> Esempio
+**Esempio**
+$$
+A = \begin{pmatrix}
+  \begin{array}{rrrr}
+    1 & -1 & 1 & 1 \\
+    0 & -1 & 3 & 2 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 0 \\
+  \end{array}
+\end{pmatrix} \in M_{4,6}(\mathbb{R})
+$$
+
+$b_4$ deve essere $0$
+
+$$
+b = \begin{pmatrix}
+  1 \\
+  1 \\
+  1 \\
+  0
+\end{pmatrix}
+$$
+
+Le equazioni non nulle sono:
+
+$$
+\left\lbrace
+  \begin{array}{rrrrrrrl}
+    x_1& - x_2& + x_3& + x_4& +2x_5& +x_6& =& 1 \\
+    & - x_2& + 3x_3& + 2x_4& +x_5& -x_6& =& 1 \\
+    & & & x_4& +2x_5& +x_6& =& 1
+  \end{array}
+\right.
+$$
+
+Partiamo dall'ultima equazione  
+$x_4 = 1 - 2x_5 - x_6$
+
+Scegliamo ad esempio $s_5 = 1$, $s_6 = 0$ e otteniamo  
+$s_4 = 1 - 2s_5 - s_6 = -1$
+
+Passiamo alla penultima equazione  
+$x_2 = -1 + 3x_3 + 2x_4 + x_5 - x_6$
+
+Scegliamo a piacere $s_3 = -1$, ottenuamo  
+$s_2 = -1 + 3s_3 + 2s_4 + s_5 - s_6 = -1 + 3(-1) + 2(-1) + 1 - 0 = -1 -3 -2 +1 = -5$
+
+Ci resta la prima equazione  
+$x_1 = 1 + x_2 - x_3 - x_4 - 2x_5 - x_6$
+
+$s_1 = 1 + s_2 - s_3 - s_4 - 2s_5 - s_6 = 1 -5 -(-1) -(-1) -2(-1) - 0 = 1 -5 +1 +1 -2 = -4$
+
+Perciò la soluzione del sistema $AX=b$ risulta
+
+$$
+s = \begin{pmatrix}
+  -4 \\
+  -5 \\
+  -1 \\
+  -1 \\
+  1 \\
+  0
+\end{pmatrix}
+$$
 
 **Definizione**  
 Siamo due sistemi lineari $AX = b$ e $A'X = b'$ con
 
 $A \in M_{n,m}(K)$ e $b \in K^m$  
-$A' \in M_{m,n}(K)$ e $b' \in K^{m'}$  
+$A' \in M_{m',n}(K)$ e $b' \in K^{m'}$  
 
 (quindi i due sistemi hanno lo steso numero di incognite, ma possono avere un numero diverso di equazioni)
 
 si dicono **equivalenti** se hanno le medesime soluzioni.
 
 **Definizione**  
-Sia $AX = b$ un sistema lineare, allora la matrice ottenuta aggiungendo ad $A$ la colonna data da$b$, ovvero $(A|b)$ è detta la **matrice completa** del sistema $AX = b$.
+Sia $AX = b$ un sistema lineare, allora la matrice ottenuta aggiungendo ad $A$ la colonna data da $b$, ovvero $(A|b)$ è detta la **matrice completa** del sistema $AX = b$.
 
 **Esempio**  
 Dato il sistema
@@ -2236,7 +2320,7 @@ $$
 
 ---
 
-Introduciamo tre *operazioni elementari* che trasformano un sistema lineare in un sistema lineare equivalente:
+Introduciamo tre **operazioni elementari** che trasformano un sistema lineare in un sistema lineare equivalente:
 
 **OE1**:  
 Scambio di equazioni del sistema.  
@@ -2260,7 +2344,7 @@ Se mostriamo che possiamo trasformare un sistema lineare in uno equivalente a sc
 
 ## Algoritmo di Gauss (di gradinizzazione)
 
-*Input*: matrice completa $(A|b)$ di un sistema lineare.
+*Input*: matrice completa $(A|b)$ di un sistema lineare.  
 *Output*: matrice completa $(\tilde{A}|\tilde{b})$ tale che $\tilde{A}$ è a scala e $\tilde{A}X = \tilde{b}$ è equivalente a $AX = b$.
 
 $1)$ Determino $\overline{j}$ indice colonna minima per cui abbiamo una colonna non nulla di $A$.
@@ -2300,7 +2384,7 @@ $$
 
 $5)$ Per ogni $i \in \{2, \dots, m\}$, sommo alla riga $i$-esima un opportuno multiplo della prima riga; più precisamente, sostituisco l'$i$-esima riga con
 
-$A_{(i)} - a_{1\overline{j}} A_{(1)}$
+$A_{(i)} - a_{i\overline{j}} A_{(1)}$
 
 $$
 \begin{pmatrix}
@@ -2322,12 +2406,14 @@ $$
 
 Questo algoritmo termina in un tempo finito e restituisce un risultato che rispetta le prescrizioni.della specificazione.
 
-> Esempio
+**Esempio**  
+
+![esempio dell'algoritmo di Gauss](../img/esempio_gauss.png){width="500px"}
 
 # Sistemi di generatori e indipendenza lineare
 
 **Lemma**  
-Sia $V$ uno spazio vettoriale su $K$; siano $U, W \in V$$ sottospazi vettoriali; allora $U \cap W$ è uno sottospazio vettoriale di $V$.
+Sia $V$ uno spazio vettoriale su $K$; siano $U, W \in V$ sottospazi vettoriali; allora $U \cap W$ è uno sottospazio vettoriale di $V$.
 
 **Dimostrazione**  
 Verifichiamo che $U \cap W$ soddisfa le tre proprietà di sottospazio vettoriale:
@@ -2385,7 +2471,7 @@ Sia $V$ uno spazio vettoriale su $K$ e sia $U \in V$ uno sottospazio vettoriale;
 Se $\{u_1, \dots, u_n\}$ è un sistema di generatori di uno sottospazio vettoriale $U$, allora per ogni $u \in U$ vale che $\{u_1, \dots, u_n, u\}$ è anch'esso un sistema di generatori di $U$.
 
 **Definizione**  
-Sia $V$ uno spazio vettoriale e siano $v_1, \dots, v_n \in V$; gli elementi $v_1, \dots, v_n$ si dicono **linearimente indipendenti** se possiamo scrivere $0 \in V$ come uan combinazione lineare di $v_1, \dots, v_n$ in cui non tutti i coefficienti in $K$ sono nulli, ovvero se vale che $0 = \lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$, con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli.
+Sia $V$ uno spazio vettoriale e siano $v_1, \dots, v_n \in V$; gli elementi $v_1, \dots, v_n$ si dicono **linearimente dipendenti** se possiamo scrivere $0 \in V$ come una combinazione lineare di $v_1, \dots, v_n$ in cui non tutti i coefficienti in $K$ sono nulli, ovvero se vale che $0 = \lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$, con $\lambda_1, \dots, \lambda_n \in K$ non tutti nulli.
 
 **Proposizione**  
 Sia $V$ uno spazio vettoriale su $K$ e siano $v_1, \dots, v_n \in V$; allora $v_1, \dots, v_n$ si sono **linearimente dipendenti** se e solo se uno di essi può essere scritto come combinazione lineare degli altri [equivalentemente, se e solo se esiste $j \in \{1, \dots, n\}$ tale che $v_j \in span(v_1, \dots, v_ {j - 1}, v_{j + 1}, \dots, v_n)$, indicato anche come $span(v_1, \dots, \hat{v}_j, \dots, v_n)$\].
@@ -2444,7 +2530,7 @@ supponiamo che ogni $v \in V$ si scriva come unica combinazione lineare di $B$; 
 
 $\lambda_1 v_1 + \dots + \lambda_n v_n = 0$
 
-d'altra parte, possiamo scrivere $0 = 0 \cdot v_1 + \dots + 0 \cdot v_n$; dato che la scrittura di $0$ come combinazione lineare di $\{v1, \dots, v_n\}$ è unica,discende che $\lambda_1 = \dots = \lambda_n = 0$, ovvero che $v_1, \dots, v_n$ sono linearmente indipendenti.
+d'altra parte, possiamo scrivere $0 = 0 \cdot v_1 + \dots + 0 \cdot v_n$; dato che la scrittura di $0$ come combinazione lineare di $\{v_1, \dots, v_n\}$ è unica, discende che $\lambda_1 = \dots = \lambda_n = 0$, ovvero che $v_1, \dots, v_n$ sono linearmente indipendenti.
 
 **Definizione**  
 Sia $V$ uno spazio vettoriale su $K$ finitamente generato; sia $B = \{v_1\ \dots, v_n\}$ una base di $V$ e sia $v \in V$; allora possiamo scrivere $v = \lambda_1 v_1 + \dots + \lambda_n v_n$ in modo unico con $\lambda_1, \dots, \lambda_n \in K$; gli scalari $\lambda_1, \dots, \lambda_n$ sono detti le **coordinate** di $V$ rispetto a $B$.
@@ -2543,7 +2629,7 @@ v_s =
   \vdots \\
   a_{sn}
 \end{pmatrix},
-v_n =
+v =
 \begin{pmatrix}
   b_1 \\
   b_2 \\
@@ -2623,7 +2709,7 @@ $$
 Consideriamo alcuni importanti risultati riguardo alle basi.
 
 **Teorema (di estrazione di una base)**  
-Sia $V$ uno spazio vettoriale su $K$ finitamente generato; sia $\{v_1, \dots, v_k\}$ un sistema di generi di $V$; allora esiste $B \subseteq \{v_1, \dots, v_k\}$ tale che $B$ è una base di $V$.
+Sia $V$ uno spazio vettoriale su $K$ finitamente generato; sia $\{v_1, \dots, v_k\}$ un sistema di generatori di $V$; allora esiste $B \subseteq \{v_1, \dots, v_k\}$ tale che $B$ è una base di $V$.
 
 **Dimostrazione**  
 (idea) costruiamo questa base $B$ in maniera algoritmica e possiamo supporre che $V \neq \{0\}$ (perché il caso $V = \{0\}$ è di facile dimostrazione), useremo l'**algoritmo dello scarto**:
@@ -2670,9 +2756,8 @@ C =
 \right\rbrace
 $$
 
-allora $w_1, \dots, w_k$ sono linearmente indipendenti se e solo se il sistema lineare omogeneo $C \cdot X = 0$ ammette una soluzione non tutta nulla; osserviamo la matrice $C$; essa ha $n$ righe e $k$ colonne; per ipotesi $k>n$, quindi ci sono più colonne che righe; se, tramite l'algoritmo di gradinizzazione di Gauss portiamo $C$ nella forma a scala, otterremo dunque una matrice del tipo:
+allora $w_1, \dots, w_k$ sono linearmente dipendenti se e solo se il sistema lineare omogeneo $C \cdot X = 0$ ammette una soluzione non tutta nulla; osserviamo la matrice $C$; essa ha $n$ righe e $k$ colonne; per ipotesi $k>n$, quindi ci sono più colonne che righe; se, tramite l'algoritmo di gradinizzazione di Gauss portiamo $C$ nella forma a scala, otterremo dunque una matrice del tipo:
 
-una matrice con disegnata una scala dentro:
 $$
 \tilde{C} =
 \begin{pmatrix} * & * & * & \dots & * \\
@@ -2684,7 +2769,7 @@ $$
 \end{pmatrix}
 $$
 
-dato che si sono più colonne che righe, almeno uno di questi scalini sarà lungo più di $1$, il che significa che almeno un'incognita nel sistema lineare può essere scritta linearmente e quindi in particolare può essere scelta non nulla, determinando dunque una soluzione non tutta nulla dell'equazione.
+dato che si sono più colonne che righe, almeno uno di questi scalini sarà lungo più di $1$, il che significa che almeno un'incognita nel sistema lineare può essere scelta liberamente e quindi in particolare può essere scelta non nulla, determinando dunque una soluzione non tutta nulla dell'equazione.
 
 **Teorema**  
 Sia $V$ uno spazio vettoriale su $K$ finitamente generato; siano $\{v_1, \dots, v_n\}$ e $\{w_1, \dots, w_m\}$ due basi di $V$; allora $n = m$.
@@ -2692,7 +2777,7 @@ Sia $V$ uno spazio vettoriale su $K$ finitamente generato; siano $\{v_1, \dots, 
 (equivalentemente due basi di uno spazio vettoriale su $K$ finitamente generato, hanno lo stesso numero di elementi)
 
 **Dimostrazione**  
-Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di Steinitz (perché altrimenti $\{w_1, \dots, w_m\}$ non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di Steinitz (perché altrimenti $\{v_1, \dots, v_n\} non sarebbero linearmente indipendenti); quindi $n = m$.
+Dato che $\{v_1, \dots, v_n\}$ è una base di $V$, allora deve essere $m \leq n$ per il lemma di Steinitz (perché altrimenti $\{w_1, \dots, w_m\}$ non sarebbero linearmente indipendenti); dal momento che $\{w_1, \dots, w_m\}$ è una base di $V$, allora deve essere $n \leq m$ per il lemma di Steinitz (perché altrimenti $\{v_1, \dots, v_n\}$ non sarebbero linearmente indipendenti); quindi $n = m$.
 
 # Dimensione e rango
 
@@ -2717,10 +2802,11 @@ Il concetto di dimensione si applica anche ai sottospazi vettoriali di uno spazi
 Sia $V$ uno spazio vettoriale finitamente generato; sia $W \subseteq V$ un sottospazio vettoriale allora:
 
 1. $dim W \leq dim V$
-2. $dim W = dim V \Leftrightarrow W = V$
+2. $dim W = dim V \iff W = V$
 
-**Dimostrazione**  
-Con la dimostrazione abbiamo associato un numero ad uno spazio vettoriale finitamente generato. Tramite questa nozione, associamo un numero a una matrice.
+---
+
+Con la dimensione abbiamo associato un numero ad uno spazio vettoriale finitamente generato. Tramite questa nozione, associamo un numero a una matrice.
 
 **Osservazione**  
 Se $A \in M_{m,n}(K)$, allora le colonne di $A$ sono elementi di $K^m$.
@@ -2759,7 +2845,7 @@ A =
 \end{pmatrix}
 $$
 
-$rg(A) = dim(span(\begin{pmatrix} 2 \\ 1 \end{pmatrix}), \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 3 \\ -1 \end{pmatrix})$
+$rg(A) = dim(span(\begin{pmatrix} 2 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 3 \\ -1 \end{pmatrix}))$
 
 vale che $rg(A) \leq min\{2, 3\} = 2$
 
@@ -2805,12 +2891,12 @@ $dim W = n - rg(A)$
 Seguirà dalla teoria delle applicazioni lineari.
 
 **Teorema (di Rouchè - Capelli)**  
-SIa $A \in M_{m,n}(K)$ e sia $B \in K^n$, allora il sistema lineare $A \cdot X = b$ è compatibile (ovvero ammette almeno una soluzione) se e solo se $rg(A) = rg(A|B)$; in tal caso la generica soluzione del sistema dipende da $n - rg(A)$ parametri liberi.
+Sia $A \in M_{m,n}(K)$ e sia $B \in K^n$, allora il sistema lineare $A \cdot X = b$ è compatibile (ovvero ammette almeno una soluzione) se e solo se $rg(A) = rg(A|B)$; in tal caso la generica soluzione del sistema dipende da $n - rg(A)$ parametri liberi.
 
 **Dimostrazione**  
 Per mostrare la prima parte del teorema, notiamo che se $s \in K^n$, con $s = \begin{pmatrix} s_1 \\ \vdots \\ s_n \end{pmatrix}$, allora
 
-$A \cdot s = b \Leftrightarrow s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$
+$A \cdot s = b \iff s_1 \cdot A^{(1)} + \dots + s_n \cdot A^{(n)} = b$
 
 (questa osservazione si ottiene scrivendo esplicitamente il prodotto righe per colonne di $A$ per $s$); dimostriamo la prima parte
 
@@ -2891,7 +2977,7 @@ $$
     x_2 - x_4 = 2
   \end{array}
 \right.
-\Leftrightarrow
+\iff
 \left\lbrace
   \begin{array}{l}
     x_1 = 2x_2 - 3c_3 + x_4 + 1 \\
@@ -2901,14 +2987,14 @@ $$
 $$
 
 $$
-\Leftrightarrow
+\iff
 \left\lbrace
   \begin{array}{l}
     x_1 = 2(x_4 + 2) - 3x_3 + x_4 + 1 \\
     x_2 = x_4 + 2
   \end{array}
 \right.
-\Leftrightarrow
+\iff
 \left\lbrace
   \begin{array}{l}
     x_1 = -3x_3 + 3x_4 + 5 \\
@@ -2926,7 +3012,7 @@ $$
     x_2 - x_4 = 0
   \end{array}
 \right.
-\Leftrightarrow
+\iff
 \left\lbrace
   \begin{array}{l}
     x_1 = 3x_4 - 3x_3 \\
@@ -2969,11 +3055,11 @@ Sia $A \in M_{n}(K)$, allora $rg(A) = n$ (ovvero il rango di $A$ è il massimo p
 Abbiamo visto nella dimostrazione di Rouchè - Capelli che
 $A \cdot X = b$ è compatibile se e solo se $b \in span(A^{(1)}, \dots, A^{(n)})$, nella nostra dimostrazione abbiamo che $span(A^{(1)}, \dots, A^{(n)}) \subseteq K^n$, e vale che $dim_k K^n = n$; pertanto
 
-$rg(A) = n \Leftrightarrow dim\ span(A^{(1)}, \dots, A^{(n)}) = n \Leftrightarrow span(A^{(1)}, \dots, A^{(n)}) = K^n \Leftrightarrow \forall b \in K^n, b \in span(A^{(1)}, \dots, A^{(n)}) \Leftrightarrow \forall b \in K^n, AX = b$ è compatibile.
+$rg(A) = n \iff dim\ span(A^{(1)}, \dots, A^{(n)}) = n \iff span(A^{(1)}, \dots, A^{(n)}) = K^n \iff \forall b \in K^n, b \in span(A^{(1)}, \dots, A^{(n)}) \iff \forall b \in K^n, AX = b$ è compatibile.
 
 $\square$
 
-Ritorniamo ora la teorema di Cramer, il quale ci dice che se $A \in M_{n}(K)$, ed $A$ è invertibile, allora $\forall b \in K^n$ il sistema lineare $A \cdot X = b$ è compatibile.
+Ritorniamo ora al teorema di Cramer, il quale ci dice che se $A \in M_{n}(K)$, ed $A$ è invertibile, allora $\forall b \in K^n$ il sistema lineare $A \cdot X = b$ è compatibile.
 
 **Proposizione**  
 Sia $A \in M_{n}(K)$, allora $rg(A) = n$ (ovvero il rango di $A$ è massimo) se e solo se $A$ è invertibile.
@@ -2985,7 +3071,7 @@ Sia $A$ invertibile, allora per il teorema di Cramer, $\forall b \in K^n$ il sis
 "$\Rightarrow$"  
 Supponiamo che $rg(A) = n$, vogliamo mostrare che una certa $B \in M_{n}(K)$ tale che $AB = BA = 1_n$; è sufficiente costruire $B$ tale che $AB = 1_n$; ora, vale che
 
-$AB = 1_n$ se e solo se $A \cdot B^{(i)} = \begin{pmatrix} 0 \\ \vdots \\ 1 & (i)\\ \vdots \\ 0 & \end{pmatrix}$
+$AB = 1_n$ se e solo se $A \cdot B^{(i)} = \begin{pmatrix} 0 \\ \vdots \\ 1 & (i) \text{ cioè l'uno va in posizione i-esima}\\ \vdots \\ 0 & \end{pmatrix}$
 
 chiamiamo $e_i$ il vettore $\begin{pmatrix} 0 \\ \vdots \\ 1 & (i)\\ \vdots \\ 0 & \end{pmatrix}$
 
@@ -2996,12 +3082,15 @@ Da questo risultato otteniamo un algoritmo per determinare l'inversa di una matr
 Abbiamo visto che per risolvere l'inversa di $A$ dobbiamo risolvere tutti i sistemi lineari del tipo $AX = e_i$, con $i \in \{1, \dots, n\}$. Cerchiamo di risolverli tutti contemporaneamente, ovvero consideriamo la matrice
 
 $$
-(A \begin{pmatrix}
-  1 & 0 & \dots & 0 \\
-  0 & 1 & \dots & 0 \\
-  \vdots & \vdots & \ddots & \vdots \\
-  0 & 0 & \dots & 1
-\end{pmatrix})
+\left(
+\begin{array}{c|cccc}
+  & 1 & 0 & \dots & 0 \\
+  & 0 & 1 & \dots & 0 \\
+A & 0 & 0 & \dots & 0 \\
+  & \vdots & \vdots & \ddots & \vdots \\
+  & 0 & 0 & \dots & 1
+\end{array}
+\right)
 $$
 
 Notiamo che dato che $A$ è invertibile, il suo rango è $n$, quindi la sua forma a scala dopo l'algoritmo di Gauss è
@@ -3076,7 +3165,7 @@ $$
 \end{pmatrix} \rightarrow
 \begin{pmatrix}
   1 & \frac{1}{2} & | & \frac{1}{2} & 0 \\
-  0 & \frac{1}{2} & | & -\frac{5}{3} & 1
+  0 & \frac{1}{2} & | & -\frac{5}{2} & 1
 \end{pmatrix} \rightarrow
 \begin{pmatrix}
   1 & \frac{1}{2} & | & \frac{1}{2} & 0 \\
@@ -3138,7 +3227,7 @@ $$
 
 Notiamo quindi che
 
-$A$ è invertibile $\Leftrightarrow$ $a_{11}a_{22} - a_{12}a_{21} \neq 0$
+$A$ è invertibile $\iff$ $a_{11}a_{22} - a_{12}a_{21} \neq 0$
 
 e in tal caso l'inversa di $A$ è data da
 
@@ -3170,7 +3259,7 @@ Questo abbiamo visto finora ci permette di enunciare.
 **Proposizione**  
 Sia $A \in M_2 (K)$, allora
 
-$A$ è invertibile $\Leftrightarrow$ $rg(A) = 2$ $\Leftrightarrow$ $det(A) \neq 0$
+$A$ è invertibile $\iff$ $rg(A) = 2$ $\iff$ $det(A) \neq 0$
 
 in tal caso, se $A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$, vale che $A^{-1} = \frac{1}{det(A)} \cdot \begin{pmatrix} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{pmatrix}$.
 
@@ -3242,7 +3331,7 @@ $$
 **Teorema**  
 Sia $A \in M_n (K)$; allora  
 
-$A$ è invertibile $\Leftrightarrow$ $det(A) \neq 0$
+$A$ è invertibile $\iff$ $det(A) \neq 0$
 
 **Formula di Sarrus**  
 Solo per le matrici $3 \times 3$ vale la formula di Sarrus:
@@ -3334,11 +3423,6 @@ $det\ 1_n = 1$
 Il determinante è l'unica funzione $M_n (K) \rightarrow K$ che soddisfa le proprietà $D1$, $D2$ e $D3$.
 
 **Corollario**  
-i) se $A$ ha due righe uguali, allora $det(A) = -det(A)$ (per $D2$) e dunque $det(A) = 0$; analogamente per le colonne.
-
-ii) se $A$ ha una riga nulla, allora $det(A) = 0$ (per $D1$).
-
-**Corollario**  
 $i)$ se $A$ ha due righe uguali, allora $det(A) = -det(A)$ (per $D2$)  
 e dunque $det(A) = 0$; analogamente per le colonne.
 
@@ -3399,7 +3483,7 @@ c \cdot \underbrace{det \begin{pmatrix}
     A_{(j)} \\
     \vdots \\
     A_{(n)}
-\end{pmatrix}}_{\text{ha due rughe uguali, quindi } det = 0} = det A$$
+\end{pmatrix}}_{\text{ha due righe uguali, quindi } det = 0} = det A$$
 
 **Corollario**  
 Se $A \in M_n(K)$ e $\tilde{A}$ è la matrice a scala ottenuta applicando l'algoritmo di gradinizzazione di Gauss a $A$, allora  
@@ -3441,11 +3525,11 @@ Con questi strumenti possiamo dimostrare il risultato secondo cui il determinant
 
 **Teorema**  
 Sia $A \in M_n(K)$; vale che  
-$rg(A) < n \Leftrightarrow det(A) = 0$  
+$rg(A) < n \iff det(A) = 0$  
 
 equivalentemente  
 
-$rg(A) = n \Leftrightarrow det(A) \neq 0$
+$rg(A) = n \iff det(A) \neq 0$
 
 **Dimostrazione**  
 "$\Rightarrow$" supponiamo che $rg(A) < n$; sia $\tilde{A}$ la matrice ottenuta da $A$ applicando l'algoritmo di gradinizzazione di Gauss; allora $\tilde{A}$ ha una riga nulla, pertanto $det(\tilde{A}) = 0$ e ciò è equivalente a $det(A) = 0$.
@@ -3454,19 +3538,19 @@ $\Leftarrow$" supponiamo che $det(A) = 0$; sia $\tilde{A}$ la matrice ottenuta d
 
 **Corollario**  
 Sia $A \in M_n(K)$; allora  
-$A$ è invertibile $\Leftrightarrow$ $det(A) \neq 0$
+$A$ è invertibile $\iff$ $det(A) \neq 0$
 
 **Dimostrazione**  
 Vediamo ora che il determinante si può calcolare sviluppando rispetto a una qualsiasi colonna o a una qualsiasi riga. Questo risultati sono detti **sviluppo di Laplace** del determinante.
 
 **Teorema**  
 Sia $A \in M_n(K)$ e sia $k \in \{1, \dots, n\}$; allora  
-$det(A) = \displaystyle\sum_{i = 1}^n (-1)^{1 + k} \cdot a_{il} \cdot det(A_{ik})$  
+$det(A) = \displaystyle\sum_{i = 1}^n (-1)^{i + k} \cdot a_{ik} \cdot det(A_{ik})$  
 (sviluppo secondo la colonna $k$-esima)
 
 **Teorema**  
 Sia $A \in M_n(K)$ e sia $l \in \{1, \dots, n\}$; allora  
-$det(A) = \displaystyle\sum_{j = 1}^n (-1)^{j + j} \cdot a_{lj} \cdot det(A_{lj})$  
+$det(A) = \displaystyle\sum_{j = 1}^n (-1)^{l + j} \cdot a_{lj} \cdot det(A_{lj})$  
 (sviluppo secondo la riga $l$-esima)
 
 **Corollario**  
@@ -3500,11 +3584,12 @@ $det(A^{-1}) = \dfrac{1}{det(A)}$
 Andiamo ora a determinare una formula esplicita per le entrate della matrice inversa di una matrice data.
 
 **Definizione**  
-Sia $A \in M_n(K)$ e siamo $i, j \in \{1, \dots, n\}$; il **cofattore $i,j$-esimo** di $A$ è lo scalare $(-1)^{i + j} \cdot A_{ij}$
+Sia $A \in M_n(K)$ e siamo $i, j \in \{1, \dots, n\}$; il **cofattore $i,j$-esimo** di $A$ è lo scalare $(-1)^{i + j} \cdot det \ A_{ij}$
 
 dove ricordiamo che $A_{ij}$ è il minore $i, j$-esimo della matrice $A$.  
 Definiamo la **matrice dei cofattori** di $A$ come quella matrice  
-$cofA \in M_n(K)$ il cui elemento di posto $(i, j)$ è il cofattore $i,j$-esimo di $A$. Dunque $(cofA)_{ij} = (-1)^{i + j} \cdot A_{ij}$
+$cofA \in M_n(K)$ il cui elemento di posto $(i, j)$ è il cofattore $i,j$-esimo di $A$.  
+Dunque $(cofA)_{ij} = (-1)^{i + j} \cdot det \ A_{ij}$
 
 **Proposizione**  
 Sia $A \in M_n(K)$; allora
@@ -3534,6 +3619,667 @@ si verifica che
 $\square$
 
 # Applicazioni Lineari
+
+**Definizione**  
+Siano $V$ e $V'$ due spazi vettoriali su $K$; una funzione
+
+$f : V \rightarrow V'$
+
+si dice **applicazione lineare** se valgono:
+
+$AL1.$ (**additività**)
+
+$\forall v_1, v_2 \in V : f(v_1 + v_2) = f(v_1) + f(v_2)$
+
+rispettivamente somma in $V$ e somma in $V'$
+
+"l'immagine della somma è la somma delle immagini"
+
+$AL2.$ (**omogeneità**)
+
+$\forall v \in V, \forall \lambda \in K : f(\lambda v) = \lambda f(v)$
+
+rispettivamente moltiplicazione per uno scalare in $V$ e moltiplicazione per uno scalare in $V'$
+
+"l'immagine della moltiplicazione per uno scalare è la moltiplicazione per uno scalare delle immagini"
+
+**Esempio**  
+Sia $f : \mathbb{R}^2 \rightarrow \mathbb{R}$ definita da $f(\begin{pmatrix} x \\ y \end{pmatrix}) = x + 2y$
+
+vale che $f\left(\begin{pmatrix} x_1 \\ y_1 \end{pmatrix} + \begin{pmatrix} x_2 \\ y_2 \end{pmatrix}\right) =$  
+$= (x_1x_2) + (2y_1y_2) =$  
+$= (x_1 + 2y_1)(x_2 + 2y_2) =$  
+$= f\left(\begin{pmatrix} x_1 \\ 2y_1 \end{pmatrix}\right) + f\left(\begin{pmatrix} x_2 \\ 2y_2 \end{pmatrix}\right)$
+
+quindi $f$ è additiva; similmente si dimostra che $f$ è omogenea.
+
+**Definizione**  
+Sia $A \in M_{m, n}(\mathbb{R})$; allora $A$ definisce una funzione
+
+$L_A : K^n \rightarrow K^m$  
+$v \mapsto Av$
+
+**Proposizione**  
+$\forall A \in M_{m, n}(\mathbb{R})$, la funzione $L_A$ è una applicazione lineare.
+
+**Dimostrazione**  
+$L_A (v_1 + v_2) = A \cdot (v_1 + v_2) = A \cdot v_1 + A \cdot v_2 = L_A(v_1) + L_A(v_2)$
+
+similmente se $\lambda \in K$ e $v \in K^n$, vale $L_A(\lambda \cdot v) = \lambda \cdot L_A(v)$
+
+**Esempio** (rotazione nel piano di un angolo $\alpha$ in senso antiorario)  
+Sia $\alpha \in \mathbb{R}$ e considero la matrice
+
+$$
+R_{\alpha} = \begin{pmatrix}
+  \cos \alpha & -\sin \alpha \\
+  \sin \alpha & \cos \alpha
+\end{pmatrix}
+$$
+
+l'applicazione lineare $L_{R_{\alpha}} : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ è la rotazione di angolo $\alpha$ in senso antiorario
+
+![rotazione di un angolo $\alpha$ in senso antiorario](../img/esempio_rotazione_vettori.png){width=700px}
+
+$$
+L_{R_{\alpha}}\left(\begin{pmatrix} 1 \\ 0 \end{pmatrix}\right) = \begin{pmatrix} \cos \alpha -\sin \alpha \\ \sin \alpha + \cos \alpha \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} \cos \alpha \\ \sin \alpha \end{pmatrix}
+$$
+
+$$
+L_{R_{\alpha}}\left(\begin{pmatrix} 0 \\ 1 \end{pmatrix}\right) = \begin{pmatrix} \cos \alpha & -\sin \alpha \\ \sin \alpha & \cos \alpha \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} -\sin \alpha \\ \cos \alpha \end{pmatrix}
+$$
+
+**Definizione**  
+(applicazioni lineare che "prendono le coordinate")  
+Sia $V$ uno spazio vettoriale di dimensione finita, $dim V = n$; sia $B = \{v_1, \dots, v_n\}$ una base di $V$; definiamo la funzione che prende le **coordinate rispetto a $B$** in questo modo:  
+essa è la funzione  
+
+$F_B : V \rightarrow K^n$
+
+che agisce nel modo seguente: se $v \in V$, allora possiamo scrivere in maniera unica $v$ come combinazione lineare $v_1 + \dots + v_n$:  
+$v = \lambda_1 v_1 + \dots + \lambda_n v_n$ con $\lambda_1, \dots, \lambda_n \in K$  
+allora definiamo $F_B(v) = \begin{pmatrix} \lambda_1 \\ \dots \\ \lambda_n \end{pmatrix}$;  
+si può verificare che $F_B$ è biettiva (quindi è invertibile);  
+si dice quindi che $F_B$ è un **isomorfismo** di spazi vettoriali.
+
+**Definizione**  
+Sia $f : V \rightarrow V'$ un'applicazione lineare; definiamo il **nucleo** di $f$ come il sottoinsieme:  
+
+$ker f = \{v \in V : f(v) = 0\}$
+
+quindi $ker f \subseteq V$; definiamo l'**immagine** di $f$ come il sottoinsieme:
+
+$im f = \{v' \in V' : \text{ esiste } v \in V : f(v) = v'\}$
+
+quindi $im f \subseteq V'$
+
+**Proposizione**  
+Sia $f : V \rightarrow V'$ un'applicazione lineare; allora $ker f$ è sottospazio vettoriale di $V$ e $im f$ è sottospazio vettoriale di $V'$.
+
+**Dimostrazione**  
+Consideriamo per primo $ker f$:
+
+$i.$ verifichiamo che $f(0) = 0$; vale infatti che  
+$f(0) = f(0 + 0) \stackrel{AL1}{=} f(0) + f(0)$  
+$\Rightarrow f(0) = f(0) + f(0)$  
+$\Rightarrow f(0) = 0$
+
+quindi $0 \in ker f$
+
+$ii.$ siano $v_1, v_2 \in ker f$, dobbiamo mostrare che $v_1 + v_2 \in ker f$, ovvero che $f(v_1 + v_2) = 0$; per ipotesi $f(v_1) = 0$ e $f(v_2) = 0$, allora
+
+$f(v_1 + v_2) \stackrel{AL1}{=} f(v_1) + f(v_2) = 0 + 0 = 0$
+
+$iii.$ Sia $v \in ker f$ e sia $\lambda \in K$, dobbiamo mostrare che $\lambda v \in ker f$, ovvero che $f(\lambda v) = 0$; per ipotesi $f(v) = 0$, allora
+
+$f(\lambda v) \stackrel{AL2}{=} \lambda f(v) = \lambda \cdot 0 = 0$
+
+quindi $ker f$ è sottospazio vettoriale.
+
+Consideriamo ora $im f$:
+
+$i.$ vale che $0 = f(0)$, dunque $0 \in im f$
+
+$ii.$ siano $v'_1, v'_2 \in im f$, dobbiamo mostrare che $v'_1 + v'_2 \in im f$; per ipotesi esistono $v_1, v_2 \in V$ tali che $f(v_1) = v'_1$ e $f(v_2) = v'_2$, allora
+
+$f(v_1 + v_2) = f(v_1) + f(v_2) = v'_1 + v'_2$
+
+pertanto $v'_1 + v'_2$ è immagine di un elemento di $V$, quindi $v'_1 + v'_2 \in im f$
+
+$iii.$ Sia $v' \in V'$ e sia $\lambda \in K$, sia $v' \in im f$, dobbiamo mostrare che $\lambda v' \in im f$; per ipotesi esiste $v \in V$ tale che $f(v) = v'$, allora
+
+$f(\lambda v) = \lambda f(v) = \lambda v'$
+
+pertanto $\lambda v'$ è immagine di un elemento di $V$, quindi $\lambda v' \in im f$
+
+dunque $im f$ è sottospazio vettoriale.
+
+---
+
+Nucleo e immagine determinano due importanti proprietà di $f$ come funzione
+
+**Proposizione**  
+Sia $f : V \rightarrow V'$ un'applicazione lineare; allora  
+
+1. $f$ è iniettiva $\Leftrightarrow ker f = 0$
+2. $f$ è suriettiva $\Leftrightarrow im f = V'$
+
+**Dimostrazione**  
+$2.$ è una parafrasi del concetto di suriettività.
+
+$1.$  
+"$\Rightarrow$"  
+Supponiamo $f$ iniettiva e dimostriamo che $ker f = 0$; per farlo consideriamo $v \in ker f$ e mostriamo che deve essere $v = 0$; dato che $v \in ker f$, abbiamo che $f(v) = 0$; d'altra parte $f(0) = 0$; dato che $f$ è iniettiva, ciò è possibile solo se $v = 0$.  
+"$\Leftarrow$"  
+Supponiamo $ker f = 0$ e mostriamo che $f$ è iniettiva; per farlo consideriamo $v_1, v_2 \in V$ tali che $f(v_1) = f(v_2)$ e mostriamo che $v_1 = v_2$; se vale $f(v_1) = f(v_2)$, allora $f(v_1) - f(v_2) = 0$, quindi (uso $AL1/2$) $f(v_1 - v_2) = 0$, dunque $v_1 - v_2 \in ker f$, pertanto, dato che $ker f$ è dato in questo caso dal solo elemento neutro, abbiamo $v_1 - v_2 = 0$, ovvero $v_1 = v_2$.
+
+**Teorema (di struttura per applicazioni lineari)**  
+Siano $V$ e $V'$ due spazi vettoriali su $K$ di dimensione finita (non è necessario che $V$ e $V'$ abbia la stessa dimensione); sia $B = \{b_1, b_2, \dots, b_n\}$ una base di $V$ e siano $v'_1, v'_2, \dots, v'_n \in V'$ vettori qualsiasi (non c'è alcuna restrizione, potrebbero essere anche tutti uguali o tutti nulli); allora esiste un'unica applicazione lineare $f : V \rightarrow V'$ tale che $f(v_i) = v'_i$ per ogni $i \in \{1, 2, \dots, n\}$.
+
+**Dimostrazione**  
+Supponiamo che una tale applicazione lineare esista ì; sia $v \in V$ (vogliamo capire chi sia $f(v)$); per ipotesi, $B$ è una base di $V$, quindi $v$ si scrive in maniera unica come $v = \lambda_1 v_1 + \dots + \lambda_n v_n$ con $\lambda_i \in K$; allora
+
+$f(v) = f(\lambda_1 v_1 + \dots + \lambda_n v_n) \stackrel{AL1}{=} f(\lambda_1 v_1) + \dots + f(\lambda_n v_n) \stackrel{AL2}{=} \lambda_1 f(v_1) + \dots + \lambda_n f(v_n) = \lambda_1 v'_1 + \dots + \lambda_n v'_n$
+
+quindi l'immagine di $v \in V$ è univocamente determinata dalle proprietà che abbiamo supposto essere vere per $f$; pertanto, se $f$ esiste, essa è unica; dobbiamo ora mostrare che $f$ esiste; per farlo usiamo il suggerimento che ci è dato dall'argomento usato appena qui sopra, ovvero, se $v \in V$, definiamo $f(v)$ nel modo seguente: scriviamo $v$ come combinazione lineare in modo unico di $B$, dunque $v = \lambda_1 v_1 + \dots + \lambda_n v_n$ e definiamo $f(v) = \lambda_1 v'_1 + \dots + \lambda_n v'_n$, avendola definita in questa maniera, segue immediatamente che $f(v_i) = v'_i$ per ogni $i \in \{1, 2, \dots, n\}$, infatti $v_i = 0 \cdot v_1 + \dots + \cdot v_i + \dots + 0 \cdot v_n$, quindi $f(v_i) = 0 \cdot v'_1 + \dots + \cdot v'_n = v'_i$; l'ultima cosa che dobbiamo mostrare è che $f$, così definita, è una applicazione lineare; siano quindi $u, v \in V$, dobbiamo mostrare che $f(u + v) = f(u) + f(v)$, scriviamo $u$ e $v$ come combinazioni lineari di $B$:  
+$u = \mu_1 v_1 + \dots + \mu_n v_n$  
+$v = \lambda_1 v_1 + \dots + \lambda_n v_n$  
+da ciò segue che vale  
+$f(u) = \mu_1 v'_1 + \dots + \mu_n v'_n$  
+$f(v) = \lambda_1 v'_1 + \dots + \lambda_n v'_n$  
+inoltre  
+$(u + v) = (\mu_1 + \lambda_1) v_1 + \dots + (\mu_n + \lambda_n) v_n$  
+quindi  
+$f(u + v) = (\mu_1 + \lambda_1) v'_1 + \dots + (\mu_n + \lambda_n) v'_n =$  
+$= (\mu_1 + v'_1 + \dots + \mu_n + v'_n) + (\lambda_1 + v'_1 + \dots + \lambda_n + v'_n) = f(u) + f(v)$
+
+pertanto è additiva; analogamente si dimostra che $f$ è omogenea.
+
+**Esempio**  
+Consideriamo in $\mathbb{R}^2$ la base standard $\xi = \{e_1, e_2\}$,  
+
+$e_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad e_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$
+
+consideriamo in $\mathbb{R}^2$ due elementi
+
+$w_1 = \begin{pmatrix} 2 \\ 3 \end{pmatrix}, \quad w_2 = \begin{pmatrix} -1 \\ 4 \end{pmatrix}$
+
+allora per il teorema di struttura delle applicazioni lineari esiste ed è unica un'applicazione lineare $f : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ tale che  
+$f(e_1) = w_1$ e $f(e_2) = w_2$  
+
+chiediamoci: chi è l'immagine attraverso $f$ di un generico elemento $\begin{pmatrix} x \\ y \end{pmatrix} \in \mathbb{R}^2$?
+
+vale che $\begin{pmatrix} x \\ y \end{pmatrix} =  x e_1 + y e_2$; allora $f\left(\begin{pmatrix} x \\ y \end{pmatrix}\right) = x w_1 + y w_2$
+
+quindi $f\left(\begin{pmatrix} x \\ y \end{pmatrix}\right) = x \begin{pmatrix} 2 \\ 3 \end{pmatrix} + y \begin{pmatrix} -1 \\ 4 \end{pmatrix} = \begin{pmatrix} 2x -y \\ 3x + 4y \end{pmatrix}$
+
+**Esempio**  
+Non può esistere un'applicazione lineare $f : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ tale che  
+
+$f\left(\begin{pmatrix} 1 \\ 0 \end{pmatrix}\right) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}, \quad f\left(\begin{pmatrix} 0 \\ 1 \end{pmatrix}\right) = \begin{pmatrix} -1 \\ 1 \end{pmatrix}, \quad f\left(\begin{pmatrix} 1 \\ 1 \end{pmatrix}\right) = \begin{pmatrix} 12 \\ 17 \end{pmatrix}$
+
+**Osservazione**  
+Sia $f : V \rightarrow V'$ una applicazione lineare tra spazi vettoriali di dimensione finita e sia $B = \{v_1, \dots, v_n\}$ una base di $V$; allora $f(v_1), \dots, f(v_n)$ sono un sistema di generatori di $im f$; infatti se $v' \in im f$, allora esiste $v \in V$ tale che $f(v) = v'$; dato che $B$ è una base, vale che $v = \lambda_1 v_1 + \dots + \lambda_n v_n$ per certi $\lambda_1, \dots, \lambda_n \in K$, quindi  
+$f(v) = f(\lambda_1 v_1 + \dots + \lambda_n v_n) = f(\lambda_1 v_1) + \dots + f(\lambda_n v_n) = \lambda_1 f(v_1) + \dots + \lambda_n f(v_n)$
+
+quindi $v'$ è combinazione lineare di $f(v_1), \dots, f(v_n)$; notiamo che abbiamo usato solo il fatto che $B$ è n sistema di generatori per $V$.  
+Sintetizzando: "le immagini di un sistema di generatori sono run sistema di generatori per l'immagine dell'applicazione lineare".
+
+**Osservazione**  
+Consideriamo una matrice $A \in M_{m, n} (K)$; allora abbiamo  
+
+$L_A : K^n \rightarrow K^m$  
+$v \mapsto A \cdot v$
+
+se in $K^n$ prendiamo la base standard $\xi = \{e_1, \dots, e_n\}$, dove  
+
+$e_i = \begin{pmatrix} 0 \\ \vdots \\ 1 & (i) \text{ cioè l'uno va in posizione i-esima}\\ \vdots \\ 0 & \end{pmatrix}$
+
+allora vale che $A \cdot e_i = A^{(i)}$; dato che $\xi$ è una base di $K^n$, abbiamo che $L_A = span \Big( L_A(e_1), \dots, L_A(e_n) \Big) = span \Big( A^{(1)}, \dots, A^{(n)} \Big)$
+
+pertanto $dim \ im L_A = dim \ span \Big( A^{(1)}, \dots, A^{(n)} \Big) = rg A$
+
+**Definizione**  
+Sia $f : V \rightarrow V'$ applicazione lineare tra spazi vettoriali di dimensione finita, definiamo il rango di $f$ come $dim im f$.
+
+Data l'osservazione precedente, il rango di un'applicazione lineare è una generalizzazione del rango di una matrice.
+
+**Teorema (di dimensione per applicazioni lineari)**  
+Sia $f : V \rightarrow V'$ applicazione lineare tra spazi vettoriali di dimensione finita, vale allora  
+$dim V = dim \ ker f + dim \ im f$  
+o, in altre parole  
+$dim V = dim \ ker f + rg f$
+
+**Dimostrazione**  
+Sia $n = dim V$ e fissiamo una base $B_{ker}$ di $ker f$; sia $B_{ker} = \{v_1, \dots, v_k\}$, dunque $dim \ ker f = k$; ora, per costruzione $v_1, \dots, v_k$ sono linearmente indipendenti, dunque essi possono essere estesi a una base di $V$ (teorema di estensione); sia essa  
+
+$B = \{v_1, \dots, v_k, v_{k+1}, \dots, v_n\}$  
+
+raggiungiamo il nostro scopo se riusciamo a mostrare che $\{f(v_{k+1}), \dots, f(v_n)\}$ è una base di $im f$, perché in tal caso abbiamo che $dim \ im f = n - k$ e dunque $dim V = n = k + (n - k) = dim \ ker f + dim \ im f$; dimostriamo dunque che $\{f(v_{k+1}), \dots, f(v_n)\}$ è una base di $im f$;  
+cominciamo mostrando che tali elementi sono linearmente indipendenti; supponiamo quindi che esista una loro combinazione lineare nulla:  
+$a_{k+1} f(v_{k+1}) + \dots + a_n f(v_n) = 0$ per certi $a_{k+1}, \dots, a_n \in K$  
+allora, dato che $f$ è lineare  
+$f(a_{k+1} v_{k+1} + \dots + a_n v_n) = 0$  
+allora $a_{k+1} v_{k+1} + \dots + a_n v_n \in ker f$, quindi  
+$a_{k+1} v_{k+1} + \dots + a_n v_n = b_1 v_1 + \dots + b_k v_k$ per certi $b_1, \dots, b_k \in K$ dato che $\{v_1, \dots, v_k\}$ è una base del nucleo, pertanto  
+$-b_1 v_1 - \dots -b_k v_k + a_{k+1} v_{k+1} + \dots + a_n v_n = 0$  
+e questa è una combinazione lineare nulla di $\{v_1, \dots, v_n\}$, la quale è una base di $V$ e pertanto l'unica possibilità è che sia  
+$-b_1 = 0, \dots, -b_k = 0, a_{k+1} = 0, \dots, a_n = 0$  
+quindi i particolare $a_{k+1} = 0, \dots, a_n = 0$, e dunque $f(v_{k+1}), \dots, f(v_n)$ sono linearmente indipendenti.  
+
+Dimostriamo che $\{f(v_{k+1}), \dots, f(v_n)\}$ sono un sistema di generatori per $im f$; dall'osservazione precedente sappiamo che $\{f(v_1), \dots, f(v_n)\}$ è un sistema di generatori per $im f$ dato che $\{v_1, \dots, v_n\}$ è una base di $V$,  
+d'altro canto, dato che $v_1, \dots, v_k \in ker f$:  
+$\{f(v_1), \dots, f(v_k), f(v_{k+1}), \dots, f(v_n)\}$  
+pertanto $span(f(v_1), \dots, f(v_n)) = span(f(v_{k+1}), \dots, f(v_n))$, pertanto  
+$im f = span(f(v_{k+1}), \dots, f(v_n))$.
+
+**Esempio**  
+Supponiamo che $f : \mathbb{R}^3 \rightarrow \mathbb{R}^4$ sia un'applicazione lineare; allora supponiamo che sicuramente $f$ non può essere suriettiva; infatti per il teorema di dimensione abbiamo $dim \ im f = dim \ \mathbb{R}^3 - dim \ ker f \leq 3$, mentre $dim \ \mathbb{R}^4 = 4$ e quindi non potrà mai essere che $im f = \mathbb{R}^4$.
+
+**Osservazione**  
+Sia $A \in M_{m, n} (K)$ e considero il sistema lineare omogeneo $AX = 0$; interpretiamo le sue soluzioni in termini dell'applicazione lineare $L_A$:  
+{soluzioni di $AX = 0$} = {$s \in K^n : A \cdot s = 0$} = {$s \in K^n : L_A(s) = 0$} = $ker L_A$
+
+**Corollario**  
+Sia $A \in M_{m, n} (K)$, allora la dimensione del sottospazio vettoriale $W \subseteq K^n$ delle soluzioni del sistema lineare omogeneo $AX = 0$ è uguale a $n - rg A$ (questo colma il vuoto lasciato nella dimostrazione del teorema di struttura per sistemi lineari qualsiasi).
+
+**Dimostrazione**  
+Abbiamo visto che $W = ker L_A$; per il teorema di dimensione, ricordando che $L_A : K^n \rightarrow K^m$, abbiamo $dim K^n = dim \ ker L_A + dim \ im L_A$  
+$\Rightarrow n = dim W + rg L_A$
+$= dim W + rg A$  
+$\Rightarrow dim W = n - rg A$
+
+**Osservazione**  
+Sia $A \in M_{m, n} (K)$, consideriamo $L_A : K^n \rightarrow K^m$; dato che $b \in K^m$, interpretiamo che cosa significhi dire che $b \in im L_A$; vale che  
+$b \in im L_A \iff$ esiste $s \in K^n$ tale che $L_A(s) = b$  
+$\iff$ esiste $s \in K^n$ tale che $A \cdot s = b$  
+$\iff$ il sistema lineare $AX = b$ è compatibile.
+
+**Corollario**  
+Sia $f : V \rightarrow V'$ applicazione lineare tra spazi di dimensione finita e supponiamo $dim V = dim V?$; allora le seguenti condizioni sono equivalenti:
+
+1. $f$ è iniettiva
+2. $f$ è suriettiva
+
+**Dimostrazione**  
+$1. \Rightarrow 2.$  
+Supponiamo $f$ iniettiva, allora $ker f = (0)$, allora dal teorema di dimensione  
+$dim V = dim \ ker f + dim \ im f$  
+quindi $dim \ im f = dim V = dim V'$, pertanto $im f = V'$ e dunque $f$ è suriettiva.
+
+$2. \Rightarrow 1.$  
+Supponiamo $f$ suriettiva, allora $im f = V'$, allora dal teorema di dimensione  
+$dim V = dim \ ker f + dim \ im f = dim \ ker f + dim V'$  
+$\Rightarrow$ $dim \ ker f = 0$  
+$\Rightarrow$ $ker f = (0)$  
+$\Rightarrow$ $f$ è iniettiva.
+
+**Corollario**  
+Sia $f : V \rightarrow V'$ applicazione lineare tra spazi di dimensione finita, e sia $dim V = dim V'$, allora  
+$f$ iniettiva $\iff$ $f$ suriettiva $\iff$ $f$ è biettiva $\iff$ $f$ è invertibile
+
+## Matrici associate
+
+Introduciamo ora un'operazione che associa a un'applicazione lineare (tra spazi di dimensione finita) una matrice.
+
+**Definizione**  
+Sia $f : V \rightarrow V'$ applicazione lineare tra spazi vettoriali di dimensione finita, sia $B$ una base di $V$ e sia $C$ una base di $V'$; siano $B = \{v_1, \dots, v_n\}$, $C = \{w_1, \dots, w_m\}$,  
+definiamo la **matrice associata** ad $f$ rispetto alle basi $B$ e $C$ come la matrice $M_C^B (f) \in M_{m, n} (K)$ ottenuta nella maniera seguente:  
+per ogni $v_i \in B$, scriviamo $f(v_i)$ come combinazione lineare di $w_1, \dots, w_m$; i coefficienti di tale matrice formano la colonna $i$-esima di $M_C^B (f)$; in altre parole  
+
+$M_C^B (f) = \begin{pmatrix}
+  \vdots & & & & \vdots \\
+  \vdots & & & & \vdots \\
+  \text{coordinate di } f(v_1) \text{ rispetto a } C & \dots & \dots & \dots & \text{coordinate di } f(v_n) \text{ rispetto a } C \\
+  \vdots & & & & \vdots \\ 
+  \vdots & & & & \vdots
+\end{pmatrix}$
+
+> Esempi
+
+**Teorema**  
+Sia $f : V \rightarrow V'$ applicazione lineare tra spazi di dimensione finita; sia $B$ una base di $V$ e sia $C$ una base di $V'$; sia $v \in V$ e supponiamo che $\begin{pmatrix} \alpha_1 \\ \vdots \\ \alpha_n \end{pmatrix}$ siano le coordinate di $v$ rispetto a $B$ (ovvero $B = \{v_1, \dots, v_n\}$ e $v = \alpha_1 v_1 + \dots + \alpha_n v_n$), quindi $\begin{pmatrix} \alpha_1 \\ \vdots \\ \alpha_n \end{pmatrix} \in K^n$; allora le coordinate di $f(v)$ rispetto a $C$ sono date da $M_C^B (f) \begin{pmatrix} \alpha_1 \\ \vdots \\ \alpha_n \end{pmatrix}$.
+
+**Dimostrazione**  
+Segue dalla definizione.
+
+**Teorema**  
+Siano $f : V \rightarrow V'$ e $g : V' \rightarrow V''$ applicazioni lineari tra spazi di dimensione finita e siano $B$ una base di $V$, $C$ una base di $V'$, $D$ una base di $V''$, allora possiamo considerare $g \circ f : V \rightarrow V''$ e abbiamo  
+
+$M_D^B (g \circ f) = M_D^{\rlap{/}{C}} (g) \cdot M_{\rlap{/}{C}}^B (f)$
+
+**Corollario**  
+Sia $V$ uno spazio vettoriale di dimensione finita, siano $B$ e $C$ basi di $V$, allora  
+
+$M_B^C (id_V) \cdot M_C^B (id_V) = M_B^B (id_V \cdot id_V) = M_B^B (id_V) = 1_n$
+
+quindi $M_B^C (id_V)$ è l'inversa di $M_C^B (id_V)$.
+
+---
+
+Data $f : V \rightarrow V'$ applicazione lineare tra spazi di dimensione finita.  
+Supponiamo $dim V = n$, $dim V' = m$, fissiamo basi $B$ di $V$$ e $C$ di $V'$,  
+allora è determinata $M_C^B (f)$  
+(le sue colonne sono le coordinate degli elementi di $B$ attraverso $f$ rispetto a $C$).  
+Abbiamo $M_C^B (f) \in M_{m, n} (K)$
+
+**Proprietà**  
+$i.$ $M_B^B (id_V) = 1_n$ (attenzione $M_C^B (id)$ non è necessariamente $1_n$)  
+
+$ii.$ $M_C^B (\text{applicazione nulla}) = \text{matrice nulla}$
+
+$iii.$ Se $f : V \rightarrow V'$ e $g : V' \rightarrow V''$ sono lineari,  
+con $B$ base di $V$, $C$ base di $V'$, $D$ base di $V''$, allora  
+$M_D^B (g \circ f) = M_D^C (g) \cdot M_C^B (f)$  
+(prodotto righe per colonne)
+
+$iv.$ $M_C^B (id)$ è l'inversa di $M_B^C (id)$
+
+$v.$ $M_C^B (f + g) = M_C^B (f) + M_C^B (g)$ per ogni $f, g : V \rightarrow V'$
+
+$vi.$ $M_C^B (\lambda \cdot f) = \lambda \cdot M_C^B (f)$
+
+**Osservazione**  
+Se $f : V \rightarrow V$,con $dim V = n$, è un isomorfismo (ovvero $f$ è un'applicazione lineare ed è biettiva, quindi invertibile), allora $f^{-1} : V' \rightarrow V$ è anch'essa lineare ed abbiamo che, se $B$ è base di $V$, allora  
+
+$M_B^B (f) \cdot M_B^B (f^{-1}) = M_B^B (f \cdot f^{-1}) = M_B^B (id) = 1_n$
+
+quindi $M_B^B (f)$ è invertibile e la sua inversa è $M_B^B (f^{-1})$, ovvero  
+
+$\Big( M_B^B (f) \Big)^{-1} = M_B^B (f^{-1})$
+
+RIcordiamo inoltre che se $f : V \rightarrow V'$ e $B$ è base di $V$ e $C$ è base di $V'$, se $v \in V$ e $\begin{pmatrix} \alpha_1 \\ \vdots \\ \alpha_n \end{pmatrix}$ è un vettore $m \times 1$ ed è il vettore delle coordinate di $v$ rispetto a $B$, abbiamo che $M_C^B (id_V) \cdot \begin{pmatrix} \alpha_1 \\ \vdots \\ \alpha_n \end{pmatrix}$ è il vettore delle coordinate di $id_V (v) = v$ rispetto alla base $C$. Pertanto, $M_C^B (id_V)$ è la matrice del **cambio di base**.
+
+Da tutti questi risultati deriviamo che, se $f : V \rightarrow V'$ è una applicazione lineare tra spazi vettoriali di dimensione finita e  
+$B$ e $\tilde{B}$ sono basi di $V$  
+$C$ e $\tilde{C}$ sono basi di $V'$  
+allora abbiamo che  
+$M_{\tilde{C}}^{\tilde{B}} (f) = M_{\tilde{C}}^{\tilde{B}} (id_{V'} \cdot f \cdot id_V) = M_{\tilde{C}}^C (id_{v'}) \cdot M_C^B (f) \cdot M_B^{\tilde{B}} (id_V)$  
+Pertanto, se consideriamo $M_C^B (f)$, possiamo ottenere $M_{\tilde{C}}^{\tilde{B}} (f)$ moltiplicando a destra e a sinistra $M_C^B (f)$ per die matrici di cambio di base.  
+In particolare, se $f : V \rightarrow V$ (attenzione, dominio e codominio qui coincidono) e se $B$ e $C$ sono due basi di $V$, allora  
+$M_C^C (f) = M_C^B (id_V) \cdot M_B^B (f) \cdot M_B^C (id_V)$  
+Notiamo che se $P = M_B^C (id_V)$, allora $M_C^B (id_V) = M_B^C (id_V)^{-1} = P^{-1}$  
+Quindi l'uguaglianza precedente si può scrivere come  
+$M_C^C (f) = P^{-1} \cdot M_B^B (f) \cdot P$
+
+**Definizione**  
+Due matrici quadrate $A, B \in M_n (K)$ si dicono **simili** se esiste una matrice invertibile $P \in M_n (K)$ tale che $B = P^{-1} \cdot A \cdot P$
+
+Pertanto possiamo riassumere quanto ottenuto finora dicendo che se $f : V \rightarrow V$ è un'applicazione lineare con $dim V = n$ e $B$ e $C$ sono basi di $V$, allora $M_B^B (f) = M_C^C (f)$ sono simili e vale  
+$M_C^C (f) = P^{-1} \cdot M_B^B (f) \cdot P$  
+dove $P = M_B^C (id_V)$.
+
+Questo risultato ci consente quindi di determinare la matrice associata ad una applicazione lineare rispetto a una base differente da quella che potremmo aver considerato in partenza. La speranza è di riuscire a trovare basi rispetto alle quali l'applicazione lineare abbia una forma abbastanza semplice.  
+Prima di passare a questo argomento, concludiamo con un risultato generale.
+
+**Definizione**  
+Siano $V, V'$ due spazi vettoriali su $K$ di dimensione, $dim V = n$, $dim V' = m$, definiamo  
+
+$\mathscr{L} (V, V') =$ {applicazioni lineari da $V$ in $V'$}
+
+abbiamo che, definendo la somma tra applicazioni in maniera "puntuale" [$(f + g)(v) = f(v) + g(v)$] e analogamente la moltiplicazione di una applicazione lineare per uno scalare [$(\lambda f)(v) = \lambda f(v)$], allora $\mathscr{L} (V, V')$ diventa uno spazio vettoriale su $K$.
+
+**Teorema**  
+Nelle ipotesi della definizione precedente, fissato $B$ una base di $V$ e $C$ una base di $V'$, abbiamo che  
+
+$\mathscr{L} (V, V') \to M_{m, n} (K)$  
+$f \mapsto M_C^B (f)$
+
+è un'applicazione lineare ed è biettiva, ovvero è un isomorfismo.
+
+## Diagonalizzazione
+
+**Esempio**  
+
+Consideriamo nel piano $\mathbb{R}^2$ la riflessione rispetto all'asse delle ordinate, ovvero:  
+
+![riflessione rispetto all'asse delle ordinate](../img/riflessione_rispetto_ordinate.png){width=400px}
+
+la riflessione $\rho$ è un'applicazione lineare e se $\xi = \{e_1, e_2\}$ è la base standard di $\mathbb{R}^2$, allora  
+
+$M_{\xi}^{\xi} (\rho) = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$
+
+se ora considerassimo una retta $\ell$ che passa per $(0, 0)$ e la riflessione $\rho_{\ell}$, rispetto alla retta $\ell$, abbiamo che  
+
+![riflessione rispetto alla retta $\ell$](../img/riflessione_rispetto_retta.png){width=500px}
+
+dal disegno possiamo notare che non è immediato comprendere come sia fatta $M_{\xi}^{\xi} (\rho_{\ell})$; possiamo interpretare questa difficoltà nel determinare $M_{\xi}^{\xi} (\rho_{\ell})$ come il fatto di non aver scelto una base "adeguata" all'applicazione lineare; considero ora una base "personalizzata" rispetto all'applicazione lineare:
+
+![base personalizzata](../img/cambio_base_retta.png){width=500px}
+
+allora se $B = \{v_1, v_2\}$, abbiamo che $B$ è una base di $\mathbb{R}^2$ e cha vale $M_B^B (\rho_{\ell}) = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$
+
+Notiamo pertanto che cambiare base può essere efficace nell'ottenere una matrice associata sufficientemente semplice. Notiamo inoltre che la base che "ha funzionato" è costituita da vettori che sono mandati dall'applicazione lineare in multipli di se stessi. Vediamo che questa si rivelerà l'idea chiave.
+
+**Definizione**  
+Sia $f : V \rightarrow V$ un'applicazione lineare con $dim V$ finita; uno scalare $\lambda \in K$ si dice **autovalore** (eigenvalue in inglese) per $f$ se esiste $v \in V, v \neq 0$, tale che $f(v) = \lambda v$
+
+**Osservazione**  
+Considerando $\rho_{\ell}$ come nell'esemplo precedente, abbiamo che $1$ e $-1$ sono autovalori di $\rho_{\ell}$ (infatti $\rho_{\ell} (v_1) = 1 \cdot v_1$ e $\rho_{\ell} (v_2) = (-1) \cdot v_2$ ed entrambi $v_1$ e $v_2$ sono non nulli).
+
+**Definizione**  
+Data $f$ come sopra, l'insieme degli autovalori di $f$ si dice **spettro** di $f$ e si indica $Sp (f)$.
+
+**Definizione**  
+Sia $f$ come sopra e sia $\lambda$ un autovalore di $f$; diciamo che $v \in V$ è un **autovettore** (eigenvector in inglese) di $f$ relativo a $\lambda$ se $f(v) = \lambda v$; definiamo l'**autospazio** (eigenspace in inglese) di $\lambda$ l'insieme degli autovettori di $\lambda$ e lo denotiamo $Aut (\lambda)$.
+
+**Osservazione**  
+Affinché $\lambda$ sia autovalore, deve esistere $v \in V$, $v \neq 0$, tale che $f(v) = \lambda v$; se $\lambda$ è autovalore; consideriamo autovettore relativo a $\lambda$ ogni vettore $w \in V$ tale che $f(w) = \lambda w$; in particolare $f(0) = \lambda \cdot 0 = 0$, dunque vale che $0 \in Aut (\lambda)$ per ogni autovalore $\lambda$.
+
+**Proposizione**  
+Sia $f : V \rightarrow V$ applicazione lineare, con $dim V$ finita, sia $\lambda$ un autovalore di $f$; allora l'autospazio di $\lambda$, $Aut (\lambda)$, è un sottospazio vettoriale di $V$.
+
+**Dimostrazione**  
+$1.$ Sia $v \in V$, sia $\mu \in K$ e sia $v \in Aut (\lambda)$; dobbiamo mostrare che $\mu \cdot v \in Aut (\lambda)$; per ipotesi $f(v) = \lambda v$; ora  
+$\mu \cdot v \in Aut (\lambda) \iff f(\mu \cdot v) = \lambda \cdot (\mu \cdot v)$  
+d'altra parte $f(\mu \cdot v) = \mu \cdot f(v) = \mu \lambda v = \lambda \cdot (\mu \cdot v)$
+
+$2.$ Siano $v_1, v_2 \in V$, e supponiamo $v_1, v_2 \in Aut (\lambda)$; dobbiamo mostrare che $v_1 + v_2 \in Aut (\lambda)$; per ipotesi $f(v_1) = \lambda v_1$ e $f(v_2) = \lambda v_2$, pertanto  
+$f(v_1 + v_2) = f(v_1) + f(v_2) = \lambda v_1 + \lambda v_2 = \lambda (v_1 + v_2)$  
+dunque $v_1 + v_2 \in Aut (\lambda)$
+
+**Proposizione**  
+Sia $f : V \rightarrow V$ applicazione lineare, con $dim V$ finita e siano $\lambda$ e $\mu$ due autovalori definiti di $f$; siano $v_1 \in Aut (\lambda)$ e $v_2 \in Aut (\mu)$; e supponiamo che $v_1 \neq 0$ e $v_2 \neq 0$; allora $v_1$ e $v_2$ sono linearmente indipendenti.
+
+L'obiettivo delle nostre considerazioni sarà capire se, data una applicazione lineare, $f : V \rightarrow V$ sia possibile determinare una base $B$ di $V$ tutta costituita da autovettori. In tal caso, infatti, la matrice $M_B^B (f)$ è **diagonale**.
+
+**Definizione**  
+Sia $f : V \rightarrow V$ applicazione lineare, $dim V$ finita; $f$ si dice **diagonalizzabile** se esiste una base $B$ di $V$ tale che $M_B^B (f)$ sia diagonale.
+
+## Diagonalizzabilità
+
+**Osservazione**  
+Ricordiamo che se $f : V \rightarrow V$ è applicazione lineare, $dim V$ finita  e
+e $N = M_B^B (f)$ ed $N' = M_C^C (f)$, allora
+
+$N' = P^{-1} \cdot N \cdot P$
+
+dove $P$ è una matrice invertibile; pertanto possiamo dire che $f$ è diagonalizzabile se e solo se, presa una sua matrice associata $M_B^B (f)$ rispetto ad una base $B$ di $V$, tale matrice è simile a una matrice diagonale, ovvero se esiste $P$ invertibile tale che $P^{-1} \cdot M_B^B (f) \cdot P$ è diagonale.
+
+**Proposizione**  
+Sia $f : V \rightarrow V$ applicazione lineare, $dim V$ finita, allora è diagonalizzabile se e solo se esiste una base $B$ di $V$ costituita tutta da autovettori.
+
+**Dimostrazione**  
+Se $B = \{v_1, \dots, v_n\}$ è una base costituita da autovettori; e per ogni $i \in \{1, \dots, n\}$, $v_i$ è un autovettore associato all'autovalore $\lambda_i$ (ovvero vale che $f(v_i) = \lambda \cdot v_i$), allora  
+
+$M_B^B (f) = \begin{pmatrix} \lambda_1 & 0 & \dots & 0 \\ 0 & \lambda_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_n \end{pmatrix}$
+
+ovvero tale matrice è diagonale (notiamo che non abbiamo supposto che i $\{\lambda_i\}$ siano tutti distinti).
+
+Per comprendere se una tale base può esistere, andiamo a ripensare agli autospazi in maniera differente. In particolare, andiamo a ridimostrare che gli autospazi sono sottospazi vettoriali in una maniera alternativa.
+
+Sia $f : V \rightarrow V$ applicazione lineare, $dim V$ finita e sia $\lambda \in K$ un autovalore di $f$. Allora per definizione esiste $v \in V$ con $v \neq 0$ tale che $f(v) = \lambda \cdot v$. Ora  
+$f(v) = \lambda \cdot v \Longleftrightarrow f(v) - \lambda v = 0 \Leftrightarrow f(v) - \lambda \cdot id_v (v) = 0 \Leftrightarrow (f - \lambda \cdot id) (v) = 0$.
+
+Per definizione $(f - \lambda \cdot id) := f_{\lambda}$
+
+Allora $f_{\lambda} : V \rightarrow V$ e $v \in ker f_{\lambda}$. Pertanto $ker f_{\lambda} \neq (0)$, perché $v \neq 0$. Ciò significa che $f_{\lambda}$ non è iniettiva. Pertanto $f_{\lambda}$ non è invertibile e dunque per qualsiasi base $B$ di $V$ vale che
+
+$M_B^B (f_{\lambda})$ non è invertibile  
+$\Leftrightarrow$ $det M_B^B (f_{\lambda}) = 0$  
+$\Leftrightarrow det M_B^B (f - \lambda \cdot id) = 0$  
+$\Leftrightarrow det \Big(M_B^B (f)- \lambda \cdot M_B^B (id) \Big) = 0$  
+$\Leftrightarrow det \Big(M_B^B (f) - \lambda \cdot 1_n \Big) = 0$
+
+Pertanto gli autovalori di $f$ sono tutti e soli i valori $\lambda \in K$ tali che $det \Big(M_B^B (f) - \lambda \cdot 1_n \Big) = 0$ per qualsiasi base $B$ di $V$.  
+Inoltre $Aut(\lambda) = \{v \in V : f(v) = \lambda \cdot v\} = \{v \in V : (f - \lambda \cdot id)(v) = 0\} = \{v \in V : f_{\lambda}(v) = 0\} = ker f_{\lambda}$
+
+Pertanto, essendo $Aut(\lambda)$ il nucleo di una applicazione lineare, riotteniamo il risultato tale che $Aut(\lambda)$ è un sottospazio vettoriale di $V$.
+
+**Definizione**  
+Sia $f : V \rightarrow V$ applicazione lineare, $dim V$ finita, sia $\lambda \in K$ un autovalore di $f$, il numero $dim_k\ Aut(\lambda)$ è detto la **molteplicità generica** dell'autovettore $\lambda$.
+
+**Definizione**  
+Sia $f : V \rightarrow V$ applicazione lineare, $dim V$ finita e consideriamo ora $\lambda$ come un parametro, una variabile; forniamo il determinante
+
+$det (M_B^B (f) - \lambda \cdot id)$
+
+dove $B$ è una qualsiasi base di $V$; questa quantità è un polinomio in $\lambda$ a coefficienti in $K$ ed è detto il **polinomio caratteristico** di $f$ ed è denotato $P_f (\lambda)$.
+
+**Esempio**  
+Consideriamo $f : \mathbb{R}^2 \rightarrow \mathbb{R}^2$
+
+$$
+f =
+\left(
+  \begin{pmatrix}
+    x \\
+    y
+  \end{pmatrix}
+\right) =
+\begin{pmatrix}
+  x + y \\
+  2x + 2y
+\end{pmatrix}
+$$
+
+se consideriamo la base standard $\xi$ di $\mathbb{R}^2$, $\xi = \{e_1, e_2\}$, allora
+
+$$
+M_{\xi}^{\xi} (f) =
+\begin{pmatrix}
+  1 & 1 \\
+  2 & 2
+\end{pmatrix}
+$$
+
+il polinomio caratteristico è dunque
+
+$$
+P_f (\lambda) = det \Big( M_{\xi}^{\xi} (f) - \lambda \cdot 1_2 \Big) =
+$$
+
+$$
+= det \left(
+  \begin{pmatrix}
+    1 & 1 \\
+    2 & 2
+  \end{pmatrix}
+  - \lambda \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix}
+\right) =
+$$
+
+$$
+= det \begin{pmatrix}
+  \begin{pmatrix}
+    1 - \lambda & 1 \\
+    2 & 2 - \lambda
+  \end{pmatrix}
+\end{pmatrix} =
+$$
+
+$$
+= (1 - \lambda)(2 - \lambda) - 1 \cdot 2 =
+$$
+
+$$
+= 2 - \lambda - 2 \lambda + \lambda^2 - 2 = \lambda^2 - 3 \lambda
+$$
+
+**Osservazione**  
+Per come abbiamo caratterizzato gli autovalori, abbiamo che gli autovalori di $f$ sono tutti e solo quei $\overline{\lambda} \in K$ tali per cui $P_f (\overline{\lambda}) = 0$, ovvero sono tutte e sole le radici del polinomio caratteristico dell'applicazione $f$.
+
+**Esempio**  
+(continuando da quello prima)
+
+$P_f (\lambda) = \lambda^2 - 3 \lambda = \lambda \cdot (\lambda - 3)$
+
+quindi le radici di $P_f$ sono $\{0, 3\}$, otteniamo quindi che $0$ e $3$ sono gli autovalori di $f$; esistono dunque autovettori non nulli $v_1$ (rispetto a $0$) e $v_2$ (rispetto a $3$), dato che autovettori non nulli rispetto ad autovettori distinti sono linearmente indipendenti, otteniamo che $\{v_1, v_2\}$ sono vettori linearmente indipendenti, e pertanto $B = \{v_1, v_2\}$ è una base di $\mathbb{R}^2$ e quindi $f$ ammette una base di autovettori, ovvero è diagonalizzabile; possiamo calcolare $v_1$ e $v_2$ determinando $ker (f_0) = ker (f - 0 \cdot id) = ker f$ e $ker (f_3) = ker (f - 3 \cdot id)$ che sono rispettivamente $Aut(0)$ e $Aut(3)$.
+
+**Definizione**  
+Sia $f : V \rightarrow V$ applicazione lineare, $dim V$ finita e sia $P_f (\lambda)$ il suo polinomio caratteristico, supponiamo che $\overline{\lambda} \in K$ sia un autovalore per $f$, ovvero $P_f (\overline{\lambda}) = 0$; per il teorema di Ruffini vale che $P_f (\lambda) = (\lambda - \overline{\lambda}) \cdot g(\lambda)$; definiamo la **molteplicità algebrica** di $\overline{\lambda}$ come quel numero $m$ tale per cui $P_f (\lambda) = (\lambda - \overline{\lambda})^m \cdot \tilde{g}(\lambda)$ e $\lambda - \overline{\lambda}$ non divide $\tilde{g}(\lambda)$.
+
+**Esempio**  
+Se $P_f (\lambda) = (\lambda - 5)^2 \cdot (\lambda + 1)^3$, allora le radici di $P_f (\lambda)$ sono $5$ e $-1$ e la molteplicità algebrica di $5$ è $2$, mente la molteplicità algebrica di $-1$ è $3$.
+
+**Notazione**  
+Denotiamo la molteplicità geometrica di $\overline{\lambda} = m_g(\overline{\lambda})$.
+Definiamo la molteplicità algebrica di $\overline{\lambda} = m_a(\overline{\lambda})$.
+
+**Proposizione**  
+Se $f : V \rightarrow V$ è applicazione lineare con $dim V$ finita e $\overline{\lambda}$ è un autovalore per $f$, allora $m_g(\overline{\lambda}) \leq m_a(\overline{\lambda})$.
+
+**Osservazione**  
+Se $f : V \rightarrow V$ è applicazione lineare con $dim V = n$, allora $P_f (\lambda)$ è un polinomio di grado esattamente $n$; pertanto la somma delle molteplicità algebriche degli autovalori di $f$ è al più $n$.
+
+Supponiamo di avere un'applicazione lineare $f : V \rightarrow V$ con $dim V = n$ tale per cui il polinomio caratteristico si scompone nel prodotto di $n$ fattori lineari distinti, ovvero $P_f (\lambda) = (\lambda - \alpha_1) \cdot (\lambda - \alpha_2) \cdot \ \ldots \ \cdot (\lambda - \alpha_n)$, con $\alpha_1, \alpha_2, \dots, \alpha_n$ tutti distinti. Allora $\alpha_1, \alpha_2, \dots, \alpha_n$ sono le radici di $P_f (\lambda)$ e dunque sono autovalori per $f$. Per ciascuno di tali autovalori esiste almeno un autovettore non nullo. In questo modo determiniamo $v_1, v_2, \dots, v_n$ con $v_i$ autovettore relativo ad $\alpha_i$. Ora, $v_1, v_2, \dots, v_n$ sono autovettori non nulli relativi ad autovalori differenti, quindi sono linearmente indipendenti; essendo essi $n$ vettori in uno spazio vettoriale di dimensione $n$, essi sono una base di $V$. Pertanto in questo caso $f$ è diagonalizzabile. Notiamo inoltre che $m_a (\alpha_i) = 1,\ \forall i$ e dunque deve essere $m_g (\alpha_i) = 1,\ \forall i$, il che implica che $dim \ Aut(\alpha_i) = 1,\ \forall i$, e dato che $v_1 \in Aut (\alpha_i)$ e $v_i \neq 0$, quindi $Aut (\alpha_i) = span(v_i)$.
+
+Vale un teorema più generale:
+
+**Teorema (criterio di diagonalizzazione)**  
+Sia $f : V \rightarrow V$ applicazione lineare con $dim V$ finita. Allora $f$ è diagonalizzabile se e solo se valgono le seguenti proprietà:
+
+1. $P_f (\lambda)$ si scompone completamente in fattori di primo grado (non necessariamente distinti).
+2. per ogni autovalore $\overline{\lambda}$ (ovvero per ogni radice di $P_f (\lambda)$) vale che $m_g(\overline{\lambda}) = m_a(\overline{\lambda})$.
+
+(quindi $1.$ dice che $P_f (\lambda) = (\lambda - \alpha_1)^{m_1} \cdot (\lambda - \alpha_2)^{m_2} \cdot \dots \cdot (\lambda - \alpha_n)^{m_k}$ e $2.$ dice che $m_i = dim \ Aut(\alpha_i)$ per ogni $i \in \{1, 2, \dots, k\}$)
+
+**Esempio**  
+Consideriamo la seguente applicazione lineare  
+
+$f : \mathbb{R}^3 \rightarrow \mathbb{R}^3$
+
+$f \left(\begin{pmatrix} x \\ y \\ z \end{pmatrix} \right) = \begin{pmatrix} 2x -3z \\ -y \\ -3x +2z \end{pmatrix}$
+
+allora se $\xi$ è la base standard di $\mathbb{R}^3$, vale che  
+
+$M_{\xi}^{\xi} (f) = \begin{pmatrix} 2 & 0 & -3 \\ 0 & -1 & 0 \\ -3 & 0 & 2 \end{pmatrix}$
+
+vogliamo comprendere se $f$ sia diagonalizzabile o meno; calcoliamo $P_f (\lambda)$
+
+$P_f (\lambda) = det \Big( M_{\xi}^{\xi} - \lambda \cdot 1_3 \Big) =$
+
+$= det \begin{pmatrix} 2 - \lambda & 0 & -3 \\ 0 & -1 -\lambda & 0 \\ -3 & 0 & 2 - \lambda \end{pmatrix} =$
+
+$= (-1 - \lambda) det \begin{pmatrix} 2 - \lambda & -3 \\ -3 & 2 - \lambda \end{pmatrix} =$
+
+$= -(1 + \lambda) \cdot \Big[ (2 - \lambda)^2 - 9 \Big] =$
+
+$= -(1 + \lambda) \cdot \Big[ \lambda^2 -4 \lambda -5 \Big] =$
+
+$= -(1 + \lambda) (\lambda + 1) (\lambda - 5) =$
+
+$= -(1 + \lambda)^2 (\lambda - 5)$
+
+abbiamo quindi che le radici di $P_f (\lambda)$ sono $-1$ e $-5$, ovvero $Sp (f) = \{ -1, -5 \}$; abbiamo che $P_f (\lambda)$ si scompone completamente in fattori di grado $1$, e vale che  
+$m_a (-1) = 2, \quad m_a (5) = 1$  
+per vedere se $f$ sia diagonalizzabile o meno, dobbiamo verificare se  
+$m_g (-1) = 2, \quad m_g (5) = 1$  
+sicuramente $m_g (5) = 1$ perché dal fatto che $5$ è autovalore segue che $m_g (5) \geq 1$ e in generale $m_g (5) \leq m_a (5) = 1$; resta da verificare se $m_g (-1) = 2 \iff dim \ Aut(-1) = 2$  
+per calcolare $Aut (-1)$ consideriamo  
+
+$M_{\xi}^{\xi} (f) - (-1) 1_3 =$
+
+$M_{\xi}^{\xi} (f) + 1_3 =$
+
+$= \begin{pmatrix} 3 & 0 & -3 \\ 0 & 0 & 0 \\ -3 & 0 & 3 \end{pmatrix}$
+
+$ker \begin{pmatrix} 3 & 0 & -3 \\ 0 & 0 & 0 \\ -3 & 0 & 3 \end{pmatrix} = span \left(\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right)$
+
+pertanto $dim \ ker (f - (-1) \cdot id) = 2$, ovvero $mg (-1) = 2$; quindi per il teorema precedente $f$ è diagonalizzabile.
 
 # Geometria Affine
 
