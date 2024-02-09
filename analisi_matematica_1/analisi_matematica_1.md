@@ -1,5 +1,5 @@
 ---
-title: "Analisi Matematica 1"
+title: title: \textbf{Analisi Matematica 1}
 author: Giovanni Norbedo
 date: 2023-2024
 header-includes:
@@ -1493,7 +1493,7 @@ Siano $\varepsilon, M \in \mathbb{R}, \varepsilon > 0, M > 0$
 allora $\exists \overline{n} \in \mathbb{R} : \overline{n} \cdot \varepsilon > M$
 
 **Dimostrazione**  
-Per assurdo $\forall n \in \mathbb{N}, \varepsilon \leq M$  
+Per assurdo $\forall n \in \mathbb{N}, \varepsilon n \leq M$  
 allora $E = \{n \cdot \varepsilon : n \in \mathbb{N}\}$ è superiormente limitato (e non vuoto)  
 
 sia $\xi \in \mathbb{R}, \xi = sup E$
@@ -3290,7 +3290,7 @@ $n, m > \overline{n} \Rightarrow |a_n - a_m| < \varepsilon$.
 "La definizione significa che i punti della successione si stanno avvicinando".
 
 **Tesi**  
-Se una successione in $\mathbb{R}$ è convergente, allora è una successione di Cauchy.
+Se una successione in $\mathbb{R}$ è convergente, allora è una successione di Chauchy.
 
 **Dimostrazione**  
 $(a_n)_n$ convergente, cioè $\lim\limits_n a_n = \overline{a}$ con $\overline{a} \in \mathbb{R}$,  
@@ -5289,7 +5289,7 @@ Radice quadrata di una incognita alla seconda:
 
 $\sqrt{x^2} = |x|$
 
-Costruire funzioni ausiliarie può tornare utili, come:
+Costruire funzioni ausilarie può tornare utili, come:
 
 $g(x) = f(x) - x$
 
@@ -5309,12 +5309,12 @@ Dimostrazioni:
 ---
 
 Grazie per l'attenzione e spero che questi appunti siano stati utili.  
-Se trovi errori, ti prego di inviarmi un'email a [norbedo@proton.me](mailto:norbedo@proton.me?subject=Errore%20Appunti%20Analisi%201%20(2023-2024)).  
+Se trovi errori, ti prego di inviarmi un'email a <a href="mailto:norbedo@proton.me?subject=Errore%20Appunti%20Analisi%201%20(2023-2024)">norbedo@proton.me</a>.  
 Buono studio e buona fortuna!
 
 Giovanni Norbedo
 
-[norbedo@proton.me](mailto:norbedo@proton.me)  
+norbedo@proton.me  
 [norbedo.xyz](https://norbedo.xyz)  
 [github.com/giovanni-norbedo](https://github.com/giovanni-norbedo)  
 [www.linkedin.com/in/norbedo](https://www.linkedin.com/in/norbedo)
