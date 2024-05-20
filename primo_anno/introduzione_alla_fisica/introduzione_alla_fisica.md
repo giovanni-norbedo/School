@@ -470,3 +470,179 @@ $\boxed{\omega = \dfrac{v}{R}}$
 - caso speciale #3: **moto circolare uniforme**  
     $\left| \vec{a} \right| = \omega^2 R = \frac{v^2}{R} \quad \omega = \frac{2 \pi}{T}$
 - **moti relativi**: "P secondo A = P secondo B + B secondo A"tt
+
+# Dinamica
+
+La dinamica è il ramo della fisica che si occupa dello studio delle cause del moto dei corpi. Si basa sulle tre leggi del moto formulate da Sir Isaac Newton nel XVII secolo:
+
+## Le leggi di Newton
+
+### Prima legge di Newton o legge dell'inerzia
+
+Ciascun corpo persevera nel proprio stato di quiete o di moto rettilineo uniforme, eccetto che sia costretto a mutare quello stato da forze impresse.
+
+### Seconda legge di Newton o legge della dinamica
+
+Il cambiamento di moto è proporzionale alla forza motrice impressa, ed avviene lungo la linea retta secondo la quale la forza è stata impressa.
+
+### Terza legge di Newton o principio di azione e reazione
+
+A ogni azione corrisponde una reazione uguale e contraria: ossia, le azioni di due corpi sono sempre eguali fra loro e dirette verso parti opposte.
+
+## Massa e Forza
+
+- **Massa**: La massa è una misura della quantità di materia in un corpo e rappresenta anche una misura della resistenza alle variazioni di velocità (**massa inerziale**). La massa è proporzionale al peso (**carica gravitazionale** o **massa gravitazionale**). La sua unità di misura è il chilogrammo (kg).
+- **Forza**: Una forza è una spinta che produce un cambiamento di moto in un corpo. La sua unità di misura è il newton ($1N = \frac{kg \cdot m}{s^2}$). Una forza viene rappresentata come un vettore.
+
+## Spiegazione delle leggi di Newton
+
+Sono i "principi fondamentali della dinamica":
+
+1. Se la forza risultante che agisce su un copo è nulla, allora l'accelerazione di questo corpo è nulla ($\vec{a} = 0$). Definiamo un **sistema di riferimento inerziale**.
+2. L'accelerazione di un corpo è proporzionale alla forza risultante su questo corpo $\sum \vec{F} = m \vec{a}$.
+3. La forza esercitata da un corpo A su un corpo B è uguale in modulo e direzione e in verso opposto alla forza esercitata da B su A. $\vec{F}_{AB} = -\vec{F}_{BA}$.
+
+## Peso
+
+Il peso di un oggetto è la forza di gravità esercitata su di esso dalla Terra. È diretto verso il centro della Terra e può essere calcolato come $\vec{F}_g = m \vec{g}$, dove $\vec{g}$ è l'accelerazione gravitazionale terrestre ($9.81 m/s^2$). Si può anche chiamare campo gravitazionale alla superficie terrestre.  
+Anche se $\vec{F}_g = m \vec{g}$ sembra simile a $\vec{F} = m \vec{a}$, sono molto diverse. La prima è un caso particolare della legge di gravitazione universale.
+
+## Forza normale
+
+La forza normale è un caso particolare di forza di contatto, cioè la spinta esercitata da una superficie. Si dice "normale" perché è perpendicolare alla superficie.  
+$\sum \vec{F} = \vec{F}_g + \vec{N} = m \vec{a} = 0 \quad \vec{F}_N = -\vec{F}_g$
+
+## Diagramma di corpo libero
+
+Ogni corpo è rappresentato da un punto. Comporta tutte le forze che sono applicate sul corpo, ma soltanto quelle. Per esempio non includiamo la velocità o la forza applicata dal corpo su un altro corpo.
+
+## Tensione
+
+La tensione è la forza esercitata da una fune. Idealmente consideriamo la fune come inestensibile e senza massa. La tensione $\vec{T}$ è sempre parallela alla fune e $\lvert \vec{T} \rvert$ è uguale lungo tutta la fune.
+
+## Strategie per la risoluzione di problemi
+
+1. **Visualizza**: Crea un'immagine mentale del problema per comprendere meglio la situazione fisica. Questo può includere l'identificazione dei corpi coinvolti e delle forze in gioco. Riformula la domanda nelle tue parole per assicurarti di averla compresa ed in termini che possono essere calcolati.
+
+2. **Descrivi**: Utilizza i diagrammi, in particolare i diagrammi di corpo libero, per rappresentare graficamente le forze che agiscono su ogni corpo. Scegli un sistema di coordinate appropriato e nomina tutte le quantità rilevanti, identificando quelle note e quelle da trovare.
+
+3. **Fai un piano**: Trasferisci i concetti fisici in forma matematica. Scegli se risolvere il problema andando dalla soluzione ai dati noti o viceversa.
+
+4. **Esegui il piano**: Risolvi i sistemi di equazioni, prestando attenzione alle unità di misura e sostituendo i valori numerici quando necessario.
+
+5. **Valuta la soluzione**: Controlla se la soluzione ottenuta ha senso fisico, è ragionevole e risponde in modo completo alla domanda posta. Considera la possibilità di validare il risultato con casi limite.
+
+6. **Cambia piano se necessario**: Se la soluzione non è corretta o non è completa, ripeti i passaggi precedenti per trovare l'errore o la lacuna e correggili. Cambia la strategia o il sistema di coordinate o di riferimento.
+
+## Attrito
+
+La forza normale è perpendicolare alla superficie. Il modulo è tale che il moto è vincolato, permesso solo parallelamente alla superficie.
+
+L'attrito è una forza che si oppone al movimento relativo tra due superfici in contatto. Essa è parallela alla superfici. Il modulo è tale che il moto è vincolato (attrito statico) o proporzionale alla forza normale (attrito dinamico).
+
+### Attrito statico e dinamico
+
+- **Attrito dinamico**: $f_d = \mu_d N$, dove $\mu_d$ (coefficiente di attrito dinamico) è la costante di proporzionalità e non ha unità.
+- **Attrito statico**: $f_s \leq \mu_s N$, dove $\mu_s$ (coefficiente di attrito statico) è la costante di proporzionalità e non ha unità. In generale $\mu_s > \mu_d$ e quasi sempre $\mu_s, \mu_d < 1$.
+
+![Attrito statico e dinamico](../../img/attrito_statico_dinamico.png){ width=400px }
+
+### Attrito dovuto a un fluido (resistenza)
+
+1) A velocità "bassa", densità "bassa" $\Rightarrow$ **flusso laminare**
+
+    Legge di Stoke: $\vec{F} = -b \vec{v}$, dove $b$ è il coefficiente
+
+    Commento: equazione utile ma raramente applicabile.
+
+2) **flusso turbolento**
+
+    $F_v = \frac{1}{2} \rho A C_D v^2$
+
+    $\rho$ = densità del fluido  
+    $A$ = area di proiezione dell'oggetto  
+    $C_D$ coefficiente di resistenza "Drag"  
+    $v$ = velocità  
+
+    La direzione della forza è $- \dfrac{\vec{v}}{\lvert \vec{v} \rvert}$
+
+![Attrito dovuto a un fluido](https://seed.golf/wp-content/uploads/2017/02/golf_ball_airflow.jpg){ width=300px }
+
+## Dinamica del moto circolare
+
+Già visto: $a = \frac{v^2}{R} = \omega^2 R$
+
+Forza necessaria per mantenere il moto circolare?
+
+$F_c = \frac{m v^2}{R}$ orientata verso il centro
+
+$F_c$ è la forza centripeta
+
+descrizione della direzione e verso della forza, non della natura della forza.
+
+## Forza elastica
+
+$F_x = -kx$  
+legge di Hooke  
+$x$ = estensione della molla
+
+Questo è un modello, in verità $F_x(x)$ è più complicata,  
+ma $F_x = -kx$ è una buona approssimazione per piccoli spostamenti.
+
+## Sistemi non-inerziali
+
+![Sistemi non-inerziali](../../img/sistemi_non_inerziali.png){ width=200px }
+
+$\vec{r}_{PA} = \vec{r}_{PB} + \vec{r}_{BA}$  
+$\vec{v}_{PA} = \vec{v}_{BA} + (\vec{v}_{PB} + \text{rotazione})$  
+$\vec{a}_{PA} = \vec{a}_{BA} + \vec{a}_{PB} + (\text{rotazione})$  
+
+$\vec{F} = m\vec{a}_{PA}$  
+$\vec{F} = m\vec{a}_{PB} + m\vec{a}_{BA}$  
+$m\vec{a}_{PB} = \vec{F} - m\vec{a}_{BA} \quad \leftarrow \text{forza apparente}$  
+$A: inerziale$  
+$B: non-inerziale ( \vec{a}_{BA} \neq 0 )$  
+$\text{lineare: } \vec{a}_{PB} = \vec{a}_{PA} - \vec{a}_{BA}$  
+
+Sistemi non-inerziali
+$\vec{F}_{t} + \vec{F}_{a} = m\vec{a}$  
+$\vec{F}_{t} + \vec{F}_{f} + \vec{F}_{a} = 0$  
+$\vec{F}_{a} = -m\vec{a}$  
+$\text{Inerziale}$  
+$\text{Non-inerziale} (\vec{a}_{BA} \neq 0)$
+
+Lineare: $\vec{a}_{PB} = \vec{a}_{PA} - \vec{a}_{BA}$
+
+## Forze macroscopiche e forze fondamentali
+
+Forze macroscopiche (forze di contatto)
+
+- forza normale
+- forza di tensione
+- forza di attrito
+- resistenza dell'aria
+- forza elastica
+
+Forze fondamentali
+
+- forza gravitazionale
+- forza elettrica
+- forza debole (fisica quantistica)
+- forza forte (fisica quantistica)
+
+## Legge di gravitazione universale
+
+$F_R = G \dfrac{m_1 m_2}{r^2}$
+
+> *Una teoria unica descrive sia la caduta dei corpi sulla Terra che il movimento degli astri*  
+> Isaac Newton
+
+## Leggi di Keplero
+
+1. Tutti i pianeti si muovono lungo orbite ellittiche, con il Sole in uno dei fuochi.
+2. La congiungente tra il Sole e un pianeta "spazza" aree uguali in intervalli di tempo uguali.
+3. Il quadrato del periodo di un qualsiasi pianeta è proporzionale al cubo della distanza media del pianeta dal Sole.
+
+## Interazioni magnetiche ed elettrostatiche
+
+...
