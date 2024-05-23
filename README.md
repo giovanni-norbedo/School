@@ -7,3 +7,7 @@ Corsi svolti:
 - Analisi Matematica 1
 - Algebra Lineare ed Elementi di Geometria
 - Introduzione alla Programmazione e Laboratorio
+- Analisi Matematica 2
+- Teoria della Probabilità
+- Introduzione alla Fisica
+- Architettura degli Elaboratori e Sistemi Operativi
