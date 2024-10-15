@@ -1,0 +1,1 @@
+pandoc algoritmi_e_strutture_dati.md --to=pdf -o algoritmi_e_strutture_dati.pdf -f markdown --toc --toc-depth=6  && firefox algoritmi_e_strutture_dati.pdf
