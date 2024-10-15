@@ -4,6 +4,8 @@ In questa repository sono presenti tutti gli appunti, i file e i programmi relat
 
 Corsi svolti:
 
+**Primo anno**
+
 - Analisi Matematica 1
 - Algebra Lineare ed Elementi di Geometria
 - Introduzione alla Programmazione e Laboratorio
@@ -11,3 +13,10 @@ Corsi svolti:
 - Teoria della Probabilità
 - Introduzione alla Fisica
 - Architettura degli Elaboratori e Sistemi Operativi
+
+**Secondo anno**
+
+- Metodi e Modelli Matematici per l'Intelligenza Artificiale
+- Algoritmi e Strutture Dati
+- Inferenza Statistica
+- Computabilità, Complessità e Logica
