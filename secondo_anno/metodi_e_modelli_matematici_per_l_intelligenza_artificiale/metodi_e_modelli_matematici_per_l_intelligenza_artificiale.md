@@ -112,7 +112,7 @@ Si ha che:
 - $f$ è derivabile se $u$ e $v$ sono derivabili e $f'(x) = u'(x) + iv'(x)$
 - $f$ è integrabile in $[a, b]$ se $u$ e $v$ sono integrabili in $[a, b]$ e $\int_a^b f(x) \, dx = \int_a^b u(x) \, dx + i\int_a^b v(x) \, dx$
 
-## Funzioni periodiche
+# Funzioni periodiche
 
 Sia $f: \mathbb{R} \to \mathbb{C}, p \in [1, +\infty)$ diciamo che $f$ è *localmente p-integrabile* se $\forall K \Subset \mathbb{R}$, cioè $K$ compatto incluso in $\mathbb{R}$, si ha che
 
@@ -121,8 +121,57 @@ $\displaystyle \int_K \lvert f(x) \rvert^p \, dx < +\infty$
 - Se $p = 1$ diciamo che $f$ è *localmente integrabile*  
 - Se $p = 2$ diciamo che $f$ è *localmente quadrato integrabile*
 
-### Definizione funzione periodica
+## Definizione funzione periodica
 
 Una funzione $f: \mathbb{R} \to \mathbb{C}$ è *periodica di periodo $T > 0$* se $\forall x \in \mathbb{R}$ si ha che $f(x + T) = f(x)$.  
 
 La quantità $\frac{1}{T}$ è detta *frequenza* della funzione $f$, mentre $\omega \coloneqq 2\pi \cdot \frac{1}{T}$ è detta *frequnza angolare*.
+
+## Osservazione
+
+Una funzione $f$ periodica di periodo $T > 0$ è univocamente determinata dalla restrizione $f \mid_{[\alpha, \alpha + T]} \quad \forall \alpha \in \mathbb{R}$.  
+Denoteremo con $[-\frac{T}{2}, \frac{T}{2})$ l'intervallo di lunghezza $T$ centrato nell'origine, detto *periodo fondamentale*.
+
+## Notazione
+
+Fissato $p \in [1, +\infty), T > 0$ e $\mathbb{X} \in \{\mathbb{R}, \mathbb{C}\}$, indicheremo con $L^p ([-\frac{T}{2}, \frac{T}{2}]; \mathbb{X}) \coloneqq L^p_{\mathbb{X}}(T)$ l'insieme delle funzioni $f: \mathbb{R} \to \mathbb{X}$ T-periodiche, localmente p-integrabili.  
+Per semplicità notazionale: $L^p \coloneqq L^p_{\mathbb{C}} (T)$.
+
+L'insieme $L^p_{\mathbb{X}}(T)$ dotato della norma $\lVert f \rVert_{L^p_{\mathbb{X}}(T)} \coloneqq \left( \displaystyle\int_{-\frac{T}{2}}^{\frac{T}{2}} \lvert f(x) \rvert^p \, dx \right)^{\frac{1}{p}}$ è uno *spazio normato*.  
+
+Una funzione è detta *localmente integrabile* se è integrabile su ogni intervallo limitato. Mentre una funzione è detta *localmente p-integrabile* se $\lvert f \rvert^p$ è integrabile su ogni intervallo limitato, cioè $\displaystyle \int_{[a, b]} \lvert f(x) \rvert^p \, dx < +\infty, \quad \forall [a, b] \subset \mathbb{R}$.
+
+Uno **spazio normato** è uno spazio vettoriale dotato di una norma, cioè una funzione che associa ad ogni vettore un numero reale non negativo, tale che:
+- $\lVert x \rVert \geq 0 \quad \forall x \in V$
+- $\lVert x \rVert = 0 \iff x = 0$
+- $\lVert \alpha x \rVert = \lvert \alpha \rvert \lVert x \rVert \quad \forall \alpha \in \mathbb{R}$
+- $\lVert x + y \rVert \leq \lVert x \rVert + \lVert y \rVert \quad \forall x, y \in V$
+
+## Osservazione
+
+Notiamo che la norma associata allo spazio $L^2_{\mathbb{C}}(T)$ è canonicamente indotta dal prodotto scalare su $L^2_{\mathbb{C}}(T)$ definito come $\langle f \mid g \rangle \coloneqq \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} f(x) \overline{g(x)} \, dx$.  
+
+## Energia di una funzione
+
+Sia $f = u + iv : \mathbb{R} \to \mathbb{C}$, T-periodica, localmente quadrato integrabile, definiamo come *energia* di $f$ la quantità $\lVert f \rVert^2_2 \coloneqq \lVert f \rVert^2_{L^2} \coloneqq \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} \lvert f(x) \rvert^2 \, dx = \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} (u^2(x) + v^2(x)) \, dx$.
+
+## Lemma
+
+Sia $T > 0$, si ha che $L^2_{\mathbb{C}}(T) \subset L^1_{\mathbb{C}}(T)$.
+
+Si dimostra applicando la disuguaglianza di Cauchy-Schwarz.
+
+$\lVert f \rVert_{L^1} = \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} \lvert f(x) \rvert \, dx = \langle \lvert f \rvert \mid 1 \rangle \leq \lVert 1 \rVert_{L^2} \lVert f \rVert_{L^2} = \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} 1 \cdot \lvert f(x) \rvert \, dx = \sqrt{T} \lVert f \rVert_{L^2}$
+
+La disuguaglianza di Cauchy-Schwarz afferma che $\lvert \langle f \mid g \rangle \rvert \leq \lVert f \rVert \lVert g \rVert$.
+
+## Armoniche elementari
+
+Consideriamo le tre famiglie di funzioni:
+
+$\mathcal{A}_{\mathbb{R}} \coloneqq \left\{ \dfrac{a_0}{2}, a_n \cos (n\omega x), b_n \sin (n\omega x) \mid n \in \mathbb{N} \smallsetminus \{0\}, a_0, a_n, b_n \in \mathbb{R} \right\}$  
+$\mathcal{A}_{\mathbb{C}} \coloneqq \left\{ c_n e^{in\omega x} \mid n \in \mathbb{Z}, c_n \in \mathbb{C} \right\}$  
+$\overline{\mathcal{A}}_{\mathbb{R}} \coloneqq \left\{ A_0, A_n \cos (n\omega x + \varphi_n), A_n \sin (n\omega x + \varphi_n) \mid n \in \mathbb{N} \smallsetminus \{0\}, A_0 \in \mathbb{R}, A_n \geq 0, \varphi_n \in [-\pi, \pi) \right\}$  
+
+esse sono dette *armoniche elementari*.  
+Le fami
