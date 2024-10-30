@@ -17,8 +17,8 @@ output: pdf_document
 
 $z^2 = -1$ ha due soluzioni: $i$ e $-i$  
 $i^2 = -1$  
-$z \coloneqq x + iy \quad x, y \in \mathbb{R}$  
-$\mathbb{C} \coloneqq \{z = x + iy \mid x, y \in \mathbb{R}\}$  
+$z := x + iy \quad x, y \in \mathbb{R}$  
+$\mathbb{C} := \{z = x + iy \mid x, y \in \mathbb{R}\}$  
 $\mathbb{R} \subset \mathbb{C}$  
 $x = \Re(z)$ parte reale di $z$  
 $y = \Im(z)$ parte immaginaria di $z$  
@@ -89,9 +89,9 @@ $e^z = e^{x + iy} = e^x \cdot e^{iy} = e^x(\cos(y) + i\sin(y)) \in \mathbb{C}^*$
 
 ## Funzioni trigonometriche complesse
 
-$\cos(z) \coloneqq \dfrac{e^{iz} + e^{-iz}}{2} \quad \sin(z) \coloneqq \dfrac{e^{iz} - e^{-iz}}{2i}$  
+$\cos(z) := \dfrac{e^{iz} + e^{-iz}}{2} \quad \sin(z) := \dfrac{e^{iz} - e^{-iz}}{2i}$  
 
-$\cosh(z) \coloneqq \dfrac{e^z + e^{-z}}{2} \quad \sinh(z) \coloneqq \dfrac{e^z - e^{-z}}{2}$  
+$\cosh(z) := \dfrac{e^z + e^{-z}}{2} \quad \sinh(z) := \dfrac{e^z - e^{-z}}{2}$  
 
 ## Logaritmo complesso
 
@@ -125,7 +125,7 @@ $\displaystyle \int_K \lvert f(x) \rvert^p \, dx < +\infty$
 
 Una funzione $f: \mathbb{R} \to \mathbb{C}$ è *periodica di periodo $T > 0$* se $\forall x \in \mathbb{R}$ si ha che $f(x + T) = f(x)$.  
 
-La quantità $\frac{1}{T}$ è detta *frequenza* della funzione $f$, mentre $\omega \coloneqq 2\pi \cdot \frac{1}{T}$ è detta *frequnza angolare*.
+La quantità $\frac{1}{T}$ è detta *frequenza* della funzione $f$, mentre $\omega := 2\pi \cdot \frac{1}{T}$ è detta *frequnza angolare*.
 
 ## Osservazione
 
@@ -134,10 +134,10 @@ Denoteremo con $[-\frac{T}{2}, \frac{T}{2})$ l'intervallo di lunghezza $T$ centr
 
 ## Notazione
 
-Fissato $p \in [1, +\infty), T > 0$ e $\mathbb{X} \in \{\mathbb{R}, \mathbb{C}\}$, indicheremo con $L^p ([-\frac{T}{2}, \frac{T}{2}]; \mathbb{X}) \coloneqq L^p_{\mathbb{X}}(T)$ l'insieme delle funzioni $f: \mathbb{R} \to \mathbb{X}$ T-periodiche, localmente p-integrabili.  
-Per semplicità notazionale: $L^p \coloneqq L^p_{\mathbb{C}} (T)$.
+Fissato $p \in [1, +\infty), T > 0$ e $\mathbb{X} \in \{\mathbb{R}, \mathbb{C}\}$, indicheremo con $L^p ([-\frac{T}{2}, \frac{T}{2}]; \mathbb{X}) := L^p_{\mathbb{X}}(T)$ l'insieme delle funzioni $f: \mathbb{R} \to \mathbb{X}$ T-periodiche, localmente p-integrabili.  
+Per semplicità notazionale: $L^p := L^p_{\mathbb{C}} (T)$.
 
-L'insieme $L^p_{\mathbb{X}}(T)$ dotato della norma $\lVert f \rVert_{L^p_{\mathbb{X}}(T)} \coloneqq \left( \displaystyle\int_{-\frac{T}{2}}^{\frac{T}{2}} \lvert f(x) \rvert^p \, dx \right)^{\frac{1}{p}}$ è uno *spazio normato*.  
+L'insieme $L^p_{\mathbb{X}}(T)$ dotato della norma $\lVert f \rVert_{L^p_{\mathbb{X}}(T)} := \left( \displaystyle\int_{-\frac{T}{2}}^{\frac{T}{2}} \lvert f(x) \rvert^p \, dx \right)^{\frac{1}{p}}$ è uno *spazio normato*.  
 
 Una funzione è detta *localmente integrabile* se è integrabile su ogni intervallo limitato. Mentre una funzione è detta *localmente p-integrabile* se $\lvert f \rvert^p$ è integrabile su ogni intervallo limitato, cioè $\displaystyle \int_{[a, b]} \lvert f(x) \rvert^p \, dx < +\infty, \quad \forall [a, b] \subset \mathbb{R}$.
 
@@ -149,11 +149,11 @@ Uno **spazio normato** è uno spazio vettoriale dotato di una norma, cioè una f
 
 ## Osservazione
 
-Notiamo che la norma associata allo spazio $L^2_{\mathbb{C}}(T)$ è canonicamente indotta dal prodotto scalare su $L^2_{\mathbb{C}}(T)$ definito come $\langle f \mid g \rangle \coloneqq \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} f(x) \overline{g(x)} \, dx$.  
+Notiamo che la norma associata allo spazio $L^2_{\mathbb{C}}(T)$ è canonicamente indotta dal prodotto scalare su $L^2_{\mathbb{C}}(T)$ definito come $\langle f \mid g \rangle := \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} f(x) \overline{g(x)} \, dx$.  
 
 ## Energia di una funzione
 
-Sia $f = u + iv : \mathbb{R} \to \mathbb{C}$, T-periodica, localmente quadrato integrabile, definiamo come *energia* di $f$ la quantità $\lVert f \rVert^2_2 \coloneqq \lVert f \rVert^2_{L^2} \coloneqq \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} \lvert f(x) \rvert^2 \, dx = \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} (u^2(x) + v^2(x)) \, dx$.
+Sia $f = u + iv : \mathbb{R} \to \mathbb{C}$, T-periodica, localmente quadrato integrabile, definiamo come *energia* di $f$ la quantità $\lVert f \rVert^2_2 := \lVert f \rVert^2_{L^2} := \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} \lvert f(x) \rvert^2 \, dx = \displaystyle \int_{-\frac{T}{2}}^{\frac{T}{2}} (u^2(x) + v^2(x)) \, dx$.
 
 ## Lemma
 
@@ -169,9 +169,9 @@ La disuguaglianza di Cauchy-Schwarz afferma che $\lvert \langle f \mid g \rangle
 
 Consideriamo le tre famiglie di funzioni:
 
-$\mathcal{A}_{\mathbb{R}} \coloneqq \left\{ \dfrac{a_0}{2}, a_n \cos (n\omega x), b_n \sin (n\omega x) \mid n \in \mathbb{N} \smallsetminus \{0\}, a_0, a_n, b_n \in \mathbb{R} \right\}$  
-$\mathcal{A}_{\mathbb{C}} \coloneqq \left\{ c_n e^{in\omega x} \mid n \in \mathbb{Z}, c_n \in \mathbb{C} \right\}$  
-$\overline{\mathcal{A}}_{\mathbb{R}} \coloneqq \left\{ A_0, A_n \cos (n\omega x + \varphi_n), A_n \sin (n\omega x + \varphi_n) \mid n \in \mathbb{N} \smallsetminus \{0\}, A_0 \in \mathbb{R}, A_n \geq 0, \varphi_n \in [-\pi, \pi) \right\}$  
+$\mathcal{A}_{\mathbb{R}} := \left\{ \dfrac{a_0}{2}, a_n \cos (n\omega x), b_n \sin (n\omega x) \mid n \in \mathbb{N} \smallsetminus \{0\}, a_0, a_n, b_n \in \mathbb{R} \right\}$  
+$\mathcal{A}_{\mathbb{C}} := \left\{ c_n e^{in\omega x} \mid n \in \mathbb{Z}, c_n \in \mathbb{C} \right\}$  
+$\overline{\mathcal{A}}_{\mathbb{R}} := \left\{ A_0, A_n \cos (n\omega x + \varphi_n), A_n \sin (n\omega x + \varphi_n) \mid n \in \mathbb{N} \smallsetminus \{0\}, A_0 \in \mathbb{R}, A_n \geq 0, \varphi_n \in [-\pi, \pi) \right\}$  
 
 esse sono dette *armoniche elementari*.  
 Le fami

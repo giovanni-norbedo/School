@@ -1,0 +1,1 @@
+pandoc metodi_e_modelli_matematici_per_l_intelligenza_artificiale.md --to=pdf -o metodi_e_modelli_matematici_per_l_intelligenza_artificiale.pdf -f markdown --toc --toc-depth=6  && firefox metodi_e_modelli_matematici_per_l_intelligenza_artificiale.pdf

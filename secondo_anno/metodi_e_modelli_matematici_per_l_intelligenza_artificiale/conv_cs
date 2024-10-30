@@ -1,0 +1,1 @@
+pandoc cs.md --to=pdf -o cs.pdf -f markdown && firefox cs.pdf
