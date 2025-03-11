@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 2px solid #666;
+        }
+        td {
+            border: 1px solid #ccc;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background-color: #e6e6e6;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border: none;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sudoku Solution</h1>
+    {% if solution %}
+    <table>
+        {% for row in solution %}
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No solution found.</p>
+    {% endif %}
+    <a href="/">Solve another Sudoku</a>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: none;
+        }
+        td {
+            border: none;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            outline: none;
+            background-color: #f9f9f9;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+    <form action="/solve" method="post">
+        <table>
+            {% for i in range(9) %}
+            <tr>
+                {% for j in range(9) %}
+                <td><input type="text" name="cell_{{ i }}_{{ j }}" maxlength="1" size="1"></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <button type="submit">Solve</button>
+    </form>
+</body>
+</html>
