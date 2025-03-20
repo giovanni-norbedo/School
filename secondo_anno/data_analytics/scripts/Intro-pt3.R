@@ -43,6 +43,7 @@ mx[, c("a", "b")] # possiamo utilizzare anche i nomi di riga o colonna
 
 x <- matrix(1:16, ncol=4)
 x
+
 y <- x[c(1,4),2:4]
 y
 
@@ -59,6 +60,7 @@ a.x[-1, ,1]
 
 
 str(2:4)
+?str
 y <- matrix(2:4, nrow = 1)    # vettore riga 
 y
 str(y) 
@@ -116,9 +118,15 @@ solve(b)
 b <- c(2,4)
 solve(a,b) #soluzione del sistema lineare Ax=b => x=A^-1 b
 
+c <- matrix(1:9, nrow = 3)
+c
+solve(c)
+
 diag(a) #extract the diagonal
 diag(b) #diagonal matrix with b elements on the diagonal
 diag(3) #identity matrix 3x3
+
+diag(c)
 
 # chol()
 # det()
@@ -152,6 +160,9 @@ mylist[[1]][2]
 
 # selezioniamo le prime due righe e tre colonne della matrice in posizione 3 nella lista
 # ...
+
+mylist
+mylist[[3]][1:2,1:3]
 
 
 x[[1]] <- x1 
@@ -206,8 +217,10 @@ factor(country, levels = c("Italy", "Germany", "France"))
 countryf2 <- countryf
 levels(countryf) 
 levels(countryf2) <- c("Italy", "Germany", "France")
+
 cbind(countryf, countryf2)
 cbind.data.frame(countryf, countryf2)
+
 #ordered() # ordered factor
 
 age <- c(47,44,44,40,38,36,42,34,34,44)
@@ -224,11 +237,20 @@ str(genderf)
 #1. Definisci un vettore x con gli elementi 5, 12, 13, 12. Converti questo vettore
 # in factor e ispeziona la sua struttura. Come vengono definiti i livelli?
 
+x <- c(5, 12, 13, 12)
+x <- factor(x)
+str(x)
+
 #2. Crea un factor dalla sequenza di stringhe "1", "1", "0", "1",
 # "1", "0". Cosa restituiscono length() e mode()?
 
 x <- c("1", "1", "0", "1", "1", "0")
 x
+length(x)
+mode(x)
+str(x)
+
+x <- factor(x)
 length(x)
 mode(x)
 str(x)
@@ -239,6 +261,7 @@ str(x)
 levels(x) <- c("m", "f")
 x2 <- factor(x, levels = c("1","0"), labels = c("f", "m"))
 x2
+table(x)
 
 #4. Eseguire le seguenti righe
 v1 <- factor(letters[1:5])
@@ -247,7 +270,8 @@ v2 <- factor(letters[1:5], levels = rev(letters[1:5]))
 #Cosa succede a v1 quando modifichi i suoi livelli? In cosa differisce v2
 # da v1?
 
-
+v1
+v2
 
 # Data frames ----
 # è una lista ma può essere considerata come una matrice con colonne possibilmente di diverso tipo

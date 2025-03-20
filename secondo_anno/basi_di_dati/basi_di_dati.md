@@ -303,3 +303,334 @@ es: un dipendente non può essere responsabile di se stesso
 - le chiavi permettono di correlare i dati in relazioni diverse
     - il modello relazionale è basato su valoro
 
+**Chiavi e valori NULL**:  
+- In presenza di valori nulli, i valori della chiave non permetteranno
+    - di identificare le n-uple
+    - di realizzare facilmente i riferimenti da altre relazioni
+- la presenza di valori nulli nelle chiavi deve essere limitata
+
+**Integrità referenziale**:
+- informazioni in relazioni diverse sono correlate attraverso valori comuni
+- in particolare, valori delle chiavi (primarie)
+- le correlazioni debbono essere "coerenti"
+
+**Vincolo di Integrità Referenziale**:  
+Un vincolo di integrità referenziale ("foreing key") fra attributi $X$ di una relazione $r_1$ e un’altra relazione $r_2$ impone ai valori su $X$ in $r_1$ di comparire come valori della chiave primaria di $r_2$.
+
+**Azioni compensative**:  
+Viene eliminata una n-upla causando una violazione.  
+
+- Comportamento “standard”:
+    - Rifiuto dell’operazione
+- Azioni compensative
+    - Eliminazione in cascata
+    - Introduzione di valori nulli
+
+**Eliminazioni in cascata**:  
+- Se una n-upla $t_1$ in $r_1$ è eliminata, allora tutte le n-uple in $r_2$ che fanno riferimento a $t_1$ sono eliminate
+
+## SQL
+
+**SQL**: Structured Query Language.
+
+**Benefici SQL**:  
+- Indipendenza dai venditori di HW e SW
+- Portabilità attraverso varia piattaforme HW
+- Coperto da standard internazionali SQL1, SQL2 e SQL3
+- Strategico per IBM, Oracle, Microsoft, …
+- Linguaggio per data base relazionali (unico)
+- Strutturato ad alto livello (English-like)
+
+- Linguaggio programmazione (Statico/Dinamico/API)
+- In grado di fornire viste diverse del data base
+- Linguaggio completo (IF, triggers, …) con T-SQL e PL-SQL
+- Definizione dinamica dei dati
+- Client/Server
+
+**Problemi di portabilità**:  
+- codici di errore non standard
+- tipi di dati non sempre supportati
+- tabelle di sistema non sono uguali
+- definisce solo linguaggio statico, non dinamico
+- sorting
+
+## Esempio
+
+```sql
+CREATE TABLE Studenti(
+    matricola int(11),
+    cognome varchar(45),
+    nome varchar(45)
+);
+```
+
+| matricola | cognome |  nome  |
+|-----------|---------|--------|
+| 276545    | Rossi   | Mario  |
+| 7876463   | Neri    | Piero  |
+| 7876462   | Bianchi | Luca   |
+
+**Vincoli**:  
+- PRIMARY KEY - chiave primaria (una sola, implica NOT NULL)
+- NOT NULL
+- UNIQUE - definisce chiavi
+- CHECK - vedremo più avanti
+
+**Chiave primaria**:
+
+```sql
+CREATE TABLE Studenti(
+    matricola int(11) PRIMARY KEY,
+    cognome varchar(45),
+    nome varchar(45)
+);
+```
+
+or
+
+```sql
+CREATE TABLE Studenti(
+    matricola int(11),
+    cognome varchar(45),
+    nome varchar(45),
+    PRIMARY KEY (matricola)
+);
+```
+
+**Proibire i NULL**:
+
+```sql
+CREATE TABLE Studenti(
+    matricola int(11) PRIMARY KEY,
+    cognome varchar(45) NOT NULL,
+    nome varchar(45) NOT NULL
+);
+```
+
+**Chiavi composte**:
+
+```sql
+CREATE TABLE Esami(
+    studente int(11) PRIMARY KEY,
+    voto smallint NOT NULL,
+    lode bool,
+    corso int(11) PRIMARY KEY
+);
+```
+
+or 
+
+```sql
+CREATE TABLE Esami(
+    studente int(11),
+    voto smallint NOT NULL,
+    lode bool,
+    corso int(11),
+    PRIMARY KEY (studente, corso)
+);
+```
+
+**Not NULL + unique = Primary key**:
+
+```sql
+CREATE TABLE Corsi(
+    codice int(11) NOT NULL UNIQUE,
+    titolo varchar(45) NOT NULL,
+    docente varchar(45)
+
+);
+
+CREATE TABLE Esami(
+    studente int(11) NOT NULL UNIQUE,
+    voto smallint NOT NULL,
+    lode bool,
+    corso int(11) NOT NULL UNIQUE
+);
+```
+
+**UNIQUE su più colonne**:
+
+```sql
+CREATE TABLE nomeTabella (
+    id int(11) PRIMARY KEY,
+    campo1 int(19),
+    campo2 int(12),
+    CONSTRAINT [nome] UNIQUE(campo1, campo2)
+);
+```
+
+**Auto Increment**:  
+- il motore si occupa di incrementare il contatore numerico
+- identifico in modo chiaro una n-upla
+- ottimo come chiave primaria!
+
+```sql
+CREATE TABLE Studenti(
+    matricola int(11) PRIMARY KEY AUTO_INCREMENT,
+    cognome varchar(45) NOT NULL,
+    nome varchar(45) NOT NULL
+);
+```
+
+**Check**:  
+- Serve per specificare vincoli complessi
+- Netto = Lordo - Trattenute
+- non supportato in MySql
+- MySql IGNORA il comando dato alla creazione della tabella
+
+**AUTO_INCREMENT: dettagli**:  
+Cosa succede se cancello una riga?
+- non riciclo!
+- successivo = inserito automaticamente +1
+
+Cosa succede se imposto un valore?
+- se non è duplicato viene accettato
+- successivo = inserito manualmente +1
+
+Cosa succede se modifico un valore?  
+- se non è duplicato viene accettato
+- successivo = inserito automaticamente +1
+
+**Valori predefiniti**:  
+
+```sql
+CREATE TABLE nome(
+    nomeAttributo tipo DEFAULT valore
+);
+```
+
+```sql
+CREATE TABLE Corsi(
+    codice int(11) PRIMARY KEY,
+    titolo varchar(45) NOT NULL DEFAULT "nuovo",
+    docente varchar(45)
+);
+```
+
+**Commenti**:
+
+```sql
+CREATE TABLE nome(
+    nomeAttributo tipo COMMENT 'commento'
+);
+```
+
+```sql
+CREATE TABLE Corsi(
+    codice int(11) PRIMARY KEY COMMENT 'codice del corso',
+    titolo varchar(45) NOT NULL DEFAULT "nuovo"
+    COMMENT 'titolo del corso',
+    docente varchar(45) COMMENT 'docente del corso'
+);
+```
+
+**Vincoli Interrelazionali**:
+- FOREIGN KEY e REFERENCES e permettono di definire vincoli di integrità referenziale
+- di nuovo due sintassi
+    - per singoli attributi (non in MySql)
+    - su più attributi
+- è possibile definire azioni compensative
+
+
+**FOREIGN KEY**: colonne che sono FK  
+**REFERENCES**: colonne nella relazione (tabella) esterna
+
+```sql
+CREATE TABLE Esami(
+    studente int(11),
+    voto smallint NOT NULL,
+    lode bool,
+    corso int(11),
+    PRIMARY KEY (studente, corso),
+    FOREIGN KEY (studente) REFERENCES Studenti(matricola),
+);
+```
+
+or (MySql)
+
+```sql
+CREATE TABLE Esami(
+    studente int(11) REFERENCES Studenti(matricola),
+    voto smallint NOT NULL,
+    lode bool,
+    corso int(11),
+    PRIMARY KEY (studente, corso)
+);
+```
+
+```sql
+CREATE TABLE Esami(
+    studente int(11),
+    voto smallint NOT NULL,
+    lode bool,
+    corso int(11),
+    PRIMARY KEY (studente, corso),
+    FOREIGN KEY (studente) REFERENCES Studenti(matricola)
+    FOREIGN KEY (corso) REFERENCES Corsi(codice)
+);
+```
+
+**Vincoli Interrelazionali con nome**:
+
+```sql
+CREATE TABLE Esami(
+    studente int(11),
+    voto smallint NOT NULL,
+    lode bool,
+    corso int(11),
+    PRIMARY KEY (studente, corso),
+    CONSTRAINT FK_Studente FOREIGN KEY (studente) REFERENCES Studenti(matricola)
+    CONSTRAINT FK_Corso FOREIGN KEY (corso) REFERENCES Corsi(codice)
+);
+```
+
+**Disattivare i vincoli interrelazionali**:  
+- sto caricando i dati: ordine importante, altrimenti errore
+- voglio disattivare temporaneamente i vincoli
+- disattivazione
+    - `SET foreign_key_checks = 0`
+- riattivazione
+    - `SET foreign_key_checks = 1`
+
+**Integrità referenziale**:
+- informazioni in relazioni diverse sono correlate attraverso valori comuni
+- in particolare, valori delle chiavi (primarie)
+- le correlazioni debbono essere "coerenti"
+
+**Cancellazione**:  
+
+```sql
+CREATE TABLE Infrazioni(
+    codice int(11) PRIMARY KEY AUTO_INCREMENT,
+    data datetime NOT NULL,
+    vigile int(11),
+    prov char(2) NOT NULL,
+    targa char(6) NOT NULL,
+    FOREIGN KEY (vigile) REFERENCES Vigili(matricola)
+    ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY (prov, targa) REFERENCES
+    Automobile(prov, targa)
+);
+```
+
+**Modificare tabelle**:  
+- aggiungere/togliere colonne
+- cambiare il tipo di dato
+- rinominare la tabella
+- definire chiavi primarie, esterne, etc.
+
+```sql
+ALTER TABLE nomeTabella
+    action1,
+    action2,
+    ...
+    ADD COLUMN definizioneColonna,
+    ADD COLUMN dataModifica TIMESTAMP AFTER data
+    DROP COLUMN nomeColonna,
+    CHANGE COLUMN nomeColonna nuovoNomeColonna tipoColonna,
+    RENAME TO nuovoNomeTabella,
+    ADD CONSTRAINT nomeVincolo tipoVincolo
+    ...
+```
+
+...
