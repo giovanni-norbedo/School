@@ -20,3 +20,8 @@ Corsi svolti:
 - Algoritmi e Strutture Dati
 - Inferenza Statistica
 - Computabilità, Complessità e Logica
+- Algoritmi di Ottimizzazione 
+- Basi di Dati
+- Analisi Numerica
+- Aspetti etici, sociali e legali dell'intelligenza artificiale 
+- Data Analytics 
