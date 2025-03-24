@@ -802,7 +802,7 @@ I metodi numerici per il calcolo degli zeri di una funzione sono **iterativi**.
 **Definizione**: Un **metodo iterativo** è una procedura che genera una successione $\{x_k\}_{k \geq 0}$ a partire da uno o più valori iniziali e quindi a partire da uno o più termini precedenti.
 
 **Definizione**: Un metodo iterativo è **convergente** ad $\alpha$ se $\displaystyle \lim_{k \to \infty} x_k = \alpha$ o equivalentemente $\displaystyle \lim_{k \to \infty} |x_k - \alpha| = 0$.  
-$|x_k - \alpha| = \varepsilon_k$ è l'errore al passo $k$.
+$x_k - \alpha = \varepsilon_k$ è l'errore al passo $k$.
 
 **Definizione**: Un metodo iterativo è **localmente convergente** ad $\alpha$ se $\exists \delta > 0$ raggio di convergenza tale che $\forall x_0 \in B(\alpha, \delta) = [\alpha - \delta, \alpha + \delta]$ si ha che $\displaystyle \lim_{k \to \infty} x_k = \alpha$.
 
@@ -864,5 +864,25 @@ function [xk, k] = bisezione(f, a, b, toll, maxit)
 end
 ```
 
+### Convergenza globale del metodo di bisezione
+
+**Teorema**: Il metodo di bisezione converge globalmente ad uno zero di $f(x)$ (indipendentemente da $x_0$), cioè $\forall x_0 \in [a, b]$.  
+
+$|x_k - \alpha| = | \varepsilon_k | \leq \dfrac{b_k - a_k}{2} \leq \dfrac{b - a}{2^{k+1}}$ 
+
+$\displaystyle \lim_{k \to \infty} \dfrac{b - a}{2^{k+1}} = 0$  
+
+Per il teorema dei due carabinieri:
+
+$\displaystyle \lim_{k \to \infty} 0 = 0$  
+$\displaystyle \lim_{k \to \infty} \dfrac{b - a}{2^{k+1}} = 0$  
+
+$0 \leq |x_k - \alpha| \leq \dfrac{b - a}{2^{k+1}}$  
+
+Quindi $\displaystyle \lim_{k \to \infty} |x_k - \alpha| = \lim_{k \to \infty} | \varepsilon_k | = 0$.
+
+### Ordine di convergenza del metodo di bisezione e costante asintotica
+
+**Teorema**: Il metodo di bisezione è **lineare** ($p = 1$) con costante asintotica di riduzione dell'errore $C = \dfrac{1}{2}$ (il limite non esiste).
 
 
