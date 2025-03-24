@@ -239,8 +239,6 @@ Massimizzazione: $v = \max_{x \in F} f(x)$
 
 - **Problemi di ottimizzazione mista**: Alcune variabili sono intere, altre continue.
 
----
-
 ## Convessità
 
 Una funzione $f(x)$ è **convessa** se, per ogni coppia di punti $x', x''$ di valori di $x$ con $x' < x''$ si ha
@@ -290,12 +288,12 @@ Massimo locale se $\dfrac{d^2 f(x^*)}{dx^2} < 0$. La funzione è strettamente co
 
 Punto di flesso se $\dfrac{d^2 f(x^*)}{dx^2} = 0$ e serve esaminare derivate di ordine superiore.
 
-![Studio dei punti critici](image.png){ width=400px }
+![Studio dei punti critici](image.png){ width=320px }
 
 ## Minimi e Massimi Globali
 
 (Se il dominio è limitato è necessario controllare gli estremi
-dell’intervallo.)
+dell'intervallo.)
 
 Per un **minimo globale** è necessario confrontare i minimi locali e trovare il più basso valore di $f(x)$.  
 Se questo valore è minore di $f(x)$ per $x \to \pm \infty$ (o agli estremi del suo dominio, se essa è definita in un intervallo limitato), allora questo punto è un minimo globale.
@@ -309,8 +307,6 @@ Se $f(x)$ è strettamente convessa, allora esiste un solo minimo globale.
 Analogamente per massimi globali e funzioni concave.
 
 Se la funzione non è strettamente concava o strettamente convessa ci possono essere infinite soluzioni ottime, rispettivamente massimi e minimi globali.
-
----
 
 # Programmazione Lineare
 
@@ -329,43 +325,22 @@ L'insieme $X$ dei punti ammissibili è definito da un insieme di vincoli lineari
 Un problema LP può essere scritto come:  
 
 $$  
-\max c^T x  
-$$  
-
-Soggetto a:  
-
-$$  
-Ax \leq b  
-$$  
-
-$$  
+\max c^T x \\
+Ax \leq b \\
 x \geq 0  
 $$  
 
 Oppure in forma esplicita:  
 
 $$  
-\max Z = c_1x_1 + c_2x_2 + \dots + c_nx_n  
-$$  
-
-$$  
-a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n \leq b_1  
-$$  
-
-$$  
-a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n \leq b_2  
-$$  
-
-$$  
-\vdots  
-$$  
-
-$$  
-a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n \leq b_m  
-$$  
-
-$$  
-x_1, x_2, \dots, x_n \geq 0  
+\begin{aligned}
+\max Z &= c_1x_1 + c_2x_2 + \dots + c_nx_n  \\
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n &\leq b_1  \\
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n &\leq b_2  \\
+&\vdots  \\
+a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n &\leq b_m  \\
+x_1, x_2, \dots, x_n &\geq 0  
+\end{aligned}
 $$  
 
 ### Notazione
@@ -373,7 +348,7 @@ $$
 - $m$ numero di righe della matrice $A$  
 - $n$ dimensione del vettore $x$ e numero di colonne di $A$  
 - $c$ vettore della funzione obiettivo  
-- $A$ matrice tecnologica  
+- $A$ matrice dei coefficienti dei vincoli  
 - $b$ vettore dei termini noti ($\geq 0$ nella forma standard)  
 - $x$ vettore delle variabili decisionali  
 - $X = \{x : Ax \leq b, x \geq 0\}$ insieme ammissibile
@@ -398,7 +373,7 @@ $$
 
 4. **Divisibilità (o Continuità)**  
    - Le variabili $x_j$ assumono valori reali: $x \in \mathbb{R}^n$.  
-   - Se servono soluzioni intere, il problema diventa di **Programmazione Intera**.  
+   - Se servono soluzioni intere, il problema diventa di *Programmazione Intera*.  
 
 5. **Certezza**  
    - Tutti i coefficienti del problema sono numeri reali noti a priori. Non ci sono incertezze o probabilità.
@@ -456,8 +431,6 @@ Ne consegue che è impossibile avere un'unica soluzione ottimale che non sia una
 
 $\square$
 
----
-
 # L'algoritmo del Simplesso
 
 ## Soluzioni agli angoli (Corner-point solutions)
@@ -478,7 +451,8 @@ In un problema di programmazione lineare con $n$ variabili decisionali, ogni sol
 ## La soluzione ottimale si trova in un vertice
 
 **Proprietà 1:**
-1. Se esiste un'unica soluzione ottimale, allora essa deve essere una soluzione CPF.
+
+1. Se esiste un'unica soluzione ottimale, allora essa deve essere una soluzione CPF.  
 2. Se esistono più soluzioni ottimali, almeno due di esse devono essere soluzioni CPF adiacenti.
 
 ### Dimostrazione (per assurdo)
@@ -511,6 +485,8 @@ Di conseguenza, tutte le soluzioni ottimali possono essere ottenute come medie p
 
 $$\binom{m+n}{n} = \frac{(m+n)!}{m!n!}$$
 
+dove $m$ è il numero di vincoli e $n$ il numero di variabili decisionali.
+
 ## La regione ammissibile è convessa
 
 **Proprietà 3:** Se una soluzione CPF non ha soluzioni adiacenti migliori, allora è ottimale.
@@ -538,7 +514,8 @@ Se una soluzione CPF non ha soluzioni adiacenti con un valore maggiore di $Z$, a
 - Se non ci sono miglioramenti possibili, la soluzione corrente è ottimale.
 
 **Osservazione:**  
-- Il metodo del simplesso si concentra sulle soluzioni CPF. Per qualsiasi problema con almeno una soluzione ottimale, trovarne una richiede solo di trovare una soluzione CPF migliore.
+
+- Il metodo del simplesso si concentra sulle soluzioni CPF. Per qualsiasi problema con almeno una soluzione ottimale, trovarne una richiede solo di trovare una soluzione CPF migliore.  
 - Poiché il numero di soluzioni ammissibili è generalmente infinito, ridurre il numero di soluzioni che devono essere esaminate a un piccolo numero finito (solo tre nel nostro esempio) è una semplificazione enorme.
 
 ### Riassunto dell'algoritmo
@@ -551,12 +528,11 @@ Se una soluzione CPF non ha soluzioni adiacenti con un valore maggiore di $Z$, a
    - **Test di ottimalità efficiente**: Se non ci sono miglioramenti possibili, la soluzione corrente è ottimale.
 
 **Osservazione:**  
-- Quando possibile, l'inizializzazione del metodo del simplesso sceglie l'origine (tutte le variabili decisionali uguali a zero) come soluzione CPF iniziale. Quando ci sono troppe variabili decisionali per trovare una soluzione CPF iniziale graficamente, questa scelta elimina la necessità di utilizzare procedure algebriche per trovare e risolvere una soluzione CPF iniziale.  
-- La scelta dell'origine è comunemente possibile quando tutte le variabili decisionali hanno vincoli di non negatività, poiché l'intersezione di questi confini di vincolo restituisce l'origine come soluzione agli angoli. Questa soluzione è quindi una soluzione CPF a meno che non sia inammissibile perché viola uno o più vincoli. Se è inammissibile, sono necessarie procedure speciali per trovare la soluzione CPF iniziale.
-- Quale soluzione CPF adiacente scegliere? Dopo aver identificato la soluzione CPF corrente, il metodo del simplesso esamina ciascuno dei bordi della regione ammissibile che si dipartono da questa soluzione CPF e identifica il tasso di miglioramento in Z che si otterrebbe spostandosi lungo il bordo. Tra i bordi con un tasso di miglioramento positivo in Z, sceglie quindi di muoversi lungo quello con il tasso di miglioramento più grande in Z. L'iterazione è completata risolvendo prima la soluzione CPF adiacente all'altro estremo di questo bordo e quindi rinominando questa soluzione CPF adiacente come la soluzione CPF corrente per il test di ottimalità e (se necessario) la prossima iterazione.  
-- Un tasso di miglioramento positivo in Z implica che la soluzione CPF adiacente è migliore della soluzione CPF corrente, mentre un tasso di miglioramento negativo in Z implica che la soluzione CPF adiacente è peggiore. Pertanto, il test di ottimalità consiste semplicemente nel verificare se uno dei bordi fornisce un tasso di miglioramento positivo in Z. Se nessuno lo fa, allora la soluzione CPF corrente è ottimale.
 
----
+- Quando possibile, l'inizializzazione del metodo del simplesso sceglie l'origine (tutte le variabili decisionali uguali a zero) come soluzione CPF iniziale. Quando ci sono troppe variabili decisionali per trovare una soluzione CPF iniziale graficamente, questa scelta elimina la necessità di utilizzare procedure algebriche per trovare e risolvere una soluzione CPF iniziale.  
+- La scelta dell'origine è comunemente possibile quando tutte le variabili decisionali hanno vincoli di non negatività, poiché l'intersezione di questi confini di vincolo restituisce l'origine come soluzione agli angoli. Questa soluzione è quindi una soluzione CPF a meno che non sia inammissibile perché viola uno o più vincoli. Se è inammissibile, sono necessarie procedure speciali per trovare la soluzione CPF iniziale.  
+- Quale soluzione CPF adiacente scegliere? Dopo aver identificato la soluzione CPF corrente, il metodo del simplesso esamina ciascuno dei bordi della regione ammissibile che si dipartono da questa soluzione CPF e identifica il tasso di miglioramento in Z che si otterrebbe spostandosi lungo il bordo. Tra i bordi con un tasso di miglioramento positivo in Z, sceglie quindi di muoversi lungo quello con il tasso di miglioramento più grande in Z. L'iterazione è completata risolvendo prima la soluzione CPF adiacente all'altro estremo di questo bordo e quindi rinominando questa soluzione CPF adiacente come la soluzione CPF corrente per il test di ottimalità e (se necessario) la prossima iterazione.  
+- Un tasso di miglioramento positivo in Z implica che la soluzione CPF adiacente è migliore della soluzione CPF corrente, mentre un tasso di miglioramento negativo in Z implica che la soluzione CPF adiacente è peggiore. Pertanto, il test di ottimalità consiste semplicemente nel verificare se uno dei bordi fornisce un tasso di miglioramento positivo in Z. Se nessuno lo fa, allora la soluzione CPF corrente è ottimale.  
 
 # Soluzioni di base
 
@@ -564,23 +540,15 @@ Se una soluzione CPF non ha soluzioni adiacenti con un valore maggiore di $Z$, a
 
 Un qualunque problema di programmazione lineare può sempre essere formulato in forma standard:
 
-$$\max z = cx$$
-
-$$Ax = b \quad (b \geq 0)$$
-
-$$x \geq 0$$
+$$
+\max z = cx \\
+Ax = b \quad (b \geq 0) \\
+x \geq 0
+$$
 
 ## Soluzioni di base
 
-Dato il problema:
-
-$$\max z = cx$$
-
-$$Ax = b$$
-
-$$x \geq 0$$
-
-Si supponga $\text{rank}(A) = m$. Poiché $m < n$, eventualmente riordinando le colonne, si può porre:
+Dato il problema appena formulato, si supponga $\text{rank}(A) = m$. Poiché $m < n$, eventualmente riordinando le colonne, si può porre:
 
 $$A = [B | N]$$
 
@@ -621,8 +589,6 @@ $$x = \begin{bmatrix} B^{-1}b \\ 0 \end{bmatrix}$$
 
 Se $B^{-1}b \geq 0$, si ottiene una **soluzione di base ammissibile (BFS)** per il sistema $Ax = b, x \geq 0$.
 
----
-
 ## Vertici e BFS
 
 Dato il problema $Ax = b, x \geq 0$, una soluzione $x$ è un **vertice** del poliedro $P(A, b)$ se e solo se $x$ è una BFS.
@@ -630,7 +596,7 @@ Dato il problema $Ax = b, x \geq 0$, una soluzione $x$ è un **vertice** del pol
 Un punto di un poliedro è un vertice (punto estremo) se e solo se soddisfa all'uguaglianza $n$ vincoli linearmente indipendenti.
 
 Quindi basta dimostrare che ogni BFS soddisfa $n$ vincoli linearmente indipendenti tra $Ax = b$ e $x \geq 0$.  
-Per definizione, ogni BFS soddisfa all'uguaglianza $(n-m)$ vincoli $x \geq 0$ e gli $m$ vincoli $Ax = b$. I vincoli stringenti sono linearmente indipendenti, poiché la matrice dei loro coefficienti è non singolare:
+Per definizione, ogni BFS soddisfa all'uguaglianza $(n-m)$ vincoli $x \geq 0$ e gli $m$ vincoli $Ax = b$. I vincoli stringenti sono linearmente indipendenti, poiché la matrice dei loro coefficienti è non singolare (quindi invertibile):
 
 $$\begin{bmatrix} B & N \\ 0 & I_{n-m} \end{bmatrix}$$
 
@@ -638,31 +604,29 @@ $$\begin{bmatrix} B & N \\ 0 & I_{n-m} \end{bmatrix}$$
 
 Si consideri il problema:
 
-$$\max z = 2x_1 + x_2$$
-
-Soggetto a:
-
-$$x_1 + x_2 \leq 5$$
-
-$$-x_1 + x_2 \leq 0$$
-
-$$6x_1 + 2x_2 \leq 21$$
-
-$$x_1, x_2 \geq 0$$
+$$
+\begin{aligned}
+\max z &= 2x_1 + x_2 \\
+x_1 + x_2 &\leq 5 \\
+-x_1 + x_2 &\leq 0 \\
+6x_1 + 2x_2 &\leq 21 \\
+x_1, x_2 &\geq 0
+\end{aligned}
+$$
 
 Non è in forma standard, ma espresso solo in termini delle variabili strutturali.
 
 Trasformandolo in forma standard introducendo le variabili di **slack** $x_3, x_4, x_5$:
 
-$$\max z = 2x_1 + x_2$$
-
-$$x_1 + x_2 + x_3 = 5$$
-
-$$-x_1 + x_2 + x_4 = 0$$
-
-$$6x_1 + 2x_2 + x_5 = 21$$
-
-$$x_1, x_2, x_3, x_4, x_5 \geq 0$$
+$$
+\begin{aligned}
+  \max z &= 2x_1 + x_2 \\
+  x_1 + x_2 + x_3 &= 5 \\
+  -x_1 + x_2 + x_4 &= 0 \\
+  6x_1 + 2x_2 + x_5 &= 21 \\
+  x_1, x_2, x_3, x_4, x_5 &\geq 0
+\end{aligned}
+$$
 
 $$
 A = \begin{bmatrix} 1 & 1 & 1 & 0 & 0 \\ -1 & 1 & 0 & 1 & 0 \\ 6 & 2 & 0 & 0 & 1 \end{bmatrix}
@@ -670,7 +634,7 @@ A = \begin{bmatrix} 1 & 1 & 1 & 0 & 0 \\ -1 & 1 & 0 & 1 & 0 \\ 6 & 2 & 0 & 0 & 1
 B = \begin{bmatrix} 5 \\ 0 \\ 21 \end{bmatrix}
 $$
 
-Limite superiore delle possibili basi $\dfrac{5!}{3!2!} = 10$, ma non tutte le basi corrispondono ad una soluzione ammissibile BFS, nell’esempio solo 6 basi sono ammissibili.
+Limite superiore delle possibili basi $\frac{5!}{3!2!} = 10$, ma non tutte le basi corrispondono ad una soluzione ammissibile BFS, nell’esempio solo 6 basi sono ammissibili.
 Siccome i vertici sono 4, vi saranno BFS **degeneri**.
 
 $$
@@ -683,7 +647,7 @@ $$
 B_{(3)}^{-1} b = B_{(3)}^{-1} \begin{bmatrix} 5 \\ 0 \\ 21 \end{bmatrix} = \begin{bmatrix} 11/4 \\ 9/4 \\ 1/2 \end{bmatrix} \Rightarrow p_3
 $$
 
-Cioè la soluzione di base ammissibile $p_3 = (11/4, 9/4, 0, 5/4, 0)$.
+Cioè la soluzione di base ammissibile $p_3 = (11/4, \ 9/4, \ 0, \ 5/4, \ 0)$.
 
 $$
 X_B^{(2)} = \begin{bmatrix} x_1 \\ x_2 \\ x_5 \end{bmatrix} = \begin{bmatrix} 5/2 \\ 5/2 \\ 1 \end{bmatrix} \Rightarrow p_2 \quad
@@ -746,15 +710,28 @@ $$z(B) = c_B B^{-1} b$$
 
 In alcuni casi una prima base ammissibile è immediata. Si supponga infatti che il problema sia formulato come:
 
-$max \ z = cx$  
-$Hx \leq b$  
-$x \ge 0$  
+$$
+\begin{aligned}
+  \max \ z &= cx \\
+  Hx &\leq b \\
+  x &\geq 0
+\end{aligned}
+$$
 
 con $b \ge 0$, allora la sua trasformazione in forma standard introduce delle variabili di slack  $s$ le cui corrispondenti colonne formano la prima base ammissibile:
 
 $max \ z = cx$  
 $Hx + Is = b$  
 $x \ge 0, s \ge 0$  
+
+$$
+\begin{aligned}
+  \max \ z &= cx \\
+  Hx + Is &= b \\
+  x &\ge 0 \\
+  s &\ge 0
+\end{aligned}
+$$
 
 Riordinando le colonne si ottiene:
 
@@ -782,46 +759,58 @@ Non è immediato esprimere un problema di PL in forma canonica in presenza di di
 
 **Formulazione iniziale:**
 
-$min \ z = 4x_1 + x_2$  
-$3x_1 + x_2 = 3$  
-$4x_1 + 3x_2 \ge 6$  
-$x_1 + 2x_2 \leq 4$  
-$x_1, x_2 \ge 0$  
-
+$$
+\begin{aligned}
+  \max \ z &= 4x_1 + x_2 \\
+  3x_1 + x_2 &= 3 \\
+  4x_1 + 3x_2 - x_3 &\geq 6 \\
+  x_1 + 2x_2 + x_4 &\leq 4 \\
+  x_1, x_2, x_3, x_4 &\geq 0
+\end{aligned}
+$$
 
 **Formulazione standard:**
 
-$max \ z = -4x_1 - x_2$  
-$3x_1 + x_2 = 3$  
-$4x_1 + 3x_2 - x_3 = 6$  
-$x_1 + 2x_2 + x_4 = 4$  
-$x_1, x_2, x_3, x_4 \ge 0$  
+$$
+\begin{aligned}
+  \max \ z &= -4x_1 - x_2 \\
+  3x_1 + x_2 &= 3 \\
+  4x_1 + 3x_2 - x_3 &= 6 \\
+  x_1 + 2x_2 + x_4 &= 4 \\
+  x_1, x_2, x_3, x_4 &\ge 0
+\end{aligned}
+$$
 
 Questa formulazione standard **NON** è una forma canonica:
 
-$A = \begin{bmatrix} 3 & 1 & 0 & 0 \\ 4 & 3 & -1 & 0 \\ 1 & 2 & 0 & 1 \end{bmatrix}$
-
+$$A = \begin{bmatrix} 3 & 1 & 0 & 0 \\ 4 & 3 & -1 & 0 \\ 1 & 2 & 0 & 1 \end{bmatrix}$$
 
 ## Fase I
 
 Se il problema è nella forma standard, ottenuto solo da vincoli di tipo $=$ e $\le$, si introducono $m$ variabili artificiali $u$ e si formula il problema di fase I:
 
-
 **Problema originale:**
 
-$max \ z = cx$  
-$Ax = b$  
-$x \ge 0$  
+$$
+\begin{aligned}
+  \max \ z &= cx \\
+  Ax &= b \\
+  x &\ge 0
+\end{aligned}
+$$
 
 **Fase I:**
 
-$min \ w = 1u$  (dove $1$ è un vettore di uni)  
-$Ax + Iu = b$  
-$x \ge 0, u \ge 0$  
-
+$$
+\begin{aligned}
+  \min \ w &= 1u \\
+  Ax + Iu &= b \\
+  x &\ge 0 \\
+  u &\ge 0
+\end{aligned}
+$$
 
 Per il problema di fase I è immediato determinare una base iniziale ammissibile.
-
 
 ## Fase I (continua)
 
@@ -832,26 +821,22 @@ Il problema di fase I ammette una soluzione ottima $w^*$ non negativa per costru
 
 ## Esempio - Fase I
 
-
-$min \ w = u_1 + u_2 \implies max \ w = -u_1 - u_2$  
-$3x_1 + x_2 + u_1 = 3$  
-$4x_1 + 3x_2 - x_3 + u_2 = 6$  
-$x_1 + 2x_2 + x_4 = 4$  
-$x_1, x_2, x_3, x_4, u_1, u_2 \ge 0$  
+$$
+\begin{aligned}
+  \min \ w = u_1 + u_2 &\implies \max \ w = -u_1 - u_2 \\
+  3x_1 + x_2 + u_1 &= 3 \\
+  4x_1 + 3x_2 - x_3 + u_2 &= 6 \\
+  x_1 + 2x_2 + x_4 &= 4 \\
+  x_1, x_2, x_3, x_4, u_1, u_2 &\ge 0
+\end{aligned}
+$$
 
 Data la presenza di una variabile di slack, bastano solo due variabili artificiali ($u_1, u_2$).
 $u_1, u_2, x_4$ è la base iniziale.
 
-
 ## Esempio - Radioterapia
 
-$min \ z = 0.4x_1 + 0.5x_2$  
-$0.3x_1 + 0.1x_2 \leq 2.7$  
-$0.5x_1 + 0.5x_2 = 6$  
-$0.6x_1 + 0.4x_2 \ge 6$  
-$x_1, x_2 \ge 0$  
-
-> (pag. 9-14 da pdf n7)
+*(pag. 9-14 da pdf n7)*
 
 *(Grafici e Tableau per gli esempi di Radioterapia, soluzione illimitata e infinite soluzioni ottime)*
 
@@ -885,13 +870,13 @@ $max \ \sum_{j=1}^{n} c_j x_j$
 
 Soggetto a:
 
-$\sum_{j=1}^{n} a_{ij} x_j \leq b_i \quad i = 1, \dots , m$  
+$\displaystyle \sum_{j=1}^{n} a_{ij} x_j \leq b_i \quad i = 1, \dots , m$  
 $x_j \ge 0 \quad j = 1, \dots , n$
 
 
 **Variabili decisionali:** La quantità di beni prodotti: $x_j \in \mathbb{R}$ per $j = 1, \dots ,n$. Assumiamo che queste variabili siano continue.
 
-**Funzione obiettivo:** Massimizzare il profitto $\sum_{j=1}^{n} c_j x_j$.
+**Funzione obiettivo:** Massimizzare il profitto $\displaystyle\sum_{j=1}^{n} c_j x_j$.
 
 **Vincoli:**
 
@@ -933,7 +918,7 @@ Questa domanda trova risposta nel **problema duale**.
 
 Per ogni bene, il guadagno ottenuto dalla vendita delle risorse necessarie per produrlo non deve essere inferiore al profitto ottenibile dalla vendita del bene stesso.
 
-$\sum_{i=1}^{m} a_{ij}\pi_i \ge c_j \quad \text{per } j = 1,2$
+$\displaystyle\sum_{i=1}^{m} a_{ij}\pi_i \ge c_j \quad \text{per } j = 1,2$
 
 Il prezzo di vendita delle risorse deve essere non negativo:
 
@@ -961,7 +946,7 @@ $\pi \ge 0$
 Che deriva da:
 
 $\min \displaystyle\sum_{i=1}^{m} b_i \pi_i$  
-$\sum_{i=1}^{m} a_{ij} \pi_i \ge c_j \quad \text{per } j = 1, \dots ,n$  
+$\displaystyle\sum_{i=1}^{m} a_{ij} \pi_i \ge c_j \quad \text{per } j = 1, \dots ,n$  
 $\pi_i \ge 0 \quad \text{per } i = 1, \dots ,m$
 
 ## Commenti al problema duale
@@ -977,18 +962,27 @@ Ad ogni problema di PL (primale) è associato un problema duale.
 
 **(P) Primale:**
 
-$max \ z = c^T x$  
-$Ax \leq b$  
-$x \ge 0$  
-$n$ variabili e $m$ vincoli
+$$
+\begin{aligned}
+  \max \ z &= c^T x \\
+  Ax &\leq b \\
+  x &\ge 0
+\end{aligned}
+$$
 
+con $n$ variabili e $m$ vincoli.
 
 **(D) Duale:**
 
-$min \ w = b^T \pi$  
-$A^T \pi \ge c$  
-$\pi \ge 0$  
-$m$ variabili e $n$ vincoli
+$$
+\begin{aligned}
+  \min \ w &= b^T \pi \\
+  A^T \pi &\ge c \\
+  \pi &\ge 0
+\end{aligned}
+$$
+
+con $m$ variabili e $n$ vincoli.
 
 **Proprietà:** Il problema D ha tante variabili quanti sono i vincoli in P e tanti vincoli quante sono le variabili in P.
 
@@ -1097,17 +1091,25 @@ In altre parole, se $x^*$ è una soluzione ottima finita per il primale, anche i
 
 Consideriamo il problema primale inammissibile:
 
-$\min x_1 + 2 x_2$  
-$x_1 + x_2 = 1$  
-$2 x_1 + 2 x_2 = 3$  
-$x_1, x_2$ libere  
+$$
+\begin{aligned}
+  \min \ x_1 + 2 x_2 \\
+  x_1 + x_2 &= 1 \\
+  2 x_1 + 2 x_2 &= 3 \\
+  x_1, x_2 &\text{ libere}
+\end{aligned}
+$$
 
 Il problema duale è:
 
-$\max \pi_1 + 3 \pi_2$  
-$\pi_1 + 2 \pi_2 = 1$  
-$2 \pi_1 + 2 \pi_2 = 2$  
-$\pi_1, \pi_2$ libere  
+$$
+\begin{aligned}
+  \max \ \pi_1 + 3 \pi_2 \\
+  \pi_1 + 2 \pi_2 &= 1 \\
+  2 \pi_1 + 2 \pi_2 &= 2 \\
+  \pi_1, \pi_2 &\text{ libere}
+\end{aligned}
+$$
 
 Entrambi i problemi sono inammissibili.
 
@@ -1122,7 +1124,8 @@ dove $A_j$ è la $j$-esima colonna e $a_i$ è l'$i$-esima riga della matrice $A$
 
 ## Rilassamento complementare - Dimostrazione
 
-...
+Se $x$ e $\pi$ sono soluzioni ottime, i vincoli del problema imporranno che $\pi^T b \geq \pi^T A x \geq c^T x$. Poiché $x$ e $\pi$ sono soluzioni ottime, si ha $\pi^T b = c^T x$. Quindi $\pi^T (b - A x) = 0$. Similmente, si ha $(\pi^T A - c^T) x = 0$. Infine, dato che $\pi \geq 0$, $b^T - A^T x \geq 0$, $\pi^T A - c^T \geq 0$ e $x \geq 0$, si ha che ogni termine del prodotto scalare deve essere uguale a zero, cioè $\pi_i (a_i^T x - b_i) = 0, \ \forall i$ e $(c_j - \pi^T A_j) x_j = 0, \ \forall j$.  
+Se le equazioni sono soddisfatte, scrivendo le equazioni in forma compatta e per la coppia $(x, \pi)$ tale che $\pi(b^T - Ax) = 0 \Rightarrow \pi b^T = \pi Ax$ e $(\pi^T A - c^T)x = 0 \Rightarrow \pi Ax = c^T x$, poiché $\pi^T b = \pi^T Ax = c^T x$, allora $(x, \pi)$ è ottimale.
 
 ## Rilassamento complementare - Commenti
 
@@ -1139,4 +1142,3 @@ dove $A_j$ è la $j$-esima colonna e $a_i$ è l'$i$-esima riga della matrice $A$
 
 *(Soluzioni dell'esercizio)*
 
-...
